@@ -25,6 +25,12 @@
 		4CC7D4AA19E581960078A7EF /* ic_action_place.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4A519E581960078A7EF /* ic_action_place.png */; };
 		4CC7D4AB19E581960078A7EF /* ic_action_network_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4A619E581960078A7EF /* ic_action_network_cell.png */; };
 		4CC7D4AC19E581960078A7EF /* ic_action_go_to_today.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC7D4A719E581960078A7EF /* ic_action_go_to_today.png */; };
+		4CD68C7319ED33EE00980A9E /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD68C7219ED33EE00980A9E /* InfoViewController.m */; };
+		4CD68C7619ED340300980A9E /* DisciplinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD68C7519ED340300980A9E /* DisciplinesViewController.m */; };
+		4CD68C7919ED341C00980A9E /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD68C7819ED341C00980A9E /* CalendarViewController.m */; };
+		4CD68C7C19ED342A00980A9E /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD68C7B19ED342A00980A9E /* LocationsViewController.m */; };
+		4CD68C7F19ED344500980A9E /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD68C7E19ED344500980A9E /* ResultsViewController.m */; };
+		4CD68C8119ED3A6C00980A9E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD68C8019ED3A6C00980A9E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,17 @@
 		4CC7D4A519E581960078A7EF /* ic_action_place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_place.png; sourceTree = "<group>"; };
 		4CC7D4A619E581960078A7EF /* ic_action_network_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_network_cell.png; sourceTree = "<group>"; };
 		4CC7D4A719E581960078A7EF /* ic_action_go_to_today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_go_to_today.png; sourceTree = "<group>"; };
+		4CD68C7119ED33EE00980A9E /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		4CD68C7219ED33EE00980A9E /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		4CD68C7419ED340300980A9E /* DisciplinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisciplinesViewController.h; sourceTree = "<group>"; };
+		4CD68C7519ED340300980A9E /* DisciplinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisciplinesViewController.m; sourceTree = "<group>"; };
+		4CD68C7719ED341C00980A9E /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		4CD68C7819ED341C00980A9E /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		4CD68C7A19ED342A00980A9E /* LocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
+		4CD68C7B19ED342A00980A9E /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
+		4CD68C7D19ED344500980A9E /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		4CD68C7E19ED344500980A9E /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		4CD68C8019ED3A6C00980A9E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CD68C8119ED3A6C00980A9E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +117,7 @@
 		4C996FE319E5591800F8502E = {
 			isa = PBXGroup;
 			children = (
+				4CD68C8019ED3A6C00980A9E /* MapKit.framework */,
 				4C996FEE19E5591800F8502E /* pl.wroclaw.2017 */,
 				4C99700819E5591800F8502E /* pl.wroclaw.2017Tests */,
 				4C996FED19E5591800F8502E /* Products */,
@@ -123,12 +142,22 @@
 				4C996FF419E5591800F8502E /* AppDelegate.m */,
 				4C996FF619E5591800F8502E /* ViewController.h */,
 				4C996FF719E5591800F8502E /* ViewController.m */,
-				4C30110519E56C64005D1BAA /* NewsViewController.h */,
-				4C30110619E56C64005D1BAA /* NewsViewController.m */,
 				4C996FF919E5591800F8502E /* Main.storyboard */,
 				4C996FFC19E5591800F8502E /* Images.xcassets */,
 				4C996FFE19E5591800F8502E /* LaunchScreen.xib */,
 				4C996FEF19E5591800F8502E /* Supporting Files */,
+				4CD68C7119ED33EE00980A9E /* InfoViewController.h */,
+				4CD68C7219ED33EE00980A9E /* InfoViewController.m */,
+				4C30110519E56C64005D1BAA /* NewsViewController.h */,
+				4C30110619E56C64005D1BAA /* NewsViewController.m */,
+				4CD68C7419ED340300980A9E /* DisciplinesViewController.h */,
+				4CD68C7519ED340300980A9E /* DisciplinesViewController.m */,
+				4CD68C7719ED341C00980A9E /* CalendarViewController.h */,
+				4CD68C7819ED341C00980A9E /* CalendarViewController.m */,
+				4CD68C7A19ED342A00980A9E /* LocationsViewController.h */,
+				4CD68C7B19ED342A00980A9E /* LocationsViewController.m */,
+				4CD68C7D19ED344500980A9E /* ResultsViewController.h */,
+				4CD68C7E19ED344500980A9E /* ResultsViewController.m */,
 			);
 			path = pl.wroclaw.2017;
 			sourceTree = "<group>";
@@ -223,6 +252,12 @@
 				TargetAttributes = {
 					4C996FEB19E5591800F8502E = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = XA82JG5U4D;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					4C99700419E5591800F8502E = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -283,10 +318,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C996FF819E5591800F8502E /* ViewController.m in Sources */,
+				4CD68C7919ED341C00980A9E /* CalendarViewController.m in Sources */,
 				4C996FF519E5591800F8502E /* AppDelegate.m in Sources */,
 				4C996FF219E5591800F8502E /* main.m in Sources */,
 				4C30110719E56C64005D1BAA /* NewsViewController.m in Sources */,
+				4CD68C7F19ED344500980A9E /* ResultsViewController.m in Sources */,
+				4CD68C7619ED340300980A9E /* DisciplinesViewController.m in Sources */,
 				4C3010FD19E56539005D1BAA /* SWRevealViewController.m in Sources */,
+				4CD68C7C19ED342A00980A9E /* LocationsViewController.m in Sources */,
+				4CD68C7319ED33EE00980A9E /* InfoViewController.m in Sources */,
 				4C30110019E56841005D1BAA /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = pl.wroclaw.2017/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -421,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = pl.wroclaw.2017/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

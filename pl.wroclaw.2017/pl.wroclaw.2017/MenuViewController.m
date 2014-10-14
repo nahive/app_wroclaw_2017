@@ -25,10 +25,14 @@
 }
 
 -(void) customSetup{
-    self.view.backgroundColor = [self colorWithHexString:@"7f7f7f"];
     self.tableView.backgroundColor = [self colorWithHexString:@"7f7f7f"];
-    
+//    self.logoView.frame = CGRectMake(10, 10, 150, 60);
+//    self.logoView.contentMode = UIViewContentModeCenter;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, -1000,320, 1000)];
+    view.backgroundColor=[UIColor whiteColor];
+    [self.view addSubview:view];
+    
 }
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
@@ -54,9 +58,22 @@
     return 1;
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        return 95;
+    }
+    return 43;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 7;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,21 +106,24 @@
     switch ( indexPath.row )
     {
         case 0:
-            CellIdentifier = @"news";
+            CellIdentifier = @"logo";
             break;
         case 1:
-            CellIdentifier = @"info";
+            CellIdentifier = @"news";
             break;
         case 2:
-            CellIdentifier = @"disciplines";
+            CellIdentifier = @"info";
             break;
         case 3:
-            CellIdentifier = @"calendar";
+            CellIdentifier = @"disciplines";
             break;
         case 4:
-            CellIdentifier = @"locations";
+            CellIdentifier = @"calendar";
             break;
         case 5:
+            CellIdentifier = @"locations";
+            break;
+        case 6:
             CellIdentifier = @"results";
             break;
     }
