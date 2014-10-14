@@ -8,12 +8,19 @@
 
 #import "NewsViewController.h"
 #import "SWRevealViewController.h"
+#import "CustomTableCell.h"
 
 @interface NewsViewController ()
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
 @end
 
 @implementation NewsViewController
+{
+NSArray *images;
+NSArray *titles;
+NSArray *shortTexts;
+NSArray *dates;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +30,15 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self initArrays];
+}
+
+-(void) initArrays
+{
+    titles = [[NSArray alloc] initWithObjects:@"News1",@"News2",@"News3", nil];
+    shortTexts = [[NSArray alloc] initWithObjects:@"Lorem adasd asd asd asd asd asd ",@"Impsum iipoi opi poi po ipoi poipi",@"Dolor dsaj ijf fiwej funf rn ur", nil];
+    dates = [[NSArray alloc] initWithObjects:@"2014-06-11",@"2014-06-12",@"2014-06-13", nil];
+    images = [[NSArray alloc] initWithObjects:@"news1.jpg",@"news2.png",@"news3.jpg", nil];
 }
 
 
@@ -43,29 +59,39 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *simpleTableIdentifier = @"CustomTableCell";
+    NSLog(@"bla");
+    CustomTableCell *cell = (CustomTableCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:simpleTableIdentifier owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+  
+    cell.title.text = [titles objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:[images objectAtIndex:indexPath.row]];
+    cell.shortText.text = [shortTexts objectAtIndex:indexPath.row];
+    cell.date.text = [dates objectAtIndex:indexPath.row];
+      NSLog(@"bla2");
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 105;
+}
+
+
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 3;
 }
-
-/*
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
- 
- // Configure the cell...
- 
- return cell;
- }
- */
 
 /*
  // Override to support conditional editing of the table view.

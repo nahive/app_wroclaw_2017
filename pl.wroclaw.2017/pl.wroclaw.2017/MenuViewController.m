@@ -32,7 +32,6 @@
     UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, -1000,320, 1000)];
     view.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:view];
-    
 }
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender

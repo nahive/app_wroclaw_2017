@@ -173,10 +173,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="46a-7c-O0Y">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="46a-7c-O0Y" id="EQT-Rq-8bK">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="z2r-fY-iMK">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z2r-fY-iMK" id="5RG-6l-iEg">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="sc2-YW-Qm9" id="Brz-Oj-EFp"/>
-                            <outlet property="delegate" destination="sc2-YW-Qm9" id="HaC-cc-RRN"/>
+                            <outlet property="dataSource" destination="sc2-YW-Qm9" id="NjD-31-rgj"/>
+                            <outlet property="delegate" destination="sc2-YW-Qm9" id="VSp-gK-pdC"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="News" id="APP-Jt-wzR">
@@ -274,7 +287,6 @@
         <!--Disciplines View-->
         <scene sceneID="GRH-2t-C3m">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3MQ-hD-Gnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="DisciplineView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cTl-0X-R5S" userLabel="Disciplines View" customClass="DisciplinesViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0AV-4G-oAx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -302,6 +314,7 @@
                         <outlet property="revealButtonItem" destination="oD5-4n-0oS" id="EFQ-j0-lai"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3MQ-hD-Gnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2917" y="-161"/>
         </scene>
