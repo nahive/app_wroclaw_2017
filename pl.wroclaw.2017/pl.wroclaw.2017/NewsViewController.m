@@ -8,19 +8,16 @@
 
 #import "NewsViewController.h"
 #import "SWRevealViewController.h"
-#import "CustomTableCell.h"
 
 @interface NewsViewController ()
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
 @end
 
 @implementation NewsViewController
-{
 NSArray *images;
 NSArray *titles;
-NSArray *shortTexts;
+NSArray *contents;
 NSArray *dates;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,17 +27,13 @@ NSArray *dates;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self initArrays];
+    titles = [NSArray arrayWithObjects:@"Lorem",@"Ipsum",@"Dolor", nil];
+    images = [NSArray arrayWithObjects:@"news1.jpg",@"news2.png",@"news3.jpg", nil];
+    dates = [NSArray arrayWithObjects:@"2014-06-16",@"2014-06-15",@"2014-06-14", nil];
+    contents = [NSArray arrayWithObjects:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam.",
+                @"Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor.",
+                @"Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus.", nil];
 }
-
--(void) initArrays
-{
-    titles = [[NSArray alloc] initWithObjects:@"News1",@"News2",@"News3", nil];
-    shortTexts = [[NSArray alloc] initWithObjects:@"Lorem adasd asd asd asd asd asd ",@"Impsum iipoi opi poi po ipoi poipi",@"Dolor dsaj ijf fiwej funf rn ur", nil];
-    dates = [[NSArray alloc] initWithObjects:@"2014-06-11",@"2014-06-12",@"2014-06-13", nil];
-    images = [[NSArray alloc] initWithObjects:@"news1.jpg",@"news2.png",@"news3.jpg", nil];
-}
-
 
 - (void)customSetup
 {
@@ -60,28 +53,23 @@ NSArray *dates;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *simpleTableIdentifier = @"CustomTableCell";
-    NSLog(@"bla");
-    CustomTableCell *cell = (CustomTableCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:simpleTableIdentifier owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-  
-    cell.title.text = [titles objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:[images objectAtIndex:indexPath.row]];
-    cell.shortText.text = [shortTexts objectAtIndex:indexPath.row];
-    cell.date.text = [dates objectAtIndex:indexPath.row];
-      NSLog(@"bla2");
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 105;
+    static NSString *simpleTableIdentifier = @"NewsCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    UIImageView *image = (UIImageView*) [cell viewWithTag:101];
+    image.image = [UIImage imageNamed:[images objectAtIndex:indexPath.row]];
+    
+    UILabel *date = (UILabel *) [cell viewWithTag:102];
+    date.text = [dates objectAtIndex:indexPath.row];
+    UILabel *title = (UILabel *) [cell viewWithTag:103];
+    title.text = [titles objectAtIndex:indexPath.row];
+    UILabel *content = (UILabel *) [cell viewWithTag:104];
+    content.text = [contents objectAtIndex:indexPath.row];
+    return cell;
 }
 
 
@@ -90,7 +78,12 @@ NSArray *dates;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 3;
+    return [titles count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
 }
 
 /*
