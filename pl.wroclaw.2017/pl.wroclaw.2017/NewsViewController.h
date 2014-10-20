@@ -9,4 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NewsViewController : UITableViewController
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 @end

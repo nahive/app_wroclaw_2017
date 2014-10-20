@@ -34,6 +34,7 @@
 		4CD68C7C19ED342A00980A9E /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD68C7B19ED342A00980A9E /* LocationsViewController.m */; };
 		4CD68C7F19ED344500980A9E /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD68C7E19ED344500980A9E /* ResultsViewController.m */; };
 		4CD68C8119ED3A6C00980A9E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD68C8019ED3A6C00980A9E /* MapKit.framework */; };
+		D41AD54519F175130029C18F /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41AD54419F175130029C18F /* NewsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		4CD68C7D19ED344500980A9E /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		4CD68C7E19ED344500980A9E /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		4CD68C8019ED3A6C00980A9E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D41AD54319F175130029C18F /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		D41AD54419F175130029C18F /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,8 @@
 				4C996FEF19E5591800F8502E /* Supporting Files */,
 				4CD68C7119ED33EE00980A9E /* InfoViewController.h */,
 				4CD68C7219ED33EE00980A9E /* InfoViewController.m */,
+				D41AD54319F175130029C18F /* NewsDetailViewController.h */,
+				D41AD54419F175130029C18F /* NewsDetailViewController.m */,
 				4C30110519E56C64005D1BAA /* NewsViewController.h */,
 				4C30110619E56C64005D1BAA /* NewsViewController.m */,
 				4CD68C7419ED340300980A9E /* DisciplinesViewController.h */,
@@ -333,6 +338,7 @@
 				4CD68C7919ED341C00980A9E /* CalendarViewController.m in Sources */,
 				4C996FF519E5591800F8502E /* AppDelegate.m in Sources */,
 				4C996FF219E5591800F8502E /* main.m in Sources */,
+				D41AD54519F175130029C18F /* NewsDetailViewController.m in Sources */,
 				4C30110719E56C64005D1BAA /* NewsViewController.m in Sources */,
 				4CD68C7F19ED344500980A9E /* ResultsViewController.m in Sources */,
 				4CD68C7619ED340300980A9E /* DisciplinesViewController.m in Sources */,

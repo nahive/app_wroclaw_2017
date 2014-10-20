@@ -8,16 +8,22 @@
 
 #import "NewsViewController.h"
 #import "SWRevealViewController.h"
+#import "NewsDetailViewController.h"
+
 
 @interface NewsViewController ()
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
 @end
 
-@implementation NewsViewController
+@implementation NewsViewController {
 NSArray *images;
 NSArray *titles;
-NSArray *contents;
+NSArray *shortContents;
 NSArray *dates;
+NSArray *fullContents;
+}
+
+@synthesize tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,9 +36,12 @@ NSArray *dates;
     titles = [NSArray arrayWithObjects:@"Lorem",@"Ipsum",@"Dolor", nil];
     images = [NSArray arrayWithObjects:@"news1.jpg",@"news2.png",@"news3.jpg", nil];
     dates = [NSArray arrayWithObjects:@"2014-06-16",@"2014-06-15",@"2014-06-14", nil];
-    contents = [NSArray arrayWithObjects:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam.",
+    shortContents = [NSArray arrayWithObjects:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam.",
                 @"Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor.",
                 @"Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus.", nil];
+    fullContents = [NSArray arrayWithObjects:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam.",
+                    @"Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor. Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor. Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor.",
+                    @"Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus. Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus. Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus.", nil];
 }
 
 - (void)customSetup
@@ -68,8 +77,19 @@ NSArray *dates;
     UILabel *title = (UILabel *) [cell viewWithTag:103];
     title.text = [titles objectAtIndex:indexPath.row];
     UILabel *content = (UILabel *) [cell viewWithTag:104];
-    content.text = [contents objectAtIndex:indexPath.row];
+    content.text = [shortContents objectAtIndex:indexPath.row];
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showNewsDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NewsDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.newsName = [titles objectAtIndex:indexPath.row];
+        destViewController.photoName = [images objectAtIndex:indexPath.row];
+        destViewController.dateValue = [dates objectAtIndex:indexPath.row];
+        destViewController.textValue = [fullContents objectAtIndex:indexPath.row];
+    }
 }
 
 
