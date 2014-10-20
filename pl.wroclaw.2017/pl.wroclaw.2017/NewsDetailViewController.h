@@ -19,5 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *textContent;
 @property (nonatomic, strong) NSString *textValue;
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+
 
 @end

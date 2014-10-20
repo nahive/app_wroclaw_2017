@@ -13,14 +13,7 @@
 @end
 
 @implementation NewsDetailViewController
-@synthesize newsLabel;
-@synthesize newsName;
-@synthesize newsDetailPhoto;
-@synthesize photoName;
-@synthesize dateLabel;
-@synthesize dateValue;
-@synthesize textValue;
-@synthesize textContent;
+@synthesize newsLabel, newsName, newsDetailPhoto, photoName, dateLabel, dateValue, textValue, textContent, scrollView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,9 +23,13 @@
     dateLabel.text = dateValue;
     textContent.text = textValue;
     
-    CGRect rect      = textContent.frame;
-    rect.size.height = textContent.contentSize.height;
-    textContent.frame   = rect;
+    scrollView.contentSize = CGSizeMake(320, 1700);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    CGRect frame = textContent.frame;
+    frame.size.height = textContent.contentSize.height;
+    textContent.frame = frame;   
     
 }
 
