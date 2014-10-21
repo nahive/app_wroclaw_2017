@@ -2,7 +2,7 @@
 //  NewsDetailViewController.m
 //  pl.wroclaw.2017
 //
-//  Created by Adam Mateja on 17.10.2014.
+//  Created by Szy Mas on 21/10/14.
 //  Copyright (c) 2014 pl.wroclaw. All rights reserved.
 //
 
@@ -13,34 +13,25 @@
 @end
 
 @implementation NewsDetailViewController
-@synthesize newsLabel, newsName, newsDetailPhoto, photoName, dateLabel, dateValue, textValue, textContent, scrollView;
-
+@synthesize newsContent,newsDate,newsTitle,imageView,titleValue,dateValue,contentValue,photoValue, scrollView;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    newsTitle.text = titleValue;
+    newsDate.text = dateValue;
+    newsContent.text = contentValue;
+    imageView.image = [UIImage imageNamed:photoValue];
     // Do any additional setup after loading the view.
-    newsLabel.text = newsName;
-    newsDetailPhoto.image = [UIImage imageNamed:photoName];
-    dateLabel.text = dateValue;
-    textContent.text = textValue;
-    
-    scrollView.contentSize = CGSizeMake(320, 1700);
-    
-    
-
-   // textContent = [[UITextView alloc] initWithFrame:CGRectMake(20, 35, 280, 50)];
-    textContent.text = textValue;
-    
 }
 
-- (void) viewDidAppear:(BOOL)animated {
-    [self.view addSubview:textContent];
-    CGRect frame = textContent.frame;
-    frame.size.height = textContent.contentSize.height;
-    textContent.frame = frame;
+- (void) viewDidAppear:(BOOL)animated  {
+    CGFloat scrollViewHeight = 0.0f;
+    for (UIView* view in scrollView.subviews)
+    {
+        scrollViewHeight += view.frame.size.height;
+    }
+    scrollViewHeight -= 50;
+    [scrollView setContentSize:(CGSizeMake(320, scrollViewHeight))];
 }
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
