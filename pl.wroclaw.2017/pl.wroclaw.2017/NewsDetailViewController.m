@@ -24,14 +24,22 @@
     textContent.text = textValue;
     
     scrollView.contentSize = CGSizeMake(320, 1700);
-}
+    
+    
 
-- (void)viewDidAppear:(BOOL)animated {
-    CGRect frame = textContent.frame;
-    frame.size.height = textContent.contentSize.height;
-    textContent.frame = frame;   
+   // textContent = [[UITextView alloc] initWithFrame:CGRectMake(20, 35, 280, 50)];
+    textContent.text = textValue;
     
 }
+
+- (void) viewDidAppear:(BOOL)animated {
+    [self.view addSubview:textContent];
+    CGRect frame = textContent.frame;
+    frame.size.height = textContent.contentSize.height;
+    textContent.frame = frame;
+}
+
+
 
 
 - (void)didReceiveMemoryWarning {

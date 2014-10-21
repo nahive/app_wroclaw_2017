@@ -330,7 +330,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="8" y="361" width="299" height="134"/>
+                                    <rect key="frame" x="8" y="356" width="299" height="67"/>
                                 </variation>
                             </textView>
                         </subviews>
