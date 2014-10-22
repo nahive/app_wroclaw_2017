@@ -5,50 +5,63 @@
     </dependencies>
     <scenes>
         <!--News Detail View Controller-->
-        <scene sceneID="3bV-gG-btZ">
+        <scene sceneID="9CO-5w-bbE">
             <objects>
-                <viewController id="WZB-jz-5Oq" customClass="NewsDetailViewController" customModule="wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VqC-HN-2tm" customClass="NewsDetailViewController" customModule="wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wzz-Sf-7uc"/>
-                        <viewControllerLayoutGuide type="bottom" id="rkt-5F-Joo"/>
+                        <viewControllerLayoutGuide type="top" id="0hg-Pd-EXh"/>
+                        <viewControllerLayoutGuide type="bottom" id="EEz-Ed-ibh"/>
                     </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="BVT-LZ-HP4">
+                    <view key="view" contentMode="scaleToFill" id="IF0-Ws-wu9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYx-63-HSx"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmD-6c-naC">
-                                <rect key="frame" x="201" y="284" width="197" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCh-aW-8LN">
-                                <rect key="frame" x="201" y="325" width="197" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hg-Ah-3WD">
-                                <rect key="frame" x="201" y="255" width="164" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJj-0Z-CH4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Kg-aB-jqD">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ox-u8-QhW">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="243"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7i7-hO-Kbp">
+                                                <rect key="frame" x="8" y="251" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8u-UO-UNx">
+                                                <rect key="frame" x="8" y="280" width="65" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IO8-5Q-aJF">
+                                                <rect key="frame" x="8" y="321" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </scrollView>
+                    </view>
                     <connections>
-                        <outlet property="newsContent" destination="mCh-aW-8LN" id="P0z-CL-Ars"/>
-                        <outlet property="newsDate" destination="2hg-Ah-3WD" id="pNQ-vO-nAx"/>
-                        <outlet property="newsImage" destination="dYx-63-HSx" id="hZh-sU-cQ5"/>
-                        <outlet property="newsTitle" destination="zmD-6c-naC" id="Vh4-6k-RH3"/>
-                        <outlet property="scrollView" destination="BVT-LZ-HP4" id="3SV-xn-Ic8"/>
+                        <outlet property="insideView" destination="5Kg-aB-jqD" id="4J8-Iz-kcQ"/>
+                        <outlet property="newsContent" destination="IO8-5Q-aJF" id="pZc-0c-d65"/>
+                        <outlet property="newsDate" destination="7i7-hO-Kbp" id="3LT-wa-Tcr"/>
+                        <outlet property="newsImage" destination="1ox-u8-QhW" id="3gz-kW-XHa"/>
+                        <outlet property="newsTitle" destination="B8u-UO-UNx" id="AKr-3i-3Pu"/>
+                        <outlet property="scrollView" destination="SJj-0Z-CH4" id="dcR-7c-JzE"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VGW-On-mxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSc-3Y-ASD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530" y="-926"/>
+            <point key="canvasLocation" x="1530" y="-909"/>
         </scene>
         <!--News View-->
         <scene sceneID="XDa-bw-qPS">
@@ -89,7 +102,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="WZB-jz-5Oq" kind="show" identifier="showNewsDetail" id="Q7a-Cr-Gxc"/>
+                                    <segue destination="VqC-HN-2tm" kind="show" identifier="showNewsDetail" id="YkM-os-1TO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
