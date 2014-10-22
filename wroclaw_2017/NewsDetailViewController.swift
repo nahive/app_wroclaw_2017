@@ -30,48 +30,37 @@ class NewsDetailViewController: UIViewController {
         newsTitle.text = titleVal;
         newsContent.text = contentVal;
         
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
+        view.backgroundColor = UIColor.greenColor()
+        scrollView.backgroundColor = UIColor.redColor()
+        insideView.backgroundColor = UIColor.blueColor()
         
-//
-          newsImage.frame = CGRectMake(0,0,view.frame.size.width,view.frame.size.height/3);
-        newsDate.frame = CGRectMake(5, view.frame.size.height/3+2, view.frame.size.width/2, newsDate.frame.size.height);
-        newsTitle.frame = CGRectMake(5, newsDate.frame.origin.y + newsDate.frame.size.height, view.frame.size.width/2, newsTitle.frame.size.height*3);
-        newsContent.frame = CGRectMake(5, newsTitle.frame.origin.y + newsTitle.frame.size.height, view.frame.size.width,newsContent.frame.size.height*10);
+//        newsImage.frame = CGRectMake(0,0,view.frame.size.width,view.frame.size.height/3);
+//        newsDate.frame = CGRectMake(5, view.frame.size.height/3+2, view.frame.size.width/2, newsDate.frame.size.height);
+//        newsTitle.frame = CGRectMake(5, newsDate.frame.origin.y + newsDate.frame.size.height, view.frame.size.width/2, newsTitle.frame.size.height*3);
+//        newsContent.frame = CGRectMake(5, newsTitle.frame.origin.y + newsTitle.frame.size.height, view.frame.size.width,newsContent.frame.size.height*25);
         
-//        var viewHeight: CGFloat = 0.0;
-//        for view in insideView.subviews{
-//            viewHeight += view.frame.size.height
+//        
+//        var size : CGFloat = 0;
+//        size += newsImage.frame.size.height;
+//        size += newsDate.frame.size.height;
+//        size += newsTitle.frame.size.height;
+//        size += newsContent.frame.size.height;
+//        insideView.frame = CGRectMake(0,0,insideView.frame.size.width, size);
+//        
+//        view.backgroundColor = UIColor.whiteColor()
+//        var scrollViewHeight: CGFloat = 0.0;
+//        for view in scrollView.subviews{
+//            scrollViewHeight += view.frame.size.height
 //        }
-//        insideView.frame.size.height = viewHeight;
-
-        var scrollViewHeight: CGFloat = 0.0;
-        for view in scrollView.subviews{
-            scrollViewHeight += view.frame.size.height
-        }
-        scrollView.contentSize = CGSizeMake(320, scrollViewHeight);
-
-        
-        
+//        scrollView.contentSize = CGSizeMake(320, scrollViewHeight);
     }
     
-//    func resizeToFitSubviews(){
-//        var w : Int = 0;
-//        var h : Int = 0;
-//        
-//        for v in insideView.subviews {
-//            var fw = (v.frame.origin.x + v.frame.size.width);
-//            var fh = (v.frame.origin.y + v.frame.size.height);
-//            w = w > fw ? w : fw;
-//            h = h > fh ? h : fh;
-//        }
-//        insideView.frame = CGRectMake(insideView.origin.x, insideView.frame.origin.y, <#width: CGFloat#>, <#height: CGFloat#>)
-//    }
-//    
     override func viewWillAppear(animated: Bool) {
-        //
         
     }
 
