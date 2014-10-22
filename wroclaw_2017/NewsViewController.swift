@@ -11,7 +11,7 @@ import UIKit
 class NewsViewController: UITableViewController {
     @IBOutlet weak var revealButtonItem: UIBarButtonItem!
     var images: [String] = ["news1.jpg","news2.png","news3.jpg"];
-    var titles: [String] = ["Lorem","Ipsum","Dolor"];
+    var titles: [String] = ["Jasiu szedl po mleko i nie doszedl w ogole","Ipsum","Dolor"];
     var dates: [String] = ["2014-06-16","2014-06-15","2014-06-14"];
     var shortContents: [String] = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam.",
     "Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor.",

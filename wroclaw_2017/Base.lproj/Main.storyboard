@@ -4,6 +4,52 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
+        <!--News Detail View Controller-->
+        <scene sceneID="3bV-gG-btZ">
+            <objects>
+                <viewController id="WZB-jz-5Oq" customClass="NewsDetailViewController" customModule="wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wzz-Sf-7uc"/>
+                        <viewControllerLayoutGuide type="bottom" id="rkt-5F-Joo"/>
+                    </layoutGuides>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="BVT-LZ-HP4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYx-63-HSx"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmD-6c-naC">
+                                <rect key="frame" x="201" y="284" width="197" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCh-aW-8LN">
+                                <rect key="frame" x="201" y="325" width="197" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hg-Ah-3WD">
+                                <rect key="frame" x="201" y="255" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </scrollView>
+                    <connections>
+                        <outlet property="newsContent" destination="mCh-aW-8LN" id="P0z-CL-Ars"/>
+                        <outlet property="newsDate" destination="2hg-Ah-3WD" id="pNQ-vO-nAx"/>
+                        <outlet property="newsImage" destination="dYx-63-HSx" id="hZh-sU-cQ5"/>
+                        <outlet property="newsTitle" destination="zmD-6c-naC" id="Vh4-6k-RH3"/>
+                        <outlet property="scrollView" destination="BVT-LZ-HP4" id="3SV-xn-Ic8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VGW-On-mxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530" y="-926"/>
+        </scene>
         <!--News View-->
         <scene sceneID="XDa-bw-qPS">
             <objects>
@@ -43,7 +89,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="hqK-JJ-SO4" kind="show" identifier="showNewsDetail" id="rjn-bX-qY5"/>
+                                    <segue destination="WZB-jz-5Oq" kind="show" identifier="showNewsDetail" id="Q7a-Cr-Gxc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -64,61 +110,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaW-T1-gwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1530" y="-215"/>
-        </scene>
-        <!--News Detail View Controller-->
-        <scene sceneID="5LF-mJ-cXU">
-            <objects>
-                <viewController id="hqK-JJ-SO4" customClass="NewsDetailViewController" customModule="wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7oh-EB-lBA"/>
-                        <viewControllerLayoutGuide type="bottom" id="nJ5-hm-9tt"/>
-                    </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="B8v-cG-lL0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="news1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cRL-5X-CmJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="197"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="fwQ-bh-FIW"/>
-                                    <constraint firstAttribute="height" constant="197" id="plU-Kl-6Iy"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6js-3H-T12">
-                                <rect key="frame" x="8" y="205" width="235" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vb1-7E-z3P">
-                                <rect key="frame" x="8" y="234" width="221" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu2-Px-3gs">
-                                <rect key="frame" x="8" y="263" width="214" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="cRL-5X-CmJ" secondAttribute="centerX" id="9NI-3Z-ksl"/>
-                        </constraints>
-                    </scrollView>
-                    <connections>
-                        <outlet property="newsContent" destination="Xu2-Px-3gs" id="wUW-7I-SgI"/>
-                        <outlet property="newsDate" destination="6js-3H-T12" id="Cts-KU-mud"/>
-                        <outlet property="newsImage" destination="cRL-5X-CmJ" id="y4s-8A-Aaf"/>
-                        <outlet property="newsTitle" destination="vb1-7E-z3P" id="N47-4q-QQ0"/>
-                        <outlet property="scrollView" destination="B8v-cG-lL0" id="kxc-Qx-n9W"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UFR-DK-ZOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1530" y="-874"/>
         </scene>
         <!--News Controller-->
         <scene sceneID="laM-0m-Ixk">
@@ -302,7 +293,6 @@
         <image name="ic_action_network_cell.png" width="96" height="96"/>
         <image name="ic_action_place.png" width="96" height="96"/>
         <image name="logo.png" width="924" height="263"/>
-        <image name="news1.jpg" width="1920" height="1200"/>
         <image name="reveal-icon.png" width="22" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
