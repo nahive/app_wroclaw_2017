@@ -14,8 +14,10 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var newsContent: UILabel!
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var insideView: UIView!
     
+    @IBOutlet weak var V: NSLayoutConstraint!
+ 
+    var screen =  UIScreen.mainScreen().bounds;
     var imageVal = "";
     var dateVal = "";
     var titleVal = "";
@@ -29,35 +31,28 @@ class NewsDetailViewController: UIViewController {
         newsDate.text = dateVal;
         newsTitle.text = titleVal;
         newsContent.text = contentVal;
+       
+    }
+    
+    func customSetup(){
+//        view.backgroundColor = UIColor.greenColor()
+//        scrollView.backgroundColor = UIColor.redColor()
         
-        
-        // Do any additional setup after loading the view.
+        newsImage.frame = CGRectMake(0,0,screen.size.width,screen.size.height/3);
+        newsDate.frame = CGRectMake(5, screen.size.height/3+2, screen.size.width/2, newsDate.frame.size.height);
+        newsTitle.frame = CGRectMake(5, newsDate.frame.origin.y + newsDate.frame.size.height, screen.size.width/2, newsTitle.frame.size.height*3);
+        newsContent.frame = CGRectMake(5, newsTitle.frame.origin.y + newsTitle.frame.size.height - newsTitle.frame.size.height/4, screen.size.width,newsContent.frame.size.height*25);
+        V.constant = newsImage.frame.height+newsDate.frame.height+newsTitle.frame.height+newsContent.frame.height;
+        scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, V.constant);
+        scrollView.clipsToBounds = false;
+    }
+    
+    override func viewDidLayoutSubviews() {
+      
     }
     
     override func viewDidAppear(animated: Bool) {
-        view.backgroundColor = UIColor.greenColor()
-        scrollView.backgroundColor = UIColor.redColor()
-        insideView.backgroundColor = UIColor.blueColor()
-        
-//        newsImage.frame = CGRectMake(0,0,view.frame.size.width,view.frame.size.height/3);
-//        newsDate.frame = CGRectMake(5, view.frame.size.height/3+2, view.frame.size.width/2, newsDate.frame.size.height);
-//        newsTitle.frame = CGRectMake(5, newsDate.frame.origin.y + newsDate.frame.size.height, view.frame.size.width/2, newsTitle.frame.size.height*3);
-//        newsContent.frame = CGRectMake(5, newsTitle.frame.origin.y + newsTitle.frame.size.height, view.frame.size.width,newsContent.frame.size.height*25);
-        
-//        
-//        var size : CGFloat = 0;
-//        size += newsImage.frame.size.height;
-//        size += newsDate.frame.size.height;
-//        size += newsTitle.frame.size.height;
-//        size += newsContent.frame.size.height;
-//        insideView.frame = CGRectMake(0,0,insideView.frame.size.width, size);
-//        
-//        view.backgroundColor = UIColor.whiteColor()
-//        var scrollViewHeight: CGFloat = 0.0;
-//        for view in scrollView.subviews{
-//            scrollViewHeight += view.frame.size.height
-//        }
-//        scrollView.contentSize = CGSizeMake(320, scrollViewHeight);
+         customSetup();
     }
     
     override func viewWillAppear(animated: Bool) {
