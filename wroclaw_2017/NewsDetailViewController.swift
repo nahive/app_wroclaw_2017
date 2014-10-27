@@ -15,7 +15,8 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var V: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewH: NSLayoutConstraint!
+    @IBOutlet weak var insideViewH: NSLayoutConstraint!
  
     var screen =  UIScreen.mainScreen().bounds;
     var imageVal = "";
@@ -35,24 +36,26 @@ class NewsDetailViewController: UIViewController {
     }
     
     func customSetup(){
-//        view.backgroundColor = UIColor.greenColor()
-//        scrollView.backgroundColor = UIColor.redColor()
-        
         newsImage.frame = CGRectMake(0,0,screen.size.width,screen.size.height/3);
         newsDate.frame = CGRectMake(5, screen.size.height/3+2, screen.size.width/2, newsDate.frame.size.height);
-        newsTitle.frame = CGRectMake(5, newsDate.frame.origin.y + newsDate.frame.size.height, screen.size.width/2, newsTitle.frame.size.height*3);
-        newsContent.frame = CGRectMake(5, newsTitle.frame.origin.y + newsTitle.frame.size.height - newsTitle.frame.size.height/4, screen.size.width,newsContent.frame.size.height*25);
-        V.constant = newsImage.frame.height+newsDate.frame.height+newsTitle.frame.height+newsContent.frame.height;
-        scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, V.constant);
-        scrollView.clipsToBounds = false;
+        newsContent.frame.size.width = view.frame.width-10;
+        newsTitle.frame.size.width = view.frame.width*2/3;
+        newsTitle.sizeToFit();
+        newsContent.sizeToFit();
+        newsTitle.frame.origin = CGPointMake(5, newsDate.frame.origin.y + newsDate.frame.size.height);
+        newsContent.frame.origin = CGPointMake(5, newsTitle.frame.origin.y+newsTitle.frame.size.height+5);
+        insideViewH.constant = newsImage.frame.height+newsDate.frame.height+newsTitle.frame.height+newsContent.frame.height+30;
+        scrollViewH.constant = view.frame.size.height;
+        scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
     }
     
+    
     override func viewDidLayoutSubviews() {
-      
+        customSetup();
     }
     
     override func viewDidAppear(animated: Bool) {
-         customSetup();
+//         customSetup();
     }
     
     override func viewWillAppear(animated: Bool) {

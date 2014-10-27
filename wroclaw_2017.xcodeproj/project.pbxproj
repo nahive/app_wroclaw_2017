@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */; };
 		4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */; };
 		4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832D19F6F5A800B68B88 /* ViewController.swift */; };
 		4C9B833119F6F5A800B68B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B832F19F6F5A800B68B88 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		4C9B832619F6F5A800B68B88 /* wroclaw_2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wroclaw_2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9B832A19F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				4C9B836519F6F71100B68B88 /* SWRevealViewController.h */,
 				4C9B836619F6F71100B68B88 /* SWRevealViewController.m */,
 				4C9B836B19F70C9000B68B88 /* MenuViewController.swift */,
+				4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */,
 			);
 			name = support;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */,
+				4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */,
 				4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */,
 				4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */,
 				4C9B836719F6F71100B68B88 /* SWRevealViewController.m in Sources */,
