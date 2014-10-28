@@ -63,7 +63,7 @@ class NewsViewController: UITableViewController {
         date?.text = dates[indexPath.row];
         var title: UITextView? = cell!.viewWithTag(103) as? UITextView;
         title?.text = titles[indexPath.row];
-        title?.font = UIFont(name: "Helvetica", size: 16);
+        title?.font = UIFont(name: "HelveticaNeue-Light", size: 17);
        
         
         return cell!

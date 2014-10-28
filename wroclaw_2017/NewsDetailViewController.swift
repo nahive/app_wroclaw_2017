@@ -36,19 +36,6 @@ class NewsDetailViewController: UIViewController {
         hideElements();
         startLoaderAnimation();
        
-        
-        
-        
-        
-//        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-//        spinner.center = CGPointMake(160, 240);
-//        spinner.tag = 12;
-//        [self.view addSubview:spinner];
-//        [spinner startAnimating];
-//        [spinner release];
-        
-        
-       
     }
     
     func startLoaderAnimation() {
@@ -71,8 +58,6 @@ class NewsDetailViewController: UIViewController {
     }
     
     func showElements() {
-        
-        
         UIView.animateWithDuration(0.3,
             delay: 0.0,
             options: .CurveEaseInOut | .AllowUserInteraction,
@@ -109,7 +94,6 @@ class NewsDetailViewController: UIViewController {
         insideViewH.constant = newsImage.frame.height+newsDate.frame.height+newsTitle.frame.height+newsContent.frame.height+30;
         scrollViewH.constant = view.frame.size.height;
         scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
-        
         
     }
     

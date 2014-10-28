@@ -29,6 +29,9 @@
 		4C9B836C19F70C9000B68B88 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B836B19F70C9000B68B88 /* MenuViewController.swift */; };
 		4CB5F59E19F71255006F09EC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5F59D19F71255006F09EC /* NewsViewController.swift */; };
 		4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */; };
+		4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3471A004B65006DE05C /* DIDatepicker.m */; };
+		4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */; };
+		4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,11 @@
 		4C9B836B19F70C9000B68B88 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4CB5F59D19F71255006F09EC /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		4CC9A3461A004B65006DE05C /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
+		4CC9A3471A004B65006DE05C /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
+		4CC9A3481A004B65006DE05C /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
+		4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
+		4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,13 +122,14 @@
 				4C9B836819F70BE800B68B88 /* support */,
 				4C9B834D19F6F65C00B68B88 /* assets */,
 				4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */,
+				4C9B832F19F6F5A800B68B88 /* Main.storyboard */,
 				4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */,
 				4C9B832D19F6F5A800B68B88 /* ViewController.swift */,
-				4C9B832F19F6F5A800B68B88 /* Main.storyboard */,
-				4C9B833219F6F5A800B68B88 /* Images.xcassets */,
-				4C9B832919F6F5A800B68B88 /* Supporting Files */,
 				4CB5F59D19F71255006F09EC /* NewsViewController.swift */,
 				4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */,
+				4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */,
+				4C9B833219F6F5A800B68B88 /* Images.xcassets */,
+				4C9B832919F6F5A800B68B88 /* Supporting Files */,
 			);
 			path = wroclaw_2017;
 			sourceTree = "<group>";
@@ -172,6 +181,10 @@
 		4C9B836819F70BE800B68B88 /* support */ = {
 			isa = PBXGroup;
 			children = (
+				4CC9A3461A004B65006DE05C /* DIDatepicker.h */,
+				4CC9A3471A004B65006DE05C /* DIDatepicker.m */,
+				4CC9A3481A004B65006DE05C /* DIDatepickerDateView.h */,
+				4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */,
 				4C9B836519F6F71100B68B88 /* SWRevealViewController.h */,
 				4C9B836619F6F71100B68B88 /* SWRevealViewController.m */,
 				4C9B836B19F70C9000B68B88 /* MenuViewController.swift */,
@@ -291,8 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */,
 				4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */,
 				4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */,
+				4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */,
+				4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */,
 				4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */,
 				4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */,
 				4C9B836719F6F71100B68B88 /* SWRevealViewController.m in Sources */,
