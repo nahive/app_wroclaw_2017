@@ -23,7 +23,7 @@ class NewsDetailViewController: UIViewController {
     var dateVal = "";
     var titleVal = "";
     var contentVal = "";
-    
+    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,69 @@ class NewsDetailViewController: UIViewController {
         newsDate.text = dateVal;
         newsTitle.text = titleVal;
         newsContent.text = contentVal;
+        
+        hideElements();
+        startLoaderAnimation();
        
+        
+        
+        
+        
+//        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+//        spinner.center = CGPointMake(160, 240);
+//        spinner.tag = 12;
+//        [self.view addSubview:spinner];
+//        [spinner startAnimating];
+//        [spinner release];
+        
+        
+       
+    }
+    
+    func startLoaderAnimation() {
+        actInd.center = self.view.center
+        actInd.hidesWhenStopped = true
+        actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        view.addSubview(actInd)
+        actInd.startAnimating()
+    }
+    
+    func stopLoaderAnimation(){
+        actInd.stopAnimating();
+    }
+    
+    func hideElements() {
+        newsImage.alpha = 0.0;
+        newsDate.alpha = 0.0;
+        newsTitle.alpha = 0.0;
+        newsContent.alpha = 0.0;
+    }
+    
+    func showElements() {
+        
+        
+        UIView.animateWithDuration(0.3,
+            delay: 0.0,
+            options: .CurveEaseInOut | .AllowUserInteraction,
+            animations: {
+                self.newsImage.alpha = 1.0
+            },
+            completion: { finished in
+                println("Bug faced right!")
+        })
+        
+        UIView.animateWithDuration(0.5,
+            delay: 0.5,
+            options: .CurveEaseInOut | .AllowUserInteraction,
+            animations: {
+                self.newsDate.alpha = 1.0
+                self.newsTitle.alpha = 1.0
+                self.newsContent.alpha = 1.0
+            },
+            completion: { finished in
+                
+        })
+        stopLoaderAnimation();
     }
     
     func customSetup(){
@@ -47,15 +109,20 @@ class NewsDetailViewController: UIViewController {
         insideViewH.constant = newsImage.frame.height+newsDate.frame.height+newsTitle.frame.height+newsContent.frame.height+30;
         scrollViewH.constant = view.frame.size.height;
         scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
+        
+        
     }
     
     
     override func viewDidLayoutSubviews() {
         customSetup();
+        
     }
     
     override func viewDidAppear(animated: Bool) {
 //         customSetup();
+        
+        showElements();
     }
     
     override func viewWillAppear(animated: Bool) {
