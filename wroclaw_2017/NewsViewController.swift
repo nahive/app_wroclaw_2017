@@ -11,7 +11,7 @@ import UIKit
 class NewsViewController: UITableViewController {
     @IBOutlet weak var revealButtonItem: UIBarButtonItem!
     var images: [String] = ["news1.jpg","news2.png","news3.jpg"];
-    var titles: [String] = ["Alexis Sanchez increasingly crucial to Arsenal's title hopes","African Cup of Nations - Senzo Meyiwa: South Africa star killed when trying to protect his girlfriend","Football has to return to its roots, or it will die"];
+    var titles: [String] = ["Alexis Sanchez increasingly crucial to Arsenal's title hopes","African Cup of Nations - Senzo Meyiwa: South Africa star killed when...","Football has to return to its roots, or it will die. Football has to return to its roots. "];
     var dates: [String] = ["2014-06-16","2014-06-15","2014-06-14"];
     var fullContents: [String] = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam.",
     "Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor. Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor. Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor.",
@@ -28,6 +28,8 @@ class NewsViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+       
+        
     }
     
     
@@ -42,7 +44,6 @@ class NewsViewController: UITableViewController {
     }
     
    override func viewDidAppear(animated: Bool) {
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,8 +61,11 @@ class NewsViewController: UITableViewController {
         image?.image = UIImage(named: images[indexPath.row]);
         var date: UILabel? = cell!.viewWithTag(102) as? UILabel;
         date?.text = dates[indexPath.row];
-        var title: UILabel? = cell!.viewWithTag(103) as? UILabel;
+        var title: UITextView? = cell!.viewWithTag(103) as? UITextView;
         title?.text = titles[indexPath.row];
+        title?.font = UIFont(name: "Helvetica", size: 16);
+       
+        
         return cell!
     }
     

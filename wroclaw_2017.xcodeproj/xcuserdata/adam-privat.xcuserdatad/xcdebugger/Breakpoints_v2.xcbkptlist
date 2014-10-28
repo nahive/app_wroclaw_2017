@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "wroclaw_2017/NewsViewController.swift"
+            timestampString = "436189344.011637"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "NewsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wroclaw_2017.NewsViewController.titleLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "wroclaw_2017"
+                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
+                  timestampString = "436189344.032622"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wroclaw_2017.NewsViewController.titleLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "wroclaw_2017"
+                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
+                  timestampString = "436189344.033517"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wroclaw_2017.NewsViewController.titleLabel.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "wroclaw_2017"
+                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
+                  timestampString = "436189344.033745"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wroclaw_2017.NewsViewController.init (wroclaw_2017.NewsViewController.Type)(style : C.UITableViewStyle) -&gt; wroclaw_2017.NewsViewController"
+                  moduleName = "wroclaw_2017"
+                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
+                  timestampString = "436189344.033928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "2131">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wroclaw_2017.NewsViewController.init (wroclaw_2017.NewsViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; wroclaw_2017.NewsViewController"
+                  moduleName = "wroclaw_2017"
+                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
+                  timestampString = "436189344.034293"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "1923">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wroclaw_2017.NewsViewController.init (wroclaw_2017.NewsViewController.Type)() -&gt; wroclaw_2017.NewsViewController"
+                  moduleName = "wroclaw_2017"
+                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
+                  timestampString = "436189344.034598"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "2111">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "wroclaw_2017.NewsViewController.init (wroclaw_2017.NewsViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; wroclaw_2017.NewsViewController"
+                  moduleName = "wroclaw_2017"
+                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
+                  timestampString = "436189344.034888"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "2131">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

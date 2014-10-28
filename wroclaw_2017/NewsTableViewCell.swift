@@ -11,10 +11,10 @@ import UIKit
 class NewsTableViewCell: UITableViewCell {
 
     var screen = UIScreen.mainScreen().bounds;
-    @IBOutlet weak var titleCell: UILabel!
-    
-    @IBOutlet weak var titleH: NSLayoutConstraint!
+   // @IBOutlet weak var titleCell: UILabel!
+
     @IBOutlet weak var titleW: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,7 +22,8 @@ class NewsTableViewCell: UITableViewCell {
         
 //        titleCell.backgroundColor = UIColor.redColor();
         titleW.constant = screen.width - 80 - 25;
-        titleH.constant = 60;
+       // titleH.constant = 40;
+     
     }
 
 
