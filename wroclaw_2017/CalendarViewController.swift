@@ -55,6 +55,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             self.revealButtonItem.target = revealViewController;
             self.revealButtonItem.action = "revealToggle:";
             self.navigationController?.navigationBar.addGestureRecognizer(revealViewController.panGestureRecognizer());
+            view.addGestureRecognizer(revealViewController.panGestureRecognizer());
         }
     }
     

@@ -20,7 +20,6 @@ class NewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
-        gestureSetup();
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,12 +36,12 @@ class NewsViewController: UITableViewController {
             self.revealButtonItem.target = revealViewController;
             self.revealButtonItem.action = "revealToggle:";
             self.navigationController?.navigationBar.addGestureRecognizer(revealViewController.panGestureRecognizer());
+            view.addGestureRecognizer(revealViewController.panGestureRecognizer());
         }
     }
     
-    func gestureSetup(){
-        var swipeRight = UISwipeGestureRecognizer(self,"openMenu:");
-swipeRight.direction = UISwipeGestureRecognizer.DirectionRight;
+    func openMenu(){
+        
     }
 
     override func viewDidAppear(animated: Bool) {
