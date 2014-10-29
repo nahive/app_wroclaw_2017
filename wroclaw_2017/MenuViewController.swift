@@ -21,7 +21,7 @@ class MenuViewController: UITableViewController {
     }
     
     func customSetup(){
-        self.tableView.backgroundColor = colorize(0x7f7f7f);
+        self.tableView.backgroundColor = Utils.colorize(0x7f7f7f);
         self.tableView.tableFooterView = UIView(frame: CGRectZero);
         var view: UIView = UIView(frame: CGRectMake(0,-1000,320,1000));
         view.backgroundColor = UIColor.whiteColor();
@@ -55,7 +55,7 @@ class MenuViewController: UITableViewController {
         if(indexPath.row == 0){
             return 95
         }
-        return 43
+        return 55
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

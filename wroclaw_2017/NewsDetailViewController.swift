@@ -35,7 +35,6 @@ class NewsDetailViewController: UIViewController {
         
         hideElements();
         startLoaderAnimation();
-       
     }
     
     func startLoaderAnimation() {
@@ -58,27 +57,10 @@ class NewsDetailViewController: UIViewController {
     }
     
     func showElements() {
-        UIView.animateWithDuration(0.3,
-            delay: 0.0,
-            options: .CurveEaseInOut | .AllowUserInteraction,
-            animations: {
-                self.newsImage.alpha = 1.0
-            },
-            completion: { finished in
-                println("Bug faced right!")
-        })
-        
-        UIView.animateWithDuration(0.5,
-            delay: 0.5,
-            options: .CurveEaseInOut | .AllowUserInteraction,
-            animations: {
-                self.newsDate.alpha = 1.0
-                self.newsTitle.alpha = 1.0
-                self.newsContent.alpha = 1.0
-            },
-            completion: { finished in
-                
-        })
+        Utils.fadeIn(newsImage,duration: 0.3, delay: 0.0);
+        Utils.fadeIn(newsDate,duration: 0.5, delay: 0.5);
+        Utils.fadeIn(newsTitle,duration: 0.5, delay: 0.5);
+        Utils.fadeIn(newsContent,duration: 0.5, delay: 0.5);
         stopLoaderAnimation();
     }
     
@@ -94,7 +76,6 @@ class NewsDetailViewController: UIViewController {
         insideViewH.constant = newsImage.frame.height+newsDate.frame.height+newsTitle.frame.height+newsContent.frame.height+30;
         scrollViewH.constant = view.frame.size.height;
         scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
-        
     }
     
     
@@ -104,8 +85,6 @@ class NewsDetailViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-//         customSetup();
-        
         showElements();
     }
     

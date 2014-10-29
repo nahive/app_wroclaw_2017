@@ -17,12 +17,10 @@ class NewsViewController: UITableViewController {
     "Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor. Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor. Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor.",
     "Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus. Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus. Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus."];
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
+        gestureSetup();
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,7 +29,6 @@ class NewsViewController: UITableViewController {
        
         
     }
-    
     
 
     func customSetup(){
@@ -43,7 +40,12 @@ class NewsViewController: UITableViewController {
         }
     }
     
-   override func viewDidAppear(animated: Bool) {
+    func gestureSetup(){
+        var swipeRight = UISwipeGestureRecognizer(self,"openMenu:");
+swipeRight.direction = UISwipeGestureRecognizer.DirectionRight;
+    }
+
+    override func viewDidAppear(animated: Bool) {
     }
     
     override func didReceiveMemoryWarning() {

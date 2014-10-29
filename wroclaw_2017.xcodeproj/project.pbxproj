@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CF7381A0058BF005D5D95 /* Utils.swift */; };
 		4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */; };
 		4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */; };
 		4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832D19F6F5A800B68B88 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C3CF7381A0058BF005D5D95 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		4C9B832619F6F5A800B68B88 /* wroclaw_2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wroclaw_2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9B832A19F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				4C9B836619F6F71100B68B88 /* SWRevealViewController.m */,
 				4C9B836B19F70C9000B68B88 /* MenuViewController.swift */,
 				4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */,
+				4C3CF7381A0058BF005D5D95 /* Utils.swift */,
 			);
 			name = support;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */,
 				4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */,
 				4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */,
+				4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */,
 				4C9B836719F6F71100B68B88 /* SWRevealViewController.m in Sources */,
 				4CB5F59E19F71255006F09EC /* NewsViewController.swift in Sources */,
 				4C9B836C19F70C9000B68B88 /* MenuViewController.swift in Sources */,

@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        var font: UIFont = UIFont(name: "HelveticaNeue-Thin",size: 20.0)!;
+        let navDict: NSDictionary = [NSFontAttributeName: font];
+        UINavigationBar.appearance().titleTextAttributes = navDict;
+        UINavigationBar.appearance().tintColor = Utils.colorize(0x7f7f7f);
         return true
     }
 
