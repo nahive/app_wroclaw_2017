@@ -23,30 +23,19 @@ class NewsDetailViewController: UIViewController {
     var dateVal = "";
     var titleVal = "";
     var contentVal = "";
-    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fillFromSegue();
+        hideElements();
+    }
+    
+    func fillFromSegue(){
         var image : UIImage = UIImage(named: imageVal)!;
         newsImage.image = image;
         newsDate.text = dateVal;
         newsTitle.text = titleVal;
         newsContent.text = contentVal;
-        
-        hideElements();
-        startLoaderAnimation();
-    }
-    
-    func startLoaderAnimation() {
-        actInd.center = self.view.center
-        actInd.hidesWhenStopped = true
-        actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-        view.addSubview(actInd)
-        actInd.startAnimating()
-    }
-    
-    func stopLoaderAnimation(){
-        actInd.stopAnimating();
     }
     
     func hideElements() {
@@ -61,7 +50,6 @@ class NewsDetailViewController: UIViewController {
         Utils.fadeIn(newsDate,duration: 0.5, delay: 0.5);
         Utils.fadeIn(newsTitle,duration: 0.5, delay: 0.5);
         Utils.fadeIn(newsContent,duration: 0.5, delay: 0.5);
-        stopLoaderAnimation();
     }
     
     func customSetup(){

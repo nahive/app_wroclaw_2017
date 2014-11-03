@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CF7381A0058BF005D5D95 /* Utils.swift */; };
+		4C3D16301A076C85001EBDA7 /* CalendarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */; };
+		4C3D16321A076EE6001EBDA7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D16311A076EE6001EBDA7 /* MapKit.framework */; };
 		4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */; };
 		4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */; };
 		4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832D19F6F5A800B68B88 /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		4C3CF7381A0058BF005D5D95 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDetailViewController.swift; sourceTree = "<group>"; };
+		4C3D16311A076EE6001EBDA7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		4C9B832619F6F5A800B68B88 /* wroclaw_2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wroclaw_2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9B832A19F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3D16321A076EE6001EBDA7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +108,7 @@
 		4C9B831D19F6F5A800B68B88 = {
 			isa = PBXGroup;
 			children = (
+				4C3D16311A076EE6001EBDA7 /* MapKit.framework */,
 				4C9B832819F6F5A800B68B88 /* wroclaw_2017 */,
 				4C9B833E19F6F5A800B68B88 /* wroclaw_2017Tests */,
 				4C9B832719F6F5A800B68B88 /* Products */,
@@ -130,6 +136,7 @@
 				4CB5F59D19F71255006F09EC /* NewsViewController.swift */,
 				4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */,
 				4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */,
+				4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */,
 				4C9B833219F6F5A800B68B88 /* Images.xcassets */,
 				4C9B832919F6F5A800B68B88 /* Supporting Files */,
 			);
@@ -245,6 +252,11 @@
 				TargetAttributes = {
 					4C9B832519F6F5A800B68B88 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					4C9B833A19F6F5A800B68B88 = {
 						CreatedOnToolsVersion = 6.1;
@@ -308,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */,
+				4C3D16301A076C85001EBDA7 /* CalendarDetailViewController.swift in Sources */,
 				4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */,
 				4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */,
 				4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */,
