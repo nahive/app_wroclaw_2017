@@ -20,7 +20,6 @@ class NewsTableViewCell: UITableViewCell {
         titleW.constant = screen.width - 80 - 25;
     }
 
-
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

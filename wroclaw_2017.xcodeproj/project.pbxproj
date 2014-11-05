@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0E6ED41A0922C9006A22D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E6ED31A0922C9006A22D7 /* Main.storyboard */; };
 		4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CF7381A0058BF005D5D95 /* Utils.swift */; };
 		4C3D16301A076C85001EBDA7 /* CalendarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */; };
 		4C3D16321A076EE6001EBDA7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D16311A076EE6001EBDA7 /* MapKit.framework */; };
+		4C4B9E041A09FFF000F60266 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B9E031A09FFF000F60266 /* InfoViewController.swift */; };
+		4C4B9E061A0A001400F60266 /* InfoMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B9E051A0A001400F60266 /* InfoMenuViewController.swift */; };
 		4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */; };
 		4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */; };
 		4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832D19F6F5A800B68B88 /* ViewController.swift */; };
-		4C9B833119F6F5A800B68B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B832F19F6F5A800B68B88 /* Main.storyboard */; };
 		4C9B833319F6F5A800B68B88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B833219F6F5A800B68B88 /* Images.xcassets */; };
 		4C9B834219F6F5A800B68B88 /* wroclaw_2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B834119F6F5A800B68B88 /* wroclaw_2017Tests.swift */; };
 		4C9B834C19F6F63E00B68B88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */; };
@@ -48,15 +50,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0E6ED31A0922C9006A22D7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4C3CF7381A0058BF005D5D95 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDetailViewController.swift; sourceTree = "<group>"; };
 		4C3D16311A076EE6001EBDA7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4C4B9E031A09FFF000F60266 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4C4B9E051A0A001400F60266 /* InfoMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoMenuViewController.swift; sourceTree = "<group>"; };
 		4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		4C9B832619F6F5A800B68B88 /* wroclaw_2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wroclaw_2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9B832A19F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C9B832D19F6F5A800B68B88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4C9B833019F6F5A800B68B88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C9B833219F6F5A800B68B88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4C9B833B19F6F5A800B68B88 /* wroclaw_2017Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wroclaw_2017Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9B834019F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,13 +134,14 @@
 				4C9B836819F70BE800B68B88 /* support */,
 				4C9B834D19F6F65C00B68B88 /* assets */,
 				4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */,
-				4C9B832F19F6F5A800B68B88 /* Main.storyboard */,
+				4C0E6ED31A0922C9006A22D7 /* Main.storyboard */,
 				4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */,
 				4C9B832D19F6F5A800B68B88 /* ViewController.swift */,
 				4CB5F59D19F71255006F09EC /* NewsViewController.swift */,
 				4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */,
 				4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */,
 				4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */,
+				4C4B9E031A09FFF000F60266 /* InfoViewController.swift */,
 				4C9B833219F6F5A800B68B88 /* Images.xcassets */,
 				4C9B832919F6F5A800B68B88 /* Supporting Files */,
 			);
@@ -197,6 +202,7 @@
 				4C9B836519F6F71100B68B88 /* SWRevealViewController.h */,
 				4C9B836619F6F71100B68B88 /* SWRevealViewController.m */,
 				4C9B836B19F70C9000B68B88 /* MenuViewController.swift */,
+				4C4B9E051A0A001400F60266 /* InfoMenuViewController.swift */,
 				4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */,
 				4C3CF7381A0058BF005D5D95 /* Utils.swift */,
 			);
@@ -295,9 +301,9 @@
 				4C9B835F19F6F67000B68B88 /* news1.jpg in Resources */,
 				4C9B835E19F6F67000B68B88 /* logo.png in Resources */,
 				4C9B835B19F6F67000B68B88 /* ic_action_go_to_today.png in Resources */,
+				4C0E6ED41A0922C9006A22D7 /* Main.storyboard in Resources */,
 				4C9B835D19F6F67000B68B88 /* ic_action_place.png in Resources */,
 				4C9B835A19F6F67000B68B88 /* ic_action_chat.png in Resources */,
-				4C9B833119F6F5A800B68B88 /* Main.storyboard in Resources */,
 				4C9B833319F6F5A800B68B88 /* Images.xcassets in Resources */,
 				4C9B836219F6F67000B68B88 /* reveal-icon.png in Resources */,
 				4C9B836019F6F67000B68B88 /* news2.png in Resources */,
@@ -328,9 +334,11 @@
 				4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */,
 				4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */,
 				4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */,
+				4C4B9E041A09FFF000F60266 /* InfoViewController.swift in Sources */,
 				4C9B836719F6F71100B68B88 /* SWRevealViewController.m in Sources */,
 				4CB5F59E19F71255006F09EC /* NewsViewController.swift in Sources */,
 				4C9B836C19F70C9000B68B88 /* MenuViewController.swift in Sources */,
+				4C4B9E061A0A001400F60266 /* InfoMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,17 +359,6 @@
 			targetProxy = 4C9B833C19F6F5A800B68B88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4C9B832F19F6F5A800B68B88 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C9B833019F6F5A800B68B88 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4C9B834319F6F5A800B68B88 /* Debug */ = {

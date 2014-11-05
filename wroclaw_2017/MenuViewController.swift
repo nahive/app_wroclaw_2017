@@ -10,6 +10,10 @@ import UIKit
 
 class MenuViewController: UITableViewController {
     
+    @IBOutlet var mainMenu: UITableView!
+    @IBOutlet var infoSubmenu: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
@@ -21,11 +25,13 @@ class MenuViewController: UITableViewController {
     }
     
     func customSetup(){
-        self.tableView.backgroundColor = Utils.colorize(0x7f7f7f);
-        self.tableView.tableFooterView = UIView(frame: CGRectZero);
+        mainMenu.backgroundColor = Utils.colorize(0x7f7f7f);
+        mainMenu.tableFooterView = UIView(frame: CGRectZero);
         var view: UIView = UIView(frame: CGRectMake(0,-1000,320,1000));
         view.backgroundColor = UIColor.whiteColor();
         self.view.addSubview(view);
+        
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -65,6 +71,9 @@ class MenuViewController: UITableViewController {
         return 7
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    }
+    
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.clearColor();
         if(cell.respondsToSelector("setSeparatorInset:")){
@@ -85,6 +94,7 @@ class MenuViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if(tableView == mainMenu){
         var cellId = "Cell";
         switch(indexPath.row){
         case 0:
@@ -113,15 +123,12 @@ class MenuViewController: UITableViewController {
             break;
         }
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as UITableViewCell;
-        return cell;
-    }
-    
-    func colorize (hex: Int, alpha: Double = 1.0) -> UIColor {
-        let red = Double((hex & 0xFF0000) >> 16) / 255.0
-        let green = Double((hex & 0xFF00) >> 8) / 255.0
-        let blue = Double((hex & 0xFF)) / 255.0
-        var color: UIColor = UIColor( red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha:CGFloat(alpha) )
-        return color
+            return cell;
+        }
+        else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell;
+            return cell;
+        }
     }
 
     /*
