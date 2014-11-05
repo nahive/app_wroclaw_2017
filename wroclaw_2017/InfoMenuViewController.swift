@@ -9,6 +9,7 @@
 import UIKit
 
 class InfoMenuViewController: UITableViewController {
+    @IBOutlet weak var revealButtonItem: UIBarButtonItem!
     var infoHeaders = ["Longer, longer, longer Header1","Header2","Header3"];
     var infoContents: [String] = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam.",
         "Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor. Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor. Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor.",
@@ -17,7 +18,7 @@ class InfoMenuViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        customSetup();
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -42,6 +43,16 @@ class InfoMenuViewController: UITableViewController {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return 5
+    }
+    
+    func customSetup(){
+        var revealViewController = self.revealViewController();
+        if(revealViewController != nil){
+            self.revealButtonItem.target = revealViewController;
+            self.revealButtonItem.action = "revealToggle:";
+            self.navigationController?.navigationBar.addGestureRecognizer(revealViewController.panGestureRecognizer());
+            view.addGestureRecognizer(revealViewController.panGestureRecognizer());
+        }
     }
     
     

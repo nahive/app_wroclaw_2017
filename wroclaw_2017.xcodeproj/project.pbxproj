@@ -37,6 +37,7 @@
 		4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3471A004B65006DE05C /* DIDatepicker.m */; };
 		4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */; };
 		4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */; };
+		D43E0A851A0A482700121C99 /* ic_action_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A841A0A482700121C99 /* ic_action_forward.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		4CC9A3481A004B65006DE05C /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
 		4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
 		4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		D43E0A841A0A482700121C99 /* ic_action_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_forward.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				4C9B834E19F6F67000B68B88 /* ic_action_about.png */,
+				D43E0A841A0A482700121C99 /* ic_action_forward.png */,
 				4C9B834F19F6F67000B68B88 /* ic_action_chat.png */,
 				4C9B835019F6F67000B68B88 /* ic_action_go_to_today.png */,
 				4C9B835119F6F67000B68B88 /* ic_action_network_cell.png */,
@@ -307,6 +310,7 @@
 				4C9B833319F6F5A800B68B88 /* Images.xcassets in Resources */,
 				4C9B836219F6F67000B68B88 /* reveal-icon.png in Resources */,
 				4C9B836019F6F67000B68B88 /* news2.png in Resources */,
+				D43E0A851A0A482700121C99 /* ic_action_forward.png in Resources */,
 				4C9B835C19F6F67000B68B88 /* ic_action_network_cell.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

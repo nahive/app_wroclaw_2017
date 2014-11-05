@@ -245,9 +245,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Informations" id="Jjz-uu-HLb">
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="c2r-QZ-I6L"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="c2r-QZ-I6L">
+                            <color key="tintColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="revealButtonItem" destination="c2r-QZ-I6L" id="cO4-Y2-fMN"/>
                         <segue destination="anT-3Y-Mtc" kind="show" identifier="showInfoDetail" id="56w-Is-zW0"/>
                     </connections>
                 </tableViewController>
@@ -389,6 +392,9 @@
                                             <color key="textColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_forward.png" translatesAutoresizingMaskIntoConstraints="NO" id="n5K-NZ-LDK">
+                                            <rect key="frame" x="232" y="18" width="20" height="20"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -657,6 +663,7 @@
     <resources>
         <image name="ic_action_about.png" width="96" height="96"/>
         <image name="ic_action_chat.png" width="96" height="96"/>
+        <image name="ic_action_forward.png" width="48" height="48"/>
         <image name="ic_action_go_to_today.png" width="96" height="96"/>
         <image name="ic_action_network_cell.png" width="96" height="96"/>
         <image name="ic_action_place.png" width="96" height="96"/>
