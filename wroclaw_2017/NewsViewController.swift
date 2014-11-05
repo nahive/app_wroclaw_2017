@@ -10,7 +10,10 @@ import UIKit
 
 class NewsViewController: UITableViewController {
     @IBOutlet weak var revealButtonItem: UIBarButtonItem!
-    var images: [String] = ["news1.jpg","news2.png","news3.jpg","news1.jpg","news2.png","news3.jpg"];
+    
+    
+    
+    var images: [String] = ["news1.jpg","news2.jpg","news3.jpg","news1.jpg","news2.jpg","news3.jpg"];
     var titles: [String] = ["Alexis Sanchez increasingly crucial to Arsenal's title hopes","African Cup of Nations - Senzo Meyiwa: South Africa star killed when...","Football has to return to its roots, or it will die. Football has to return to its roots. ","Alexis Sanchez increasingly crucial to Arsenal's title hopes","African Cup of Nations - Senzo Meyiwa: South Africa star killed when...","Football has to return to its roots, or it will die. Football has to return to its roots. "];
     var dates: [String] = ["2014-06-16","2014-06-15","2014-06-14","2014-06-13","2014-06-12","2014-06-11"];
     var fullContents: [String] = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam.",
@@ -27,8 +30,9 @@ class NewsViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-      
-       
+        var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
+        bgView.alpha = 0.5;
+        tableView.backgroundView = bgView;
         
     }
     
@@ -68,6 +72,7 @@ class NewsViewController: UITableViewController {
         var title: UITextView? = cell!.viewWithTag(103) as? UITextView;
         title?.text = titles[indexPath.row];
         title?.font = UIFont(name: "HelveticaNeue-Light", size: 17);
+        cell?.backgroundColor = UIColor.clearColor()
         return cell!
     }
     
@@ -108,7 +113,7 @@ class NewsViewController: UITableViewController {
 //    }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        return 110
     }
 
 }
