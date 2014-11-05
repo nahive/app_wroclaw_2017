@@ -39,6 +39,10 @@
 		4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */; };
 		4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */; };
 		D43E0A851A0A482700121C99 /* ic_action_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A841A0A482700121C99 /* ic_action_forward.png */; };
+		D43E0A8B1A0AB0CF00121C99 /* clock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8A1A0AB0CF00121C99 /* clock.jpg */; };
+		D43E0A8D1A0AB21F00121C99 /* jujitsu2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */; };
+		D43E0A8F1A0AB24500121C99 /* power.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8E1A0AB24500121C99 /* power.jpg */; };
+		D43E0A911A0AB25D00121C99 /* wroclaw2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +96,10 @@
 		4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
 		4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D43E0A841A0A482700121C99 /* ic_action_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_forward.png; sourceTree = "<group>"; };
+		D43E0A8A1A0AB0CF00121C99 /* clock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clock.jpg; sourceTree = "<group>"; };
+		D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jujitsu2.jpg; sourceTree = "<group>"; };
+		D43E0A8E1A0AB24500121C99 /* power.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = power.jpg; sourceTree = "<group>"; };
+		D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wroclaw2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,11 +190,15 @@
 			isa = PBXGroup;
 			children = (
 				4C3F8F9E1A0A79970066F3F7 /* news2.jpg */,
+				D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */,
 				4C3F8F981A0A79550066F3F7 /* news1.jpg */,
 				4C3F8F9A1A0A79550066F3F7 /* news3.jpg */,
+				D43E0A8A1A0AB0CF00121C99 /* clock.jpg */,
 				4C3F8F961A0A776C0066F3F7 /* bg_news.jpg */,
 				4C9B834E19F6F67000B68B88 /* ic_action_about.png */,
+				D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */,
 				D43E0A841A0A482700121C99 /* ic_action_forward.png */,
+				D43E0A8E1A0AB24500121C99 /* power.jpg */,
 				4C9B834F19F6F67000B68B88 /* ic_action_chat.png */,
 				4C9B835019F6F67000B68B88 /* ic_action_go_to_today.png */,
 				4C9B835119F6F67000B68B88 /* ic_action_network_cell.png */,
@@ -300,7 +312,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43E0A911A0AB25D00121C99 /* wroclaw2.jpg in Resources */,
 				4C9B834C19F6F63E00B68B88 /* LaunchScreen.xib in Resources */,
+				D43E0A8D1A0AB21F00121C99 /* jujitsu2.jpg in Resources */,
 				4C9B836319F6F67000B68B88 /* reveal-icon@2x.png in Resources */,
 				4C3F8F9B1A0A79550066F3F7 /* news1.jpg in Resources */,
 				4C9B835919F6F67000B68B88 /* ic_action_about.png in Resources */,
@@ -310,7 +324,9 @@
 				4C3F8F9F1A0A79970066F3F7 /* news2.jpg in Resources */,
 				4C3F8F9D1A0A79550066F3F7 /* news3.jpg in Resources */,
 				4C9B835D19F6F67000B68B88 /* ic_action_place.png in Resources */,
+				D43E0A8B1A0AB0CF00121C99 /* clock.jpg in Resources */,
 				4C9B835A19F6F67000B68B88 /* ic_action_chat.png in Resources */,
+				D43E0A8F1A0AB24500121C99 /* power.jpg in Resources */,
 				4C9B833319F6F5A800B68B88 /* Images.xcassets in Resources */,
 				4C9B836219F6F67000B68B88 /* reveal-icon.png in Resources */,
 				D43E0A851A0A482700121C99 /* ic_action_forward.png in Resources */,

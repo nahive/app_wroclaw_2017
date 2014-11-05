@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wroclaw_2017/NewsViewController.swift"
-            timestampString = "436189344.011637"
+            timestampString = "436908422.760325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "NewsViewController"
-            landmarkType = "3">
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "fullContents"
+            landmarkType = "19">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -126,11 +126,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wroclaw_2017/NewsDetailViewController.swift"
-            timestampString = "436214269.898016"
+            timestampString = "436908303.292733"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "5">
          </BreakpointContent>
