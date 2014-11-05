@@ -478,9 +478,6 @@
                             <outlet property="delegate" destination="HSl-ZE-XQG" id="ADA-9Z-kQe"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="mainMenu" destination="Wx4-GW-71a" id="YZa-MY-trS"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Qf-BK-i9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

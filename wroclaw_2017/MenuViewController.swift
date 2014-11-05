@@ -9,9 +9,7 @@
 import UIKit
 
 class MenuViewController: UITableViewController {
-    
-    @IBOutlet var mainMenu: UITableView!
-    @IBOutlet var infoSubmenu: UITableView!
+
     
     
     override func viewDidLoad() {
@@ -25,8 +23,8 @@ class MenuViewController: UITableViewController {
     }
     
     func customSetup(){
-        mainMenu.backgroundColor = Utils.colorize(0x7f7f7f);
-        mainMenu.tableFooterView = UIView(frame: CGRectZero);
+        self.tableView.backgroundColor = Utils.colorize(0x7f7f7f);
+        self.tableView.tableFooterView = UIView(frame: CGRectZero);
         var view: UIView = UIView(frame: CGRectMake(0,-1000,320,1000));
         view.backgroundColor = UIColor.whiteColor();
         self.view.addSubview(view);
@@ -94,7 +92,6 @@ class MenuViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if(tableView == mainMenu){
         var cellId = "Cell";
         switch(indexPath.row){
         case 0:
@@ -123,12 +120,7 @@ class MenuViewController: UITableViewController {
             break;
         }
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as UITableViewCell;
-            return cell;
-        }
-        else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell;
-            return cell;
-        }
+        return cell;
     }
 
     /*

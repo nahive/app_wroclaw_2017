@@ -42,7 +42,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     func initDatePicker(){
         datePickerW.constant = view.frame.width;
         datePicker.addTarget(self, action: "updateDate:", forControlEvents: UIControlEvents.ValueChanged);
-        var datesrc = "20170701";
+        var datesrc = "20170803";
         var dateformat = NSDateFormatter();
         dateformat.dateFormat = "yyyyMMdd";
         var date = dateformat.dateFromString(datesrc);
