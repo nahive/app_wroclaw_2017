@@ -154,6 +154,7 @@
 				4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */,
 				4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */,
 				4C4B9E031A09FFF000F60266 /* InfoViewController.swift */,
+				4C4B9E051A0A001400F60266 /* InfoMenuViewController.swift */,
 				4C9B833219F6F5A800B68B88 /* Images.xcassets */,
 				4C9B832919F6F5A800B68B88 /* Supporting Files */,
 			);
@@ -220,7 +221,6 @@
 				4C9B836519F6F71100B68B88 /* SWRevealViewController.h */,
 				4C9B836619F6F71100B68B88 /* SWRevealViewController.m */,
 				4C9B836B19F70C9000B68B88 /* MenuViewController.swift */,
-				4C4B9E051A0A001400F60266 /* InfoMenuViewController.swift */,
 				4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */,
 				4C3CF7381A0058BF005D5D95 /* Utils.swift */,
 			);

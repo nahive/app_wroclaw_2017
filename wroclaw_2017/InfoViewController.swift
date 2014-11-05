@@ -9,9 +9,10 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-
+    
     var infoHeaders : [String] = [];
     var infoContents : [String] = [];
+    var infoTitle : String = "";
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var insideView: UIView!
@@ -21,6 +22,9 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = infoTitle;
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -50,7 +54,7 @@ class InfoViewController: UIViewController {
         insideViewH.constant = countViewsHeight();
         scrollViewH.constant = view.frame.size.height;
         scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
-
+        
     }
     
     func countViewsHeight() -> CGFloat {
@@ -66,15 +70,15 @@ class InfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

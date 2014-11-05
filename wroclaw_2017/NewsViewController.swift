@@ -37,7 +37,7 @@ class NewsViewController: UITableViewController {
         
     }
     
-
+    
     func customSetup(){
         var revealViewController = self.revealViewController();
         if(revealViewController != nil){
@@ -46,11 +46,32 @@ class NewsViewController: UITableViewController {
             self.navigationController?.navigationBar.addGestureRecognizer(revealViewController.panGestureRecognizer());
             view.addGestureRecognizer(revealViewController.panGestureRecognizer());
         }
-    }
-    
-    func openMenu(){
+        
+        self.refreshControl =  UIRefreshControl();
+        self.refreshControl?.backgroundColor = UIColor.whiteColor();
+        self.refreshControl?.tintColor = UIColor.grayColor();
+        self.refreshControl?.addTarget(self, action: "updateData:", forControlEvents: UIControlEvents.ValueChanged);
         
     }
+    
+    func updateData(sender : UIRefreshControl!){
+        // Reload table data
+        self.tableView.reloadData();
+        
+        // End the refreshing
+        if ((self.refreshControl) != nil) {
+            
+            var formatter : NSDateFormatter = NSDateFormatter();
+            formatter.dateFormat = "MMM d, h:mm a";
+            var date = formatter.stringFromDate(NSDate());
+            var title = "Updated \(date)";
+            var attrs = NSDictionary(object: UIColor.grayColor(), forKey: NSForegroundColorAttributeName);
+            var attrTit = NSAttributedString(string: title, attributes: attrs);
+            self.refreshControl?.attributedTitle = attrTit;
+            self.refreshControl?.endRefreshing();
+        }
+    }
+    
 
     override func viewDidAppear(animated: Bool) {
     }
