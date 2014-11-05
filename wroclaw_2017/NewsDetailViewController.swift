@@ -18,6 +18,7 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var newsContent: UILabel!
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var insideView: UIView!
     
     @IBOutlet weak var scrollViewH: NSLayoutConstraint!
     @IBOutlet weak var insideViewH: NSLayoutConstraint!
@@ -63,7 +64,7 @@ class NewsDetailViewController: UIViewController {
     }
     
     func customSetup(){
-        newsImage.frame = CGRectMake(0,0,screen.size.width,screen.size.height/3);
+        newsImage.frame = CGRectMake(0,-44,screen.size.width,screen.size.height/3+44);
         newsDate.frame = CGRectMake(25, screen.size.height/3+2, screen.size.width/2, newsDate.frame.size.height);
         clockImage.frame = CGRectMake(5, screen.size.height/3+6, 15, 15);
         newsContent.frame.size.width = view.frame.width-10;
@@ -77,8 +78,8 @@ class NewsDetailViewController: UIViewController {
         insideViewH.constant = newsImage.frame.height+newsDate.frame.height+newsTitle.frame.height+newsContent.frame.height+75;
         scrollViewH.constant = view.frame.size.height;
         scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
+        
     }
-    
     
     override func viewDidLayoutSubviews() {
         customSetup();

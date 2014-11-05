@@ -21,11 +21,9 @@ class InfoMenuViewController: UITableViewController {
         super.viewDidLoad()
         customSetup();
         
-        //        var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
-        //        bgView.alpha = 0.5;
-        //        tableView.backgroundView = bgView;
-        
-        
+        var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
+        bgView.alpha = 0.3;
+        tableView.backgroundView = bgView;
     }
     
     override func didReceiveMemoryWarning() {

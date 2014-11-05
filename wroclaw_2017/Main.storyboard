@@ -22,7 +22,8 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EoA-b7-Q2G">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ox-u8-QhW">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="power.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1ox-u8-QhW">
+                                                <rect key="frame" x="0.0" y="-44" width="600" height="300"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                                 </variation>
@@ -72,6 +73,7 @@
                     <connections>
                         <outlet property="author" destination="zAZ-hc-7Pn" id="du3-Xx-BQt"/>
                         <outlet property="clockImage" destination="Ta2-Fw-aH9" id="MnX-L1-fpb"/>
+                        <outlet property="insideView" destination="EoA-b7-Q2G" id="SNp-hR-Gyp"/>
                         <outlet property="insideViewH" destination="sFx-0x-kQG" id="xKf-px-HnZ"/>
                         <outlet property="newsContent" destination="IO8-5Q-aJF" id="pZc-0c-d65"/>
                         <outlet property="newsDate" destination="7i7-hO-Kbp" id="3LT-wa-Tcr"/>
@@ -89,7 +91,7 @@
         <scene sceneID="XDa-bw-qPS">
             <objects>
                 <tableViewController storyboardIdentifier="NewsTest" title="News View" id="YgV-WD-tBc" customClass="NewsViewController" customModule="wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DY1-sq-Myl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DY1-sq-Myl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.80806107954545459" green="0.80806107954545459" blue="0.80806107954545459" alpha="1" colorSpace="calibratedRGB"/>
@@ -375,6 +377,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="IdS-yd-MCJ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="fOV-5e-i1n"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="results" rowHeight="55" id="1Hc-yt-x1N">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -423,6 +428,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZD-ue-aLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1639" y="-587"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="huC-T9-m1u">
+            <objects>
+                <navigationController id="IdS-yd-MCJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lAC-62-OFa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Lum-s9-Drv" kind="relationship" relationship="rootViewController" id="6Tl-i1-rtO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xov-aK-e0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="109"/>
+        </scene>
+        <!--Locations-->
+        <scene sceneID="V67-VJ-O8Z">
+            <objects>
+                <viewController id="Lum-s9-Drv" customClass="LocationsViewController" customModule="wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c4S-TP-8kB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ivr-NH-jiJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m2e-lf-WCd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TxP-lU-5t2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="4Of-0z-XZ7"/>
+                                    <constraint firstAttribute="width" constant="600" id="bvr-eX-8st"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Locations" id="vjV-sT-Grc">
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="oS3-Dg-mbx"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapH" destination="4Of-0z-XZ7" id="6IL-Wd-BhG"/>
+                        <outlet property="mapView" destination="TxP-lU-5t2" id="biO-z1-BN5"/>
+                        <outlet property="mapW" destination="bvr-eX-8st" id="8cv-Zw-KT7"/>
+                        <outlet property="revealButtonItem" destination="oS3-Dg-mbx" id="JtO-M7-srG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odl-vW-wXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="109"/>
         </scene>
         <!--Calendar View-->
         <scene sceneID="HT0-Eg-4Gl">
@@ -580,9 +637,8 @@
         <!--Info-->
         <scene sceneID="E0L-Dn-Lxq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MuA-YC-0uJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="4cB-DG-VXH" customClass="InfoMenuViewController" customModule="wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lZx-Ps-kcb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lZx-Ps-kcb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.80806107949999995" green="0.80806107949999995" blue="0.80806107949999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -623,6 +679,7 @@
                         <segue destination="anT-3Y-Mtc" kind="show" identifier="showInfoDetail" id="YQR-Dj-Axt"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MuA-YC-0uJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="938" y="-1271"/>
         </scene>
@@ -636,6 +693,7 @@
         <image name="ic_action_network_cell.png" width="96" height="96"/>
         <image name="ic_action_place.png" width="96" height="96"/>
         <image name="logo.png" width="924" height="263"/>
+        <image name="power.jpg" width="1920" height="1018"/>
         <image name="reveal-icon.png" width="22" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
