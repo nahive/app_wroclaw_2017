@@ -47,7 +47,7 @@ class InfoViewController: UIViewController {
             content.numberOfLines = 100;
             content.text = infoContents[i];
             content.sizeToFit();
-            content.frame = CGRect(x: 5, y: label.frame.origin.y + label.frame.height-10, width: view.frame.width-10, height: content.frame.height+30);
+            content.frame = CGRect(x: 5, y: label.frame.origin.y + label.frame.height-20, width: view.frame.width-10, height: content.frame.height+80);
             insideView.addSubview(content);
         }
         

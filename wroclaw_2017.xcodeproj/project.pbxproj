@@ -45,6 +45,7 @@
 		D43E0A8D1A0AB21F00121C99 /* jujitsu2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */; };
 		D43E0A8F1A0AB24500121C99 /* power.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8E1A0AB24500121C99 /* power.jpg */; };
 		D43E0A911A0AB25D00121C99 /* wroclaw2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */; };
+		D43E0A931A0B66C200121C99 /* ic_action_location_found.png in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A921A0B66C200121C99 /* ic_action_location_found.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jujitsu2.jpg; sourceTree = "<group>"; };
 		D43E0A8E1A0AB24500121C99 /* power.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = power.jpg; sourceTree = "<group>"; };
 		D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wroclaw2.jpg; sourceTree = "<group>"; };
+		D43E0A921A0B66C200121C99 /* ic_action_location_found.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_location_found.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				4C3F8F961A0A776C0066F3F7 /* bg_news.jpg */,
 				4C9B834E19F6F67000B68B88 /* ic_action_about.png */,
 				D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */,
+				D43E0A921A0B66C200121C99 /* ic_action_location_found.png */,
 				D43E0A841A0A482700121C99 /* ic_action_forward.png */,
 				D43E0A8E1A0AB24500121C99 /* power.jpg */,
 				4C9B834F19F6F67000B68B88 /* ic_action_chat.png */,
@@ -329,6 +332,7 @@
 				4C9B835B19F6F67000B68B88 /* ic_action_go_to_today.png in Resources */,
 				4C0E6ED41A0922C9006A22D7 /* Main.storyboard in Resources */,
 				4C3F8F9F1A0A79970066F3F7 /* news2.jpg in Resources */,
+				D43E0A931A0B66C200121C99 /* ic_action_location_found.png in Resources */,
 				4C3F8F9D1A0A79550066F3F7 /* news3.jpg in Resources */,
 				4C9B835D19F6F67000B68B88 /* ic_action_place.png in Resources */,
 				D43E0A8B1A0AB0CF00121C99 /* clock.jpg in Resources */,
@@ -475,6 +479,7 @@
 		4C9B834619F6F5A800B68B88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = wroclaw_2017/Info.plist;
@@ -488,6 +493,7 @@
 		4C9B834719F6F5A800B68B88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = wroclaw_2017/Info.plist;

@@ -15,11 +15,17 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var revealButtonItem: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var datePickerW: NSLayoutConstraint!
+    
+    var events: [String: String] = ["Softball": "Men's Squash Final", "Tug of War": "Men's Fina", "Squash": "Men's Semifinal"];
+    
     var times: [String] = ["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","16:15","17:00","18:15"];
-    var titles: [String] = ["Lorem ipsum dolor sit amet","consectetur adipiscing elit","Suspendisse eu lobortis diam","Donec nulla leo, sollicitudin in metus"," vitae, pulvinar eleifend elit","Maecenas vulputate enim nec turpis feugia","malesuada ac eget felis. Sed ornare lobortis tristique","Praesent consequat dui elit","eget semper mauris elementum id"," In tempus auctor turpis eu varius.","Curabitur pharetra sodales sem","et fringilla tellus semper eget."];
+    var titles: [String] = ["Dance Sport Women's eliminations","Men's Squash Final","Ju-jitsu Men's 1st round","Archery Women's Semifinal","Tug of War Men's eliminations","Women's Duathlon","Rugby Sevens Men's Quarterfinal","Women's Air Sports","Men's Softball 2sd round","Canoe Polo Women's 3rd round","Billard Sports Men's eliminations","Korfball Women's Final"];
     var fullContents: [String] = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend malesuada arcu, tincidunt feugiat leo lacinia at. Nam felis metus, scelerisque ultrices metus quis, vulputate ultricies quam.",
         "Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor. Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor. Sed eros lacus, tincidunt luctus pulvinar a, ornare quis ante. Praesent sed nibh nisi. Donec tempor sit amet sapien a euismod. Proin tempus purus gravida condimentum tempor.",
         "Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus. Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus. Duis ut nulla interdum, malesuada justo nec, posuere purus. Mauris ac porta eros. Nulla finibus nisi sit amet commodo ullamcorper. Cras mollis tempor commodo. Integer quam tellus."];
+    
+    
+    var sportCategories: [String] = ["Softball", "Tug of War", "Squash"];
     
     
     override func viewDidLoad() {
@@ -54,6 +60,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     func customSetup(){
         var revealViewController = self.revealViewController();
@@ -91,7 +98,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
 
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return sportCategories.count;
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -100,6 +107,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titles.count;
     }
+    
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tableId = "CalendarCell";

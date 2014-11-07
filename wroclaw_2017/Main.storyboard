@@ -296,40 +296,12 @@
                                     <segue destination="pyS-Eb-2L3" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="RTZ-ni-NCl"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="info" rowHeight="55" id="Gft-NF-bvJ">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gft-NF-bvJ" id="8QR-EF-mm6">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_about.png" translatesAutoresizingMaskIntoConstraints="NO" id="aIC-4U-BVR">
-                                            <rect key="frame" x="8" y="9" width="35" height="35"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7f-v1-Xuo">
-                                            <rect key="frame" x="51" y="12" width="100" height="30"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                            <color key="textColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_action_forward.png" translatesAutoresizingMaskIntoConstraints="NO" id="n5K-NZ-LDK">
-                                            <rect key="frame" x="232" y="18" width="20" height="20"/>
-                                        </imageView>
-                                    </subviews>
-                                    <variation key="default">
-                                        <mask key="subviews">
-                                            <exclude reference="n5K-NZ-LDK"/>
-                                        </mask>
-                                    </variation>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="svL-6I-7Oa" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="gGQ-NZ-d4s"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="disciplines" rowHeight="55" id="GY8-Pl-jN9">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GY8-Pl-jN9" id="nKZ-SZ-X5e">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_chat.png" translatesAutoresizingMaskIntoConstraints="NO" id="XpO-vd-S1K">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_location_found.png" translatesAutoresizingMaskIntoConstraints="NO" id="XpO-vd-S1K">
                                             <rect key="frame" x="8" y="9" width="35" height="35"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disciplines" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwR-9S-wBr">
@@ -359,6 +331,34 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="Ie5-u0-RuV" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="xbm-jd-lWl"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="info" rowHeight="55" id="Gft-NF-bvJ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gft-NF-bvJ" id="8QR-EF-mm6">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_about.png" translatesAutoresizingMaskIntoConstraints="NO" id="aIC-4U-BVR">
+                                            <rect key="frame" x="8" y="9" width="35" height="35"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7f-v1-Xuo">
+                                            <rect key="frame" x="51" y="12" width="100" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_action_forward.png" translatesAutoresizingMaskIntoConstraints="NO" id="n5K-NZ-LDK">
+                                            <rect key="frame" x="232" y="18" width="20" height="20"/>
+                                        </imageView>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="n5K-NZ-LDK"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="svL-6I-7Oa" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="gGQ-NZ-d4s"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="locations" rowHeight="55" id="3k6-Rv-V3W">
@@ -690,6 +690,7 @@
         <image name="ic_action_chat.png" width="96" height="96"/>
         <image name="ic_action_forward.png" width="48" height="48"/>
         <image name="ic_action_go_to_today.png" width="96" height="96"/>
+        <image name="ic_action_location_found.png" width="48" height="48"/>
         <image name="ic_action_network_cell.png" width="96" height="96"/>
         <image name="ic_action_place.png" width="96" height="96"/>
         <image name="logo.png" width="924" height="263"/>

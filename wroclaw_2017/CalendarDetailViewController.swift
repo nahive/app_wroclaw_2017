@@ -60,11 +60,11 @@ class CalendarDetailViewController: UIViewController {
     
     func fillFromSegue(){
         self.title = titleVal;
-        eventDate.text = "01 Sep";
+        eventDate.text = "03 Sep";
         eventTime.text = timeVal;
         eventTitle.text = titleVal;
         eventContent.text = contentVal;
-        eventPlace.text = "Plac Grunwaldzki 451";
+        eventPlace.text = "Plac Grunwaldzki 201";
     }
     
     func customSetup(){
