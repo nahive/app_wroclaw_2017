@@ -46,6 +46,7 @@
 		D43E0A8F1A0AB24500121C99 /* power.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8E1A0AB24500121C99 /* power.jpg */; };
 		D43E0A911A0AB25D00121C99 /* wroclaw2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */; };
 		D43E0A931A0B66C200121C99 /* ic_action_location_found.png in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A921A0B66C200121C99 /* ic_action_location_found.png */; };
+		D459963A1A0E509B002B1059 /* wushu.png in Resources */ = {isa = PBXBuildFile; fileRef = D45996391A0E509B002B1059 /* wushu.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		D43E0A8E1A0AB24500121C99 /* power.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = power.jpg; sourceTree = "<group>"; };
 		D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wroclaw2.jpg; sourceTree = "<group>"; };
 		D43E0A921A0B66C200121C99 /* ic_action_location_found.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_location_found.png; sourceTree = "<group>"; };
+		D45996391A0E509B002B1059 /* wushu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wushu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			children = (
 				4C3F8F9E1A0A79970066F3F7 /* news2.jpg */,
 				D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */,
+				D45996391A0E509B002B1059 /* wushu.png */,
 				4C3F8F981A0A79550066F3F7 /* news1.jpg */,
 				4C3F8F9A1A0A79550066F3F7 /* news3.jpg */,
 				D43E0A8A1A0AB0CF00121C99 /* clock.jpg */,
@@ -322,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D459963A1A0E509B002B1059 /* wushu.png in Resources */,
 				D43E0A911A0AB25D00121C99 /* wroclaw2.jpg in Resources */,
 				4C9B834C19F6F63E00B68B88 /* LaunchScreen.xib in Resources */,
 				D43E0A8D1A0AB21F00121C99 /* jujitsu2.jpg in Resources */,
