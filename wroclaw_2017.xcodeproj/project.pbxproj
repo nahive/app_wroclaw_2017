@@ -47,6 +47,18 @@
 		D43E0A911A0AB25D00121C99 /* wroclaw2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */; };
 		D43E0A931A0B66C200121C99 /* ic_action_location_found.png in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A921A0B66C200121C99 /* ic_action_location_found.png */; };
 		D459963A1A0E509B002B1059 /* wushu.png in Resources */ = {isa = PBXBuildFile; fileRef = D45996391A0E509B002B1059 /* wushu.png */; };
+		D459963F1A10F4CA002B1059 /* orbita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D459963D1A10F4CA002B1059 /* orbita.jpg */; };
+		D45996401A10F4CA002B1059 /* stadionolimpijski.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D459963E1A10F4CA002B1059 /* stadionolimpijski.jpg */; };
+		D45996421A11046C002B1059 /* lotnisko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D45996411A11046C002B1059 /* lotnisko.jpg */; };
+		D45996441A110A28002B1059 /* wakepark_blur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D45996431A110A28002B1059 /* wakepark_blur.jpg */; };
+		D45996461A120372002B1059 /* DisciplineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996451A120372002B1059 /* DisciplineViewController.swift */; };
+		D459964D1A121050002B1059 /* aikido.png in Resources */ = {isa = PBXBuildFile; fileRef = D45996471A121050002B1059 /* aikido.png */; };
+		D459964E1A121050002B1059 /* air-sports.png in Resources */ = {isa = PBXBuildFile; fileRef = D45996481A121050002B1059 /* air-sports.png */; };
+		D459964F1A121050002B1059 /* archery.png in Resources */ = {isa = PBXBuildFile; fileRef = D45996491A121050002B1059 /* archery.png */; };
+		D45996501A121050002B1059 /* beach-handball.png in Resources */ = {isa = PBXBuildFile; fileRef = D459964A1A121050002B1059 /* beach-handball.png */; };
+		D45996511A121050002B1059 /* billiard-sports.png in Resources */ = {isa = PBXBuildFile; fileRef = D459964B1A121050002B1059 /* billiard-sports.png */; };
+		D45996521A121050002B1059 /* bodybuilding.png in Resources */ = {isa = PBXBuildFile; fileRef = D459964C1A121050002B1059 /* bodybuilding.png */; };
+		D45996541A1229D9002B1059 /* DisciplineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +120,18 @@
 		D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wroclaw2.jpg; sourceTree = "<group>"; };
 		D43E0A921A0B66C200121C99 /* ic_action_location_found.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_location_found.png; sourceTree = "<group>"; };
 		D45996391A0E509B002B1059 /* wushu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wushu.png; sourceTree = "<group>"; };
+		D459963D1A10F4CA002B1059 /* orbita.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orbita.jpg; sourceTree = "<group>"; };
+		D459963E1A10F4CA002B1059 /* stadionolimpijski.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stadionolimpijski.jpg; sourceTree = "<group>"; };
+		D45996411A11046C002B1059 /* lotnisko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lotnisko.jpg; sourceTree = "<group>"; };
+		D45996431A110A28002B1059 /* wakepark_blur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wakepark_blur.jpg; sourceTree = "<group>"; };
+		D45996451A120372002B1059 /* DisciplineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplineViewController.swift; sourceTree = "<group>"; };
+		D45996471A121050002B1059 /* aikido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aikido.png; sourceTree = "<group>"; };
+		D45996481A121050002B1059 /* air-sports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "air-sports.png"; sourceTree = "<group>"; };
+		D45996491A121050002B1059 /* archery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = archery.png; sourceTree = "<group>"; };
+		D459964A1A121050002B1059 /* beach-handball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beach-handball.png"; sourceTree = "<group>"; };
+		D459964B1A121050002B1059 /* billiard-sports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "billiard-sports.png"; sourceTree = "<group>"; };
+		D459964C1A121050002B1059 /* bodybuilding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bodybuilding.png; sourceTree = "<group>"; };
+		D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplineDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +182,8 @@
 				4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */,
 				4C0E6ED31A0922C9006A22D7 /* Main.storyboard */,
 				4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */,
+				D45996451A120372002B1059 /* DisciplineViewController.swift */,
+				D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */,
 				4C9B832D19F6F5A800B68B88 /* ViewController.swift */,
 				4CB5F59D19F71255006F09EC /* NewsViewController.swift */,
 				4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */,
@@ -207,9 +233,19 @@
 				4C3F8F981A0A79550066F3F7 /* news1.jpg */,
 				4C3F8F9A1A0A79550066F3F7 /* news3.jpg */,
 				D43E0A8A1A0AB0CF00121C99 /* clock.jpg */,
+				D45996471A121050002B1059 /* aikido.png */,
+				D45996481A121050002B1059 /* air-sports.png */,
+				D45996491A121050002B1059 /* archery.png */,
+				D459964A1A121050002B1059 /* beach-handball.png */,
+				D459964B1A121050002B1059 /* billiard-sports.png */,
+				D459964C1A121050002B1059 /* bodybuilding.png */,
 				4C3F8F961A0A776C0066F3F7 /* bg_news.jpg */,
+				D459963D1A10F4CA002B1059 /* orbita.jpg */,
+				D45996431A110A28002B1059 /* wakepark_blur.jpg */,
+				D459963E1A10F4CA002B1059 /* stadionolimpijski.jpg */,
 				4C9B834E19F6F67000B68B88 /* ic_action_about.png */,
 				D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */,
+				D45996411A11046C002B1059 /* lotnisko.jpg */,
 				D43E0A921A0B66C200121C99 /* ic_action_location_found.png */,
 				D43E0A841A0A482700121C99 /* ic_action_forward.png */,
 				D43E0A8E1A0AB24500121C99 /* power.jpg */,
@@ -330,23 +366,33 @@
 				4C9B834C19F6F63E00B68B88 /* LaunchScreen.xib in Resources */,
 				D43E0A8D1A0AB21F00121C99 /* jujitsu2.jpg in Resources */,
 				4C9B836319F6F67000B68B88 /* reveal-icon@2x.png in Resources */,
+				D459964E1A121050002B1059 /* air-sports.png in Resources */,
 				4C3F8F9B1A0A79550066F3F7 /* news1.jpg in Resources */,
 				4C9B835919F6F67000B68B88 /* ic_action_about.png in Resources */,
 				4C9B835E19F6F67000B68B88 /* logo.png in Resources */,
 				4C9B835B19F6F67000B68B88 /* ic_action_go_to_today.png in Resources */,
 				4C0E6ED41A0922C9006A22D7 /* Main.storyboard in Resources */,
 				4C3F8F9F1A0A79970066F3F7 /* news2.jpg in Resources */,
+				D45996421A11046C002B1059 /* lotnisko.jpg in Resources */,
 				D43E0A931A0B66C200121C99 /* ic_action_location_found.png in Resources */,
 				4C3F8F9D1A0A79550066F3F7 /* news3.jpg in Resources */,
 				4C9B835D19F6F67000B68B88 /* ic_action_place.png in Resources */,
 				D43E0A8B1A0AB0CF00121C99 /* clock.jpg in Resources */,
+				D45996511A121050002B1059 /* billiard-sports.png in Resources */,
+				D45996441A110A28002B1059 /* wakepark_blur.jpg in Resources */,
 				4C9B835A19F6F67000B68B88 /* ic_action_chat.png in Resources */,
 				D43E0A8F1A0AB24500121C99 /* power.jpg in Resources */,
+				D45996401A10F4CA002B1059 /* stadionolimpijski.jpg in Resources */,
 				4C9B833319F6F5A800B68B88 /* Images.xcassets in Resources */,
 				4C9B836219F6F67000B68B88 /* reveal-icon.png in Resources */,
+				D45996501A121050002B1059 /* beach-handball.png in Resources */,
 				D43E0A851A0A482700121C99 /* ic_action_forward.png in Resources */,
+				D459964D1A121050002B1059 /* aikido.png in Resources */,
 				4C9B835C19F6F67000B68B88 /* ic_action_network_cell.png in Resources */,
+				D459963F1A10F4CA002B1059 /* orbita.jpg in Resources */,
+				D459964F1A121050002B1059 /* archery.png in Resources */,
 				4C3F8F971A0A776C0066F3F7 /* bg_news.jpg in Resources */,
+				D45996521A121050002B1059 /* bodybuilding.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +422,9 @@
 				4C4B9E041A09FFF000F60266 /* InfoViewController.swift in Sources */,
 				4C9B836719F6F71100B68B88 /* SWRevealViewController.m in Sources */,
 				4CA7AB631A0AD1CD005073E7 /* LocationsViewController.swift in Sources */,
+				D45996461A120372002B1059 /* DisciplineViewController.swift in Sources */,
 				4CB5F59E19F71255006F09EC /* NewsViewController.swift in Sources */,
+				D45996541A1229D9002B1059 /* DisciplineDetailViewController.swift in Sources */,
 				4C9B836C19F70C9000B68B88 /* MenuViewController.swift in Sources */,
 				4C4B9E061A0A001400F60266 /* InfoMenuViewController.swift in Sources */,
 			);
@@ -488,6 +536,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = wroclaw_2017/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "wroclaw_2017/wroclaw_2017-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -502,6 +554,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = wroclaw_2017/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "wroclaw_2017/wroclaw_2017-Bridging-Header.h";
 			};

@@ -27,7 +27,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     //How to add many values for one key?
-    var events: [String: String] = ["Softball": "Men's Squash Final", "Tug of War": "Men's Final", "Squash": "Men's Semifinal"];
+    var events: [String: [String]] = ["Softball": ["Men's Squash Final", "Men's SemiFinal", "Women's q"], "Tug of War": ["Men's Final"], "Squash": ["Men's Semifinal"]];
     var eventsSectionTitles: [String] = ["Softball", "Tug of War", "Squash"];
     var eventIndexTitles: [String] = ["Softball", "Tug of War", "Squash", "Dance Sport"];
     
@@ -117,12 +117,9 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         return 50
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        var sectionTitle: String = eventsSectionTitles.removeAtIndex(section);
-        //        eventsSectionTitles.insert(sectionTitle, atIndex: section);
-        //        println(sectionTitle);
-        //        var sectionEvents: String = events.removeValueForKey(sectionTitle)!;
-        //        println(sectionEvents);
-        return 1;
+        var sectionTitle: String = eventsSectionTitles[section];
+        var sectionEvents: [String] = events[sectionTitle]!;
+        return sectionEvents.count;
         
     }
     
@@ -191,11 +188,12 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         var sectionTitle: String = eventsSectionTitles.removeAtIndex(indexPath.section);
         eventsSectionTitles.insert(sectionTitle, atIndex: indexPath.section);
         
-        //This should return an array from which particural event should be taken
-        var sectionEvents: String = events.removeValueForKey(sectionTitle)!;
+        var sectionEvents: [String] = events.removeValueForKey(sectionTitle)!;
         events.updateValue(sectionEvents, forKey: sectionTitle);
         
-        title?.text = sectionEvents;
+        var event: String = sectionEvents[indexPath.row];
+        
+        title?.text = event;
         title?.font = UIFont(name: "HelveticaNeue-Light", size: 15);
         
         return cell!
