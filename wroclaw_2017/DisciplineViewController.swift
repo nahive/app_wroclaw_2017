@@ -169,14 +169,21 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "showDisciplineDetail"){
+            let row = self.tableView.indexPathForSelectedRow()?.row;
+            var destViewController : DisciplineDetailViewController = segue.destinationViewController as DisciplineDetailViewController;
+//            destViewController.titleVal = titles[row!];
+//            destViewController.timeVal = times[row!];
+//            destViewController.contentVal = fullContents[row!%3];
+            
+            
+        }
     }
-    */
+
 
 }

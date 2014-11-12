@@ -59,6 +59,7 @@
 		D45996511A121050002B1059 /* billiard-sports.png in Resources */ = {isa = PBXBuildFile; fileRef = D459964B1A121050002B1059 /* billiard-sports.png */; };
 		D45996521A121050002B1059 /* bodybuilding.png in Resources */ = {isa = PBXBuildFile; fileRef = D459964C1A121050002B1059 /* bodybuilding.png */; };
 		D45996541A1229D9002B1059 /* DisciplineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */; };
+		D45996561A13993D002B1059 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996551A13993D002B1059 /* json.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		D459964B1A121050002B1059 /* billiard-sports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "billiard-sports.png"; sourceTree = "<group>"; };
 		D459964C1A121050002B1059 /* bodybuilding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bodybuilding.png; sourceTree = "<group>"; };
 		D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplineDetailViewController.swift; sourceTree = "<group>"; };
+		D45996551A13993D002B1059 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */,
 				D45996451A120372002B1059 /* DisciplineViewController.swift */,
 				D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */,
+				D45996551A13993D002B1059 /* json.swift */,
 				4C9B832D19F6F5A800B68B88 /* ViewController.swift */,
 				4CB5F59D19F71255006F09EC /* NewsViewController.swift */,
 				4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */,
@@ -421,6 +424,7 @@
 				4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */,
 				4C4B9E041A09FFF000F60266 /* InfoViewController.swift in Sources */,
 				4C9B836719F6F71100B68B88 /* SWRevealViewController.m in Sources */,
+				D45996561A13993D002B1059 /* json.swift in Sources */,
 				4CA7AB631A0AD1CD005073E7 /* LocationsViewController.swift in Sources */,
 				D45996461A120372002B1059 /* DisciplineViewController.swift in Sources */,
 				4CB5F59E19F71255006F09EC /* NewsViewController.swift in Sources */,

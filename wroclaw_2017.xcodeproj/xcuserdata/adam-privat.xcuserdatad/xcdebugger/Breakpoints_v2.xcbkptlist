@@ -9,114 +9,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "wroclaw_2017/NewsViewController.swift"
-            timestampString = "436908422.760325"
+            filePath = "wroclaw_2017/NewsDetailViewController.swift"
+            timestampString = "437498881.161564"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "fullContents"
-            landmarkType = "19">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "wroclaw_2017.NewsViewController.titleLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
-                  moduleName = "wroclaw_2017"
-                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
-                  timestampString = "436189344.032622"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "wroclaw_2017.NewsViewController.titleLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
-                  moduleName = "wroclaw_2017"
-                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
-                  timestampString = "436189344.033517"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "wroclaw_2017.NewsViewController.titleLabel.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
-                  moduleName = "wroclaw_2017"
-                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
-                  timestampString = "436189344.033745"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "wroclaw_2017.NewsViewController.init (wroclaw_2017.NewsViewController.Type)(style : C.UITableViewStyle) -&gt; wroclaw_2017.NewsViewController"
-                  moduleName = "wroclaw_2017"
-                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
-                  timestampString = "436189344.033928"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "2131">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "wroclaw_2017.NewsViewController.init (wroclaw_2017.NewsViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; wroclaw_2017.NewsViewController"
-                  moduleName = "wroclaw_2017"
-                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
-                  timestampString = "436189344.034293"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "1923">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "wroclaw_2017.NewsViewController.init (wroclaw_2017.NewsViewController.Type)() -&gt; wroclaw_2017.NewsViewController"
-                  moduleName = "wroclaw_2017"
-                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
-                  timestampString = "436189344.034598"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "2111">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "wroclaw_2017.NewsViewController.init (wroclaw_2017.NewsViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; wroclaw_2017.NewsViewController"
-                  moduleName = "wroclaw_2017"
-                  urlString = "file:///Users/adam-privat/Aplikacje/app_wroclaw_2017/wroclaw_2017/NewsViewController.swift"
-                  timestampString = "436189344.034888"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "2131">
-               </Location>
-            </Locations>
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "didReceiveMemoryWarning()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wroclaw_2017/NewsDetailViewController.swift"
-            timestampString = "436908303.292733"
+            timestampString = "437498570.722725"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "didReceiveMemoryWarning()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getJSON()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

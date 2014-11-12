@@ -9,6 +9,14 @@
 import UIKit
 
 class DisciplineDetailViewController: UIViewController {
+    
+    
+    var screen = UIScreen.mainScreen().bounds;
+    var dateVal = "";
+    var timeVal = "";
+    var titleVal = "";
+    var contentVal = "";
+    var placeVal = "";
 
     override func viewDidLoad() {
         super.viewDidLoad()

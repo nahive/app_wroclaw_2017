@@ -523,13 +523,13 @@
                                 <exclude reference="e9S-Fh-4fy"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="AXQ-Ra-sva"/>
-                                <exclude reference="v01-1X-bhO"/>
                                 <exclude reference="2YS-8J-sYK"/>
                                 <exclude reference="7m6-wI-e3J"/>
                                 <exclude reference="GZH-HL-1ju"/>
                                 <exclude reference="VQL-Up-1Q7"/>
                                 <exclude reference="hI5-sS-ILE"/>
+                                <exclude reference="AXQ-Ra-sva"/>
+                                <exclude reference="v01-1X-bhO"/>
                             </mask>
                         </variation>
                     </view>

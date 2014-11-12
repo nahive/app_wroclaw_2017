@@ -127,8 +127,9 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         myPin.pinColor = MKPinAnnotationColor.Green;
         myPin.backgroundColor = UIColor.clearColor();
         var detail: UIButton = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as UIButton;
-       // detail.frame = CGRectMake(0, 0, 100, 100);
-       // detail.backgroundColor = UIColor.blackColor();
+        detail.frame = CGRectMake(0, 0, 100, 100);
+       
+        detail.backgroundColor = UIColor.blackColor();
         myPin.rightCalloutAccessoryView = detail;
         //myPin.draggable = false;
        // myPin.highlighted = true;

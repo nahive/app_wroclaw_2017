@@ -24,25 +24,43 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var insideViewH: NSLayoutConstraint!
     
     var screen =  UIScreen.mainScreen().bounds;
-    var imageVal = "";
-    var dateVal = "";
-    var titleVal = "";
-    var contentVal = "";
-    var authorVal = "";
+    var idVal = "";
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fillFromSegue();
+       // getJSON();
         hideElements();
     }
     
-    func fillFromSegue(){
-        var image : UIImage = UIImage(named: imageVal)!;
-        newsImage.image = image;
-        newsDate.text = dateVal;
-        newsTitle.text = titleVal;
-        newsContent.text = contentVal;
-        author.text = "By, " + authorVal;
+    func getJSON(){
+        
+        var url = "https://2017.wroclaw.pl/mobile/news/view/"+idVal;
+        let json = JSON(url:url);
+        
+        for (k, v) in json {
+            println(k);
+                switch k as NSString {
+                case "title":
+                    newsTitle.text = v.toString(pretty: true);
+                    break;
+                case "author":
+                    author.text = v.toString(pretty: true);
+                    break;
+                case "photo":
+                    var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+v.toString(pretty: true))!;
+                    println(url);
+                    var data: NSData = NSData(contentsOfURL: url)!;
+                    newsImage.image = UIImage(data: data);
+                    break;
+                case "date":
+                    newsDate.text = v.toString(pretty: true);
+                    break;
+                case "content":
+                    newsContent.text = v.toString(pretty: true);
+                default:
+                    break;
+                }
+        }
     }
     
     func hideElements() {
@@ -87,6 +105,7 @@ class NewsDetailViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        getJSON();
         showElements();
     }
     

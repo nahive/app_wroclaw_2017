@@ -13,15 +13,11 @@ class NewsViewController: UITableViewController {
     
     
     
-    var images: [String] = ["news1.jpg","news2.jpg","news3.jpg","jujitsu2.jpg","power.jpg","wroclaw2.jpg"];
-    var authors: [String] = ["Piotr Laboga","Marcin Zachorny","Łukasz Pałka","Adam Nowak","Filip Kowal","Marcin Pietraszko"];
-    var titles: [String] = ["NBC produce brilliant promo ahead of Liverpool v Chelsea, set to ‘You’ll Never Walk Alone’.","African Cup of Nations - Senzo Meyiwa: South Africa star killed when...","Football has to return to its roots, or it will die. Football has to return to its roots. ","Alexis Sanchez increasingly crucial to Arsenal's title hopes","African Cup of Nations - Senzo Meyiwa: South Africa star killed when...","Football has to return to its roots, or it will die. Football has to return to its roots. "];
+    var images: [UIImage] = [];
+    var authors: [String] = [];
+    var titles: [String] = [];
     var dates: [String] = ["2014-06-16","2014-06-15","2014-06-14","2014-06-13","2014-06-12","2014-06-11"];
-    var fullContents: [String] = ["The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. \n\n It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59. The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. \n\n Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59.",
-        "The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. \n\n It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59. The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. \n\n Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59.",
-        "The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. \n\n It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59. The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. \n\n Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59.",
-        "The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. \n\n It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59. The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. \n\n Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59.",
-        "The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. \n\n It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59. The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. \n\n Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59.", "The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. \n\n It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59. The Frenchman's stance puts him in direct opposition to some of Europe's biggest leagues and clubs, who want the event to be staged in May. The World Cup June and July, but Fifa has been told that Qatar's searing summer temperatures will put players' health at risk. \n\n Platini said:It'll never be in April, May or June. It will be in winter. He added the 2022 Champions League semi-finals and final could be moved to June if necessary, saying the clubs would accept whatever decision was made. It's not the clubs that are playing, it's the players and it's not possible to play in May when it's 40 degrees, said Platini, 59."];
+    var id: [String] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +30,48 @@ class NewsViewController: UITableViewController {
         var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
         bgView.alpha = 0.5;
         tableView.backgroundView = bgView;
+        
+        getJSON();
+        
+       
+        
+    }
+    
+    func getJSON() {
+        
+        images.removeAll(keepCapacity: true);
+        authors.removeAll(keepCapacity: true);
+        titles.removeAll(keepCapacity: true);
+        dates.removeAll(keepCapacity: true);
+        id.removeAll(keepCapacity: true);
+        
+        var url = "https://2017.wroclaw.pl/mobile/news"
+        let json = JSON(url:url);
+        
+        for (k, v) in json {
+            for (i,j) in v {
+                switch i as NSString {
+                case "title":
+                    titles.append(j.toString(pretty: true));
+                    break;
+                case "author":
+                    authors.append(j.toString(pretty: true));
+                    break;
+                case "photo":
+                    var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
+                    var data: NSData = NSData(contentsOfURL: url)!;
+                    images.append(UIImage(data: data)!);
+                    break;
+                case "date":
+                    dates.append(j.toString(pretty: true));
+                    break;
+                case "id":
+                    id.append(j.toString(pretty: true));
+                default:
+                    break;
+                }
+            }
+        }
         
     }
     
@@ -56,6 +94,7 @@ class NewsViewController: UITableViewController {
     
     func updateData(sender : UIRefreshControl!){
         // Reload table data
+        getJSON();
         self.tableView.reloadData();
         
         // End the refreshing
@@ -70,6 +109,8 @@ class NewsViewController: UITableViewController {
             self.refreshControl?.attributedTitle = attrTit;
             self.refreshControl?.endRefreshing();
         }
+        
+        
     }
     
 
@@ -88,7 +129,7 @@ class NewsViewController: UITableViewController {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableId);
         }
         var image: UIImageView? = cell!.viewWithTag(101) as? UIImageView;
-        image?.image = UIImage(named: images[indexPath.row]);
+        image?.image = images[indexPath.row];
         var date: UILabel? = cell!.viewWithTag(102) as? UILabel;
         date?.text = dates[indexPath.row];
         var title: UITextView? = cell!.viewWithTag(103) as? UITextView;
@@ -102,11 +143,7 @@ class NewsViewController: UITableViewController {
         if(segue.identifier == "showNewsDetail"){
             let row = self.tableView.indexPathForSelectedRow()?.row;
             var destViewController : NewsDetailViewController = segue.destinationViewController as NewsDetailViewController;
-            destViewController.titleVal = titles[row!];
-            destViewController.imageVal = images[row!];
-            destViewController.contentVal = fullContents[row!];
-            destViewController.dateVal = dates[row!];
-            destViewController.authorVal = authors[row!];
+            destViewController.idVal = id[row!];
         }
     }
     // MARK: - Table view data source
