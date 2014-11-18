@@ -21,13 +21,20 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     var seenError : Bool = false
     var locationFixAchieved : Bool = false
     var locationStatus : NSString = "Not Started"
-    var localizationImages: [String] = ["lotnisko.jpg", "orbita.jpg", "stadionolimpijski.jpg"];
-    var localizationNames: [String] = ["Lotnisko", "Hala orbita", "Stadion olimpijski"];
-    var localizationsAddress: [String] = ["Wiejska 24", "Prudnicka 14", "Piękna 64"];
+
+    var localizationImages: [UIImage] = [];
+    var localizationNames: [String] = [];
+    var localizationsAddress: [String] = [];
+     var localizationLat: [Double] = [];
+     var localizationLng: [Double] = [];
+     var localizationId: [String] = [];
+    
+    
     var pageControl: UIPageControl = UIPageControl();
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
+        getJSON();
         setMarkers();
         setScrollView();
         initLocationManager();
@@ -65,7 +72,8 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         scrollView.backgroundColor = UIColor.whiteColor();
         
         // * amount of array items
-        scrollView.contentSize = CGSizeMake(view.frame.width*(2/3)*3, view.frame.height*(1/3) - 50);
+        var multi : CGFloat = CGFloat(localizationImages.count);
+        scrollView.contentSize = CGSizeMake(view.frame.width*(2/3)*multi, view.frame.height*(1/3) - 50);
         scrollView.userInteractionEnabled = true;
         
         var numberOfImages: Int = localizationImages.count - 1;
@@ -74,7 +82,7 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         for index in 0...numberOfImages {
             println(index);
             var imageView: UIImageView = UIImageView(frame: CGRectMake(xPoistion, 0, view.frame.width*(2/3), view.frame.height*(1/3) - 100));
-            imageView.image = UIImage(named: localizationImages[index]);
+            imageView.image = localizationImages[index];
             scrollView.addSubview(imageView);
             
             var localizationName: UILabel = UILabel(frame: CGRectMake(xPoistion + (view.frame.width*(2/3))/2 - 100, view.frame.height*(1/3) - 95, 200, 20));
@@ -95,11 +103,66 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
 
     }
     
+    
+    func getJSON() {
+        var url = "https://2017.wroclaw.pl/mobile/location"
+        let json = JSON(url:url);
+        
+        var categoryDisciplines: [String] = [];
+        
+        for (k, v) in json {
+            for (i,j) in v {
+                switch i as NSString {
+                case "lat":
+                    var lats : NSString  = NSString(string: j.toString(pretty: true));
+                    var lat = lats.doubleValue;
+                    localizationLat.append(lat);
+                    break;
+                case "lng":
+                    var lngs : NSString  = NSString(string: j.toString(pretty: true));
+                    var lng = lngs.doubleValue;
+                    localizationLng.append(lng);
+                    break;
+                case "id":
+                    localizationId.append(j.toString(pretty: true));
+                    break;
+                case "photo":
+                    var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
+                    var data: NSData;
+                    if (NSData(contentsOfURL: url) != nil) {
+                        data = NSData(contentsOfURL: url)!;
+                    } else {
+                        var url2: NSURL = NSURL(string: "https://2017.wroclaw.pl/upload/images/ikony-dyscyplin/powerlifting.png")!
+                        data = NSData(contentsOfURL: url2)!;
+                    }
+                    localizationImages.append(UIImage(data: data)!);
+                    break;
+                case "title":
+                    localizationNames.append(j.toString(pretty: true));
+                    break;
+                case "address":
+                    localizationsAddress.append(j.toString(pretty: true));
+                    break;
+                default:
+                    break;
+                }
+            }
+        }
+    }
+
+    
     func setMarkers() {
-        var address: [String: String] = ["address" : "Piekna", "nr": "64K/17"];
-        var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(51.1109228, 17.0394964);
-        var placeMark: MKPlacemark = MKPlacemark(coordinate: location, addressDictionary: address);
-        mapView.addAnnotation(placeMark);
+        var address: [String: String] = [:]
+        var location: CLLocationCoordinate2D;
+        var placeMark: MKPointAnnotation;
+        for i in 0...localizationId.count-1 {
+            address = ["address" : localizationsAddress[i]];
+            location = CLLocationCoordinate2DMake(localizationLat[i], localizationLng[i]);
+            placeMark = MKPointAnnotation();
+            placeMark.setCoordinate(location);
+            placeMark.title = localizationNames[i];
+            mapView.addAnnotation(placeMark);
+        }
     }
     
     func setPageControl(){
@@ -123,18 +186,21 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     }
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        if annotation is MKUserLocation {
+            return nil; }
         var myPin: MKPinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Current");
         myPin.pinColor = MKPinAnnotationColor.Green;
         myPin.backgroundColor = UIColor.clearColor();
         var detail: UIButton = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as UIButton;
-        detail.frame = CGRectMake(0, 0, 100, 100);
+      //  detail.frame = CGRectMake(0, 0, 100, 100);
        
-        detail.backgroundColor = UIColor.blackColor();
+      //  detail.backgroundColor = UIColor.blackColor();
         myPin.rightCalloutAccessoryView = detail;
         //myPin.draggable = false;
        // myPin.highlighted = true;
       //  myPin.animatesDrop = true;
         myPin.canShowCallout = true;
+        
         return myPin;
     }
     

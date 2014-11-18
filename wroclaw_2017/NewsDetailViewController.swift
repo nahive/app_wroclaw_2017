@@ -25,33 +25,33 @@ class NewsDetailViewController: UIViewController {
     
     var screen =  UIScreen.mainScreen().bounds;
     var idVal = "";
+    var titleVal = "";
+    var dateVal = "";
+    var photoVal = UIImage();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // getJSON();
         hideElements();
     }
     
-    func getJSON(){
+    
+    func fillFromSegue(){
+        self.title = titleVal;
+        newsDate.text = dateVal;
+        newsTitle.text = titleVal;
+        newsImage.image = photoVal;
+        getJSON();
         
+    }
+    
+    func getJSON(){
         var url = "https://2017.wroclaw.pl/mobile/news/view/"+idVal;
         let json = JSON(url:url);
         
         for (k, v) in json {
                 switch k as NSString {
-                case "title":
-                    newsTitle.text = v.toString(pretty: true);
-                    break;
                 case "author":
                     author.text = v.toString(pretty: true);
-                    break;
-                case "photo":
-                    var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+v.toString(pretty: true))!;
-                    var data: NSData = NSData(contentsOfURL: url)!;
-                    newsImage.image = UIImage(data: data);
-                    break;
-                case "date":
-                    newsDate.text = v.toString(pretty: true);
                     break;
                 case "content":
                     newsContent.text = v.toString(pretty: true);
@@ -103,7 +103,7 @@ class NewsDetailViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        getJSON();
+        fillFromSegue();
         showElements();
     }
     

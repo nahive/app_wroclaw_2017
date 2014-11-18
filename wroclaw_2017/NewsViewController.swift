@@ -30,15 +30,11 @@ class NewsViewController: UITableViewController {
         var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
         bgView.alpha = 0.5;
         tableView.backgroundView = bgView;
-        
-        getJSON();
-        
-       
-        
+        getJSON()
     }
     
     func getJSON() {
-        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
         images.removeAll(keepCapacity: true);
         authors.removeAll(keepCapacity: true);
         titles.removeAll(keepCapacity: true);
@@ -73,6 +69,7 @@ class NewsViewController: UITableViewController {
                 }
             }
         }
+          UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
         
     }
     
@@ -113,10 +110,7 @@ class NewsViewController: UITableViewController {
         
         
     }
-    
 
-    override func viewDidAppear(animated: Bool) {
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -145,6 +139,9 @@ class NewsViewController: UITableViewController {
             let row = self.tableView.indexPathForSelectedRow()?.row;
             var destViewController : NewsDetailViewController = segue.destinationViewController as NewsDetailViewController;
             destViewController.idVal = id[row!];
+            destViewController.photoVal = images[row!];
+            destViewController.titleVal = titles[row!];
+            destViewController.dateVal = dates[row!];
         }
     }
     // MARK: - Table view data source

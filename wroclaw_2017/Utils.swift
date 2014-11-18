@@ -34,7 +34,7 @@ class Utils {
                 view.alpha = 1.0
             },
             completion: { finished in
-                println("Bug faced right!")
+                
         })
     }
     
@@ -46,7 +46,7 @@ class Utils {
                 view.alpha = 0.0
             },
             completion: { finished in
-                println("Bug faced right!")
+                
         })
     }
 

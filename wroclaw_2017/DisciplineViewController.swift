@@ -20,8 +20,8 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     
     //sort this array
     var disciplinesSectionTitles: [String] = [];
-    
     var disciplineIndexTitles: [String] = [];
+    var names: [String] = [];
     var locations: [String] = [];
     var id: [String] = [];
     var numberOfImage: Int = 0;
@@ -30,7 +30,9 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
+        
         getJSON();
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,9 +42,6 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     
     
     func getJSON() {
-        
-       
-        
         var url = "https://2017.wroclaw.pl/mobile/discipline"
         let json = JSON(url:url);
         
@@ -70,18 +69,7 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
                     break;
                 case "name":
                     categoryDisciplines.append(j.toString(pretty: true));
-                    break;
-                case "photo":
-                    var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
-                    var data: NSData;
-                    if (NSData(contentsOfURL: url) != nil) {
-                        data = NSData(contentsOfURL: url)!;
-                    } else {
-                        var url2: NSURL = NSURL(string: "https://2017.wroclaw.pl/upload/images/ikony-dyscyplin/powerlifting.png")!
-                        data = NSData(contentsOfURL: url2)!;
-                    }
-
-                    images.append(UIImage(data: data)!);
+                    names.append(j.toString(pretty: true));
                     break;
                 case "category":
                     if (!(disciplinesSectionTitles.last == j.toString(pretty: true))) {
@@ -124,10 +112,22 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         return disciplinesSectionTitles.count;
     }
 
+    
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var sectionTitle: String = disciplinesSectionTitles[section];
         var sectionEvents: [String] = disciplines[sectionTitle]!;
         return sectionEvents.count;
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "showDisciplineDetail"){
+            let row = self.tableView.indexPathForSelectedRow()?.row;
+            var destViewController : DisciplineDetailViewController = segue.destinationViewController as DisciplineDetailViewController;
+            destViewController.idVal = id[row!];
+            destViewController.locationVal = locations[row!];
+            destViewController.titleVal = names[row!];
+        }
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -181,8 +181,8 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         var image: UIImageView? = cell!.viewWithTag(101) as? UIImageView;
         image?.backgroundColor = Utils.colorize(0x605196);
         image?.layer.cornerRadius = 8;
-        if (!(numberOfImage > images.count-1)){
-            image?.image = images[numberOfImage];
+        if (!(numberOfImage > icons.count-1)){
+            image?.image = icons[numberOfImage];
         }
         numberOfImage++;
         
@@ -245,17 +245,9 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "showDisciplineDetail"){
-            let row = self.tableView.indexPathForSelectedRow()?.row;
-            var destViewController : DisciplineDetailViewController = segue.destinationViewController as DisciplineDetailViewController;
-//            destViewController.titleVal = titles[row!];
-//            destViewController.timeVal = times[row!];
-//            destViewController.contentVal = fullContents[row!%3];
-            
-            
-        }
-    }
+    
+    
+    
 
 
 }
