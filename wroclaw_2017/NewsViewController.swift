@@ -16,7 +16,7 @@ class NewsViewController: UITableViewController {
     var images: [UIImage] = [];
     var authors: [String] = [];
     var titles: [String] = [];
-    var dates: [String] = ["2014-06-16","2014-06-15","2014-06-14","2014-06-13","2014-06-12","2014-06-11"];
+    var dates: [String] = [];
     var id: [String] = [];
     
     override func viewDidLoad() {
@@ -67,6 +67,7 @@ class NewsViewController: UITableViewController {
                     break;
                 case "id":
                     id.append(j.toString(pretty: true));
+                    break;
                 default:
                     break;
                 }

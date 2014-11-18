@@ -13,24 +13,94 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
 @IBOutlet weak var barButtonItem: UIBarButtonItem!
     
     var screen =  UIScreen.mainScreen().bounds;
-    var disciplines: [String: [String]] = ["Ball Sports": ["Beach Handball", "Fistball", "Canoe Polo"], "Trend Sports": ["Ju-jitsu", "Sumo", "Karate"], "Artistic and Dance Sports": ["Dance Sports", "Roller Skating Artistic", "Gymnastics Rythmic"]];
+    var disciplines: [String: [String]] = ["" : []];
     
-    var images: [String] = ["wushu.png","aikido.png","air-sports.png","archery.png","beach-handball.png","billard-sports.png", "bodybuiliding.png","archery.png","aikido.png"];
+    var images: [UIImage] = [];
+    var icons: [UIImage] = [];
     
     //sort this array
-    var disciplinesSectionTitles: [String] = ["Ball Sports", "Trend Sports", "Artistic and Dance Sports"];
+    var disciplinesSectionTitles: [String] = [];
     
-    var disciplineIndexTitles: [String] = ["Ball Sports", "Trend Sports", "Artistic and Dance Sports"];
+    var disciplineIndexTitles: [String] = [];
+    var locations: [String] = [];
+    var id: [String] = [];
+    var numberOfImage: Int = 0;
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
+        getJSON();
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    
+    func getJSON() {
+        
+       
+        
+        var url = "https://2017.wroclaw.pl/mobile/discipline"
+        let json = JSON(url:url);
+        
+        var categoryDisciplines: [String] = [];
+        
+        for (k, v) in json {
+            for (i,j) in v {
+                switch i as NSString {
+                case "location":
+                    locations.append(j.toString(pretty: true));
+                    break;
+                case "id":
+                    id.append(j.toString(pretty: true));
+                    break;
+                case "icon":
+                    var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
+                    var data: NSData;
+                    if (NSData(contentsOfURL: url) != nil) {
+                        data = NSData(contentsOfURL: url)!;
+                    } else {
+                        var url2: NSURL = NSURL(string: "https://2017.wroclaw.pl/upload/images/ikony-dyscyplin/powerlifting.png")!
+                        data = NSData(contentsOfURL: url2)!;
+                    }
+                    icons.append(UIImage(data: data)!);
+                    break;
+                case "name":
+                    categoryDisciplines.append(j.toString(pretty: true));
+                    break;
+                case "photo":
+                    var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
+                    var data: NSData;
+                    if (NSData(contentsOfURL: url) != nil) {
+                        data = NSData(contentsOfURL: url)!;
+                    } else {
+                        var url2: NSURL = NSURL(string: "https://2017.wroclaw.pl/upload/images/ikony-dyscyplin/powerlifting.png")!
+                        data = NSData(contentsOfURL: url2)!;
+                    }
+
+                    images.append(UIImage(data: data)!);
+                    break;
+                case "category":
+                    if (!(disciplinesSectionTitles.last == j.toString(pretty: true))) {
+                        disciplinesSectionTitles.append(j.toString(pretty: true));
+                        var lastDiscipline = categoryDisciplines.last;
+                        categoryDisciplines.removeAll(keepCapacity: true);
+                        categoryDisciplines.append(lastDiscipline!);
+                    }
+                    if (!(disciplineIndexTitles.last == j.toString(pretty: true))) {
+                        disciplineIndexTitles.append(j.toString(pretty: true));
+                    }
+                    disciplines.updateValue(categoryDisciplines, forKey: j.toString(pretty: true));
+                    break;
+                default:
+                    break;
+                }
+            }
+        }
+        
     }
     
     func customSetup(){
@@ -56,7 +126,6 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var sectionTitle: String = disciplinesSectionTitles[section];
-        println(sectionTitle);
         var sectionEvents: [String] = disciplines[sectionTitle]!;
         return sectionEvents.count;
     }
@@ -112,7 +181,10 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         var image: UIImageView? = cell!.viewWithTag(101) as? UIImageView;
         image?.backgroundColor = Utils.colorize(0x605196);
         image?.layer.cornerRadius = 8;
-        image?.image = UIImage(named: images[indexPath.row]);
+        if (!(numberOfImage > images.count-1)){
+            image?.image = images[numberOfImage];
+        }
+        numberOfImage++;
         
         //        NSString *sectionTitle = [animalSectionTitles objectAtIndex:indexPath.section];
         //        NSArray *sectionAnimals = [animals objectForKey:sectionTitle];

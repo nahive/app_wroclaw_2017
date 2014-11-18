@@ -38,7 +38,6 @@ class NewsDetailViewController: UIViewController {
         let json = JSON(url:url);
         
         for (k, v) in json {
-            println(k);
                 switch k as NSString {
                 case "title":
                     newsTitle.text = v.toString(pretty: true);
@@ -48,7 +47,6 @@ class NewsDetailViewController: UIViewController {
                     break;
                 case "photo":
                     var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+v.toString(pretty: true))!;
-                    println(url);
                     var data: NSData = NSData(contentsOfURL: url)!;
                     newsImage.image = UIImage(data: data);
                     break;
