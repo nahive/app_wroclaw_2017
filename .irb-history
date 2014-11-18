@@ -1,0 +1,14 @@
+query("button")
+query("table")
+exit
+query("button")
+result = query("button")
+btn1 = result[0]
+touch("button index:0")
+touch("button index:0")
+touch("button index:0")
+touch("button index:0")
+touch("button index:0")
+touch("button index:0")
+touch("button index:0")
+exit
