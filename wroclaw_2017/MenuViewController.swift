@@ -8,10 +8,11 @@
 
 import UIKit
 
-public class MenuViewController: UITableViewController {
+class MenuViewController: UITableViewController {
+
     
-    override public func
-        viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
         // Uncomment the following line to preserve selection between presentations
@@ -19,10 +20,6 @@ public class MenuViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    public func getTableView() -> UITableView {
-        return tableView;
     }
     
     func customSetup(){
@@ -35,48 +32,47 @@ public class MenuViewController: UITableViewController {
         
     }
     
-    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if((sender?.isKindOfClass(UITableView)) != nil){
             
         }
     }
     
-    
-    public override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.Default
     }
     
-    override public func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
-    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
     
-    override public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(indexPath.row == 0){
             return 95
         }
         return 55
     }
 
-    override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         
         return 7
     }
     
-    override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     }
     
-    override public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.clearColor();
         if(cell.respondsToSelector("setSeparatorInset:")){
             cell.separatorInset = UIEdgeInsetsZero;
@@ -86,7 +82,7 @@ public class MenuViewController: UITableViewController {
         }
     }
     
-    override public func viewDidLayoutSubviews() {
+    override func viewDidLayoutSubviews() {
         if(self.tableView.respondsToSelector("setSeparatorInset:")){
             self.tableView.separatorInset = UIEdgeInsetsZero;
         }
@@ -95,7 +91,7 @@ public class MenuViewController: UITableViewController {
         }
     }
     
-    override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cellId = "Cell";
         switch(indexPath.row){
         case 0:

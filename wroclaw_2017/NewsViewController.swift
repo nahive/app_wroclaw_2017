@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class NewsViewController: UITableViewController {
+class NewsViewController: UITableViewController {
     @IBOutlet weak var revealButtonItem: UIBarButtonItem!
     
     
@@ -19,7 +19,7 @@ public class NewsViewController: UITableViewController {
     var dates: [String] = [];
     var id: [String] = [];
     
-    override public func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
         // Uncomment the following line to preserve selection between presentations
@@ -33,15 +33,7 @@ public class NewsViewController: UITableViewController {
         //getJSON()
     }
     
-    public func didItLoad() -> UIViewController {
-        return self;
-    }
-    
-    public func didDownload() -> Bool {
-        return id.count != 0;
-    }
-    
-    public func getJSON() {
+    func getJSON() {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
         images.removeAll(keepCapacity: true);
         authors.removeAll(keepCapacity: true);
@@ -120,12 +112,12 @@ public class NewsViewController: UITableViewController {
     }
 
     
-    public override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tableId = "NewsCell";
         var cell = tableView.dequeueReusableCellWithIdentifier(tableId) as? UITableViewCell;
         if !(cell != nil) {
@@ -142,7 +134,7 @@ public class NewsViewController: UITableViewController {
         return cell!
     }
     
-    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "showNewsDetail"){
             let row = self.tableView.indexPathForSelectedRow()?.row;
             var destViewController : NewsDetailViewController = segue.destinationViewController as NewsDetailViewController;
@@ -154,7 +146,7 @@ public class NewsViewController: UITableViewController {
     }
     // MARK: - Table view data source
 
-    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
@@ -162,7 +154,7 @@ public class NewsViewController: UITableViewController {
     
     
 
-    override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return titles.count
@@ -178,7 +170,7 @@ public class NewsViewController: UITableViewController {
 //        return h_view
 //    }
     
-    override public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 110
     }
 
