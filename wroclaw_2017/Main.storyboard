@@ -461,7 +461,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TxP-lU-5t2">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TxP-lU-5t2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="4Of-0z-XZ7"/>
@@ -496,7 +496,6 @@
                         <constraints>
                             <constraint firstItem="TxP-lU-5t2" firstAttribute="top" secondItem="m2e-lf-WCd" secondAttribute="topMargin" id="3Zk-IE-H2k"/>
                             <constraint firstItem="TxP-lU-5t2" firstAttribute="leading" secondItem="m2e-lf-WCd" secondAttribute="leadingMargin" constant="-16" id="ENq-xe-fa9"/>
-                            <constraint firstItem="TxP-lU-5t2" firstAttribute="leading" secondItem="m2e-lf-WCd" secondAttribute="leadingMargin" id="Y3y-NT-xiL"/>
                             <constraint firstItem="TxP-lU-5t2" firstAttribute="top" secondItem="m2e-lf-WCd" secondAttribute="topMargin" id="sun-eo-Ygc"/>
                         </constraints>
                     </view>
@@ -510,11 +509,79 @@
                         <outlet property="revealButtonItem" destination="oS3-Dg-mbx" id="JtO-M7-srG"/>
                         <outlet property="scrollView" destination="EWd-v1-dNd" id="Arn-kn-mkJ"/>
                         <outlet property="view" destination="m2e-lf-WCd" id="JY6-1G-0Pa"/>
+                        <segue destination="qMj-dO-WVY" kind="show" identifier="showMapDetails" id="HUB-Iz-u2K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odl-vW-wXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1639" y="109"/>
+        </scene>
+        <!--Locations Detail View Controller-->
+        <scene sceneID="kmq-cw-rZG">
+            <objects>
+                <viewController id="qMj-dO-WVY" customClass="LocationsDetailViewController" customModule="wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="apU-Uv-MYi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jys-xc-qHZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qvi-AC-mFV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2uU-Kj-QWk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1EG-pI-Mfm">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqe-2z-tcl">
+                                                <rect key="frame" x="8" y="371" width="45" height="28"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cni-Gf-4Uf">
+                                                <rect key="frame" x="8" y="342" width="43" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tp0-bb-c7k">
+                                                <rect key="frame" x="8" y="400" width="88" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="343-Hw-0bx">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="271"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="600" id="QTx-EU-jKY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="9mv-HW-mcg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="insideViewH" destination="QTx-EU-jKY" id="OLF-hX-GmG"/>
+                        <outlet property="mapContent" destination="Tp0-bb-c7k" id="NIN-Pb-3yG"/>
+                        <outlet property="mapImage" destination="343-Hw-0bx" id="5Y8-6v-Uyu"/>
+                        <outlet property="mapPlace" destination="cni-Gf-4Uf" id="0Eg-3R-Ibw"/>
+                        <outlet property="mapTitle" destination="Mqe-2z-tcl" id="Shk-v0-AM7"/>
+                        <outlet property="scrollView" destination="2uU-Kj-QWk" id="0Jg-f7-r8h"/>
+                        <outlet property="scrollViewH" destination="9mv-HW-mcg" id="1eN-4v-85M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDa-md-nn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="807"/>
         </scene>
         <!--Calendar View-->
         <scene sceneID="HT0-Eg-4Gl">

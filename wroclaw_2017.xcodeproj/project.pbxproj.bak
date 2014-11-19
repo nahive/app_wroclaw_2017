@@ -37,6 +37,7 @@
 		4CA7AB631A0AD1CD005073E7 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */; };
 		4CB5F59E19F71255006F09EC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5F59D19F71255006F09EC /* NewsViewController.swift */; };
 		4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */; };
+		4CC597211A1C77BD00477892 /* LocationsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC597201A1C77BD00477892 /* LocationsDetailViewController.swift */; };
 		4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3471A004B65006DE05C /* DIDatepicker.m */; };
 		4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */; };
 		4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */; };
@@ -110,6 +111,7 @@
 		4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		4CB5F59D19F71255006F09EC /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		4CC597201A1C77BD00477892 /* LocationsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDetailViewController.swift; sourceTree = "<group>"; };
 		4CC9A3461A004B65006DE05C /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
 		4CC9A3471A004B65006DE05C /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
 		4CC9A3481A004B65006DE05C /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				4C4B9E031A09FFF000F60266 /* InfoViewController.swift */,
 				4C4B9E051A0A001400F60266 /* InfoMenuViewController.swift */,
 				4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */,
+				4CC597201A1C77BD00477892 /* LocationsDetailViewController.swift */,
 				4C9B833219F6F5A800B68B88 /* Images.xcassets */,
 				4C9B832919F6F5A800B68B88 /* Supporting Files */,
 			);
@@ -436,6 +439,7 @@
 				4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */,
 				4C4B9E041A09FFF000F60266 /* InfoViewController.swift in Sources */,
 				4C9B836719F6F71100B68B88 /* SWRevealViewController.m in Sources */,
+				4CC597211A1C77BD00477892 /* LocationsDetailViewController.swift in Sources */,
 				D45996561A13993D002B1059 /* json.swift in Sources */,
 				4CA7AB631A0AD1CD005073E7 /* LocationsViewController.swift in Sources */,
 				D45996461A120372002B1059 /* DisciplineViewController.swift in Sources */,

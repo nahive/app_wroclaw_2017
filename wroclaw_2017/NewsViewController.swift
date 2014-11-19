@@ -30,7 +30,7 @@ class NewsViewController: UITableViewController {
         var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
         bgView.alpha = 0.5;
         tableView.backgroundView = bgView;
-        getJSON()
+        //getJSON()
     }
     
     func getJSON() {

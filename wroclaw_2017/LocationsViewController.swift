@@ -22,15 +22,17 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     var locationFixAchieved : Bool = false
     var locationStatus : NSString = "Not Started"
 
-    var localizationImages: [UIImage] = [];
-    var localizationNames: [String] = [];
-    var localizationsAddress: [String] = [];
-     var localizationLat: [Double] = [];
-     var localizationLng: [Double] = [];
-     var localizationId: [String] = [];
+    var locationImages: [UIImage] = [];
+    var locationNames: [String] = [];
+    var locationsAddress: [String] = [];
+    var locationLat: [Double] = [];
+    var locationLng: [Double] = [];
+    var locationId: [String] = [];
+    var locationContent: [String] = [];
     
-    
+    var clickedAnnotation = "";
     var pageControl: UIPageControl = UIPageControl();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
@@ -72,30 +74,35 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         scrollView.backgroundColor = UIColor.whiteColor();
         
         // * amount of array items
-        var multi : CGFloat = CGFloat(localizationImages.count);
+        var multi : CGFloat = CGFloat(locationImages.count);
         scrollView.contentSize = CGSizeMake(view.frame.width*(2/3)*multi, view.frame.height*(1/3) - 50);
         scrollView.userInteractionEnabled = true;
         
-        var numberOfImages: Int = localizationImages.count - 1;
+        var numberOfImages: Int = locationImages.count - 1;
         var xPoistion: CGFloat = 0;
         
         for index in 0...numberOfImages {
             println(index);
             var imageView: UIImageView = UIImageView(frame: CGRectMake(xPoistion, 0, view.frame.width*(2/3), view.frame.height*(1/3) - 100));
-            imageView.image = localizationImages[index];
+            imageView.image = locationImages[index];
             scrollView.addSubview(imageView);
             
-            var localizationName: UILabel = UILabel(frame: CGRectMake(xPoistion + (view.frame.width*(2/3))/2 - 100, view.frame.height*(1/3) - 95, 200, 20));
-            localizationName.text = localizationNames[index];
-            localizationName.font = UIFont(name: "HelveticaNeue-Thin", size: 21);
-            localizationName.textAlignment = NSTextAlignment.Center;
-            scrollView.addSubview(localizationName);
+            var singleTap = UITapGestureRecognizer(target: self, action: "imageTap:");
+            singleTap.numberOfTapsRequired = 1;
+            imageView.userInteractionEnabled = true;
+            imageView.addGestureRecognizer(singleTap);
             
-            var localizationAddress: UILabel = UILabel(frame: CGRectMake(xPoistion + (view.frame.width*(2/3))/2 - 100, view.frame.height*(1/3) - 75, 200, 20));
-            localizationAddress.text = "ul. " + localizationsAddress[index];
-            localizationAddress.font = UIFont(name: "HelveticaNeue-Thin", size: 14);
-            localizationAddress.textAlignment = NSTextAlignment.Center;
-            scrollView.addSubview(localizationAddress);
+            var locationName: UILabel = UILabel(frame: CGRectMake(xPoistion + (view.frame.width*(2/3))/2 - 100, view.frame.height*(1/3) - 95, 200, 20));
+            locationName.text = locationNames[index];
+            locationName.font = UIFont(name: "HelveticaNeue-Thin", size: 21);
+            locationName.textAlignment = NSTextAlignment.Center;
+            scrollView.addSubview(locationName);
+            
+            var locationAddress: UILabel = UILabel(frame: CGRectMake(xPoistion + (view.frame.width*(2/3))/2 - 100, view.frame.height*(1/3) - 75, 200, 20));
+            locationAddress.text = "ul. " + locationsAddress[index];
+            locationAddress.font = UIFont(name: "HelveticaNeue-Thin", size: 14);
+            locationAddress.textAlignment = NSTextAlignment.Center;
+            scrollView.addSubview(locationAddress);
             
             xPoistion += view.frame.width*(2/3);
         }
@@ -103,7 +110,15 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
 
     }
     
-    
+    func imageTap(sender: UITapGestureRecognizer!){
+        var orx = Int(sender.view!.frame.origin.x);
+        var index =  orx / 250;
+        var x : CLLocationDegrees = locationLat[index];
+        var y : CLLocationDegrees = locationLng[index];
+        var coords = CLLocationCoordinate2DMake(x, y);
+        mapView.setCenterCoordinate(coords, animated: true)
+    }
+
     func getJSON() {
         var url = "https://2017.wroclaw.pl/mobile/location"
         let json = JSON(url:url);
@@ -116,15 +131,15 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
                 case "lat":
                     var lats : NSString  = NSString(string: j.toString(pretty: true));
                     var lat = lats.doubleValue;
-                    localizationLat.append(lat);
+                    locationLat.append(lat);
                     break;
                 case "lng":
                     var lngs : NSString  = NSString(string: j.toString(pretty: true));
                     var lng = lngs.doubleValue;
-                    localizationLng.append(lng);
+                    locationLng.append(lng);
                     break;
                 case "id":
-                    localizationId.append(j.toString(pretty: true));
+                    locationId.append(j.toString(pretty: true));
                     break;
                 case "photo":
                     var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
@@ -135,13 +150,16 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
                         var url2: NSURL = NSURL(string: "https://2017.wroclaw.pl/upload/images/ikony-dyscyplin/powerlifting.png")!
                         data = NSData(contentsOfURL: url2)!;
                     }
-                    localizationImages.append(UIImage(data: data)!);
+                    locationImages.append(UIImage(data: data)!);
                     break;
                 case "title":
-                    localizationNames.append(j.toString(pretty: true));
+                    locationNames.append(j.toString(pretty: true));
                     break;
                 case "address":
-                    localizationsAddress.append(j.toString(pretty: true));
+                    locationsAddress.append(j.toString(pretty: true));
+                    break;
+                case "content":
+                    locationContent.append(j.toString(pretty: true));
                     break;
                 default:
                     break;
@@ -155,19 +173,19 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         var address: [String: String] = [:]
         var location: CLLocationCoordinate2D;
         var placeMark: MKPointAnnotation;
-        for i in 0...localizationId.count-1 {
-            address = ["address" : localizationsAddress[i]];
-            location = CLLocationCoordinate2DMake(localizationLat[i], localizationLng[i]);
+        for i in 0...locationId.count-1 {
+            address = ["address" : locationsAddress[i]];
+            location = CLLocationCoordinate2DMake(locationLat[i], locationLng[i]);
             placeMark = MKPointAnnotation();
             placeMark.setCoordinate(location);
-            placeMark.title = localizationNames[i];
+            placeMark.title = locationNames[i];
             mapView.addAnnotation(placeMark);
         }
     }
     
     func setPageControl(){
         pageControl.frame = CGRectMake(view.frame.width/2 - 50, view.frame.height*(2/3) + scrollView.frame.height + 20, 100, 30);
-        pageControl.numberOfPages = localizationNames.count;
+        pageControl.numberOfPages = locationNames.count;
         pageControl.currentPage = 0;
         view.addSubview(pageControl);
         pageControl.backgroundColor = UIColor.clearColor();
@@ -189,25 +207,32 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         if annotation is MKUserLocation {
             return nil; }
         var myPin: MKPinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Current");
-        myPin.pinColor = MKPinAnnotationColor.Green;
+        myPin.pinColor = MKPinAnnotationColor.Red;
         myPin.backgroundColor = UIColor.clearColor();
         var detail: UIButton = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as UIButton;
-      //  detail.frame = CGRectMake(0, 0, 100, 100);
-       
-      //  detail.backgroundColor = UIColor.blackColor();
         myPin.rightCalloutAccessoryView = detail;
-        //myPin.draggable = false;
-       // myPin.highlighted = true;
-      //  myPin.animatesDrop = true;
         myPin.canShowCallout = true;
         
         return myPin;
     }
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
-        println("test");
-        var news: NewsViewController = NewsViewController();
-        presentViewController(news, animated: true, completion: nil);
+        var bla = view.annotation.title;
+        clickedAnnotation = bla!;
+        performSegueWithIdentifier("showMapDetails", sender: self);
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "showMapDetails"){
+            let row = find(locationNames,clickedAnnotation);
+            println(row);
+            var destViewController : LocationsDetailViewController = segue.destinationViewController as LocationsDetailViewController;
+          
+            destViewController.imageVal = locationImages[row!];
+            destViewController.titleVal = locationNames[row!];
+            destViewController.placeVal = locationsAddress[row!];
+            destViewController.idVal = locationId[row!];
+        }
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
@@ -258,8 +283,8 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     override func viewDidAppear(animated: Bool) {
        // mapView.frame.origin =  CGPoint(x:0, y:0);
-       // mapH.constant = view.frame.height*(2/3);
-        //mapW.constant = view.frame.width;
+        mapH.constant = view.frame.height*(2/3);
+        mapW.constant = view.frame.width;
     }
 
     override func didReceiveMemoryWarning() {
