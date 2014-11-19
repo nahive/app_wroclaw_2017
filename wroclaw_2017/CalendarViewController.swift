@@ -44,7 +44,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.alpha = 0.0;
         var scroll: UIScrollView! = datePicker.subviews[0] as UIScrollView;
         scroll.frame = CGRectMake(0, 0, view.frame.width, datePicker.frame.height);
-        
         // Do any additional setup after loading the view.
     }
     
@@ -56,6 +55,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         scroll.frame = CGRectMake(0, 0, view.frame.width, datePicker.frame.height);
         Utils.fadeIn(tableView,duration: 0.6);
     }
+    
     
     func initDatePicker(){
         datePickerW.constant = view.frame.width;
@@ -72,8 +72,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
     func customSetup(){
         var revealViewController = self.revealViewController();
         if(revealViewController != nil){

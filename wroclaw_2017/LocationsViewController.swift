@@ -234,7 +234,18 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         var bla = view.annotation.title;
         clickedAnnotation = bla!;
+        println(clickedAnnotation);
         performSegueWithIdentifier("showMapDetails", sender: self);
+    }
+    
+    func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+        println(view.annotation.title);
+        let row = find(locationNames,view.annotation.title!);
+        println(UIScreen.mainScreen().bounds.width*(2/3));
+        let index: CGFloat = CGFloat(row!);
+        let scrollXPosition: CGFloat = UIScreen.mainScreen().bounds.width*(2/3)*index;
+        
+        scrollView.scrollRectToVisible(CGRect(x: scrollXPosition, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height), animated: true);
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -271,6 +282,8 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
             setMapToLocation(coord.latitude, longitude: coord.longitude, scale50KM: 0.025)
         }
     }
+    
+    
 
     func locationManager(manager: CLLocationManager!,
         didChangeAuthorizationStatus status: CLAuthorizationStatus) {

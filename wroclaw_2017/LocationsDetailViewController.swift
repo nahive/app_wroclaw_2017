@@ -43,10 +43,17 @@ class LocationsDetailViewController: UIViewController {
         var myLngString: String = NSString(format: "%.5f", myLng);
         var myLatString: String = NSString(format: "%.5f", myLat);
         
-        
-      var link: NSURL = NSURL(string: "http://maps.apple.com/?daddr=%28"+latString+",%20"+lngString+"%29&saddr=%28"+myLatString+",%20"+myLngString+"%29")!;
+        var url: String = "http://maps.apple.com/?daddr=%28"+latString;
+        url += ",%20";
+        url += lngString;
+        url += "%29&saddr=%28";
+        url += myLatString;
+        url += ",%20";
+        url += myLngString;
+        url += "%29";
+        var link: NSURL = NSURL(string: url)!;
         UIApplication.sharedApplication().openURL(link);
-        println(link);
+        
     }
     
     override func viewDidLoad() {
