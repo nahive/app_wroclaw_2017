@@ -111,6 +111,7 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
             self.barButtonItem.target = revealViewController;
             self.barButtonItem.action = "revealToggle:";
         }
+        view.addGestureRecognizer(revealViewController.panGestureRecognizer());
     }
 
     override func didReceiveMemoryWarning() {
