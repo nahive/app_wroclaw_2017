@@ -30,6 +30,9 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     var locationId: [String] = [];
     var locationContent: [String] = [];
     
+    var myLat: Double = 0;
+    var myLng: Double = 0;
+    
     var clickedAnnotation = "";
     var pageControl: UIPageControl = UIPageControl();
     
@@ -232,6 +235,10 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
             destViewController.titleVal = locationNames[row!];
             destViewController.placeVal = locationsAddress[row!];
             destViewController.idVal = locationId[row!];
+            destViewController.myLat = myLat;
+            destViewController.myLng = myLng;
+            
+            
         }
     }
     
@@ -245,6 +252,10 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
             var locationArray = locations as NSArray
             var locationObj = locationArray.lastObject as CLLocation
             var coord = locationObj.coordinate
+            
+            myLat = coord.latitude;
+            myLng = coord.longitude;
+            
             setMapToLocation(coord.latitude, longitude: coord.longitude, scale50KM: 0.025)
         }
     }
