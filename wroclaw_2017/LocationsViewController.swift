@@ -30,9 +30,6 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     var locationId: [String] = [];
     var locationContent: [String] = [];
     
-    var myLat: Double = 0;
-    var myLng: Double = 0;
-    
     var clickedAnnotation = "";
     var pageControl: UIPageControl = UIPageControl();
     
@@ -146,7 +143,13 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
                     break;
                 case "photo":
                     var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
-                    var data: NSData = NSData(contentsOfURL: url)!;
+                    var data: NSData;
+                    if (NSData(contentsOfURL: url) != nil) {
+                        data = NSData(contentsOfURL: url)!;
+                    } else {
+                        var url2: NSURL = NSURL(string: "https://2017.wroclaw.pl/upload/images/ikony-dyscyplin/powerlifting.png")!
+                        data = NSData(contentsOfURL: url2)!;
+                    }
                     locationImages.append(UIImage(data: data)!);
                     break;
                 case "title":
@@ -229,10 +232,6 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
             destViewController.titleVal = locationNames[row!];
             destViewController.placeVal = locationsAddress[row!];
             destViewController.idVal = locationId[row!];
-            destViewController.myLat = myLat;
-            destViewController.myLng = myLng;
-            
-            
         }
     }
     
@@ -246,10 +245,6 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
             var locationArray = locations as NSArray
             var locationObj = locationArray.lastObject as CLLocation
             var coord = locationObj.coordinate
-            
-            myLat = coord.latitude;
-            myLng = coord.longitude;
-            
             setMapToLocation(coord.latitude, longitude: coord.longitude, scale50KM: 0.025)
         }
     }

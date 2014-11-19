@@ -24,7 +24,7 @@ public class NewsViewController: UITableViewController {
         customSetup();
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        
+
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
@@ -77,7 +77,7 @@ public class NewsViewController: UITableViewController {
                 }
             }
         }
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+          UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
         
     }
     
@@ -118,7 +118,7 @@ public class NewsViewController: UITableViewController {
         
         
     }
-    
+
     
     public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -153,7 +153,7 @@ public class NewsViewController: UITableViewController {
         }
     }
     // MARK: - Table view data source
-    
+
     override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
@@ -161,25 +161,25 @@ public class NewsViewController: UITableViewController {
     }
     
     
-    
+
     override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return titles.count
     }
     
-    //    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    //        return 10
-    //    }
+//    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 10
+//    }
     
-    //    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    //        var h_view : UIView = UIView();
-    //        h_view.backgroundColor = UIColor.lightGrayColor();
-    //        return h_view
-    //    }
+//    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        var h_view : UIView = UIView();
+//        h_view.backgroundColor = UIColor.lightGrayColor();
+//        return h_view
+//    }
     
     override public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 110
     }
-    
+
 }

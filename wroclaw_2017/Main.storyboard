@@ -569,14 +569,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aHw-mq-NLM">
-                        <barButtonItem key="rightBarButtonItem" image="ic_action_directions.png" id="aEl-aC-0wU">
-                            <color key="tintColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="openMap:" destination="qMj-dO-WVY" id="75R-Gz-AId"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="insideViewH" destination="QTx-EU-jKY" id="OLF-hX-GmG"/>
                         <outlet property="mapContent" destination="Tp0-bb-c7k" id="NIN-Pb-3yG"/>
@@ -931,7 +923,6 @@
         <image name="clock.jpg" width="128" height="128"/>
         <image name="ic_action_about.png" width="96" height="96"/>
         <image name="ic_action_chat.png" width="96" height="96"/>
-        <image name="ic_action_directions.png" width="64" height="64"/>
         <image name="ic_action_forward.png" width="48" height="48"/>
         <image name="ic_action_go_to_today.png" width="96" height="96"/>
         <image name="ic_action_location_found.png" width="48" height="48"/>

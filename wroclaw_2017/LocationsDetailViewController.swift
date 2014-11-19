@@ -25,30 +25,6 @@ class LocationsDetailViewController: UIViewController {
     var idVal = "";
     var imageVal = UIImage();
     
-    
-    var lat: Double = 0;
-    var lng: Double = 0;
-    var myLng: Double = 0;
-    var myLat: Double = 0;
-    
-    @IBAction func openMap(sender: AnyObject) {
-        println("A");
-        println(lng);
-        println(lat);
-        println(myLng);
-        println(myLat);
-        
-        var lngString: String = NSString(format: "%.5f", lng);
-        var latString: String = NSString(format: "%.5f", lat);
-        var myLngString: String = NSString(format: "%.5f", myLng);
-        var myLatString: String = NSString(format: "%.5f", myLat);
-        
-        
-       var link: NSURL = NSURL(string: "http://maps.apple.com/?daddr=%28"+latString+",%20"+lngString+"%29&saddr=%28"+myLatString+",%20"+myLngString+"%29")!;
-        UIApplication.sharedApplication().openURL(link);
-        println(link);
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         fillFromSegue();
@@ -78,13 +54,6 @@ class LocationsDetailViewController: UIViewController {
             switch k as NSString {
             case "content":
                 mapContent.text = v.toString(pretty: true);
-                break;
-            case "lat":
-                lat = v.asNumber!;
-                break;
-            case "lng":
-                lng = v.asNumber!;
-                break;
             default:
                 break;
             }
