@@ -44,8 +44,8 @@ class LocationsDetailViewController: UIViewController {
         var myLatString: String = NSString(format: "%.5f", myLat);
         
         
-        var link: NSURL = NSURL(string: "http://maps.apple.com/?sll="+myLatString+","+myLngString+",ll="+latString+","+lngString)!;
-        //UIApplication.sharedApplication().openURL(link);
+      var link: NSURL = NSURL(string: "http://maps.apple.com/?daddr=%28"+latString+",%20"+lngString+"%29&saddr=%28"+myLatString+",%20"+myLngString+"%29")!;
+        UIApplication.sharedApplication().openURL(link);
         println(link);
     }
     

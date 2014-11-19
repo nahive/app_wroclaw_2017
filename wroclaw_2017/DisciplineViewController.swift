@@ -26,18 +26,33 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     var id: [String] = [];
     var numberOfImage: Int = 0;
     
+    var loader = UIActivityIndicatorView();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
         
-        getJSON();
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge);
+        loader.frame = CGRectMake(0,0,80,80);
+        loader.center = self.view.center;
+        self.view.addSubview(loader);
+        loader.bringSubviewToFront(self.view);
+        loader.startAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        getJSON();
+        self.tableView.reloadData();
+        loader.stopAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        
     }
     
     
@@ -57,15 +72,14 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
                     id.append(j.toString(pretty: true));
                     break;
                 case "icon":
-                    var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
-                    var data: NSData;
-                    if (NSData(contentsOfURL: url) != nil) {
-                        data = NSData(contentsOfURL: url)!;
+                    var str = j.toString(pretty: true);
+                    str = str.substringWithRange(Range<String.Index>(start: advance(str.startIndex, 31), end: advance(str.endIndex, 0)))
+                    var img = UIImage(named: str);
+                    if img != nil {
+                        icons.append(img!);
                     } else {
-                        var url2: NSURL = NSURL(string: "https://2017.wroclaw.pl/upload/images/ikony-dyscyplin/powerlifting.png")!
-                        data = NSData(contentsOfURL: url2)!;
+                        icons.append(UIImage(named: "aikido.png")!);
                     }
-                    icons.append(UIImage(data: data)!);
                     break;
                 case "name":
                     categoryDisciplines.append(j.toString(pretty: true));
@@ -201,7 +215,7 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         
         disciplineName?.text = event;
         disciplineName?.font = UIFont(name: "HelveticaNeue-Light", size: 22);
-        
+        cell?.selectionStyle = UITableViewCellSelectionStyle.None;
         return cell!
     }
 

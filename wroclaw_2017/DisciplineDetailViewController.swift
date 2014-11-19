@@ -30,7 +30,7 @@ class DisciplineDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fillFromSegue();
-       
+        hideElements();
 //        contentLabel.text =
 
         // Do any additional setup after loading the view.
@@ -47,7 +47,23 @@ class DisciplineDetailViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         customSetup()
+        showElements();
     }
+    
+    
+    func hideElements() {
+        disImage.alpha = 0.0;
+        disTitle.alpha = 0.0;
+        disContent.alpha = 0.0;
+
+    }
+    
+    func showElements() {
+        Utils.fadeIn(disImage,duration: 0.3, delay: 0.0);
+        Utils.fadeIn(disTitle,duration: 0.5, delay: 0.5);
+        Utils.fadeIn(disContent,duration: 0.5, delay: 0.5);
+    }
+
     
     func customSetup(){
         disImage.frame = CGRectMake(0,0,screen.size.width, screen.size.height/3);

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>wroclaw_2017-cal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>wroclaw_2017.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>45df9490cb871bb306cca552</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4C9B832519F6F5A800B68B88</key>
 		<dict>
 			<key>primary</key>

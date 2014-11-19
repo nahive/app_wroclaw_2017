@@ -195,7 +195,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         
         title?.text = event;
         title?.font = UIFont(name: "HelveticaNeue-Light", size: 15);
-        
+        cell?.selectionStyle = UITableViewCellSelectionStyle.None;
         return cell!
     }
     

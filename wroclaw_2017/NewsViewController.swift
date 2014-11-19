@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsViewController: UITableViewController {
+public class NewsViewController: UITableViewController {
     @IBOutlet weak var revealButtonItem: UIBarButtonItem!
     
     
@@ -18,23 +18,45 @@ class NewsViewController: UITableViewController {
     var titles: [String] = [];
     var dates: [String] = [];
     var id: [String] = [];
-    
-    override func viewDidLoad() {
+    var loader = UIActivityIndicatorView();
+    override public func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
         bgView.alpha = 0.5;
         tableView.backgroundView = bgView;
-        //getJSON()
+        
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge);
+        loader.frame = CGRectMake(0,0,80,80);
+        loader.center = self.view.center;
+        self.view.addSubview(loader);
+        loader.bringSubviewToFront(self.view);
+        loader.startAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
     }
     
-    func getJSON() {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
+    public func didItLoad() -> UIViewController {
+        return self;
+    }
+    
+    public func didDownload() -> Bool {
+        return id.count != 0;
+    }
+    
+    public override func viewDidAppear(animated: Bool) {
+        getJSON();
+        self.tableView.reloadData();
+        loader.stopAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        
+    }
+    
+    public func getJSON() {
         images.removeAll(keepCapacity: true);
         authors.removeAll(keepCapacity: true);
         titles.removeAll(keepCapacity: true);
@@ -69,8 +91,8 @@ class NewsViewController: UITableViewController {
                 }
             }
         }
-          UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
-        
+        println("bla");
+        loader.stopAnimating()
     }
     
     
@@ -110,14 +132,14 @@ class NewsViewController: UITableViewController {
         
         
     }
-
     
-    override func didReceiveMemoryWarning() {
+    
+    public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tableId = "NewsCell";
         var cell = tableView.dequeueReusableCellWithIdentifier(tableId) as? UITableViewCell;
         if !(cell != nil) {
@@ -131,10 +153,11 @@ class NewsViewController: UITableViewController {
         title?.text = titles[indexPath.row];
         title?.font = UIFont(name: "HelveticaNeue-Light", size: 17);
         cell?.backgroundColor = UIColor.clearColor()
+        cell?.selectionStyle = UITableViewCellSelectionStyle.None;
         return cell!
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "showNewsDetail"){
             let row = self.tableView.indexPathForSelectedRow()?.row;
             var destViewController : NewsDetailViewController = segue.destinationViewController as NewsDetailViewController;
@@ -145,33 +168,33 @@ class NewsViewController: UITableViewController {
         }
     }
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
     
     
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return titles.count
     }
     
-//    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 10
-//    }
+    //    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    //        return 10
+    //    }
     
-//    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        var h_view : UIView = UIView();
-//        h_view.backgroundColor = UIColor.lightGrayColor();
-//        return h_view
-//    }
+    //    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    //        var h_view : UIView = UIView();
+    //        h_view.backgroundColor = UIColor.lightGrayColor();
+    //        return h_view
+    //    }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 110
     }
-
+    
 }

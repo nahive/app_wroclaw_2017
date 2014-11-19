@@ -70,6 +70,7 @@ class InfoMenuViewController: UITableViewController {
         title?.text = infoTitles[indexPath.row];
         title?.font = UIFont(name: "HelveticaNeue-Light", size:18);
         cell?.backgroundColor = UIColor.clearColor()
+        cell?.selectionStyle = UITableViewCellSelectionStyle.None;
         return cell!
     }
     

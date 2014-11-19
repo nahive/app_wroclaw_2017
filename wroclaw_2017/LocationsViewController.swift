@@ -33,20 +33,38 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     var myLat: Double = 0;
     var myLng: Double = 0;
     
+    var loader = UIActivityIndicatorView();
     var clickedAnnotation = "";
     var pageControl: UIPageControl = UIPageControl();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
+        
+        
+        //var bgImage: UIImage = UIImage(named: "wakepark_blur.jpg")!;
+        //self.view.backgroundColor = UIColor(patternImage: bgImage);
+        
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
+        loader.frame = CGRectMake(0,0,80,80);
+        loader.center = self.view.center;
+        self.view.addSubview(loader);
+        loader.bringSubviewToFront(self.view);
+        loader.startAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        mapH.constant = view.frame.height*(2/3);
+        mapW.constant = view.frame.width;
         getJSON();
         setMarkers();
         setScrollView();
         initLocationManager();
         setPageControl();
-        
-        //var bgImage: UIImage = UIImage(named: "wakepark_blur.jpg")!;
-        //self.view.backgroundColor = UIColor(patternImage: bgImage);
+        loader.stopAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
         
     }
     
@@ -146,14 +164,8 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
                     break;
                 case "photo":
                     var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
-                    var data: NSData;
-                    if (NSData(contentsOfURL: url) != nil) {
-                        data = NSData(contentsOfURL: url)!;
-                    } else {
-                        var url2: NSURL = NSURL(string: "https://2017.wroclaw.pl/upload/images/ikony-dyscyplin/powerlifting.png")!
-                        data = NSData(contentsOfURL: url2)!;
-                    }
-                    locationImages.append(UIImage(data: data)!);
+                    var data: NSData? = NSData(contentsOfURL: url);
+                    locationImages.append(UIImage(data: data!)!);
                     break;
                 case "title":
                     locationNames.append(j.toString(pretty: true));
@@ -215,7 +227,7 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         var detail: UIButton = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as UIButton;
         myPin.rightCalloutAccessoryView = detail;
         myPin.canShowCallout = true;
-        
+        myPin.animatesDrop = true;
         return myPin;
     }
     
@@ -290,13 +302,6 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         mapView.setRegion(region, animated: true);
     }
     
-    
-    
-    override func viewDidAppear(animated: Bool) {
-       // mapView.frame.origin =  CGPoint(x:0, y:0);
-        mapH.constant = view.frame.height*(2/3);
-        mapW.constant = view.frame.width;
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
