@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wroclaw_2017/LocationsViewController.swift"
-            timestampString = "438079447.365633"
+            timestampString = "438095174.81634"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "setMarkers()"
             landmarkType = "5">
          </BreakpointContent>
@@ -88,12 +88,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wroclaw_2017/LocationsViewController.swift"
-            timestampString = "438079447.365633"
+            timestampString = "438095174.81634"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
-            landmarkName = "mapView(_:annotationView:calloutAccessoryControlTapped:)"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "mapView(_:viewForAnnotation:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

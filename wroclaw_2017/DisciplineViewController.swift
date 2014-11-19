@@ -57,15 +57,14 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
                     id.append(j.toString(pretty: true));
                     break;
                 case "icon":
-                    var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
-                    var data: NSData;
-                    if (NSData(contentsOfURL: url) != nil) {
-                        data = NSData(contentsOfURL: url)!;
+                    var str = j.toString(pretty: true);
+                    str = str.substringWithRange(Range<String.Index>(start: advance(str.startIndex, 31), end: advance(str.endIndex, 0)))
+                    var img = UIImage(named: str);
+                    if img != nil {
+                        icons.append(img!);
                     } else {
-                        var url2: NSURL = NSURL(string: "https://2017.wroclaw.pl/upload/images/ikony-dyscyplin/powerlifting.png")!
-                        data = NSData(contentsOfURL: url2)!;
+                        icons.append(UIImage(named: "powerlifting.png")!);
                     }
-                    icons.append(UIImage(data: data)!);
                     break;
                 case "name":
                     categoryDisciplines.append(j.toString(pretty: true));

@@ -146,13 +146,7 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
                     break;
                 case "photo":
                     var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
-                    var data: NSData;
-                    if (NSData(contentsOfURL: url) != nil) {
-                        data = NSData(contentsOfURL: url)!;
-                    } else {
-                        var url2: NSURL = NSURL(string: "https://2017.wroclaw.pl/upload/images/ikony-dyscyplin/powerlifting.png")!
-                        data = NSData(contentsOfURL: url2)!;
-                    }
+                    var data: NSData = NSData(contentsOfURL: url)!;
                     locationImages.append(UIImage(data: data)!);
                     break;
                 case "title":
