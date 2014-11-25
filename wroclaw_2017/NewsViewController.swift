@@ -21,12 +21,10 @@ public class NewsViewController: UITableViewController {
     var loader = UIActivityIndicatorView();
     override public func viewDidLoad() {
         super.viewDidLoad()
-        customSetup();
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+
         
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        customSetup();
         var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
         bgView.alpha = 0.5;
         tableView.backgroundView = bgView;
@@ -49,12 +47,18 @@ public class NewsViewController: UITableViewController {
     }
     
     public override func viewDidAppear(animated: Bool) {
+        if (NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")) {
+        } else {performSegueWithIdentifier("showSettings", sender: nil);}
+        
         getJSON();
         self.tableView.reloadData();
         loader.stopAnimating();
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
         
-    }
+        
+        
+        
+        }
     
     public func getJSON() {
         images.removeAll(keepCapacity: true);
@@ -63,7 +67,15 @@ public class NewsViewController: UITableViewController {
         dates.removeAll(keepCapacity: true);
         id.removeAll(keepCapacity: true);
         
-        var url = "https://2017.wroclaw.pl/mobile/news"
+        var url = "";
+        
+        
+        if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+            url = "https://2017.wroclaw.pl/mobile/news"
+        } else {
+            url = "https://2017.wroclaw.pl/mobile/news?lang=en_US"
+        }
+        
         let json = JSON(url:url);
         
         for (k, v) in json {
@@ -98,6 +110,9 @@ public class NewsViewController: UITableViewController {
     
     func customSetup(){
         var revealViewController = self.revealViewController();
+        if(revealViewController == nil) {
+            println("yes");
+        }
         if(revealViewController != nil){
             self.revealButtonItem.target = revealViewController;
             self.revealButtonItem.action = "revealToggle:";

@@ -92,6 +92,7 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
                         categoryDisciplines.removeAll(keepCapacity: true);
                         categoryDisciplines.append(lastDiscipline!);
                     }
+                    
                     if (!(disciplineIndexTitles.last == j.toString(pretty: true))) {
                         disciplineIndexTitles.append(j.toString(pretty: true));
                     }
@@ -102,6 +103,8 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
                 }
             }
         }
+        
+        disciplinesSectionTitles = disciplinesSectionTitles.sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending };
         
     }
     

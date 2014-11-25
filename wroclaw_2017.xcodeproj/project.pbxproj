@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47658C02E7D7583BF166083E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2869FCA7822D049F9D7F151E /* libPods.a */; };
 		4C0E6ED41A0922C9006A22D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E6ED31A0922C9006A22D7 /* Main.storyboard */; };
 		4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CF7381A0058BF005D5D95 /* Utils.swift */; };
 		4C3D16301A076C85001EBDA7 /* CalendarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */; };
@@ -91,6 +92,12 @@
 		D45996461A120372002B1059 /* DisciplineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996451A120372002B1059 /* DisciplineViewController.swift */; };
 		D45996541A1229D9002B1059 /* DisciplineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */; };
 		D45996561A13993D002B1059 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996551A13993D002B1059 /* json.swift */; };
+		D4C38E2C1A208CE60056EA87 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */; };
+		D4C38E2E1A20A20C0056EA87 /* ic_action_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E2D1A20A20C0056EA87 /* ic_action_settings.png */; };
+		D4C38E301A20AE220056EA87 /* SelectCountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */; };
+		D4C38E321A20AE380056EA87 /* SelectFollowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */; };
+		D4C38E341A20AFE60056EA87 /* England.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E331A20AFE60056EA87 /* England.png */; };
+		D4C38E361A20AFF00056EA87 /* Poland.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E351A20AFF00056EA87 /* Poland.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +111,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2869FCA7822D049F9D7F151E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0E6ED31A0922C9006A22D7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4C3CF7381A0058BF005D5D95 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDetailViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +188,8 @@
 		4CC9A3481A004B65006DE05C /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
 		4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
 		4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		BAEE7E89BC0716F270FF1863 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CB693D5CE0F3598FB002B4EA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D422AFD01A1C9DBB00A62C32 /* LocationsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDetailViewController.swift; sourceTree = "<group>"; };
 		D422AFD21A1CA45900A62C32 /* route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = route.png; sourceTree = "<group>"; };
 		D43E0A841A0A482700121C99 /* ic_action_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_forward.png; sourceTree = "<group>"; };
@@ -196,6 +206,12 @@
 		D45996451A120372002B1059 /* DisciplineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplineViewController.swift; sourceTree = "<group>"; };
 		D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplineDetailViewController.swift; sourceTree = "<group>"; };
 		D45996551A13993D002B1059 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D4C38E2D1A20A20C0056EA87 /* ic_action_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_settings.png; sourceTree = "<group>"; };
+		D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryTableViewController.swift; sourceTree = "<group>"; };
+		D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFollowTableViewController.swift; sourceTree = "<group>"; };
+		D4C38E331A20AFE60056EA87 /* England.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = England.png; sourceTree = "<group>"; };
+		D4C38E351A20AFF00056EA87 /* Poland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Poland.png; sourceTree = "<group>"; };
 		b544a6d7874871c8461db369 /* CFNetwork.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -206,6 +222,7 @@
 			files = (
 				4C52D1541A0AD92A0060E222 /* CoreLocation.framework in Frameworks */,
 				4C3D16321A076EE6001EBDA7 /* MapKit.framework in Frameworks */,
+				47658C02E7D7583BF166083E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +236,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3168F9F84F5E529AC5CA913E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAEE7E89BC0716F270FF1863 /* Pods.debug.xcconfig */,
+				CB693D5CE0F3598FB002B4EA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4B0D1D91D1FDF3DC39A84EAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2869FCA7822D049F9D7F151E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4C8A7BE41A1CD305008754F3 /* disci_icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +303,8 @@
 				4C9B832819F6F5A800B68B88 /* wroclaw_2017 */,
 				4C9B833E19F6F5A800B68B88 /* wroclaw_2017Tests */,
 				4C9B832719F6F5A800B68B88 /* Products */,
+				3168F9F84F5E529AC5CA913E /* Pods */,
+				4B0D1D91D1FDF3DC39A84EAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -290,6 +326,9 @@
 				4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */,
 				4C0E6ED31A0922C9006A22D7 /* Main.storyboard */,
 				4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */,
+				D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */,
+				D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */,
+				D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */,
 				D45996451A120372002B1059 /* DisciplineViewController.swift */,
 				D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */,
 				D45996551A13993D002B1059 /* json.swift */,
@@ -337,6 +376,8 @@
 		4C9B834D19F6F65C00B68B88 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				D4C38E351A20AFF00056EA87 /* Poland.png */,
+				D4C38E331A20AFE60056EA87 /* England.png */,
 				4C8A7BE41A1CD305008754F3 /* disci_icons */,
 				D422AFD21A1CA45900A62C32 /* route.png */,
 				4C3F8F9E1A0A79970066F3F7 /* news2.jpg */,
@@ -345,6 +386,7 @@
 				4C3F8F981A0A79550066F3F7 /* news1.jpg */,
 				4C3F8F9A1A0A79550066F3F7 /* news3.jpg */,
 				D43E0A8A1A0AB0CF00121C99 /* clock.jpg */,
+				D4C38E2D1A20A20C0056EA87 /* ic_action_settings.png */,
 				4C3F8F961A0A776C0066F3F7 /* bg_news.jpg */,
 				D459963D1A10F4CA002B1059 /* orbita.jpg */,
 				D45996431A110A28002B1059 /* wakepark_blur.jpg */,
@@ -398,9 +440,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C9B834519F6F5A800B68B88 /* Build configuration list for PBXNativeTarget "wroclaw_2017" */;
 			buildPhases = (
+				0B11E397CFED8020C8504499 /* Check Pods Manifest.lock */,
 				4C9B832219F6F5A800B68B88 /* Sources */,
 				4C9B832319F6F5A800B68B88 /* Frameworks */,
 				4C9B832419F6F5A800B68B88 /* Resources */,
+				1BE2EA36695532361B13B752 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -500,6 +544,7 @@
 				4C8A7C101A1CD305008754F3 /* canoe.png in Resources */,
 				4C8A7C1D1A1CD305008754F3 /* muaythai.png in Resources */,
 				4C8A7C251A1CD305008754F3 /* squash.png in Resources */,
+				D4C38E2E1A20A20C0056EA87 /* ic_action_settings.png in Resources */,
 				D45996421A11046C002B1059 /* lotnisko.jpg in Resources */,
 				4C8A7C141A1CD305008754F3 /* floorball.png in Resources */,
 				4C8A7C221A1CD305008754F3 /* roller-sports.png in Resources */,
@@ -520,6 +565,7 @@
 				4C9B836219F6F67000B68B88 /* reveal-icon.png in Resources */,
 				4C8A7C201A1CD305008754F3 /* powerlifting.png in Resources */,
 				4C8A7C1F1A1CD305008754F3 /* orienteering.png in Resources */,
+				D4C38E361A20AFF00056EA87 /* Poland.png in Resources */,
 				4C8A7C091A1CD305008754F3 /* air-sports.png in Resources */,
 				4C8A7C281A1CD305008754F3 /* tug-of-war.png in Resources */,
 				4C8A7C081A1CD305008754F3 /* aikido.png in Resources */,
@@ -530,6 +576,7 @@
 				D459963F1A10F4CA002B1059 /* orbita.jpg in Resources */,
 				4C8A7C0C1A1CD305008754F3 /* billiard-sports.png in Resources */,
 				4C8A7C0A1A1CD305008754F3 /* archery.png in Resources */,
+				D4C38E341A20AFE60056EA87 /* England.png in Resources */,
 				4C3F8F971A0A776C0066F3F7 /* bg_news.jpg in Resources */,
 				4C8A7C191A1CD305008754F3 /* kickboxing.png in Resources */,
 				4C8A7C111A1CD305008754F3 /* Dance Sport.png in Resources */,
@@ -550,6 +597,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B11E397CFED8020C8504499 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1BE2EA36695532361B13B752 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C9B832219F6F5A800B68B88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -557,11 +637,14 @@
 			files = (
 				4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */,
 				4C3D16301A076C85001EBDA7 /* CalendarDetailViewController.swift in Sources */,
+				D4C38E321A20AE380056EA87 /* SelectFollowTableViewController.swift in Sources */,
 				4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */,
+				D4C38E2C1A208CE60056EA87 /* SettingsViewController.swift in Sources */,
 				4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */,
 				4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */,
 				4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */,
 				4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */,
+				D4C38E301A20AE220056EA87 /* SelectCountryTableViewController.swift in Sources */,
 				4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */,
 				4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */,
 				4C4B9E041A09FFF000F60266 /* InfoViewController.swift in Sources */,
@@ -677,6 +760,7 @@
 		};
 		4C9B834619F6F5A800B68B88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAEE7E89BC0716F270FF1863 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -699,6 +783,7 @@
 		};
 		4C9B834719F6F5A800B68B88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB693D5CE0F3598FB002B4EA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

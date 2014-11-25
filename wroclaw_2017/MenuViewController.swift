@@ -70,7 +70,7 @@ public class MenuViewController: UITableViewController {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         
-        return 7
+        return 8
     }
     
     override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -118,6 +118,9 @@ public class MenuViewController: UITableViewController {
             break;
         case 6:
             cellId = "results";
+            break;
+        case 7:
+            cellId = "settings";
             break;
         default:
             cellId = "null";

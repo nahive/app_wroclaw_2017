@@ -5,7 +5,6 @@
 
 #import "DIDatepickerDateView.h"
 
-
 const CGFloat kDIDatepickerItemWidth = 46.;
 const CGFloat kDIDatepickerSelectionLineWidth = 51.;
 

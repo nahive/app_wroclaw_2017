@@ -19,6 +19,17 @@ class DisciplineDetailViewController: UIViewController {
     @IBOutlet weak var scrollViewH: NSLayoutConstraint!
     @IBOutlet weak var insideViewH: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var followSwitch: UISwitch!
+    
+    
+    @IBAction func changeFollow(sender: AnyObject) {
+        if(followSwitch.on) {
+            println("a");
+        }
+    }
+    
+    
     var screen = UIScreen.mainScreen().bounds;
     var titleVal = "";
     var contentVal = "";
@@ -26,11 +37,19 @@ class DisciplineDetailViewController: UIViewController {
     var imageVal = "";
     var idVal = "";
     var locationVal = "";
+    var followsDisciplines: [NSString] = [];
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fillFromSegue();
         hideElements();
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") != nil) {
+            println(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [NSString]);
+            if (contains(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [NSString], titleVal)) {
+                println("tak");
+            }
+        }
 //        contentLabel.text =
 
         // Do any additional setup after loading the view.
@@ -63,7 +82,7 @@ class DisciplineDetailViewController: UIViewController {
         Utils.fadeIn(disTitle,duration: 0.5, delay: 0.5);
         Utils.fadeIn(disContent,duration: 0.5, delay: 0.5);
     }
-
+    
     
     func customSetup(){
         disImage.frame = CGRectMake(0,0,screen.size.width, screen.size.height/3);
