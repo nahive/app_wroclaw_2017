@@ -8,7 +8,8 @@
 
 import UIKit
 
-class NewsDetailViewController: UIViewController {
+class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
+    
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var clockImage: UIImageView!
     
@@ -23,6 +24,10 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var scrollViewH: NSLayoutConstraint!
     @IBOutlet weak var insideViewH: NSLayoutConstraint!
     
+    @IBOutlet weak var insideViewW: NSLayoutConstraint!
+    @IBOutlet weak var insideContentView: UIView!
+    @IBOutlet weak var insideContentViewH: NSLayoutConstraint!
+    
     var screen =  UIScreen.mainScreen().bounds;
     var idVal = "";
     var titleVal = "";
@@ -32,6 +37,7 @@ class NewsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideElements();
+          fillFromSegue();
     }
     
     
@@ -42,6 +48,11 @@ class NewsDetailViewController: UIViewController {
         newsImage.image = photoVal;
         getJSON();
         
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+  
+        newsImage.frame = CGRectMake(0, -44 + (scrollView.contentOffset.y + 64)/3,screen.size.width,screen.size.height/3+44);
     }
     
     func getJSON(){
@@ -80,31 +91,33 @@ class NewsDetailViewController: UIViewController {
     }
     
     func customSetup(){
-        newsImage.frame = CGRectMake(0,-44,screen.size.width,screen.size.height/3+44);
-        newsDate.frame = CGRectMake(25, screen.size.height/3+2, screen.size.width/2, newsDate.frame.size.height);
-        clockImage.frame = CGRectMake(5, screen.size.height/3+6, 15, 15);
+        newsImage.frame = CGRectMake(0, -44,screen.size.width,screen.size.height/3+44);
+        newsDate.frame = CGRectMake(40, 0, screen.size.width/2, newsDate.frame.size.height);
+        clockImage.frame = CGRectMake(20, 0, 15, 15);
         newsContent.frame.size.width = view.frame.width-10;
         newsTitle.frame.size.width = view.frame.width*2/3;
         author.frame.size.width = view.frame.width-10;
         newsTitle.sizeToFit();
         newsContent.sizeToFit();
-        newsTitle.frame.origin = CGPointMake(5, newsDate.frame.origin.y + newsDate.frame.size.height + 5);
-        author.frame = CGRectMake(5, newsTitle.frame.origin.y+newsTitle.frame.size.height, screen.size.width/2, author.frame.height);
-        newsContent.frame.origin = CGPointMake(5, newsTitle.frame.origin.y+newsTitle.frame.size.height+40);
-        insideViewH.constant = newsImage.frame.height+newsDate.frame.height+newsTitle.frame.height+newsContent.frame.height+75;
+        newsTitle.frame.origin = CGPointMake(20, newsDate.frame.origin.y + newsDate.frame.size.height + 5);
+        author.frame = CGRectMake(20, newsTitle.frame.origin.y+newsTitle.frame.size.height, screen.size.width/2, author.frame.height);
+        newsContent.frame.origin = CGPointMake(20, newsTitle.frame.origin.y+newsTitle.frame.size.height+40);
+//        insideContentViewH.constant = newsDate.frame.height + newsTitle.frame.height + newsContent.frame.height + author.frame.height + 75;
+        insideViewH.constant = newsImage.frame.height+newsDate.frame.height + newsTitle.frame.height + newsContent.frame.height + author.frame.height + 75;
         scrollViewH.constant = view.frame.size.height;
         scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
-        
+//
     }
     
     override func viewDidLayoutSubviews() {
-        customSetup();
+        
         
     }
     
     override func viewDidAppear(animated: Bool) {
-        fillFromSegue();
+        customSetup();
         showElements();
+        
     }
     
     override func viewWillAppear(animated: Bool) {

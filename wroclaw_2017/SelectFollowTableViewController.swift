@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SelectFollowTableViewController: UITableViewController, UISearchDisplayDelegate {
+class SelectFollowTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
     var contentValue: String = "";
     var screen =  UIScreen.mainScreen().bounds;
@@ -17,8 +17,10 @@ class SelectFollowTableViewController: UITableViewController, UISearchDisplayDel
     var icons: [UIImage] = [];
     var followsSectionTitles: [String] = [];
     var followIndexTitles: [String] = [];
+    
     var names: [String] = [];
     var searchResults: [String] = [];
+    
     var numberOfImage: Int = 0;
     var selectedDisciplies: [NSString] = [];
     var indexPathChanged: Bool = false;
@@ -174,7 +176,6 @@ class SelectFollowTableViewController: UITableViewController, UISearchDisplayDel
             getCountiresJSON();
         }
         
-        
         self.tableView.reloadData();
         loader.stopAnimating();
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
@@ -190,13 +191,17 @@ class SelectFollowTableViewController: UITableViewController, UISearchDisplayDel
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return followsSectionTitles.count;
+        if(tableView == self.searchDisplayController!.searchResultsTableView){
+            return 1;
+        } else {
+            return followsSectionTitles.count;
+        }
     }
     
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (tableView == self.searchDisplayController) {
+        if (tableView == self.searchDisplayController!.searchResultsTableView) {
             return searchResults.count;
         } else {
             var sectionTitle: String = followsSectionTitles[section];
@@ -250,13 +255,12 @@ class SelectFollowTableViewController: UITableViewController, UISearchDisplayDel
             var previousIndexPath = indexPath;
             indexPathChanged = true;
         }
-        
-        println(indexPath);
         let tableId = "FollowCell";
         var cell = tableView.dequeueReusableCellWithIdentifier(tableId) as? UITableViewCell;
         if !(cell != nil) {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableId);
         }
+    
         var followName: UILabel? = cell!.viewWithTag(102) as? UILabel;
         var image: UIImageView? = cell!.viewWithTag(101) as? UIImageView;
         if (contentValue == "disciplines") {
@@ -264,22 +268,30 @@ class SelectFollowTableViewController: UITableViewController, UISearchDisplayDel
             image?.layer.cornerRadius = 8;
         }
         
-        if (tableView == self.searchDisplayController) {
-            println("yes");
+        var sectionTitle : String;
+        var event : String;
+        var ind : Int;
+        var currentImage : UIImage;
+        println("start");
+        if (tableView == self.searchDisplayController!.searchResultsTableView) {
+            println("filtered");
+            event = searchResults[indexPath.row];
+            ind = find(names, event)!;
+            currentImage = icons[ind];
+            
+        } else {
+            println("not");
+            sectionTitle = followsSectionTitles[indexPath.section];
+            var sectionEvents: [String] = follows[sectionTitle]!;
+            var sectionImages: [UIImage] = imagesDictionary[sectionTitle]!;
+            event = sectionEvents[indexPath.row];
+            currentImage = sectionImages[indexPath.row];
         }
         
-        var sectionTitle: String = followsSectionTitles[indexPath.section];
-        
-        var sectionEvents: [String] = follows[sectionTitle]!;
-        var sectionImages: [UIImage] = imagesDictionary[sectionTitle]!;
-        
-        var event: String = sectionEvents[indexPath.row];
-        var currentImage: UIImage = sectionImages[indexPath.row];
         image?.image = currentImage;
         followName?.text = event;
         followName?.font = UIFont(name: "HelveticaNeue-Light", size: 22);
         cell?.selectionStyle = UITableViewCellSelectionStyle.None;
-        
         
         
         if (contains(selectedDisciplies, event)) {
@@ -321,17 +333,23 @@ class SelectFollowTableViewController: UITableViewController, UISearchDisplayDel
     }
     
     func filterContentForSearchText(searchText: String) {
+        
         // Filter the array using the filter method
         //NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
-        var resultPredicate: NSPredicate = NSPredicate(format: "name contains[c] %@", searchText)!;
-        searchResults = names.filter { resultPredicate.evaluateWithObject($0) };
+        searchResults = names.filter({(name: String) -> Bool in
+            let stringMatch = name.lowercaseString.rangeOfString(searchText.lowercaseString)
+            return stringMatch != nil
+            })
+            println(searchResults);
     }
     
-    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
-        filterContentForSearchText(searchString)
-        println("test");
-        return true;
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        self.filterContentForSearchText(searchString)
+    return true
     }
-
     
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+        return true
+    }
 }

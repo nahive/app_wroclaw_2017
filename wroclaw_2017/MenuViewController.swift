@@ -135,34 +135,34 @@ public class MenuViewController: UITableViewController {
         
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
             var newsLabel: UILabel? = cell.viewWithTag(1) as? UILabel;
-            newsLabel?.text = "aktualności";
+            newsLabel?.text = "Aktualności";
             var disciplineLabel: UILabel? = cell.viewWithTag(2) as? UILabel;
-            disciplineLabel?.text = "dyscypliny";
+            disciplineLabel?.text = "Dyscypliny";
             var calendarLabel: UILabel? = cell.viewWithTag(3) as? UILabel;
-            calendarLabel?.text = "kalendarz";
+            calendarLabel?.text = "Kalendarz";
             var infoLabel: UILabel? = cell.viewWithTag(4) as? UILabel;
-            infoLabel?.text = "informacje";
+            infoLabel?.text = "Informacje";
             var locationLabel: UILabel? = cell.viewWithTag(5) as? UILabel;
-            locationLabel?.text = "obiekty";
+            locationLabel?.text = "Obiekty";
             var resultLabel: UILabel? = cell.viewWithTag(6) as? UILabel;
-            resultLabel?.text = "wyniki";
+            resultLabel?.text = "Wyniki";
             var settingsLabel: UILabel? = cell.viewWithTag(7) as? UILabel;
-            settingsLabel?.text = "ustawienia";
+            settingsLabel?.text = "Ustawienia";
         } else if (NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage")) {
             var newsLabel: UILabel? = cell.viewWithTag(1) as? UILabel;
-            newsLabel?.text = "news";
+            newsLabel?.text = "News";
             var disciplineLabel: UILabel? = cell.viewWithTag(2) as? UILabel;
-            disciplineLabel?.text = "disciplines";
+            disciplineLabel?.text = "Disciplines";
             var calendarLabel: UILabel? = cell.viewWithTag(3) as? UILabel;
-            calendarLabel?.text = "calendar";
+            calendarLabel?.text = "Calendar";
             var infoLabel: UILabel? = cell.viewWithTag(4) as? UILabel;
-            infoLabel?.text = "info";
+            infoLabel?.text = "Info";
             var locationLabel: UILabel? = cell.viewWithTag(5) as? UILabel;
-            locationLabel?.text = "locations";
+            locationLabel?.text = "Locations";
             var resultLabel: UILabel? = cell.viewWithTag(6) as? UILabel;
-            resultLabel?.text = "results";
+            resultLabel?.text = "Results";
             var settingsLabel: UILabel? = cell.viewWithTag(7) as? UILabel;
-            settingsLabel?.text = "settings";
+            settingsLabel?.text = "Settings";
         }
         
         
