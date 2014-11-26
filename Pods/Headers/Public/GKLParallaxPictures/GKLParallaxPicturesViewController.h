@@ -1,1 +1,0 @@
-../../../GKLParallaxPictures/GKLParallaxPicturesViewController/GKLParallaxPicturesViewController.h

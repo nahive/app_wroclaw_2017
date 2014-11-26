@@ -1,2863 +1,840 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0B11E397CFED8020C8504499</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>1BE2EA36695532361B13B752</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>2869FCA7822D049F9D7F151E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3168F9F84F5E529AC5CA913E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BAEE7E89BC0716F270FF1863</string>
-				<string>CB693D5CE0F3598FB002B4EA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4B0D1D91D1FDF3DC39A84EAE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2869FCA7822D049F9D7F151E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C0E6ED31A0922C9006A22D7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>path</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C0E6ED41A0922C9006A22D7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C0E6ED31A0922C9006A22D7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C3CF7381A0058BF005D5D95</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Utils.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C3CF7391A0058BF005D5D95</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C3CF7381A0058BF005D5D95</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C3D162F1A076C85001EBDA7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CalendarDetailViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C3D16301A076C85001EBDA7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C3D162F1A076C85001EBDA7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C3D16311A076EE6001EBDA7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>MapKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/MapKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>4C3D16321A076EE6001EBDA7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C3D16311A076EE6001EBDA7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C3F8F961A0A776C0066F3F7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>bg_news.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C3F8F971A0A776C0066F3F7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C3F8F961A0A776C0066F3F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C3F8F981A0A79550066F3F7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>news1.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C3F8F9A1A0A79550066F3F7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>news3.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C3F8F9B1A0A79550066F3F7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C3F8F981A0A79550066F3F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C3F8F9D1A0A79550066F3F7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C3F8F9A1A0A79550066F3F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C3F8F9E1A0A79970066F3F7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>news2.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C3F8F9F1A0A79970066F3F7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C3F8F9E1A0A79970066F3F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C4B9E031A09FFF000F60266</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>InfoViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C4B9E041A09FFF000F60266</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C4B9E031A09FFF000F60266</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C4B9E051A0A001400F60266</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>InfoMenuViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C4B9E061A0A001400F60266</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C4B9E051A0A001400F60266</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C52D1531A0AD92A0060E222</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreLocation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreLocation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>4C52D1541A0AD92A0060E222</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C52D1531A0AD92A0060E222</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C6B019C19FE997F00EBF821</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NewsTableViewCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C6B019D19FE997F00EBF821</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C6B019C19FE997F00EBF821</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7BE41A1CD305008754F3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4C8A7BE51A1CD305008754F3</string>
-				<string>4C8A7BE61A1CD305008754F3</string>
-				<string>4C8A7BE71A1CD305008754F3</string>
-				<string>4C8A7BE81A1CD305008754F3</string>
-				<string>4C8A7BE91A1CD305008754F3</string>
-				<string>4C8A7BEA1A1CD305008754F3</string>
-				<string>4C8A7BEB1A1CD305008754F3</string>
-				<string>4C8A7BEC1A1CD305008754F3</string>
-				<string>4C8A7BED1A1CD305008754F3</string>
-				<string>4C8A7BEE1A1CD305008754F3</string>
-				<string>4C8A7BEF1A1CD305008754F3</string>
-				<string>4C8A7BF01A1CD305008754F3</string>
-				<string>4C8A7BF11A1CD305008754F3</string>
-				<string>4C8A7BF21A1CD305008754F3</string>
-				<string>4C8A7BF31A1CD305008754F3</string>
-				<string>4C8A7BF41A1CD305008754F3</string>
-				<string>4C8A7BF51A1CD305008754F3</string>
-				<string>4C8A7BF61A1CD305008754F3</string>
-				<string>4C8A7BF71A1CD305008754F3</string>
-				<string>4C8A7BF81A1CD305008754F3</string>
-				<string>4C8A7BF91A1CD305008754F3</string>
-				<string>4C8A7BFA1A1CD305008754F3</string>
-				<string>4C8A7BFB1A1CD305008754F3</string>
-				<string>4C8A7BFC1A1CD305008754F3</string>
-				<string>4C8A7BFD1A1CD305008754F3</string>
-				<string>4C8A7BFE1A1CD305008754F3</string>
-				<string>4C8A7BFF1A1CD305008754F3</string>
-				<string>4C8A7C001A1CD305008754F3</string>
-				<string>4C8A7C011A1CD305008754F3</string>
-				<string>4C8A7C021A1CD305008754F3</string>
-				<string>4C8A7C031A1CD305008754F3</string>
-				<string>4C8A7C041A1CD305008754F3</string>
-				<string>4C8A7C051A1CD305008754F3</string>
-				<string>4C8A7C061A1CD305008754F3</string>
-				<string>4C8A7C071A1CD305008754F3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>disci_icons</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BE51A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>aikido.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BE61A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>air-sports.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BE71A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>archery.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BE81A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>beach-handball.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BE91A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>billiard-sports.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BEA1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>bodybuilding.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BEB1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>boules-sports.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BEC1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>bowling.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BED1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>canoe.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BEE1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Dance Sport.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BEF1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>finswimming.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BF01A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>fistball.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BF11A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>floorball.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BF21A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>flying-disc.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BF31A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>gymnastics.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BF41A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>ju-jitsu.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BF51A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>karate.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BF61A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>kickboxing.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BF71A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>korfball.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BF81A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>lacrosse.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BF91A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>life-saving.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BFA1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>muaythai.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BFB1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>netball.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BFC1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>orienteering.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BFD1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>powerlifting.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BFE1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>racquetball.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7BFF1A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>roller-sports.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7C001A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>softball.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7C011A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>sport-climbing.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7C021A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>squash.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7C031A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>sumo.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7C041A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>surfing.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7C051A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>tug-of-war.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7C061A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>waterski-&amp;-wakeboard.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7C071A1CD305008754F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>wushu.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C8A7C081A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BE51A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C091A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BE61A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C0A1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BE71A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C0B1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BE81A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C0C1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BE91A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C0D1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BEA1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C0E1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BEB1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C0F1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BEC1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C101A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BED1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C111A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BEE1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C121A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BEF1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C131A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BF01A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C141A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BF11A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C151A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BF21A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C161A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BF31A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C171A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BF41A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C181A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BF51A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C191A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BF61A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C1A1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BF71A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C1B1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BF81A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C1C1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BF91A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C1D1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BFA1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C1E1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BFB1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C1F1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BFC1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C201A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BFD1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C211A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BFE1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C221A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7BFF1A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C231A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7C001A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C241A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7C011A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C251A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7C021A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C261A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7C031A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C271A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7C041A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C281A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7C051A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C291A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7C061A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C8A7C2A1A1CD305008754F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C8A7C071A1CD305008754F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B831D19F6F5A800B68B88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4C52D1531A0AD92A0060E222</string>
-				<string>4C3D16311A076EE6001EBDA7</string>
-				<string>4C9B832819F6F5A800B68B88</string>
-				<string>4C9B833E19F6F5A800B68B88</string>
-				<string>4C9B832719F6F5A800B68B88</string>
-				<string>3168F9F84F5E529AC5CA913E</string>
-				<string>4B0D1D91D1FDF3DC39A84EAE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B831E19F6F5A800B68B88</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0610</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>pl.wroclaw</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>4C9B832519F6F5A800B68B88</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1</string>
-						<key>SystemCapabilities</key>
-						<dict>
-							<key>com.apple.Maps.iOS</key>
-							<dict>
-								<key>enabled</key>
-								<string>1</string>
-							</dict>
-						</dict>
-					</dict>
-					<key>4C9B833A19F6F5A800B68B88</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1</string>
-						<key>TestTargetID</key>
-						<string>4C9B832519F6F5A800B68B88</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>4C9B832119F6F5A800B68B88</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>4C9B831D19F6F5A800B68B88</string>
-			<key>productRefGroup</key>
-			<string>4C9B832719F6F5A800B68B88</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>4C9B832519F6F5A800B68B88</string>
-				<string>4C9B833A19F6F5A800B68B88</string>
-			</array>
-		</dict>
-		<key>4C9B832119F6F5A800B68B88</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4C9B834319F6F5A800B68B88</string>
-				<string>4C9B834419F6F5A800B68B88</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4C9B832219F6F5A800B68B88</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4CC9A34D1A004B91006DE05C</string>
-				<string>4C3D16301A076C85001EBDA7</string>
-				<string>D4C38E321A20AE380056EA87</string>
-				<string>4CB5F5A019F71BA8006F09EC</string>
-				<string>D4C38E2C1A208CE60056EA87</string>
-				<string>D4DF74571A250173001DA427</string>
-				<string>4C6B019D19FE997F00EBF821</string>
-				<string>4CC9A34A1A004B65006DE05C</string>
-				<string>4CC9A34B1A004B65006DE05C</string>
-				<string>4C9B832E19F6F5A800B68B88</string>
-				<string>D4C38E301A20AE220056EA87</string>
-				<string>4C9B832C19F6F5A800B68B88</string>
-				<string>4C3CF7391A0058BF005D5D95</string>
-				<string>4C4B9E041A09FFF000F60266</string>
-				<string>4C9B836719F6F71100B68B88</string>
-				<string>D45996561A13993D002B1059</string>
-				<string>4CA7AB631A0AD1CD005073E7</string>
-				<string>D45996461A120372002B1059</string>
-				<string>4CB5F59E19F71255006F09EC</string>
-				<string>D422AFD11A1C9DBB00A62C32</string>
-				<string>D45996541A1229D9002B1059</string>
-				<string>4C9B836C19F70C9000B68B88</string>
-				<string>4C4B9E061A0A001400F60266</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4C9B832319F6F5A800B68B88</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4C52D1541A0AD92A0060E222</string>
-				<string>4C3D16321A076EE6001EBDA7</string>
-				<string>A6186BAC3CEDB78B854975B9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4C9B832419F6F5A800B68B88</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4C8A7C1A1A1CD305008754F3</string>
-				<string>D459963A1A0E509B002B1059</string>
-				<string>4C8A7C181A1CD305008754F3</string>
-				<string>D43E0A911A0AB25D00121C99</string>
-				<string>4C9B834C19F6F63E00B68B88</string>
-				<string>4C8A7C231A1CD305008754F3</string>
-				<string>D43E0A8D1A0AB21F00121C99</string>
-				<string>4C9B836319F6F67000B68B88</string>
-				<string>4C8A7C0E1A1CD305008754F3</string>
-				<string>4C3F8F9B1A0A79550066F3F7</string>
-				<string>4C9B835919F6F67000B68B88</string>
-				<string>4C9B835E19F6F67000B68B88</string>
-				<string>4C9B835B19F6F67000B68B88</string>
-				<string>4C0E6ED41A0922C9006A22D7</string>
-				<string>4C3F8F9F1A0A79970066F3F7</string>
-				<string>4C8A7C0B1A1CD305008754F3</string>
-				<string>4C8A7C0F1A1CD305008754F3</string>
-				<string>D422AFD31A1CA45900A62C32</string>
-				<string>4C8A7C211A1CD305008754F3</string>
-				<string>4C8A7C2A1A1CD305008754F3</string>
-				<string>4C8A7C131A1CD305008754F3</string>
-				<string>4C8A7C101A1CD305008754F3</string>
-				<string>4C8A7C1D1A1CD305008754F3</string>
-				<string>4C8A7C251A1CD305008754F3</string>
-				<string>D4C38E2E1A20A20C0056EA87</string>
-				<string>D46C75CD1A24F93F00620D30</string>
-				<string>D45996421A11046C002B1059</string>
-				<string>4C8A7C141A1CD305008754F3</string>
-				<string>4C8A7C221A1CD305008754F3</string>
-				<string>D43E0A931A0B66C200121C99</string>
-				<string>4C8A7C1E1A1CD305008754F3</string>
-				<string>4C8A7C291A1CD305008754F3</string>
-				<string>4C3F8F9D1A0A79550066F3F7</string>
-				<string>4C9B835D19F6F67000B68B88</string>
-				<string>D43E0A8B1A0AB0CF00121C99</string>
-				<string>4C8A7C0D1A1CD305008754F3</string>
-				<string>D45996441A110A28002B1059</string>
-				<string>4C8A7C171A1CD305008754F3</string>
-				<string>4C9B835A19F6F67000B68B88</string>
-				<string>D43E0A8F1A0AB24500121C99</string>
-				<string>4C8A7C241A1CD305008754F3</string>
-				<string>D45996401A10F4CA002B1059</string>
-				<string>4C9B833319F6F5A800B68B88</string>
-				<string>4C9B836219F6F67000B68B88</string>
-				<string>4C8A7C201A1CD305008754F3</string>
-				<string>4C8A7C1F1A1CD305008754F3</string>
-				<string>D4C38E361A20AFF00056EA87</string>
-				<string>4C8A7C091A1CD305008754F3</string>
-				<string>4C8A7C281A1CD305008754F3</string>
-				<string>4C8A7C081A1CD305008754F3</string>
-				<string>4C8A7C271A1CD305008754F3</string>
-				<string>4C8A7C161A1CD305008754F3</string>
-				<string>D43E0A851A0A482700121C99</string>
-				<string>4C9B835C19F6F67000B68B88</string>
-				<string>D459963F1A10F4CA002B1059</string>
-				<string>D4DF74551A2500CC001DA427</string>
-				<string>4C8A7C0C1A1CD305008754F3</string>
-				<string>4C8A7C0A1A1CD305008754F3</string>
-				<string>D4C38E341A20AFE60056EA87</string>
-				<string>D46C75D51A24FAB400620D30</string>
-				<string>4C3F8F971A0A776C0066F3F7</string>
-				<string>4C8A7C191A1CD305008754F3</string>
-				<string>4C8A7C111A1CD305008754F3</string>
-				<string>4C8A7C121A1CD305008754F3</string>
-				<string>4C8A7C151A1CD305008754F3</string>
-				<string>4C8A7C1B1A1CD305008754F3</string>
-				<string>4C8A7C1C1A1CD305008754F3</string>
-				<string>4C8A7C261A1CD305008754F3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4C9B832519F6F5A800B68B88</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>4C9B834519F6F5A800B68B88</string>
-			<key>buildPhases</key>
-			<array>
-				<string>0B11E397CFED8020C8504499</string>
-				<string>4C9B832219F6F5A800B68B88</string>
-				<string>4C9B832319F6F5A800B68B88</string>
-				<string>4C9B832419F6F5A800B68B88</string>
-				<string>1BE2EA36695532361B13B752</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>wroclaw_2017</string>
-			<key>productName</key>
-			<string>wroclaw_2017</string>
-			<key>productReference</key>
-			<string>4C9B832619F6F5A800B68B88</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>4C9B832619F6F5A800B68B88</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>wroclaw_2017.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4C9B832719F6F5A800B68B88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4C9B832619F6F5A800B68B88</string>
-				<string>4C9B833B19F6F5A800B68B88</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B832819F6F5A800B68B88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D422AFC71A1B9C3600A62C32</string>
-				<string>4C9B836819F70BE800B68B88</string>
-				<string>4C9B834D19F6F65C00B68B88</string>
-				<string>4C9B834B19F6F63E00B68B88</string>
-				<string>4C0E6ED31A0922C9006A22D7</string>
-				<string>D4DF74561A250173001DA427</string>
-				<string>4C9B832B19F6F5A800B68B88</string>
-				<string>D4C38E311A20AE380056EA87</string>
-				<string>D4C38E2F1A20AE220056EA87</string>
-				<string>D4C38E2B1A208CE60056EA87</string>
-				<string>D45996451A120372002B1059</string>
-				<string>D45996531A1229D9002B1059</string>
-				<string>D45996551A13993D002B1059</string>
-				<string>4C9B832D19F6F5A800B68B88</string>
-				<string>4CB5F59D19F71255006F09EC</string>
-				<string>4CB5F59F19F71BA8006F09EC</string>
-				<string>4CC9A34C1A004B91006DE05C</string>
-				<string>4C3D162F1A076C85001EBDA7</string>
-				<string>4C4B9E031A09FFF000F60266</string>
-				<string>4C4B9E051A0A001400F60266</string>
-				<string>4CA7AB621A0AD1CD005073E7</string>
-				<string>D422AFD01A1C9DBB00A62C32</string>
-				<string>4C9B833219F6F5A800B68B88</string>
-				<string>4C9B832919F6F5A800B68B88</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>wroclaw_2017</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B832919F6F5A800B68B88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4C9B832A19F6F5A800B68B88</string>
-				<string>4C9B836419F6F71100B68B88</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B832A19F6F5A800B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B832B19F6F5A800B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B832C19F6F5A800B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B832B19F6F5A800B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B832D19F6F5A800B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B832E19F6F5A800B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B832D19F6F5A800B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B833219F6F5A800B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B833319F6F5A800B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B833219F6F5A800B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B833719F6F5A800B68B88</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4C9B834219F6F5A800B68B88</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4C9B833819F6F5A800B68B88</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4C9B833919F6F5A800B68B88</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4C9B833A19F6F5A800B68B88</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>4C9B834819F6F5A800B68B88</string>
-			<key>buildPhases</key>
-			<array>
-				<string>4C9B833719F6F5A800B68B88</string>
-				<string>4C9B833819F6F5A800B68B88</string>
-				<string>4C9B833919F6F5A800B68B88</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>4C9B833D19F6F5A800B68B88</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>wroclaw_2017Tests</string>
-			<key>productName</key>
-			<string>wroclaw_2017Tests</string>
-			<key>productReference</key>
-			<string>4C9B833B19F6F5A800B68B88</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>4C9B833B19F6F5A800B68B88</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>wroclaw_2017Tests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4C9B833C19F6F5A800B68B88</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>4C9B831E19F6F5A800B68B88</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>4C9B832519F6F5A800B68B88</string>
-			<key>remoteInfo</key>
-			<string>wroclaw_2017</string>
-		</dict>
-		<key>4C9B833D19F6F5A800B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>4C9B832519F6F5A800B68B88</string>
-			<key>targetProxy</key>
-			<string>4C9B833C19F6F5A800B68B88</string>
-		</dict>
-		<key>4C9B833E19F6F5A800B68B88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4C9B834119F6F5A800B68B88</string>
-				<string>4C9B833F19F6F5A800B68B88</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>wroclaw_2017Tests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B833F19F6F5A800B68B88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4C9B834019F6F5A800B68B88</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B834019F6F5A800B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B834119F6F5A800B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>wroclaw_2017Tests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B834219F6F5A800B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B834119F6F5A800B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B834319F6F5A800B68B88</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4C9B834419F6F5A800B68B88</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4C9B834519F6F5A800B68B88</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4C9B834619F6F5A800B68B88</string>
-				<string>4C9B834719F6F5A800B68B88</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4C9B834619F6F5A800B68B88</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>BAEE7E89BC0716F270FF1863</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>$(PROJECT_DIR)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>wroclaw_2017/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>LIBRARY_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>$(PROJECT_DIR)</string>
-				</array>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>wroclaw_2017/wroclaw_2017-Bridging-Header.h</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4C9B834719F6F5A800B68B88</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CB693D5CE0F3598FB002B4EA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>$(PROJECT_DIR)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>wroclaw_2017/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>LIBRARY_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>$(PROJECT_DIR)</string>
-				</array>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>wroclaw_2017/wroclaw_2017-Bridging-Header.h</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4C9B834819F6F5A800B68B88</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4C9B834919F6F5A800B68B88</string>
-				<string>4C9B834A19F6F5A800B68B88</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4C9B834919F6F5A800B68B88</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>wroclaw_2017Tests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/wroclaw_2017.app/wroclaw_2017</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4C9B834A19F6F5A800B68B88</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>wroclaw_2017Tests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/wroclaw_2017.app/wroclaw_2017</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4C9B834B19F6F63E00B68B88</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>path</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B834C19F6F63E00B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B834B19F6F63E00B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B834D19F6F65C00B68B88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D4C38E351A20AFF00056EA87</string>
-				<string>D4C38E331A20AFE60056EA87</string>
-				<string>4C8A7BE41A1CD305008754F3</string>
-				<string>D422AFD21A1CA45900A62C32</string>
-				<string>D4DF74541A2500CC001DA427</string>
-				<string>4C3F8F9E1A0A79970066F3F7</string>
-				<string>D46C75D41A24FAB400620D30</string>
-				<string>D46C75CB1A24F93F00620D30</string>
-				<string>D43E0A8C1A0AB21F00121C99</string>
-				<string>D45996391A0E509B002B1059</string>
-				<string>4C3F8F981A0A79550066F3F7</string>
-				<string>4C3F8F9A1A0A79550066F3F7</string>
-				<string>D43E0A8A1A0AB0CF00121C99</string>
-				<string>D4C38E2D1A20A20C0056EA87</string>
-				<string>4C3F8F961A0A776C0066F3F7</string>
-				<string>D459963D1A10F4CA002B1059</string>
-				<string>D45996431A110A28002B1059</string>
-				<string>D459963E1A10F4CA002B1059</string>
-				<string>4C9B834E19F6F67000B68B88</string>
-				<string>D43E0A901A0AB25D00121C99</string>
-				<string>D45996411A11046C002B1059</string>
-				<string>D43E0A921A0B66C200121C99</string>
-				<string>D43E0A841A0A482700121C99</string>
-				<string>D43E0A8E1A0AB24500121C99</string>
-				<string>4C9B834F19F6F67000B68B88</string>
-				<string>4C9B835019F6F67000B68B88</string>
-				<string>4C9B835119F6F67000B68B88</string>
-				<string>4C9B835219F6F67000B68B88</string>
-				<string>4C9B835319F6F67000B68B88</string>
-				<string>4C9B835719F6F67000B68B88</string>
-				<string>4C9B835819F6F67000B68B88</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>assets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B834E19F6F67000B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>ic_action_about.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B834F19F6F67000B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>ic_action_chat.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B835019F6F67000B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>ic_action_go_to_today.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B835119F6F67000B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>ic_action_network_cell.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B835219F6F67000B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>ic_action_place.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B835319F6F67000B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>logo.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B835719F6F67000B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>reveal-icon.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B835819F6F67000B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>reveal-icon@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B835919F6F67000B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B834E19F6F67000B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B835A19F6F67000B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B834F19F6F67000B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B835B19F6F67000B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B835019F6F67000B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B835C19F6F67000B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B835119F6F67000B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B835D19F6F67000B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B835219F6F67000B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B835E19F6F67000B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B835319F6F67000B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B836219F6F67000B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B835719F6F67000B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B836319F6F67000B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B835819F6F67000B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B836419F6F71100B68B88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>wroclaw_2017-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B836519F6F71100B68B88</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SWRevealViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B836619F6F71100B68B88</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SWRevealViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B836719F6F71100B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B836619F6F71100B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C9B836819F70BE800B68B88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4CC9A3461A004B65006DE05C</string>
-				<string>4CC9A3471A004B65006DE05C</string>
-				<string>4CC9A3481A004B65006DE05C</string>
-				<string>4CC9A3491A004B65006DE05C</string>
-				<string>4C9B836519F6F71100B68B88</string>
-				<string>4C9B836619F6F71100B68B88</string>
-				<string>4C9B836B19F70C9000B68B88</string>
-				<string>4C6B019C19FE997F00EBF821</string>
-				<string>4C3CF7381A0058BF005D5D95</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>support</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B836B19F70C9000B68B88</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MenuViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C9B836C19F70C9000B68B88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C9B836B19F70C9000B68B88</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4CA7AB621A0AD1CD005073E7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LocationsViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CA7AB631A0AD1CD005073E7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4CA7AB621A0AD1CD005073E7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4CB5F59D19F71255006F09EC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NewsViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CB5F59E19F71255006F09EC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4CB5F59D19F71255006F09EC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4CB5F59F19F71BA8006F09EC</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NewsDetailViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CB5F5A019F71BA8006F09EC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4CB5F59F19F71BA8006F09EC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4CC9A3461A004B65006DE05C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>DIDatepicker.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CC9A3471A004B65006DE05C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>DIDatepicker.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CC9A3481A004B65006DE05C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>DIDatepickerDateView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CC9A3491A004B65006DE05C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>DIDatepickerDateView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CC9A34A1A004B65006DE05C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4CC9A3471A004B65006DE05C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4CC9A34B1A004B65006DE05C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4CC9A3491A004B65006DE05C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4CC9A34C1A004B91006DE05C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CalendarViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CC9A34D1A004B91006DE05C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4CC9A34C1A004B91006DE05C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A6186BAC3CEDB78B854975B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2869FCA7822D049F9D7F151E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BAEE7E89BC0716F270FF1863</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CB693D5CE0F3598FB002B4EA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D422AFC71A1B9C3600A62C32</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>b544a6d7874871c8461db369</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>path</key>
-			<string>wroclaw_2017</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D422AFD01A1C9DBB00A62C32</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LocationsDetailViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D422AFD11A1C9DBB00A62C32</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D422AFD01A1C9DBB00A62C32</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D422AFD21A1CA45900A62C32</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>route.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D422AFD31A1CA45900A62C32</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D422AFD21A1CA45900A62C32</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D43E0A841A0A482700121C99</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>ic_action_forward.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D43E0A851A0A482700121C99</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D43E0A841A0A482700121C99</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D43E0A8A1A0AB0CF00121C99</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>clock.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D43E0A8B1A0AB0CF00121C99</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D43E0A8A1A0AB0CF00121C99</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D43E0A8C1A0AB21F00121C99</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>jujitsu2.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D43E0A8D1A0AB21F00121C99</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D43E0A8C1A0AB21F00121C99</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D43E0A8E1A0AB24500121C99</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>power.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D43E0A8F1A0AB24500121C99</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D43E0A8E1A0AB24500121C99</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D43E0A901A0AB25D00121C99</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>wroclaw2.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D43E0A911A0AB25D00121C99</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D43E0A901A0AB25D00121C99</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D43E0A921A0B66C200121C99</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>ic_action_location_found.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D43E0A931A0B66C200121C99</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D43E0A921A0B66C200121C99</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D45996391A0E509B002B1059</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>wushu.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D459963A1A0E509B002B1059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D45996391A0E509B002B1059</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D459963D1A10F4CA002B1059</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>orbita.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D459963E1A10F4CA002B1059</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>stadionolimpijski.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D459963F1A10F4CA002B1059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D459963D1A10F4CA002B1059</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D45996401A10F4CA002B1059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D459963E1A10F4CA002B1059</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D45996411A11046C002B1059</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>lotnisko.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D45996421A11046C002B1059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D45996411A11046C002B1059</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D45996431A110A28002B1059</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>wakepark_blur.jpg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D45996441A110A28002B1059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D45996431A110A28002B1059</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D45996451A120372002B1059</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DisciplineViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D45996461A120372002B1059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D45996451A120372002B1059</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D45996531A1229D9002B1059</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DisciplineDetailViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D45996541A1229D9002B1059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D45996531A1229D9002B1059</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D45996551A13993D002B1059</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>json.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D45996561A13993D002B1059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D45996551A13993D002B1059</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D46C75CB1A24F93F00620D30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>medal.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D46C75CD1A24F93F00620D30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D46C75CB1A24F93F00620D30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D46C75D41A24FAB400620D30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>medal3.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D46C75D51A24FAB400620D30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D46C75D41A24FAB400620D30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4C38E2B1A208CE60056EA87</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SettingsViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4C38E2C1A208CE60056EA87</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4C38E2B1A208CE60056EA87</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4C38E2D1A20A20C0056EA87</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>ic_action_settings.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4C38E2E1A20A20C0056EA87</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4C38E2D1A20A20C0056EA87</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4C38E2F1A20AE220056EA87</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SelectCountryTableViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4C38E301A20AE220056EA87</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4C38E2F1A20AE220056EA87</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4C38E311A20AE380056EA87</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SelectFollowTableViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4C38E321A20AE380056EA87</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4C38E311A20AE380056EA87</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4C38E331A20AFE60056EA87</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>England.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4C38E341A20AFE60056EA87</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4C38E331A20AFE60056EA87</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4C38E351A20AFF00056EA87</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Poland.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4C38E361A20AFF00056EA87</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4C38E351A20AFF00056EA87</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4DF74541A2500CC001DA427</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>3medals.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4DF74551A2500CC001DA427</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4DF74541A2500CC001DA427</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D4DF74561A250173001DA427</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MedalsViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4DF74571A250173001DA427</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4DF74561A250173001DA427</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>b544a6d7874871c8461db369</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CFNetwork.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CFNetwork.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>4C9B831E19F6F5A800B68B88</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C0E6ED41A0922C9006A22D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E6ED31A0922C9006A22D7 /* Main.storyboard */; };
+		4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CF7381A0058BF005D5D95 /* Utils.swift */; };
+		4C3D16301A076C85001EBDA7 /* CalendarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */; };
+		4C3D16321A076EE6001EBDA7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D16311A076EE6001EBDA7 /* MapKit.framework */; };
+		4C3F8F971A0A776C0066F3F7 /* bg_news.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F8F961A0A776C0066F3F7 /* bg_news.jpg */; };
+		4C3F8F9B1A0A79550066F3F7 /* news1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F8F981A0A79550066F3F7 /* news1.jpg */; };
+		4C3F8F9D1A0A79550066F3F7 /* news3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F8F9A1A0A79550066F3F7 /* news3.jpg */; };
+		4C3F8F9F1A0A79970066F3F7 /* news2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F8F9E1A0A79970066F3F7 /* news2.jpg */; };
+		4C4B9E041A09FFF000F60266 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B9E031A09FFF000F60266 /* InfoViewController.swift */; };
+		4C4B9E061A0A001400F60266 /* InfoMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B9E051A0A001400F60266 /* InfoMenuViewController.swift */; };
+		4C52D1541A0AD92A0060E222 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C52D1531A0AD92A0060E222 /* CoreLocation.framework */; };
+		4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */; };
+		4C8A7C081A1CD305008754F3 /* aikido.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BE51A1CD305008754F3 /* aikido.png */; };
+		4C8A7C091A1CD305008754F3 /* air-sports.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BE61A1CD305008754F3 /* air-sports.png */; };
+		4C8A7C0A1A1CD305008754F3 /* archery.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BE71A1CD305008754F3 /* archery.png */; };
+		4C8A7C0B1A1CD305008754F3 /* beach-handball.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BE81A1CD305008754F3 /* beach-handball.png */; };
+		4C8A7C0C1A1CD305008754F3 /* billiard-sports.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BE91A1CD305008754F3 /* billiard-sports.png */; };
+		4C8A7C0D1A1CD305008754F3 /* bodybuilding.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BEA1A1CD305008754F3 /* bodybuilding.png */; };
+		4C8A7C0E1A1CD305008754F3 /* boules-sports.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BEB1A1CD305008754F3 /* boules-sports.png */; };
+		4C8A7C0F1A1CD305008754F3 /* bowling.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BEC1A1CD305008754F3 /* bowling.png */; };
+		4C8A7C101A1CD305008754F3 /* canoe.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BED1A1CD305008754F3 /* canoe.png */; };
+		4C8A7C111A1CD305008754F3 /* Dance Sport.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BEE1A1CD305008754F3 /* Dance Sport.png */; };
+		4C8A7C121A1CD305008754F3 /* finswimming.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BEF1A1CD305008754F3 /* finswimming.png */; };
+		4C8A7C131A1CD305008754F3 /* fistball.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BF01A1CD305008754F3 /* fistball.png */; };
+		4C8A7C141A1CD305008754F3 /* floorball.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BF11A1CD305008754F3 /* floorball.png */; };
+		4C8A7C151A1CD305008754F3 /* flying-disc.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BF21A1CD305008754F3 /* flying-disc.png */; };
+		4C8A7C161A1CD305008754F3 /* gymnastics.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BF31A1CD305008754F3 /* gymnastics.png */; };
+		4C8A7C171A1CD305008754F3 /* ju-jitsu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BF41A1CD305008754F3 /* ju-jitsu.png */; };
+		4C8A7C181A1CD305008754F3 /* karate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BF51A1CD305008754F3 /* karate.png */; };
+		4C8A7C191A1CD305008754F3 /* kickboxing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BF61A1CD305008754F3 /* kickboxing.png */; };
+		4C8A7C1A1A1CD305008754F3 /* korfball.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BF71A1CD305008754F3 /* korfball.png */; };
+		4C8A7C1B1A1CD305008754F3 /* lacrosse.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BF81A1CD305008754F3 /* lacrosse.png */; };
+		4C8A7C1C1A1CD305008754F3 /* life-saving.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BF91A1CD305008754F3 /* life-saving.png */; };
+		4C8A7C1D1A1CD305008754F3 /* muaythai.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BFA1A1CD305008754F3 /* muaythai.png */; };
+		4C8A7C1E1A1CD305008754F3 /* netball.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BFB1A1CD305008754F3 /* netball.png */; };
+		4C8A7C1F1A1CD305008754F3 /* orienteering.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BFC1A1CD305008754F3 /* orienteering.png */; };
+		4C8A7C201A1CD305008754F3 /* powerlifting.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BFD1A1CD305008754F3 /* powerlifting.png */; };
+		4C8A7C211A1CD305008754F3 /* racquetball.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BFE1A1CD305008754F3 /* racquetball.png */; };
+		4C8A7C221A1CD305008754F3 /* roller-sports.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7BFF1A1CD305008754F3 /* roller-sports.png */; };
+		4C8A7C231A1CD305008754F3 /* softball.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7C001A1CD305008754F3 /* softball.png */; };
+		4C8A7C241A1CD305008754F3 /* sport-climbing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7C011A1CD305008754F3 /* sport-climbing.png */; };
+		4C8A7C251A1CD305008754F3 /* squash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7C021A1CD305008754F3 /* squash.png */; };
+		4C8A7C261A1CD305008754F3 /* sumo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7C031A1CD305008754F3 /* sumo.png */; };
+		4C8A7C271A1CD305008754F3 /* surfing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7C041A1CD305008754F3 /* surfing.png */; };
+		4C8A7C281A1CD305008754F3 /* tug-of-war.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7C051A1CD305008754F3 /* tug-of-war.png */; };
+		4C8A7C291A1CD305008754F3 /* waterski-&-wakeboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7C061A1CD305008754F3 /* waterski-&-wakeboard.png */; };
+		4C8A7C2A1A1CD305008754F3 /* wushu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7C071A1CD305008754F3 /* wushu.png */; };
+		4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */; };
+		4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832D19F6F5A800B68B88 /* ViewController.swift */; };
+		4C9B833319F6F5A800B68B88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B833219F6F5A800B68B88 /* Images.xcassets */; };
+		4C9B834219F6F5A800B68B88 /* wroclaw_2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B834119F6F5A800B68B88 /* wroclaw_2017Tests.swift */; };
+		4C9B834C19F6F63E00B68B88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */; };
+		4C9B835919F6F67000B68B88 /* ic_action_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B834E19F6F67000B68B88 /* ic_action_about.png */; };
+		4C9B835A19F6F67000B68B88 /* ic_action_chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B834F19F6F67000B68B88 /* ic_action_chat.png */; };
+		4C9B835B19F6F67000B68B88 /* ic_action_go_to_today.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B835019F6F67000B68B88 /* ic_action_go_to_today.png */; };
+		4C9B835C19F6F67000B68B88 /* ic_action_network_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B835119F6F67000B68B88 /* ic_action_network_cell.png */; };
+		4C9B835D19F6F67000B68B88 /* ic_action_place.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B835219F6F67000B68B88 /* ic_action_place.png */; };
+		4C9B835E19F6F67000B68B88 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B835319F6F67000B68B88 /* logo.png */; };
+		4C9B836219F6F67000B68B88 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B835719F6F67000B68B88 /* reveal-icon.png */; };
+		4C9B836319F6F67000B68B88 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B835819F6F67000B68B88 /* reveal-icon@2x.png */; };
+		4C9B836719F6F71100B68B88 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B836619F6F71100B68B88 /* SWRevealViewController.m */; };
+		4C9B836C19F70C9000B68B88 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B836B19F70C9000B68B88 /* MenuViewController.swift */; };
+		4CA7AB631A0AD1CD005073E7 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */; };
+		4CB5F59E19F71255006F09EC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5F59D19F71255006F09EC /* NewsViewController.swift */; };
+		4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */; };
+		4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3471A004B65006DE05C /* DIDatepicker.m */; };
+		4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */; };
+		4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */; };
+		D422AFD11A1C9DBB00A62C32 /* LocationsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422AFD01A1C9DBB00A62C32 /* LocationsDetailViewController.swift */; };
+		D422AFD31A1CA45900A62C32 /* route.png in Resources */ = {isa = PBXBuildFile; fileRef = D422AFD21A1CA45900A62C32 /* route.png */; };
+		D43E0A851A0A482700121C99 /* ic_action_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A841A0A482700121C99 /* ic_action_forward.png */; };
+		D43E0A8B1A0AB0CF00121C99 /* clock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8A1A0AB0CF00121C99 /* clock.jpg */; };
+		D43E0A8D1A0AB21F00121C99 /* jujitsu2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */; };
+		D43E0A8F1A0AB24500121C99 /* power.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8E1A0AB24500121C99 /* power.jpg */; };
+		D43E0A911A0AB25D00121C99 /* wroclaw2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */; };
+		D43E0A931A0B66C200121C99 /* ic_action_location_found.png in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A921A0B66C200121C99 /* ic_action_location_found.png */; };
+		D459963A1A0E509B002B1059 /* wushu.png in Resources */ = {isa = PBXBuildFile; fileRef = D45996391A0E509B002B1059 /* wushu.png */; };
+		D459963F1A10F4CA002B1059 /* orbita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D459963D1A10F4CA002B1059 /* orbita.jpg */; };
+		D45996401A10F4CA002B1059 /* stadionolimpijski.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D459963E1A10F4CA002B1059 /* stadionolimpijski.jpg */; };
+		D45996421A11046C002B1059 /* lotnisko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D45996411A11046C002B1059 /* lotnisko.jpg */; };
+		D45996441A110A28002B1059 /* wakepark_blur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D45996431A110A28002B1059 /* wakepark_blur.jpg */; };
+		D45996461A120372002B1059 /* DisciplineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996451A120372002B1059 /* DisciplineViewController.swift */; };
+		D45996541A1229D9002B1059 /* DisciplineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */; };
+		D45996561A13993D002B1059 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996551A13993D002B1059 /* json.swift */; };
+		D46C75CD1A24F93F00620D30 /* medal.png in Resources */ = {isa = PBXBuildFile; fileRef = D46C75CB1A24F93F00620D30 /* medal.png */; };
+		D46C75D51A24FAB400620D30 /* medal3.png in Resources */ = {isa = PBXBuildFile; fileRef = D46C75D41A24FAB400620D30 /* medal3.png */; };
+		D4C38E2C1A208CE60056EA87 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */; };
+		D4C38E2E1A20A20C0056EA87 /* ic_action_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E2D1A20A20C0056EA87 /* ic_action_settings.png */; };
+		D4C38E301A20AE220056EA87 /* SelectCountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */; };
+		D4C38E321A20AE380056EA87 /* SelectFollowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */; };
+		D4C38E341A20AFE60056EA87 /* England.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E331A20AFE60056EA87 /* England.png */; };
+		D4C38E361A20AFF00056EA87 /* Poland.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E351A20AFF00056EA87 /* Poland.png */; };
+		D4DF74611A264533001DA427 /* 3medals@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4DF74601A264533001DA427 /* 3medals@2x.png */; };
+		D4DF74631A264556001DA427 /* MedalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF74621A264556001DA427 /* MedalsViewController.swift */; };
+		D4DF74651A26455F001DA427 /* RecentResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF74641A26455F001DA427 /* RecentResultsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C9B833C19F6F5A800B68B88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C9B831E19F6F5A800B68B88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C9B832519F6F5A800B68B88;
+			remoteInfo = wroclaw_2017;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C0E6ED31A0922C9006A22D7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C3CF7381A0058BF005D5D95 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDetailViewController.swift; sourceTree = "<group>"; };
+		4C3D16311A076EE6001EBDA7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4C3F8F961A0A776C0066F3F7 /* bg_news.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_news.jpg; sourceTree = "<group>"; };
+		4C3F8F981A0A79550066F3F7 /* news1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news1.jpg; sourceTree = "<group>"; };
+		4C3F8F9A1A0A79550066F3F7 /* news3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news3.jpg; sourceTree = "<group>"; };
+		4C3F8F9E1A0A79970066F3F7 /* news2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news2.jpg; sourceTree = "<group>"; };
+		4C4B9E031A09FFF000F60266 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4C4B9E051A0A001400F60266 /* InfoMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoMenuViewController.swift; sourceTree = "<group>"; };
+		4C52D1531A0AD92A0060E222 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		4C8A7BE51A1CD305008754F3 /* aikido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aikido.png; sourceTree = "<group>"; };
+		4C8A7BE61A1CD305008754F3 /* air-sports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "air-sports.png"; sourceTree = "<group>"; };
+		4C8A7BE71A1CD305008754F3 /* archery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = archery.png; sourceTree = "<group>"; };
+		4C8A7BE81A1CD305008754F3 /* beach-handball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beach-handball.png"; sourceTree = "<group>"; };
+		4C8A7BE91A1CD305008754F3 /* billiard-sports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "billiard-sports.png"; sourceTree = "<group>"; };
+		4C8A7BEA1A1CD305008754F3 /* bodybuilding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bodybuilding.png; sourceTree = "<group>"; };
+		4C8A7BEB1A1CD305008754F3 /* boules-sports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boules-sports.png"; sourceTree = "<group>"; };
+		4C8A7BEC1A1CD305008754F3 /* bowling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bowling.png; sourceTree = "<group>"; };
+		4C8A7BED1A1CD305008754F3 /* canoe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canoe.png; sourceTree = "<group>"; };
+		4C8A7BEE1A1CD305008754F3 /* Dance Sport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dance Sport.png"; sourceTree = "<group>"; };
+		4C8A7BEF1A1CD305008754F3 /* finswimming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finswimming.png; sourceTree = "<group>"; };
+		4C8A7BF01A1CD305008754F3 /* fistball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fistball.png; sourceTree = "<group>"; };
+		4C8A7BF11A1CD305008754F3 /* floorball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floorball.png; sourceTree = "<group>"; };
+		4C8A7BF21A1CD305008754F3 /* flying-disc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flying-disc.png"; sourceTree = "<group>"; };
+		4C8A7BF31A1CD305008754F3 /* gymnastics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gymnastics.png; sourceTree = "<group>"; };
+		4C8A7BF41A1CD305008754F3 /* ju-jitsu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ju-jitsu.png"; sourceTree = "<group>"; };
+		4C8A7BF51A1CD305008754F3 /* karate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = karate.png; sourceTree = "<group>"; };
+		4C8A7BF61A1CD305008754F3 /* kickboxing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kickboxing.png; sourceTree = "<group>"; };
+		4C8A7BF71A1CD305008754F3 /* korfball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = korfball.png; sourceTree = "<group>"; };
+		4C8A7BF81A1CD305008754F3 /* lacrosse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lacrosse.png; sourceTree = "<group>"; };
+		4C8A7BF91A1CD305008754F3 /* life-saving.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "life-saving.png"; sourceTree = "<group>"; };
+		4C8A7BFA1A1CD305008754F3 /* muaythai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = muaythai.png; sourceTree = "<group>"; };
+		4C8A7BFB1A1CD305008754F3 /* netball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = netball.png; sourceTree = "<group>"; };
+		4C8A7BFC1A1CD305008754F3 /* orienteering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orienteering.png; sourceTree = "<group>"; };
+		4C8A7BFD1A1CD305008754F3 /* powerlifting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerlifting.png; sourceTree = "<group>"; };
+		4C8A7BFE1A1CD305008754F3 /* racquetball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = racquetball.png; sourceTree = "<group>"; };
+		4C8A7BFF1A1CD305008754F3 /* roller-sports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roller-sports.png"; sourceTree = "<group>"; };
+		4C8A7C001A1CD305008754F3 /* softball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = softball.png; sourceTree = "<group>"; };
+		4C8A7C011A1CD305008754F3 /* sport-climbing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-climbing.png"; sourceTree = "<group>"; };
+		4C8A7C021A1CD305008754F3 /* squash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squash.png; sourceTree = "<group>"; };
+		4C8A7C031A1CD305008754F3 /* sumo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sumo.png; sourceTree = "<group>"; };
+		4C8A7C041A1CD305008754F3 /* surfing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surfing.png; sourceTree = "<group>"; };
+		4C8A7C051A1CD305008754F3 /* tug-of-war.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tug-of-war.png"; sourceTree = "<group>"; };
+		4C8A7C061A1CD305008754F3 /* waterski-&-wakeboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waterski-&-wakeboard.png"; sourceTree = "<group>"; };
+		4C8A7C071A1CD305008754F3 /* wushu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wushu.png; sourceTree = "<group>"; };
+		4C9B832619F6F5A800B68B88 /* wroclaw_2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wroclaw_2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9B832A19F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C9B832D19F6F5A800B68B88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C9B833219F6F5A800B68B88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4C9B833B19F6F5A800B68B88 /* wroclaw_2017Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wroclaw_2017Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9B834019F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C9B834119F6F5A800B68B88 /* wroclaw_2017Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wroclaw_2017Tests.swift; sourceTree = "<group>"; };
+		4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		4C9B834E19F6F67000B68B88 /* ic_action_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_about.png; sourceTree = "<group>"; };
+		4C9B834F19F6F67000B68B88 /* ic_action_chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_chat.png; sourceTree = "<group>"; };
+		4C9B835019F6F67000B68B88 /* ic_action_go_to_today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_go_to_today.png; sourceTree = "<group>"; };
+		4C9B835119F6F67000B68B88 /* ic_action_network_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_network_cell.png; sourceTree = "<group>"; };
+		4C9B835219F6F67000B68B88 /* ic_action_place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_place.png; sourceTree = "<group>"; };
+		4C9B835319F6F67000B68B88 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		4C9B835719F6F67000B68B88 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
+		4C9B835819F6F67000B68B88 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
+		4C9B836419F6F71100B68B88 /* wroclaw_2017-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wroclaw_2017-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C9B836519F6F71100B68B88 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		4C9B836619F6F71100B68B88 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		4C9B836B19F70C9000B68B88 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		4CB5F59D19F71255006F09EC /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		4CC9A3461A004B65006DE05C /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
+		4CC9A3471A004B65006DE05C /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
+		4CC9A3481A004B65006DE05C /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
+		4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
+		4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		D422AFD01A1C9DBB00A62C32 /* LocationsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDetailViewController.swift; sourceTree = "<group>"; };
+		D422AFD21A1CA45900A62C32 /* route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = route.png; sourceTree = "<group>"; };
+		D43E0A841A0A482700121C99 /* ic_action_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_forward.png; sourceTree = "<group>"; };
+		D43E0A8A1A0AB0CF00121C99 /* clock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clock.jpg; sourceTree = "<group>"; };
+		D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jujitsu2.jpg; sourceTree = "<group>"; };
+		D43E0A8E1A0AB24500121C99 /* power.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = power.jpg; sourceTree = "<group>"; };
+		D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wroclaw2.jpg; sourceTree = "<group>"; };
+		D43E0A921A0B66C200121C99 /* ic_action_location_found.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_location_found.png; sourceTree = "<group>"; };
+		D45996391A0E509B002B1059 /* wushu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wushu.png; sourceTree = "<group>"; };
+		D459963D1A10F4CA002B1059 /* orbita.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orbita.jpg; sourceTree = "<group>"; };
+		D459963E1A10F4CA002B1059 /* stadionolimpijski.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stadionolimpijski.jpg; sourceTree = "<group>"; };
+		D45996411A11046C002B1059 /* lotnisko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lotnisko.jpg; sourceTree = "<group>"; };
+		D45996431A110A28002B1059 /* wakepark_blur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wakepark_blur.jpg; sourceTree = "<group>"; };
+		D45996451A120372002B1059 /* DisciplineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplineViewController.swift; sourceTree = "<group>"; };
+		D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplineDetailViewController.swift; sourceTree = "<group>"; };
+		D45996551A13993D002B1059 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		D46C75CB1A24F93F00620D30 /* medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medal.png; sourceTree = "<group>"; };
+		D46C75D41A24FAB400620D30 /* medal3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medal3.png; sourceTree = "<group>"; };
+		D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D4C38E2D1A20A20C0056EA87 /* ic_action_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_settings.png; sourceTree = "<group>"; };
+		D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryTableViewController.swift; sourceTree = "<group>"; };
+		D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFollowTableViewController.swift; sourceTree = "<group>"; };
+		D4C38E331A20AFE60056EA87 /* England.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = England.png; sourceTree = "<group>"; };
+		D4C38E351A20AFF00056EA87 /* Poland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Poland.png; sourceTree = "<group>"; };
+		D4DF74601A264533001DA427 /* 3medals@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3medals@2x.png"; sourceTree = "<group>"; };
+		D4DF74621A264556001DA427 /* MedalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalsViewController.swift; sourceTree = "<group>"; };
+		D4DF74641A26455F001DA427 /* RecentResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentResultsViewController.swift; sourceTree = "<group>"; };
+		b544a6d7874871c8461db369 /* CFNetwork.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C9B832319F6F5A800B68B88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C52D1541A0AD92A0060E222 /* CoreLocation.framework in Frameworks */,
+				4C3D16321A076EE6001EBDA7 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C9B833819F6F5A800B68B88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B0D1D91D1FDF3DC39A84EAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C8A7BE41A1CD305008754F3 /* disci_icons */ = {
+			isa = PBXGroup;
+			children = (
+				4C8A7BE51A1CD305008754F3 /* aikido.png */,
+				4C8A7BE61A1CD305008754F3 /* air-sports.png */,
+				4C8A7BE71A1CD305008754F3 /* archery.png */,
+				4C8A7BE81A1CD305008754F3 /* beach-handball.png */,
+				4C8A7BE91A1CD305008754F3 /* billiard-sports.png */,
+				4C8A7BEA1A1CD305008754F3 /* bodybuilding.png */,
+				4C8A7BEB1A1CD305008754F3 /* boules-sports.png */,
+				4C8A7BEC1A1CD305008754F3 /* bowling.png */,
+				4C8A7BED1A1CD305008754F3 /* canoe.png */,
+				4C8A7BEE1A1CD305008754F3 /* Dance Sport.png */,
+				4C8A7BEF1A1CD305008754F3 /* finswimming.png */,
+				4C8A7BF01A1CD305008754F3 /* fistball.png */,
+				4C8A7BF11A1CD305008754F3 /* floorball.png */,
+				4C8A7BF21A1CD305008754F3 /* flying-disc.png */,
+				4C8A7BF31A1CD305008754F3 /* gymnastics.png */,
+				4C8A7BF41A1CD305008754F3 /* ju-jitsu.png */,
+				4C8A7BF51A1CD305008754F3 /* karate.png */,
+				4C8A7BF61A1CD305008754F3 /* kickboxing.png */,
+				4C8A7BF71A1CD305008754F3 /* korfball.png */,
+				4C8A7BF81A1CD305008754F3 /* lacrosse.png */,
+				4C8A7BF91A1CD305008754F3 /* life-saving.png */,
+				4C8A7BFA1A1CD305008754F3 /* muaythai.png */,
+				4C8A7BFB1A1CD305008754F3 /* netball.png */,
+				4C8A7BFC1A1CD305008754F3 /* orienteering.png */,
+				4C8A7BFD1A1CD305008754F3 /* powerlifting.png */,
+				4C8A7BFE1A1CD305008754F3 /* racquetball.png */,
+				4C8A7BFF1A1CD305008754F3 /* roller-sports.png */,
+				4C8A7C001A1CD305008754F3 /* softball.png */,
+				4C8A7C011A1CD305008754F3 /* sport-climbing.png */,
+				4C8A7C021A1CD305008754F3 /* squash.png */,
+				4C8A7C031A1CD305008754F3 /* sumo.png */,
+				4C8A7C041A1CD305008754F3 /* surfing.png */,
+				4C8A7C051A1CD305008754F3 /* tug-of-war.png */,
+				4C8A7C061A1CD305008754F3 /* waterski-&-wakeboard.png */,
+				4C8A7C071A1CD305008754F3 /* wushu.png */,
+			);
+			path = disci_icons;
+			sourceTree = "<group>";
+		};
+		4C9B831D19F6F5A800B68B88 = {
+			isa = PBXGroup;
+			children = (
+				4C52D1531A0AD92A0060E222 /* CoreLocation.framework */,
+				4C3D16311A076EE6001EBDA7 /* MapKit.framework */,
+				4C9B832819F6F5A800B68B88 /* wroclaw_2017 */,
+				4C9B833E19F6F5A800B68B88 /* wroclaw_2017Tests */,
+				4C9B832719F6F5A800B68B88 /* Products */,
+				4B0D1D91D1FDF3DC39A84EAE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4C9B832719F6F5A800B68B88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B832619F6F5A800B68B88 /* wroclaw_2017.app */,
+				4C9B833B19F6F5A800B68B88 /* wroclaw_2017Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C9B832819F6F5A800B68B88 /* wroclaw_2017 */ = {
+			isa = PBXGroup;
+			children = (
+				D422AFC71A1B9C3600A62C32 /* Frameworks */,
+				4C9B836819F70BE800B68B88 /* support */,
+				4C9B834D19F6F65C00B68B88 /* assets */,
+				4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */,
+				4C0E6ED31A0922C9006A22D7 /* Main.storyboard */,
+				4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */,
+				D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */,
+				D4DF74621A264556001DA427 /* MedalsViewController.swift */,
+				D4DF74641A26455F001DA427 /* RecentResultsViewController.swift */,
+				D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */,
+				D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */,
+				D45996451A120372002B1059 /* DisciplineViewController.swift */,
+				D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */,
+				D45996551A13993D002B1059 /* json.swift */,
+				4C9B832D19F6F5A800B68B88 /* ViewController.swift */,
+				4CB5F59D19F71255006F09EC /* NewsViewController.swift */,
+				4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */,
+				4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */,
+				4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */,
+				4C4B9E031A09FFF000F60266 /* InfoViewController.swift */,
+				4C4B9E051A0A001400F60266 /* InfoMenuViewController.swift */,
+				4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */,
+				D422AFD01A1C9DBB00A62C32 /* LocationsDetailViewController.swift */,
+				4C9B833219F6F5A800B68B88 /* Images.xcassets */,
+				4C9B832919F6F5A800B68B88 /* Supporting Files */,
+			);
+			path = wroclaw_2017;
+			sourceTree = "<group>";
+		};
+		4C9B832919F6F5A800B68B88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B832A19F6F5A800B68B88 /* Info.plist */,
+				4C9B836419F6F71100B68B88 /* wroclaw_2017-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C9B833E19F6F5A800B68B88 /* wroclaw_2017Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B834119F6F5A800B68B88 /* wroclaw_2017Tests.swift */,
+				4C9B833F19F6F5A800B68B88 /* Supporting Files */,
+			);
+			path = wroclaw_2017Tests;
+			sourceTree = "<group>";
+		};
+		4C9B833F19F6F5A800B68B88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B834019F6F5A800B68B88 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C9B834D19F6F65C00B68B88 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				D4C38E351A20AFF00056EA87 /* Poland.png */,
+				D4C38E331A20AFE60056EA87 /* England.png */,
+				4C8A7BE41A1CD305008754F3 /* disci_icons */,
+				D422AFD21A1CA45900A62C32 /* route.png */,
+				D4DF74601A264533001DA427 /* 3medals@2x.png */,
+				4C3F8F9E1A0A79970066F3F7 /* news2.jpg */,
+				D46C75D41A24FAB400620D30 /* medal3.png */,
+				D46C75CB1A24F93F00620D30 /* medal.png */,
+				D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */,
+				D45996391A0E509B002B1059 /* wushu.png */,
+				4C3F8F981A0A79550066F3F7 /* news1.jpg */,
+				4C3F8F9A1A0A79550066F3F7 /* news3.jpg */,
+				D43E0A8A1A0AB0CF00121C99 /* clock.jpg */,
+				D4C38E2D1A20A20C0056EA87 /* ic_action_settings.png */,
+				4C3F8F961A0A776C0066F3F7 /* bg_news.jpg */,
+				D459963D1A10F4CA002B1059 /* orbita.jpg */,
+				D45996431A110A28002B1059 /* wakepark_blur.jpg */,
+				D459963E1A10F4CA002B1059 /* stadionolimpijski.jpg */,
+				4C9B834E19F6F67000B68B88 /* ic_action_about.png */,
+				D43E0A901A0AB25D00121C99 /* wroclaw2.jpg */,
+				D45996411A11046C002B1059 /* lotnisko.jpg */,
+				D43E0A921A0B66C200121C99 /* ic_action_location_found.png */,
+				D43E0A841A0A482700121C99 /* ic_action_forward.png */,
+				D43E0A8E1A0AB24500121C99 /* power.jpg */,
+				4C9B834F19F6F67000B68B88 /* ic_action_chat.png */,
+				4C9B835019F6F67000B68B88 /* ic_action_go_to_today.png */,
+				4C9B835119F6F67000B68B88 /* ic_action_network_cell.png */,
+				4C9B835219F6F67000B68B88 /* ic_action_place.png */,
+				4C9B835319F6F67000B68B88 /* logo.png */,
+				4C9B835719F6F67000B68B88 /* reveal-icon.png */,
+				4C9B835819F6F67000B68B88 /* reveal-icon@2x.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		4C9B836819F70BE800B68B88 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				4CC9A3461A004B65006DE05C /* DIDatepicker.h */,
+				4CC9A3471A004B65006DE05C /* DIDatepicker.m */,
+				4CC9A3481A004B65006DE05C /* DIDatepickerDateView.h */,
+				4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */,
+				4C9B836519F6F71100B68B88 /* SWRevealViewController.h */,
+				4C9B836619F6F71100B68B88 /* SWRevealViewController.m */,
+				4C9B836B19F70C9000B68B88 /* MenuViewController.swift */,
+				4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */,
+				4C3CF7381A0058BF005D5D95 /* Utils.swift */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		D422AFC71A1B9C3600A62C32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				b544a6d7874871c8461db369 /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			path = wroclaw_2017;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C9B832519F6F5A800B68B88 /* wroclaw_2017 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C9B834519F6F5A800B68B88 /* Build configuration list for PBXNativeTarget "wroclaw_2017" */;
+			buildPhases = (
+				4C9B832219F6F5A800B68B88 /* Sources */,
+				4C9B832319F6F5A800B68B88 /* Frameworks */,
+				4C9B832419F6F5A800B68B88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wroclaw_2017;
+			productName = wroclaw_2017;
+			productReference = 4C9B832619F6F5A800B68B88 /* wroclaw_2017.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C9B833A19F6F5A800B68B88 /* wroclaw_2017Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C9B834819F6F5A800B68B88 /* Build configuration list for PBXNativeTarget "wroclaw_2017Tests" */;
+			buildPhases = (
+				4C9B833719F6F5A800B68B88 /* Sources */,
+				4C9B833819F6F5A800B68B88 /* Frameworks */,
+				4C9B833919F6F5A800B68B88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C9B833D19F6F5A800B68B88 /* PBXTargetDependency */,
+			);
+			name = wroclaw_2017Tests;
+			productName = wroclaw_2017Tests;
+			productReference = 4C9B833B19F6F5A800B68B88 /* wroclaw_2017Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C9B831E19F6F5A800B68B88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = pl.wroclaw;
+				TargetAttributes = {
+					4C9B832519F6F5A800B68B88 = {
+						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					4C9B833A19F6F5A800B68B88 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 4C9B832519F6F5A800B68B88;
+					};
+				};
+			};
+			buildConfigurationList = 4C9B832119F6F5A800B68B88 /* Build configuration list for PBXProject "wroclaw_2017" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C9B831D19F6F5A800B68B88;
+			productRefGroup = 4C9B832719F6F5A800B68B88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C9B832519F6F5A800B68B88 /* wroclaw_2017 */,
+				4C9B833A19F6F5A800B68B88 /* wroclaw_2017Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C9B832419F6F5A800B68B88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8A7C1A1A1CD305008754F3 /* korfball.png in Resources */,
+				D459963A1A0E509B002B1059 /* wushu.png in Resources */,
+				4C8A7C181A1CD305008754F3 /* karate.png in Resources */,
+				D43E0A911A0AB25D00121C99 /* wroclaw2.jpg in Resources */,
+				4C9B834C19F6F63E00B68B88 /* LaunchScreen.xib in Resources */,
+				4C8A7C231A1CD305008754F3 /* softball.png in Resources */,
+				D43E0A8D1A0AB21F00121C99 /* jujitsu2.jpg in Resources */,
+				4C9B836319F6F67000B68B88 /* reveal-icon@2x.png in Resources */,
+				4C8A7C0E1A1CD305008754F3 /* boules-sports.png in Resources */,
+				4C3F8F9B1A0A79550066F3F7 /* news1.jpg in Resources */,
+				4C9B835919F6F67000B68B88 /* ic_action_about.png in Resources */,
+				4C9B835E19F6F67000B68B88 /* logo.png in Resources */,
+				4C9B835B19F6F67000B68B88 /* ic_action_go_to_today.png in Resources */,
+				4C0E6ED41A0922C9006A22D7 /* Main.storyboard in Resources */,
+				4C3F8F9F1A0A79970066F3F7 /* news2.jpg in Resources */,
+				4C8A7C0B1A1CD305008754F3 /* beach-handball.png in Resources */,
+				4C8A7C0F1A1CD305008754F3 /* bowling.png in Resources */,
+				D422AFD31A1CA45900A62C32 /* route.png in Resources */,
+				4C8A7C211A1CD305008754F3 /* racquetball.png in Resources */,
+				4C8A7C2A1A1CD305008754F3 /* wushu.png in Resources */,
+				4C8A7C131A1CD305008754F3 /* fistball.png in Resources */,
+				4C8A7C101A1CD305008754F3 /* canoe.png in Resources */,
+				4C8A7C1D1A1CD305008754F3 /* muaythai.png in Resources */,
+				4C8A7C251A1CD305008754F3 /* squash.png in Resources */,
+				D4C38E2E1A20A20C0056EA87 /* ic_action_settings.png in Resources */,
+				D46C75CD1A24F93F00620D30 /* medal.png in Resources */,
+				D45996421A11046C002B1059 /* lotnisko.jpg in Resources */,
+				4C8A7C141A1CD305008754F3 /* floorball.png in Resources */,
+				4C8A7C221A1CD305008754F3 /* roller-sports.png in Resources */,
+				D43E0A931A0B66C200121C99 /* ic_action_location_found.png in Resources */,
+				4C8A7C1E1A1CD305008754F3 /* netball.png in Resources */,
+				4C8A7C291A1CD305008754F3 /* waterski-&-wakeboard.png in Resources */,
+				4C3F8F9D1A0A79550066F3F7 /* news3.jpg in Resources */,
+				4C9B835D19F6F67000B68B88 /* ic_action_place.png in Resources */,
+				D43E0A8B1A0AB0CF00121C99 /* clock.jpg in Resources */,
+				4C8A7C0D1A1CD305008754F3 /* bodybuilding.png in Resources */,
+				D45996441A110A28002B1059 /* wakepark_blur.jpg in Resources */,
+				4C8A7C171A1CD305008754F3 /* ju-jitsu.png in Resources */,
+				4C9B835A19F6F67000B68B88 /* ic_action_chat.png in Resources */,
+				D43E0A8F1A0AB24500121C99 /* power.jpg in Resources */,
+				D4DF74611A264533001DA427 /* 3medals@2x.png in Resources */,
+				4C8A7C241A1CD305008754F3 /* sport-climbing.png in Resources */,
+				D45996401A10F4CA002B1059 /* stadionolimpijski.jpg in Resources */,
+				4C9B833319F6F5A800B68B88 /* Images.xcassets in Resources */,
+				4C9B836219F6F67000B68B88 /* reveal-icon.png in Resources */,
+				4C8A7C201A1CD305008754F3 /* powerlifting.png in Resources */,
+				4C8A7C1F1A1CD305008754F3 /* orienteering.png in Resources */,
+				D4C38E361A20AFF00056EA87 /* Poland.png in Resources */,
+				4C8A7C091A1CD305008754F3 /* air-sports.png in Resources */,
+				4C8A7C281A1CD305008754F3 /* tug-of-war.png in Resources */,
+				4C8A7C081A1CD305008754F3 /* aikido.png in Resources */,
+				4C8A7C271A1CD305008754F3 /* surfing.png in Resources */,
+				4C8A7C161A1CD305008754F3 /* gymnastics.png in Resources */,
+				D43E0A851A0A482700121C99 /* ic_action_forward.png in Resources */,
+				4C9B835C19F6F67000B68B88 /* ic_action_network_cell.png in Resources */,
+				D459963F1A10F4CA002B1059 /* orbita.jpg in Resources */,
+				4C8A7C0C1A1CD305008754F3 /* billiard-sports.png in Resources */,
+				4C8A7C0A1A1CD305008754F3 /* archery.png in Resources */,
+				D4C38E341A20AFE60056EA87 /* England.png in Resources */,
+				D46C75D51A24FAB400620D30 /* medal3.png in Resources */,
+				4C3F8F971A0A776C0066F3F7 /* bg_news.jpg in Resources */,
+				4C8A7C191A1CD305008754F3 /* kickboxing.png in Resources */,
+				4C8A7C111A1CD305008754F3 /* Dance Sport.png in Resources */,
+				4C8A7C121A1CD305008754F3 /* finswimming.png in Resources */,
+				4C8A7C151A1CD305008754F3 /* flying-disc.png in Resources */,
+				4C8A7C1B1A1CD305008754F3 /* lacrosse.png in Resources */,
+				4C8A7C1C1A1CD305008754F3 /* life-saving.png in Resources */,
+				4C8A7C261A1CD305008754F3 /* sumo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C9B833919F6F5A800B68B88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C9B832219F6F5A800B68B88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */,
+				4C3D16301A076C85001EBDA7 /* CalendarDetailViewController.swift in Sources */,
+				D4C38E321A20AE380056EA87 /* SelectFollowTableViewController.swift in Sources */,
+				4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */,
+				D4C38E2C1A208CE60056EA87 /* SettingsViewController.swift in Sources */,
+				D4DF74631A264556001DA427 /* MedalsViewController.swift in Sources */,
+				4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */,
+				4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */,
+				4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */,
+				4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */,
+				D4DF74651A26455F001DA427 /* RecentResultsViewController.swift in Sources */,
+				D4C38E301A20AE220056EA87 /* SelectCountryTableViewController.swift in Sources */,
+				4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */,
+				4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */,
+				4C4B9E041A09FFF000F60266 /* InfoViewController.swift in Sources */,
+				4C9B836719F6F71100B68B88 /* SWRevealViewController.m in Sources */,
+				D45996561A13993D002B1059 /* json.swift in Sources */,
+				4CA7AB631A0AD1CD005073E7 /* LocationsViewController.swift in Sources */,
+				D45996461A120372002B1059 /* DisciplineViewController.swift in Sources */,
+				4CB5F59E19F71255006F09EC /* NewsViewController.swift in Sources */,
+				D422AFD11A1C9DBB00A62C32 /* LocationsDetailViewController.swift in Sources */,
+				D45996541A1229D9002B1059 /* DisciplineDetailViewController.swift in Sources */,
+				4C9B836C19F70C9000B68B88 /* MenuViewController.swift in Sources */,
+				4C4B9E061A0A001400F60266 /* InfoMenuViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C9B833719F6F5A800B68B88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C9B834219F6F5A800B68B88 /* wroclaw_2017Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C9B833D19F6F5A800B68B88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C9B832519F6F5A800B68B88 /* wroclaw_2017 */;
+			targetProxy = 4C9B833C19F6F5A800B68B88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4C9B834319F6F5A800B68B88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C9B834419F6F5A800B68B88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C9B834619F6F5A800B68B88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = wroclaw_2017/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "wroclaw_2017/wroclaw_2017-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C9B834719F6F5A800B68B88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = wroclaw_2017/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "wroclaw_2017/wroclaw_2017-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		4C9B834919F6F5A800B68B88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = wroclaw_2017Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wroclaw_2017.app/wroclaw_2017";
+			};
+			name = Debug;
+		};
+		4C9B834A19F6F5A800B68B88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = wroclaw_2017Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wroclaw_2017.app/wroclaw_2017";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C9B832119F6F5A800B68B88 /* Build configuration list for PBXProject "wroclaw_2017" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C9B834319F6F5A800B68B88 /* Debug */,
+				4C9B834419F6F5A800B68B88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C9B834519F6F5A800B68B88 /* Build configuration list for PBXNativeTarget "wroclaw_2017" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C9B834619F6F5A800B68B88 /* Debug */,
+				4C9B834719F6F5A800B68B88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C9B834819F6F5A800B68B88 /* Build configuration list for PBXNativeTarget "wroclaw_2017Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C9B834919F6F5A800B68B88 /* Debug */,
+				4C9B834A19F6F5A800B68B88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C9B831E19F6F5A800B68B88 /* Project object */;
+}

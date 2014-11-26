@@ -1,30 +1,25 @@
 //
-//  MedalsViewController.swift
+//  RecentResultsViewController.swift
 //  wroclaw_2017
 //
-//  Created by Adam Mateja on 25.11.2014.
+//  Created by Adam Mateja on 26.11.2014.
 //  Copyright (c) 2014 pl.wroclaw. All rights reserved.
 //
 
 import UIKit
 
-class MedalsViewController: UIViewController {
+class RecentResultsViewController: UIViewController {
 
     @IBOutlet weak var revealButton: UIBarButtonItem!
-    @IBOutlet weak var medalsIcon: UITabBarItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        
-        
     }
     
     func customSetup(){
@@ -36,6 +31,7 @@ class MedalsViewController: UIViewController {
             view.addGestureRecognizer(revealViewController.panGestureRecognizer());
         }
     }
+    
 
     /*
     // MARK: - Navigation

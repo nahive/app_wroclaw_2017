@@ -5,4 +5,3 @@
 #import "SWRevealViewController.h"
 #import "DIDatePicker.h"
 #import "DIDatepickerDateView.h"
-#import "/Users/nahive/Downloads/Pods/GKLParallaxPictures/GKLParallaxPicturesViewController/GKLParallaxPicturesViewController.h"
