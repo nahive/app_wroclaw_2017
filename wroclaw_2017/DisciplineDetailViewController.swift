@@ -25,7 +25,23 @@ class DisciplineDetailViewController: UIViewController {
     
     @IBAction func changeFollow(sender: AnyObject) {
         if(followSwitch.on) {
-            println("a");
+            if(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") != nil) {
+                    var selectedDisciplines: [NSString] = NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [NSString];
+                    selectedDisciplines.append(titleVal);
+                    NSUserDefaults.standardUserDefaults().setObject(selectedDisciplines, forKey: "disciplinesToFollow");
+            } else {
+                var selectedDisciplines: [NSString] = [titleVal];
+                NSUserDefaults.standardUserDefaults().setObject(selectedDisciplines, forKey: "disciplinesToFollow");
+            }
+        } else if (followSwitch.on == false) {
+            if(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") != nil) {
+                if (contains(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [NSString], titleVal)) {
+                    var index: Int = find(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [NSString], titleVal)!;
+                    var selectedDisciplines: [NSString] = NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [NSString];
+                    selectedDisciplines.removeAtIndex(index);
+                    NSUserDefaults.standardUserDefaults().setObject(selectedDisciplines, forKey: "disciplinesToFollow");
+                }
+            }
         }
     }
     
@@ -47,21 +63,19 @@ class DisciplineDetailViewController: UIViewController {
         if(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") != nil) {
             println(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [NSString]);
             if (contains(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [NSString], titleVal)) {
-                println("tak");
+                followSwitch.on = true;
+            } else {
+                followSwitch.on = false;
             }
         }
-//        contentLabel.text =
-
-        // Do any additional setup after loading the view.
+        
     }
     
     func fillFromSegue(){
         self.title = titleVal;
         disTitle.text = titleVal;
         disPlace.text = placeVal;
-        
         getJSON();
-        
     }
     
     override func viewDidAppear(animated: Bool) {

@@ -17,7 +17,7 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     
     var images: [UIImage] = [];
     var icons: [UIImage] = [];
-    
+    var imagesDictionary: [String: [UIImage]] = ["" : []];
     //sort this array
     var disciplinesSectionTitles: [String] = [];
     var disciplineIndexTitles: [String] = [];
@@ -55,12 +55,26 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+            self.title = "Dyscypliny";
+        } else if (NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage")){
+            self.title = "Disciplines";
+        }
+    }
+    
     
     func getJSON() {
         var url = "https://2017.wroclaw.pl/mobile/discipline"
         let json = JSON(url:url);
-        
         var categoryDisciplines: [String] = [];
+        var categoryIcons: [UIImage] = [];
+        locations.removeAll(keepCapacity: true);
+        id.removeAll(keepCapacity: true);
+        names.removeAll(keepCapacity: true);
+        disciplineIndexTitles.removeAll(keepCapacity: true);
+        disciplinesSectionTitles.removeAll(keepCapacity: true);
+        disciplines.removeAll(keepCapacity: true);
         
         for (k, v) in json {
             for (i,j) in v {
@@ -76,9 +90,9 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
                     str = str.substringWithRange(Range<String.Index>(start: advance(str.startIndex, 31), end: advance(str.endIndex, 0)))
                     var img = UIImage(named: str);
                     if img != nil {
-                        icons.append(img!);
+                        categoryIcons.append(img!);
                     } else {
-                        icons.append(UIImage(named: "aikido.png")!);
+                        categoryIcons.append(UIImage(named: "aikido.png")!);
                     }
                     break;
                 case "name":
@@ -91,6 +105,12 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
                         var lastDiscipline = categoryDisciplines.last;
                         categoryDisciplines.removeAll(keepCapacity: true);
                         categoryDisciplines.append(lastDiscipline!);
+                        var lastImage: UIImage = categoryIcons.last!;
+                        categoryIcons.removeAll(keepCapacity: true);
+                        categoryIcons.append(lastImage);
+                        imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
+                    } else {
+                        imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
                     }
                     
                     if (!(disciplineIndexTitles.last == j.toString(pretty: true))) {
@@ -141,10 +161,13 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "showDisciplineDetail"){
             let row = self.tableView.indexPathForSelectedRow()?.row;
+            var cell: UITableViewCell = tableView.cellForRowAtIndexPath(self.tableView.indexPathForSelectedRow()!)!;
+            var followName: UILabel = cell.viewWithTag(102) as UILabel;
+            var index: Int = find(names, followName.text!)!;
             var destViewController : DisciplineDetailViewController = segue.destinationViewController as DisciplineDetailViewController;
-            destViewController.idVal = id[row!];
-            destViewController.locationVal = locations[row!];
-            destViewController.titleVal = names[row!];
+            destViewController.idVal = id[index];
+            destViewController.locationVal = locations[index];
+            destViewController.titleVal = names[index];
         }
     }
     
@@ -199,10 +222,8 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         var image: UIImageView? = cell!.viewWithTag(101) as? UIImageView;
         image?.backgroundColor = Utils.colorize(0x605196);
         image?.layer.cornerRadius = 8;
-        if (!(numberOfImage > icons.count-1)){
-            image?.image = icons[numberOfImage];
-        }
-        numberOfImage++;
+        
+        
         
         //        NSString *sectionTitle = [animalSectionTitles objectAtIndex:indexPath.section];
         //        NSArray *sectionAnimals = [animals objectForKey:sectionTitle];
@@ -213,9 +234,12 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         //How to get object at index????
         var sectionTitle: String = disciplinesSectionTitles[indexPath.section];
         
+        var sectionImages: [UIImage] = imagesDictionary[sectionTitle]!;
         var sectionEvents: [String] = disciplines[sectionTitle]!;
         
         var event: String = sectionEvents[indexPath.row];
+        var currentImage: UIImage = sectionImages[indexPath.row];
+        image?.image = currentImage;
         
         disciplineName?.text = event;
         disciplineName?.font = UIFont(name: "HelveticaNeue-Light", size: 22);

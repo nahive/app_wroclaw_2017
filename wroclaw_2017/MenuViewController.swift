@@ -25,6 +25,10 @@ public class MenuViewController: UITableViewController {
         return tableView;
     }
     
+    public override func viewWillAppear(animated: Bool) {
+        tableView.reloadData();
+    }
+    
     func customSetup(){
         self.tableView.backgroundColor = Utils.colorize(0x7f7f7f);
         self.tableView.tableFooterView = UIView(frame: CGRectZero);
@@ -100,6 +104,7 @@ public class MenuViewController: UITableViewController {
         switch(indexPath.row){
         case 0:
             cellId = "logo";
+            
             break;
         case 1:
             cellId = "news";
@@ -127,6 +132,40 @@ public class MenuViewController: UITableViewController {
             break;
         }
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as UITableViewCell;
+        
+        if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+            var newsLabel: UILabel? = cell.viewWithTag(1) as? UILabel;
+            newsLabel?.text = "aktualności";
+            var disciplineLabel: UILabel? = cell.viewWithTag(2) as? UILabel;
+            disciplineLabel?.text = "dyscypliny";
+            var calendarLabel: UILabel? = cell.viewWithTag(3) as? UILabel;
+            calendarLabel?.text = "kalendarz";
+            var infoLabel: UILabel? = cell.viewWithTag(4) as? UILabel;
+            infoLabel?.text = "informacje";
+            var locationLabel: UILabel? = cell.viewWithTag(5) as? UILabel;
+            locationLabel?.text = "obiekty";
+            var resultLabel: UILabel? = cell.viewWithTag(6) as? UILabel;
+            resultLabel?.text = "wyniki";
+            var settingsLabel: UILabel? = cell.viewWithTag(7) as? UILabel;
+            settingsLabel?.text = "ustawienia";
+        } else if (NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage")) {
+            var newsLabel: UILabel? = cell.viewWithTag(1) as? UILabel;
+            newsLabel?.text = "news";
+            var disciplineLabel: UILabel? = cell.viewWithTag(2) as? UILabel;
+            disciplineLabel?.text = "disciplines";
+            var calendarLabel: UILabel? = cell.viewWithTag(3) as? UILabel;
+            calendarLabel?.text = "calendar";
+            var infoLabel: UILabel? = cell.viewWithTag(4) as? UILabel;
+            infoLabel?.text = "info";
+            var locationLabel: UILabel? = cell.viewWithTag(5) as? UILabel;
+            locationLabel?.text = "locations";
+            var resultLabel: UILabel? = cell.viewWithTag(6) as? UILabel;
+            resultLabel?.text = "results";
+            var settingsLabel: UILabel? = cell.viewWithTag(7) as? UILabel;
+            settingsLabel?.text = "settings";
+        }
+        
+        
         return cell;
     }
     

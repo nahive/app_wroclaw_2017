@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wroclaw_2017/DisciplineViewController.swift"
-            timestampString = "438505300.314098"
+            timestampString = "438685827.800215"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "getJSON()"
             landmarkType = "5">
          </BreakpointContent>

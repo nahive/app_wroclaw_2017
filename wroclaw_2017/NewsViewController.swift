@@ -60,6 +60,14 @@ public class NewsViewController: UITableViewController {
         
         }
     
+    public override func viewWillAppear(animated: Bool) {
+        if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+            self.title = "Aktualności";
+        } else if (NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage")){
+            self.title = "News";
+        }
+    }
+    
     public func getJSON() {
         images.removeAll(keepCapacity: true);
         authors.removeAll(keepCapacity: true);
@@ -71,9 +79,11 @@ public class NewsViewController: UITableViewController {
         
         
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
-            url = "https://2017.wroclaw.pl/mobile/news"
+            url = "https://2017.wroclaw.pl/mobile/news";
+            self.title = "Aktualności";
         } else {
-            url = "https://2017.wroclaw.pl/mobile/news?lang=en_US"
+            url = "https://2017.wroclaw.pl/mobile/news?lang=en_US";
+            self.title = "News";
         }
         
         let json = JSON(url:url);

@@ -100,7 +100,6 @@ class SelectCountryTableViewController: UITableViewController {
         }
         
         tableView.reloadData();
-    
     }
 
     /*

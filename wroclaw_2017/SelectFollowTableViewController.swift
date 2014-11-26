@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SelectFollowTableViewController: UITableViewController {
+class SelectFollowTableViewController: UITableViewController, UISearchDisplayDelegate {
     
     var contentValue: String = "";
     var screen =  UIScreen.mainScreen().bounds;
@@ -18,6 +18,7 @@ class SelectFollowTableViewController: UITableViewController {
     var followsSectionTitles: [String] = [];
     var followIndexTitles: [String] = [];
     var names: [String] = [];
+    var searchResults: [String] = [];
     var numberOfImage: Int = 0;
     var selectedDisciplies: [NSString] = [];
     var indexPathChanged: Bool = false;
@@ -195,9 +196,13 @@ class SelectFollowTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var sectionTitle: String = followsSectionTitles[section];
-        var sectionEvents: [String] = follows[sectionTitle]!;
-        return sectionEvents.count;
+        if (tableView == self.searchDisplayController) {
+            return searchResults.count;
+        } else {
+            var sectionTitle: String = followsSectionTitles[section];
+            var sectionEvents: [String] = follows[sectionTitle]!;
+            return sectionEvents.count;
+        }
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -258,19 +263,11 @@ class SelectFollowTableViewController: UITableViewController {
             image?.backgroundColor = Utils.colorize(0x605196);
             image?.layer.cornerRadius = 8;
         }
-//        if (!(numberOfImage > icons.count-1)){
-//            image?.image = icons[numberOfImage];
-//        }
         
+        if (tableView == self.searchDisplayController) {
+            println("yes");
+        }
         
-        
-        //        NSString *sectionTitle = [animalSectionTitles objectAtIndex:indexPath.section];
-        //        NSArray *sectionAnimals = [animals objectForKey:sectionTitle];
-        //        NSString *animal = [sectionAnimals objectAtIndex:indexPath.row];
-        //        cell.textLabel.text = animal;
-        
-        
-        //How to get object at index????
         var sectionTitle: String = followsSectionTitles[indexPath.section];
         
         var sectionEvents: [String] = follows[sectionTitle]!;
@@ -320,12 +317,20 @@ class SelectFollowTableViewController: UITableViewController {
             }
             userDefaults.setObject(selectedDisciplies, forKey: "countriesToFollow");
         }
-        
-        
-        
-        
         tableView.reloadData();
-        
+    }
+    
+    func filterContentForSearchText(searchText: String) {
+        // Filter the array using the filter method
+        //NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
+        var resultPredicate: NSPredicate = NSPredicate(format: "name contains[c] %@", searchText)!;
+        searchResults = names.filter { resultPredicate.evaluateWithObject($0) };
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        filterContentForSearchText(searchString)
+        println("test");
+        return true;
     }
 
     

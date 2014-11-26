@@ -91,16 +91,35 @@ class SettingsViewController: UITableViewController {
         }
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as UITableViewCell;
         
-        var languageLabel: UILabel? = cell.viewWithTag(101) as? UILabel;
+        var languageName: UILabel? = cell.viewWithTag(101) as? UILabel;
         var numberOfCountries: UILabel? = cell.viewWithTag(102) as? UILabel;
         var numberOfDisciplines: UILabel? = cell.viewWithTag(103) as? UILabel;
+        var languageLabel: UILabel? = cell.viewWithTag(104) as? UILabel;
+        var followLabel: UILabel? = cell.viewWithTag(105) as? UILabel;
+        var countryLabel: UILabel? = cell.viewWithTag(106) as? UILabel;
+        var disciplineLabel: UILabel? = cell.viewWithTag(107) as? UILabel;
+        
         
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
-            languageLabel?.text = "Polski";
+            languageName?.text = "Polski";
+            languageLabel?.text = "Język:";
+            followLabel?.text = "Obserwuj";
+            countryLabel?.text = "Kraje:";
+            disciplineLabel?.text = "Dyscypliny:";
+            self.title = "Ustawienia";
         } else if (NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage")) {
-            languageLabel?.text = "English";
+            languageName?.text = "English";
+            languageLabel?.text = "Language:";
+            followLabel?.text = "Follow";
+            countryLabel?.text = "Countries:";
+            disciplineLabel?.text = "Disciplines:";
+            self.title = "Settings";
         } else {
-            languageLabel?.text = "";
+            languageName?.text = "English";
+            languageLabel?.text = "Language:";
+            followLabel?.text = "Follow";
+            countryLabel?.text = "Countries:";
+            disciplineLabel?.text = "Disciplines:";
         }
         
         if (NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") != nil) {

@@ -47,6 +47,14 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+            self.title = "Kalendarz";
+        } else if (NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage")){
+            self.title = "Calendar";
+        }
+    }
+    
     func prepareTable() {
     }
     

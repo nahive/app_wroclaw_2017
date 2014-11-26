@@ -68,6 +68,14 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+            self.title = "Obiekty";
+        } else if (NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage")){
+            self.title = "Locations";
+        }
+    }
+    
     func customSetup(){
         var revealViewController = self.revealViewController();
         if(revealViewController != nil){

@@ -92,12 +92,16 @@
 		D45996461A120372002B1059 /* DisciplineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996451A120372002B1059 /* DisciplineViewController.swift */; };
 		D45996541A1229D9002B1059 /* DisciplineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */; };
 		D45996561A13993D002B1059 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996551A13993D002B1059 /* json.swift */; };
+		D46C75CD1A24F93F00620D30 /* medal.png in Resources */ = {isa = PBXBuildFile; fileRef = D46C75CB1A24F93F00620D30 /* medal.png */; };
+		D46C75D51A24FAB400620D30 /* medal3.png in Resources */ = {isa = PBXBuildFile; fileRef = D46C75D41A24FAB400620D30 /* medal3.png */; };
 		D4C38E2C1A208CE60056EA87 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */; };
 		D4C38E2E1A20A20C0056EA87 /* ic_action_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E2D1A20A20C0056EA87 /* ic_action_settings.png */; };
 		D4C38E301A20AE220056EA87 /* SelectCountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */; };
 		D4C38E321A20AE380056EA87 /* SelectFollowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */; };
 		D4C38E341A20AFE60056EA87 /* England.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E331A20AFE60056EA87 /* England.png */; };
 		D4C38E361A20AFF00056EA87 /* Poland.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E351A20AFF00056EA87 /* Poland.png */; };
+		D4DF74551A2500CC001DA427 /* 3medals.png in Resources */ = {isa = PBXBuildFile; fileRef = D4DF74541A2500CC001DA427 /* 3medals.png */; };
+		D4DF74571A250173001DA427 /* MedalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF74561A250173001DA427 /* MedalsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,12 +210,16 @@
 		D45996451A120372002B1059 /* DisciplineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplineViewController.swift; sourceTree = "<group>"; };
 		D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplineDetailViewController.swift; sourceTree = "<group>"; };
 		D45996551A13993D002B1059 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		D46C75CB1A24F93F00620D30 /* medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medal.png; sourceTree = "<group>"; };
+		D46C75D41A24FAB400620D30 /* medal3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medal3.png; sourceTree = "<group>"; };
 		D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D4C38E2D1A20A20C0056EA87 /* ic_action_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_settings.png; sourceTree = "<group>"; };
 		D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryTableViewController.swift; sourceTree = "<group>"; };
 		D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFollowTableViewController.swift; sourceTree = "<group>"; };
 		D4C38E331A20AFE60056EA87 /* England.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = England.png; sourceTree = "<group>"; };
 		D4C38E351A20AFF00056EA87 /* Poland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Poland.png; sourceTree = "<group>"; };
+		D4DF74541A2500CC001DA427 /* 3medals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3medals.png; sourceTree = "<group>"; };
+		D4DF74561A250173001DA427 /* MedalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalsViewController.swift; sourceTree = "<group>"; };
 		b544a6d7874871c8461db369 /* CFNetwork.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -325,6 +333,7 @@
 				4C9B834D19F6F65C00B68B88 /* assets */,
 				4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */,
 				4C0E6ED31A0922C9006A22D7 /* Main.storyboard */,
+				D4DF74561A250173001DA427 /* MedalsViewController.swift */,
 				4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */,
 				D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */,
 				D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */,
@@ -380,7 +389,10 @@
 				D4C38E331A20AFE60056EA87 /* England.png */,
 				4C8A7BE41A1CD305008754F3 /* disci_icons */,
 				D422AFD21A1CA45900A62C32 /* route.png */,
+				D4DF74541A2500CC001DA427 /* 3medals.png */,
 				4C3F8F9E1A0A79970066F3F7 /* news2.jpg */,
+				D46C75D41A24FAB400620D30 /* medal3.png */,
+				D46C75CB1A24F93F00620D30 /* medal.png */,
 				D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */,
 				D45996391A0E509B002B1059 /* wushu.png */,
 				4C3F8F981A0A79550066F3F7 /* news1.jpg */,
@@ -545,6 +557,7 @@
 				4C8A7C1D1A1CD305008754F3 /* muaythai.png in Resources */,
 				4C8A7C251A1CD305008754F3 /* squash.png in Resources */,
 				D4C38E2E1A20A20C0056EA87 /* ic_action_settings.png in Resources */,
+				D46C75CD1A24F93F00620D30 /* medal.png in Resources */,
 				D45996421A11046C002B1059 /* lotnisko.jpg in Resources */,
 				4C8A7C141A1CD305008754F3 /* floorball.png in Resources */,
 				4C8A7C221A1CD305008754F3 /* roller-sports.png in Resources */,
@@ -574,9 +587,11 @@
 				D43E0A851A0A482700121C99 /* ic_action_forward.png in Resources */,
 				4C9B835C19F6F67000B68B88 /* ic_action_network_cell.png in Resources */,
 				D459963F1A10F4CA002B1059 /* orbita.jpg in Resources */,
+				D4DF74551A2500CC001DA427 /* 3medals.png in Resources */,
 				4C8A7C0C1A1CD305008754F3 /* billiard-sports.png in Resources */,
 				4C8A7C0A1A1CD305008754F3 /* archery.png in Resources */,
 				D4C38E341A20AFE60056EA87 /* England.png in Resources */,
+				D46C75D51A24FAB400620D30 /* medal3.png in Resources */,
 				4C3F8F971A0A776C0066F3F7 /* bg_news.jpg in Resources */,
 				4C8A7C191A1CD305008754F3 /* kickboxing.png in Resources */,
 				4C8A7C111A1CD305008754F3 /* Dance Sport.png in Resources */,
@@ -640,6 +655,7 @@
 				D4C38E321A20AE380056EA87 /* SelectFollowTableViewController.swift in Sources */,
 				4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */,
 				D4C38E2C1A208CE60056EA87 /* SettingsViewController.swift in Sources */,
+				D4DF74571A250173001DA427 /* MedalsViewController.swift in Sources */,
 				4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */,
 				4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */,
 				4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */,
