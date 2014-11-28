@@ -113,23 +113,19 @@ public class NewsViewController: UITableViewController {
                 }
             }
         }
-        println("bla");
         loader.stopAnimating()
     }
     
     
     func customSetup(){
         var revealViewController = self.revealViewController();
-        if(revealViewController == nil) {
-            println("yes");
-        }
         if(revealViewController != nil){
             self.revealButtonItem.target = revealViewController;
             self.revealButtonItem.action = "revealToggle:";
             self.navigationController?.navigationBar.addGestureRecognizer(revealViewController.panGestureRecognizer());
             view.addGestureRecognizer(revealViewController.panGestureRecognizer());
         }
-        
+
         self.refreshControl =  UIRefreshControl();
         self.refreshControl?.backgroundColor = UIColor.whiteColor();
         self.refreshControl?.tintColor = UIColor.grayColor();
