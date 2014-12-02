@@ -335,7 +335,6 @@
 				D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */,
 				D45996451A120372002B1059 /* DisciplineViewController.swift */,
 				D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */,
-				D45996551A13993D002B1059 /* json.swift */,
 				4C9B832D19F6F5A800B68B88 /* ViewController.swift */,
 				4CB5F59D19F71255006F09EC /* NewsViewController.swift */,
 				4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */,
@@ -422,6 +421,7 @@
 		4C9B836819F70BE800B68B88 /* support */ = {
 			isa = PBXGroup;
 			children = (
+				D45996551A13993D002B1059 /* json.swift */,
 				4CC9A3461A004B65006DE05C /* DIDatepicker.h */,
 				4CC9A3471A004B65006DE05C /* DIDatepicker.m */,
 				4CC9A3481A004B65006DE05C /* DIDatepickerDateView.h */,
@@ -494,6 +494,9 @@
 					4C9B832519F6F5A800B68B88 = {
 						CreatedOnToolsVersion = 6.1;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};

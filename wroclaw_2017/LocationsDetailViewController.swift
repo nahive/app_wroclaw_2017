@@ -18,6 +18,8 @@ class LocationsDetailViewController: UIViewController {
     @IBOutlet weak var scrollViewH: NSLayoutConstraint!
     @IBOutlet weak var insideViewH: NSLayoutConstraint!
     
+    
+    
     var screen = UIScreen.mainScreen().bounds;
     var titleVal = "";
     var contentVal = "";

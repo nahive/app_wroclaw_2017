@@ -50,7 +50,7 @@ public class NewsViewController: UITableViewController {
         if (NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")) {
         } else {performSegueWithIdentifier("showSettings", sender: nil);}
         
-        getJSON();
+        NSUserDefaults.standardUserDefaults().setInteger(getJSON(), forKey: "news_count");
         self.tableView.reloadData();
         loader.stopAnimating();
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
@@ -68,7 +68,7 @@ public class NewsViewController: UITableViewController {
         }
     }
     
-    public func getJSON() {
+    public func getJSON() -> Int {
         images.removeAll(keepCapacity: true);
         authors.removeAll(keepCapacity: true);
         titles.removeAll(keepCapacity: true);
@@ -106,7 +106,7 @@ public class NewsViewController: UITableViewController {
                     authors.append(j.toString(pretty: true));
                     break;
                 case "photo":
-                    var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
+                    var url: NSURL = NSURL(string: "https://2017:twg2017wroclaw@2017.wroclaw.pl/"+j.toString(pretty: true))!;
                     var data: NSData = NSData(contentsOfURL: url)!;
                     images.append(UIImage(data: data)!);
                     break;
@@ -122,6 +122,8 @@ public class NewsViewController: UITableViewController {
             }
         }
         loader.stopAnimating()
+        
+        return dates.count;
         
     }
     

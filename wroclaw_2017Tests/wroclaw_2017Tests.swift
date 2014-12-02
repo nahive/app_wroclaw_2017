@@ -32,7 +32,7 @@ class wroclaw_2017Tests: XCTestCase {
         // This is an example of a performance test case.
         let json = NewsViewController();
         self.measureBlock() {
-            json.getJSON();
+           // json.getJSON();
         }
     }
     

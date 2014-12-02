@@ -52,7 +52,7 @@ class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
   
-        newsImage.frame = CGRectMake(0, -44 + (scrollView.contentOffset.y + 64)/3,screen.size.width,screen.size.height/3+44);
+        newsImage.frame = CGRectMake(0, -44 + (scrollView.contentOffset.y + 64)/2,screen.size.width,screen.size.height/3+44);
     }
     
     func getJSON(){
