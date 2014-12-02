@@ -78,7 +78,7 @@ class LocationsDetailViewController: UIViewController {
     }
     
     func getJSON(){
-        var url = "https://2017.wroclaw.pl/mobile/location/view/"+idVal;
+        var url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/location/view/"+idVal;
         let json = JSON(url:url);
         
         for (k, v) in json {
