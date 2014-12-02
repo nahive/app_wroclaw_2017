@@ -149,7 +149,7 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     }
 
     func getJSON() {
-        var url = "https://2017.wroclaw.pl/mobile/location"
+        var url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/location"
         let json = JSON(url:url);
         
         var categoryDisciplines: [String] = [];

@@ -101,10 +101,10 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
         var lastId: String = "";
         
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
-            url = "https://2017.wroclaw.pl/mobile/event";
+            url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/event";
             self.title = "Ostatnie wyniki";
         } else {
-            url = "https://2017.wroclaw.pl/mobile/event?lang=en_US";
+            url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/event?lang=en_US";
             self.title = "Recent Results";
         }
         

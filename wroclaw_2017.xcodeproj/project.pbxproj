@@ -77,6 +77,7 @@
 		4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */; };
 		D422AFD11A1C9DBB00A62C32 /* LocationsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422AFD01A1C9DBB00A62C32 /* LocationsDetailViewController.swift */; };
 		D422AFD31A1CA45900A62C32 /* route.png in Resources */ = {isa = PBXBuildFile; fileRef = D422AFD21A1CA45900A62C32 /* route.png */; };
+		D42821871A2DDBF40087546F /* navi.png in Resources */ = {isa = PBXBuildFile; fileRef = D42821861A2DDBF40087546F /* navi.png */; };
 		D43E0A851A0A482700121C99 /* ic_action_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A841A0A482700121C99 /* ic_action_forward.png */; };
 		D43E0A8B1A0AB0CF00121C99 /* clock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8A1A0AB0CF00121C99 /* clock.jpg */; };
 		D43E0A8D1A0AB21F00121C99 /* jujitsu2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */; };
@@ -196,6 +197,7 @@
 		4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D422AFD01A1C9DBB00A62C32 /* LocationsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDetailViewController.swift; sourceTree = "<group>"; };
 		D422AFD21A1CA45900A62C32 /* route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = route.png; sourceTree = "<group>"; };
+		D42821861A2DDBF40087546F /* navi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navi.png; sourceTree = "<group>"; };
 		D43E0A841A0A482700121C99 /* ic_action_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_forward.png; sourceTree = "<group>"; };
 		D43E0A8A1A0AB0CF00121C99 /* clock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clock.jpg; sourceTree = "<group>"; };
 		D43E0A8C1A0AB21F00121C99 /* jujitsu2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jujitsu2.jpg; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 		4C9B834D19F6F65C00B68B88 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				D42821861A2DDBF40087546F /* navi.png */,
 				D45D88C11A27CF660062D063 /* medal-bronze.png */,
 				D45D88C21A27CF660062D063 /* medal-gold.png */,
 				D45D88C31A27CF660062D063 /* medal-silver.png */,
@@ -591,6 +594,7 @@
 				D46C75D51A24FAB400620D30 /* medal3.png in Resources */,
 				4C3F8F971A0A776C0066F3F7 /* bg_news.jpg in Resources */,
 				4C8A7C191A1CD305008754F3 /* kickboxing.png in Resources */,
+				D42821871A2DDBF40087546F /* navi.png in Resources */,
 				4C8A7C111A1CD305008754F3 /* Dance Sport.png in Resources */,
 				4C8A7C121A1CD305008754F3 /* finswimming.png in Resources */,
 				4C8A7C151A1CD305008754F3 /* flying-disc.png in Resources */,

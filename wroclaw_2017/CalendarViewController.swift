@@ -44,6 +44,7 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.alpha = 0.0;
         var scroll: UIScrollView! = datePicker.subviews[0] as UIScrollView;
         scroll.frame = CGRectMake(0, 0, view.frame.width, datePicker.frame.height);
+        getJSON();
         // Do any additional setup after loading the view.
     }
     
@@ -62,6 +63,43 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         var scroll: UIScrollView! = datePicker.subviews[0] as UIScrollView;
         scroll.frame = CGRectMake(0, 0, view.frame.width, datePicker.frame.height);
         Utils.fadeIn(tableView,duration: 0.6);
+    }
+    
+    func getJSON() {
+//        images.removeAll(keepCapacity: true);
+//        authors.removeAll(keepCapacity: true);
+//        titles.removeAll(keepCapacity: true);
+//        dates.removeAll(keepCapacity: true);
+//        id.removeAll(keepCapacity: true);
+        
+        var url = "";
+        
+        
+        if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+            url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/schedule";
+            self.title = "Aktualności";
+        } else {
+            url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/schedule?lang=en_US";
+            self.title = "News";
+        }
+        
+        
+        
+        // if (NSUserDefaults.standardUserDefaults().objectForKey("newsJSON") != nil) {
+        //  var json = NSUserDefaults.standardUserDefaults().objectForKey("newsJSON");
+        //} else {
+        let json = JSON(url:url);
+        //}
+        
+        //NSUserDefaults.standardUserDefaults().setObject(json, forKey: "newsJSON");
+        
+        for (k, v) in json {
+            for (i,j) in v {
+                println(i);
+            }
+        }
+        
+        
     }
     
     
@@ -185,10 +223,11 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         time?.text = times[indexPath.row];
         time?.font = UIFont(name: "HelveticaNeue-Thin", size: 12);
         
-        //        NSString *sectionTitle = [animalSectionTitles objectAtIndex:indexPath.section];
-        //        NSArray *sectionAnimals = [animals objectForKey:sectionTitle];
-        //        NSString *animal = [sectionAnimals objectAtIndex:indexPath.row];
-        //        cell.textLabel.text = animal;
+        println(datePicker.selectedDate);
+        var components: NSDateComponents = NSCalendar.currentCalendar().components(NSCalendarUnit.DayCalendarUnit, fromDate: datePicker.selectedDate);
+        println(components);
+        println(components.day);
+       // NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
         
         
         //How to get object at index????

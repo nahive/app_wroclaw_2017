@@ -65,7 +65,7 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     
     
     func getJSON() {
-        var url = "https://2017.wroclaw.pl/mobile/discipline"
+        var url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/discipline"
         let json = JSON(url:url);
         var categoryDisciplines: [String] = [];
         var categoryIcons: [UIImage] = [];

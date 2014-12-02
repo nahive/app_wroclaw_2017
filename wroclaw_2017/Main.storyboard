@@ -976,7 +976,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="aHw-mq-NLM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="aEl-aC-0wU">
+                        <barButtonItem key="rightBarButtonItem" image="navi.png" id="aEl-aC-0wU">
                             <connections>
                                 <action selector="openMap:" destination="qMj-dO-WVY" id="75R-Gz-AId"/>
                             </connections>
@@ -1567,6 +1567,7 @@
         <image name="ic_action_place.png" width="96" height="96"/>
         <image name="ic_action_settings.png" width="48" height="48"/>
         <image name="logo.png" width="924" height="263"/>
+        <image name="navi.png" width="44" height="44"/>
         <image name="reveal-icon.png" width="22" height="17"/>
         <image name="stadionolimpijski.jpg" width="550" height="367"/>
     </resources>

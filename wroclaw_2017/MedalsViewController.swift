@@ -59,11 +59,11 @@ class MedalsViewController: UIViewController, UITableViewDelegate {
         var lastId: String = "";
         
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
-            url = "https://2017.wroclaw.pl/mobile/result";
-            self.title = "Medal Classification";
-        } else {
-            url = "https://2017.wroclaw.pl/mobile/result?lang=en_US";
+            url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/result";
             self.title = "Klasyfikacja Medalowa";
+        } else {
+            url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/result?lang=en_US";
+            self.title = "Medal Classification";
         }
         
         let json = JSON(url:url);
