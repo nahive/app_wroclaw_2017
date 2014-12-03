@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 notification.fireDate = now;
                 notification.alertBody = "There are new news waiting for you";
                 notification.soundName = UILocalNotificationDefaultSoundName;
-                notification.applicationIconBadgeNumber = notification.applicationIconBadgeNumber+1;
+                notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber+1;
                 UIApplication.sharedApplication().scheduleLocalNotification(notification);
                 isUpdate = true;
             }
@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     notification.fireDate = now;
                     notification.alertBody = "New event for " + disci;
                     notification.soundName = UILocalNotificationDefaultSoundName;
-                    notification.applicationIconBadgeNumber = notification.applicationIconBadgeNumber+1;
+                    notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber+1;
                     UIApplication.sharedApplication().scheduleLocalNotification(notification);
                     isUpdate = true;
                     }
@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         notification.fireDate = now;
                         notification.alertBody = "New medal for " + disci;
                         notification.soundName = UILocalNotificationDefaultSoundName;
-                        notification.applicationIconBadgeNumber = notification.applicationIconBadgeNumber+1;
+                        notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber+1;
                         UIApplication.sharedApplication().scheduleLocalNotification(notification);
                         isUpdate = true;
                         }

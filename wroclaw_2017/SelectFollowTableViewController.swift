@@ -24,6 +24,7 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
     
     var numberOfImage: Int = 0;
     var selectedDisciplies: [NSString] = [];
+    var selectedShort: [NSString] = [];
     var indexPathChanged: Bool = false;
     
     var loader = UIActivityIndicatorView();
@@ -41,12 +42,7 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
         loader.color = UIColor.blackColor();
         loader.startAnimating();
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
-        
-        if (contentValue == "disciplines" && (userDefaults.objectForKey("disciplinesToFollow")) != nil) {
-            selectedDisciplies = userDefaults.objectForKey("disciplinesToFollow") as [NSString];
-        } else if (contentValue == "countries" && (userDefaults.objectForKey("countriesToFollow")) != nil) {
-            selectedDisciplies = userDefaults.objectForKey("countriesToFollow") as [NSString];
-        }
+       
     }
     
     
@@ -184,6 +180,18 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
         self.tableView.reloadData();
         loader.stopAnimating();
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        
+        if (contentValue == "disciplines" && (userDefaults.objectForKey("disciplinesToFollow")) != nil) {
+            selectedDisciplies = userDefaults.objectForKey("disciplinesToFollow") as [NSString];
+        } else if (contentValue == "countries" && (userDefaults.objectForKey("countriesToFollow")) != nil) {
+            selectedShort = userDefaults.objectForKey("countriesToFollow") as [NSString];
+            for short in selectedShort {
+                var index = find(shortNames,short)!;
+                selectedDisciplies.append(names[index]);
+            }
+        }
+        println(selectedShort);
+        println(selectedDisciplies);
     }
 
     override func didReceiveMemoryWarning() {
@@ -376,11 +384,14 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
         } else if (contentValue == "countries") {
             if (contains(selectedDisciplies, followName.text!)) {
                 var indexToRemove: Int = find(selectedDisciplies, followName.text!)!;
+                selectedShort.removeAtIndex(indexToRemove);
                 selectedDisciplies.removeAtIndex(indexToRemove);
             } else {
+                var indexToAdd = find(names,followName.text!)!;
+                selectedShort.append(shortNames[indexToAdd]);
                 selectedDisciplies.append(followName.text!);
             }
-            userDefaults.setObject(selectedDisciplies, forKey: "countriesToFollow");
+            userDefaults.setObject(selectedShort, forKey: "countriesToFollow");
         }
         
         
