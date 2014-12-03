@@ -12,7 +12,7 @@ class SettingsViewController: UITableViewController {
     
 
     @IBOutlet weak var revealButton: UIBarButtonItem!
-    @IBOutlet weak var settingsDone: UIButton!
+    @IBOutlet weak var settingsDone: UIBarButtonItem!
 
 
     
@@ -24,7 +24,6 @@ class SettingsViewController: UITableViewController {
         if (NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")) {
             revealButton.image = UIImage(named: "reveal-icon.png");
             revealButton.enabled = true;
-            settingsDone.hidden = true;
         } else {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch");
             NSUserDefaults.standardUserDefaults().synchronize();

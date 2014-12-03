@@ -19,6 +19,7 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
     var followIndexTitles: [String] = [];
     
     var names: [String] = [];
+    var shortNames: [String] = [];
     var searchResults: [String] = [];
     
     var numberOfImage: Int = 0;
@@ -107,15 +108,19 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
     }
     
     func getCountiresJSON() {
-        
-        var url = "https://2017.wroclaw.pl/mobile/country"
+  
+        var url = "";
+        if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+            url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/country";
+        } else {
+            url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/country?lang=en_US";
+        }
+
         let json = JSON(url:url);
         
         var categoryLanguages: [String] = [];
         var categoryImages: [UIImage] = [];
         var lastCategory: String = "";
-        
-        println(json);
         var ifRemove: Bool = false;
         var previousCategory: String = ""
         
@@ -126,10 +131,10 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
                     var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+j.toString(pretty: true))!;
                     var data: NSData = NSData(contentsOfURL: url)!;
                     icons.append(UIImage(data: data)!);
-                    
                     categoryImages.append(UIImage(data: data)!);
-                    
-                    
+                    break;
+                case "short_name":
+                    shortNames.append(j.toString(pretty: true));
                     break;
                 case "name":
                     names.append(j.toString(pretty: true));
@@ -272,7 +277,6 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
         var event : String;
         var ind : Int;
         var currentImage : UIImage;
-        println("start");
         if (tableView == self.searchDisplayController!.searchResultsTableView) {
             println("filtered");
             event = searchResults[indexPath.row];
@@ -280,7 +284,6 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
             currentImage = icons[ind];
             
         } else {
-            println("not");
             sectionTitle = followsSectionTitles[indexPath.section];
             var sectionEvents: [String] = follows[sectionTitle]!;
             var sectionImages: [UIImage] = imagesDictionary[sectionTitle]!;
@@ -310,7 +313,6 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
         var cell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!;
         var followName: UILabel = cell.viewWithTag(102) as UILabel;
         
-        
         if (contentValue == "disciplines") {
             if (contains(selectedDisciplies, followName.text!)) {
                 var indexToRemove: Int = find(selectedDisciplies, followName.text!)!;
@@ -320,7 +322,6 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
             }
             userDefaults.setObject(selectedDisciplies, forKey: "disciplinesToFollow");
         } else if (contentValue == "countries") {
-            println(selectedDisciplies.count);
             if (contains(selectedDisciplies, followName.text!)) {
                 var indexToRemove: Int = find(selectedDisciplies, followName.text!)!;
                 selectedDisciplies.removeAtIndex(indexToRemove);
@@ -333,9 +334,6 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
     }
     
     func filterContentForSearchText(searchText: String) {
-        
-        // Filter the array using the filter method
-        //NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
         searchResults = names.filter({(name: String) -> Bool in
             let stringMatch = name.lowercaseString.rangeOfString(searchText.lowercaseString)
             return stringMatch != nil

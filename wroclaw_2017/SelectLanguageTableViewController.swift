@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SelectCountryTableViewController: UITableViewController {
+class SelectLanguageTableViewController: UITableViewController {
     
     var data: Int = -1;
     var checkedData: Int = -1;

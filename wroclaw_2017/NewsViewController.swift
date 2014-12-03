@@ -50,13 +50,10 @@ public class NewsViewController: UITableViewController {
         if (NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")) {
         } else {performSegueWithIdentifier("showSettings", sender: nil);}
         
-        NSUserDefaults.standardUserDefaults().setInteger(getJSON(), forKey: "news_count");
+        getJSON();
         self.tableView.reloadData();
         loader.stopAnimating();
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
-        
-        
-        
         
         }
     
@@ -85,17 +82,7 @@ public class NewsViewController: UITableViewController {
             url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/news?lang=en_US";
             self.title = "News";
         }
-        
-        
-        
-       // if (NSUserDefaults.standardUserDefaults().objectForKey("newsJSON") != nil) {
-          //  var json = NSUserDefaults.standardUserDefaults().objectForKey("newsJSON");
-        //} else {
-            let json = JSON(url:url);
-        //}
-        
-        //NSUserDefaults.standardUserDefaults().setObject(json, forKey: "newsJSON");
-        
+        let json = JSON(url:url);
         for (k, v) in json {
             for (i,j) in v {
                 switch i as NSString {
@@ -123,7 +110,7 @@ public class NewsViewController: UITableViewController {
         }
         loader.stopAnimating()
         
-        return dates.count;
+        return json.length;
         
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C0E6ED41A0922C9006A22D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E6ED31A0922C9006A22D7 /* Main.storyboard */; };
+		4C39069A1A2E244700DD1A54 /* NotificationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3906991A2E244700DD1A54 /* NotificationJSON.swift */; };
 		4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CF7381A0058BF005D5D95 /* Utils.swift */; };
 		4C3D16301A076C85001EBDA7 /* CalendarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */; };
 		4C3D16321A076EE6001EBDA7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D16311A076EE6001EBDA7 /* MapKit.framework */; };
@@ -99,7 +100,7 @@
 		D46C75D51A24FAB400620D30 /* medal3.png in Resources */ = {isa = PBXBuildFile; fileRef = D46C75D41A24FAB400620D30 /* medal3.png */; };
 		D4C38E2C1A208CE60056EA87 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */; };
 		D4C38E2E1A20A20C0056EA87 /* ic_action_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E2D1A20A20C0056EA87 /* ic_action_settings.png */; };
-		D4C38E301A20AE220056EA87 /* SelectCountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */; };
+		D4C38E301A20AE220056EA87 /* SelectLanguageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E2F1A20AE220056EA87 /* SelectLanguageTableViewController.swift */; };
 		D4C38E321A20AE380056EA87 /* SelectFollowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */; };
 		D4C38E341A20AFE60056EA87 /* England.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E331A20AFE60056EA87 /* England.png */; };
 		D4C38E361A20AFF00056EA87 /* Poland.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C38E351A20AFF00056EA87 /* Poland.png */; };
@@ -120,6 +121,7 @@
 
 /* Begin PBXFileReference section */
 		4C0E6ED31A0922C9006A22D7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C3906991A2E244700DD1A54 /* NotificationJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationJSON.swift; sourceTree = "<group>"; };
 		4C3CF7381A0058BF005D5D95 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDetailViewController.swift; sourceTree = "<group>"; };
 		4C3D16311A076EE6001EBDA7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -166,7 +168,7 @@
 		4C8A7C051A1CD305008754F3 /* tug-of-war.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tug-of-war.png"; sourceTree = "<group>"; };
 		4C8A7C061A1CD305008754F3 /* waterski-&-wakeboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waterski-&-wakeboard.png"; sourceTree = "<group>"; };
 		4C8A7C071A1CD305008754F3 /* wushu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wushu.png; sourceTree = "<group>"; };
-		4C9B832619F6F5A800B68B88 /* wroclaw_2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wroclaw_2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9B832619F6F5A800B68B88 /* 2017 Wroclaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2017 Wroclaw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9B832A19F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C9B832D19F6F5A800B68B88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -219,7 +221,7 @@
 		D46C75D41A24FAB400620D30 /* medal3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medal3.png; sourceTree = "<group>"; };
 		D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D4C38E2D1A20A20C0056EA87 /* ic_action_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_settings.png; sourceTree = "<group>"; };
-		D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryTableViewController.swift; sourceTree = "<group>"; };
+		D4C38E2F1A20AE220056EA87 /* SelectLanguageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLanguageTableViewController.swift; sourceTree = "<group>"; };
 		D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFollowTableViewController.swift; sourceTree = "<group>"; };
 		D4C38E331A20AFE60056EA87 /* England.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = England.png; sourceTree = "<group>"; };
 		D4C38E351A20AFF00056EA87 /* Poland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Poland.png; sourceTree = "<group>"; };
@@ -313,7 +315,7 @@
 		4C9B832719F6F5A800B68B88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C9B832619F6F5A800B68B88 /* wroclaw_2017.app */,
+				4C9B832619F6F5A800B68B88 /* 2017 Wroclaw.app */,
 				4C9B833B19F6F5A800B68B88 /* wroclaw_2017Tests.xctest */,
 			);
 			name = Products;
@@ -331,7 +333,7 @@
 				D4C38E311A20AE380056EA87 /* SelectFollowTableViewController.swift */,
 				D4DF74621A264556001DA427 /* MedalsViewController.swift */,
 				D4DF74641A26455F001DA427 /* RecentResultsViewController.swift */,
-				D4C38E2F1A20AE220056EA87 /* SelectCountryTableViewController.swift */,
+				D4C38E2F1A20AE220056EA87 /* SelectLanguageTableViewController.swift */,
 				D4C38E2B1A208CE60056EA87 /* SettingsViewController.swift */,
 				D45996451A120372002B1059 /* DisciplineViewController.swift */,
 				D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */,
@@ -431,6 +433,7 @@
 				4C9B836B19F70C9000B68B88 /* MenuViewController.swift */,
 				4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */,
 				4C3CF7381A0058BF005D5D95 /* Utils.swift */,
+				4C3906991A2E244700DD1A54 /* NotificationJSON.swift */,
 			);
 			name = support;
 			sourceTree = "<group>";
@@ -461,7 +464,7 @@
 			);
 			name = wroclaw_2017;
 			productName = wroclaw_2017;
-			productReference = 4C9B832619F6F5A800B68B88 /* wroclaw_2017.app */;
+			productReference = 4C9B832619F6F5A800B68B88 /* 2017 Wroclaw.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4C9B833A19F6F5A800B68B88 /* wroclaw_2017Tests */ = {
@@ -630,9 +633,10 @@
 				4C6B019D19FE997F00EBF821 /* NewsTableViewCell.swift in Sources */,
 				4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */,
 				4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */,
+				4C39069A1A2E244700DD1A54 /* NotificationJSON.swift in Sources */,
 				4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */,
 				D4DF74651A26455F001DA427 /* RecentResultsViewController.swift in Sources */,
-				D4C38E301A20AE220056EA87 /* SelectCountryTableViewController.swift in Sources */,
+				D4C38E301A20AE220056EA87 /* SelectLanguageTableViewController.swift in Sources */,
 				4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */,
 				4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */,
 				4C4B9E041A09FFF000F60266 /* InfoViewController.swift in Sources */,
@@ -762,7 +766,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "2017 Wroclaw";
 				SWIFT_OBJC_BRIDGING_HEADER = "wroclaw_2017/wroclaw_2017-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -784,7 +788,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "2017 Wroclaw";
 				SWIFT_OBJC_BRIDGING_HEADER = "wroclaw_2017/wroclaw_2017-Bridging-Header.h";
 			};
 			name = Release;

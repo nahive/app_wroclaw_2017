@@ -23,6 +23,7 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         customSetup();
         getJSON();
+       
         
 //        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge);
 //        loader.frame = CGRectMake(0,0,80,80);
@@ -202,6 +203,7 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
             }
         }
         id = id.sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending };
+       
         //loader.stopAnimating()
     }
     
