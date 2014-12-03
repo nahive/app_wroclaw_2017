@@ -216,8 +216,22 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        
+        
         //section header view
         var sectionHeaderView: UIView = UIView();
+        if (tableView == self.searchDisplayController!.searchResultsTableView) {
+            var title: UILabel = UILabel();
+            title.frame = CGRectMake(5, 5, 300, 30);
+            if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+                title.text = "Wyniki wyszukiwania:";
+            } else {
+                title.text = "Search results:";
+            }
+            sectionHeaderView.addSubview(title);
+            return sectionHeaderView;
+        }
         sectionHeaderView.frame = CGRectMake(10, 10, screen.width, 30);
         sectionHeaderView.backgroundColor = Utils.colorize(0xffffff);
         //sectionHeaderView.layer.borderColor = Utils.colorize(0xd64691, alpha: 0.5).CGColor;
@@ -278,10 +292,31 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
         var ind : Int;
         var currentImage : UIImage;
         if (tableView == self.searchDisplayController!.searchResultsTableView) {
-            println("filtered");
             event = searchResults[indexPath.row];
             ind = find(names, event)!;
             currentImage = icons[ind];
+            
+            
+            var numberOfSubviews: Int = cell?.subviews.count as Int!;
+            for index in 0...numberOfSubviews-1 {
+                if (index > -1) {
+                    if (cell?.subviews[index] is UILabel) {
+                        cell?.subviews[index].removeFromSuperview();
+                        break;
+                    }
+                }
+            }
+            var label: UILabel = UILabel();
+            label.text = event;
+            label.font = UIFont(name: "HelveticaNeue-Thin", size: 21);
+            label.frame = CGRectMake(screen.width/2 - 100, 5, 200, 30);
+            label.textAlignment = NSTextAlignment.Center;
+            cell?.addSubview(label);
+            
+            var imageView: UIImageView = UIImageView();
+            imageView.frame = CGRectMake(5, 5, 20, 20);
+            imageView.image = currentImage;
+            cell?.addSubview(imageView);
             
         } else {
             sectionTitle = followsSectionTitles[indexPath.section];
@@ -289,11 +324,13 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
             var sectionImages: [UIImage] = imagesDictionary[sectionTitle]!;
             event = sectionEvents[indexPath.row];
             currentImage = sectionImages[indexPath.row];
+            image?.image = currentImage;
+            followName?.text = event;
+            followName?.font = UIFont(name: "HelveticaNeue-Light", size: 22);
         }
+    
         
-        image?.image = currentImage;
-        followName?.text = event;
-        followName?.font = UIFont(name: "HelveticaNeue-Light", size: 22);
+        
         cell?.selectionStyle = UITableViewCellSelectionStyle.None;
         
         
@@ -310,8 +347,23 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var cell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!;
-        var followName: UILabel = cell.viewWithTag(102) as UILabel;
+        var followName: UILabel = UILabel();
+        
+        if (tableView == self.searchDisplayController!.searchResultsTableView) {
+            var cell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!;
+            var numberOfSubviews: Int = cell.subviews.count as Int!;
+            for index in 0...numberOfSubviews-1 {
+                if (index > -1) {
+                    if (cell.subviews[index] is UILabel) {
+                        followName = cell.subviews[index] as UILabel;
+                        break;
+                    }
+                }
+            }
+        } else {
+            var cell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!;
+            followName = cell.viewWithTag(102) as UILabel;
+        }
         
         if (contentValue == "disciplines") {
             if (contains(selectedDisciplies, followName.text!)) {
@@ -330,6 +382,8 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
             }
             userDefaults.setObject(selectedDisciplies, forKey: "countriesToFollow");
         }
+        
+        
         tableView.reloadData();
     }
     
@@ -338,7 +392,6 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
             let stringMatch = name.lowercaseString.rangeOfString(searchText.lowercaseString)
             return stringMatch != nil
             })
-            println(searchResults);
     }
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
@@ -349,5 +402,9 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
         self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
         return true
+    }
+    
+    func searchDisplayControllerDidEndSearch(controller: UISearchDisplayController) {
+        tableView.reloadData();
     }
 }

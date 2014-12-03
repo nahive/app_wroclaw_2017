@@ -16,6 +16,7 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
     var id: [String] = [];
     var icons: [UIImage] = [];
     var eventsName: [String] = [];
+    var sportName: [String] = [];
     var loader = UIActivityIndicatorView();
     var refreshControl: UIRefreshControl = UIRefreshControl();
     @IBOutlet weak var tableView: UITableView!
@@ -122,7 +123,7 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
                     //titles.append(j.toString(pretty: true));
                     break;
                 case "sport":
-                    //authors.append(j.toString(pretty: true));
+                    sportName.append(j.toString(pretty: true));
                     break;
                 case "id":
                     id.append(j.toString(pretty: true));
@@ -226,13 +227,13 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
         
         //section header view
         var sectionHeaderView: UIView = UIView();
-        sectionHeaderView.frame = CGRectMake(10, 10, screen.width, 30);
+        sectionHeaderView.frame = CGRectMake(10, 10, screen.width, 60);
         sectionHeaderView.backgroundColor = Utils.colorize(0xfafafa);
         
         
         var disciplineIcon: UIImage = icons[section];
         var imageView: UIImageView = UIImageView(image: disciplineIcon);
-        imageView.frame = CGRectMake(10, 5, 30, 30);
+        imageView.frame = CGRectMake(10, 12, 30, 30);
         imageView.backgroundColor = Utils.colorize(0x888888);
         imageView.layer.cornerRadius = 8;
         sectionHeaderView.addSubview(imageView);
@@ -240,16 +241,23 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
         
         var label: UILabel = UILabel();
         label.text = eventsName[section];
-        label.font = UIFont(name: "HelveticaNeue-Thin", size: 21);
-        label.frame = CGRectMake(screen.width/2 - 100, 5, 200, 30);
+        label.font = UIFont(name: "HelveticaNeue-Thin", size: 19);
+        label.frame = CGRectMake(screen.width/2 - 150, 5, 300, 30);
         label.textAlignment = NSTextAlignment.Center;
         sectionHeaderView.addSubview(label);
+        
+        var sportLabel: UILabel = UILabel();
+        sportLabel.text = sportName[section];
+        sportLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 15);
+        sportLabel.frame = CGRectMake(screen.width/2 - 150, 30, 300, 20);
+        sportLabel.textAlignment = NSTextAlignment.Center;
+        sectionHeaderView.addSubview(sportLabel);
         
         return sectionHeaderView;
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40;
+        return 55;
     }
     
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -267,6 +275,9 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
             var sectionResults: [[String]] = results[sectionTitle]!;
             var whichResult: Int = sectionResults.count;
             var currentResult: [String] = sectionResults[whichResult - indexPath.row-1];
+            
+            println(sectionResults);
+            println(currentResult);
             
             nameLabel.text = currentResult[0];
             countryLabel.text = currentResult[1];

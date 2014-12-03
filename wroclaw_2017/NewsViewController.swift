@@ -20,9 +20,7 @@ public class NewsViewController: UITableViewController {
     var id: [String] = [];
     var loader = UIActivityIndicatorView();
     override public func viewDidLoad() {
-        super.viewDidLoad()
-
-        
+        super.viewDidLoad();
         
         customSetup();
         var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
