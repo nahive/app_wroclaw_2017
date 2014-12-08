@@ -168,7 +168,7 @@
 		4C8A7C051A1CD305008754F3 /* tug-of-war.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tug-of-war.png"; sourceTree = "<group>"; };
 		4C8A7C061A1CD305008754F3 /* waterski-&-wakeboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waterski-&-wakeboard.png"; sourceTree = "<group>"; };
 		4C8A7C071A1CD305008754F3 /* wushu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wushu.png; sourceTree = "<group>"; };
-		4C9B832619F6F5A800B68B88 /* 2017 Wroclaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2017 Wroclaw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9B832619F6F5A800B68B88 /* Wroclaw 2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wroclaw 2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9B832A19F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C9B832D19F6F5A800B68B88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 		4C9B832719F6F5A800B68B88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C9B832619F6F5A800B68B88 /* 2017 Wroclaw.app */,
+				4C9B832619F6F5A800B68B88 /* Wroclaw 2017.app */,
 				4C9B833B19F6F5A800B68B88 /* wroclaw_2017Tests.xctest */,
 			);
 			name = Products;
@@ -464,7 +464,7 @@
 			);
 			name = wroclaw_2017;
 			productName = wroclaw_2017;
-			productReference = 4C9B832619F6F5A800B68B88 /* 2017 Wroclaw.app */;
+			productReference = 4C9B832619F6F5A800B68B88 /* Wroclaw 2017.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4C9B833A19F6F5A800B68B88 /* wroclaw_2017Tests */ = {
@@ -766,7 +766,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_NAME = "2017 Wroclaw";
+				PRODUCT_NAME = "Wroclaw 2017";
 				SWIFT_OBJC_BRIDGING_HEADER = "wroclaw_2017/wroclaw_2017-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -788,7 +788,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_NAME = "2017 Wroclaw";
+				PRODUCT_NAME = "Wroclaw 2017";
 				SWIFT_OBJC_BRIDGING_HEADER = "wroclaw_2017/wroclaw_2017-Bridging-Header.h";
 			};
 			name = Release;
