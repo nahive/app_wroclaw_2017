@@ -9,7 +9,7 @@
         <!--News Detail View Controller-->
         <scene sceneID="9CO-5w-bbE">
             <objects>
-                <viewController id="VqC-HN-2tm" customClass="NewsDetailViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VqC-HN-2tm" customClass="NewsDetailViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0hg-Pd-EXh"/>
                         <viewControllerLayoutGuide type="bottom" id="EEz-Ed-ibh"/>
@@ -113,7 +113,7 @@
         <!--Settings-->
         <scene sceneID="qw2-fc-hzK">
             <objects>
-                <tableViewController id="fkB-Rq-8Jp" customClass="SettingsViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fkB-Rq-8Jp" customClass="SettingsViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="lAF-N2-sQm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,7 +396,7 @@
         <!--Select Follow Table View Controller-->
         <scene sceneID="tjl-IT-cjO">
             <objects>
-                <tableViewController id="lqQ-ts-Zsw" customClass="SelectFollowTableViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="lqQ-ts-Zsw" customClass="SelectFollowTableViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nL7-3g-gTL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -453,7 +453,7 @@
         <!--Select Language Table View Controller-->
         <scene sceneID="X6G-GJ-AJP">
             <objects>
-                <tableViewController id="whG-4V-9Vp" customClass="SelectLanguageTableViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="whG-4V-9Vp" customClass="SelectLanguageTableViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="RUF-yb-lT7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -507,7 +507,7 @@
         <!--News View-->
         <scene sceneID="XDa-bw-qPS">
             <objects>
-                <tableViewController storyboardIdentifier="NewsTest" title="News View" id="YgV-WD-tBc" customClass="NewsViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NewsTest" title="News View" id="YgV-WD-tBc" customClass="NewsViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DY1-sq-Myl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -523,7 +523,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="110" id="QnM-up-w0R" customClass="NewsTableViewCell" customModule="Wroclaw_2017" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="110" id="QnM-up-w0R" customClass="NewsTableViewCell" customModule="Wroclaw2017" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QnM-up-w0R" id="W5y-5Y-HFg">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -607,7 +607,7 @@
         <!--Info View Controller-->
         <scene sceneID="Fmz-cU-jlH">
             <objects>
-                <viewController id="anT-3Y-Mtc" customClass="InfoViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="anT-3Y-Mtc" customClass="InfoViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rdF-kR-FRx"/>
                         <viewControllerLayoutGuide type="bottom" id="tl7-2j-7oq"/>
@@ -687,7 +687,7 @@
         <!--Menu View-->
         <scene sceneID="hEd-3J-OYr">
             <objects>
-                <tableViewController title="Menu View" id="HSl-ZE-XQG" customClass="MenuViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Menu View" id="HSl-ZE-XQG" customClass="MenuViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wx4-GW-71a">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -903,7 +903,7 @@
         <!--Locations-->
         <scene sceneID="V67-VJ-O8Z">
             <objects>
-                <viewController id="Lum-s9-Drv" customClass="LocationsViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lum-s9-Drv" customClass="LocationsViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c4S-TP-8kB"/>
                         <viewControllerLayoutGuide type="bottom" id="Ivr-NH-jiJ"/>
@@ -970,7 +970,7 @@
         <!--Locations Detail View Controller-->
         <scene sceneID="kmq-cw-rZG">
             <objects>
-                <viewController id="qMj-dO-WVY" customClass="LocationsDetailViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qMj-dO-WVY" customClass="LocationsDetailViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="apU-Uv-MYi"/>
                         <viewControllerLayoutGuide type="bottom" id="Jys-xc-qHZ"/>
@@ -1044,7 +1044,7 @@
         <!--Calendar View-->
         <scene sceneID="HT0-Eg-4Gl">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RC9-Jc-1Jm" userLabel="Calendar View" customClass="CalendarViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RC9-Jc-1Jm" userLabel="Calendar View" customClass="CalendarViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qsT-6O-0Da"/>
                         <viewControllerLayoutGuide type="bottom" id="wMX-Zt-GCV"/>
@@ -1066,7 +1066,7 @@
                                     <constraint firstAttribute="height" constant="468" id="Fw9-Rr-VVW"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CalendarCell" rowHeight="50" id="cxM-kG-XMQ" userLabel="CalendarCell" customClass="CalendarTableViewCell" customModule="Wroclaw_2017" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CalendarCell" rowHeight="50" id="cxM-kG-XMQ" userLabel="CalendarCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxM-kG-XMQ" id="o7i-gW-L97">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -1077,11 +1077,8 @@
                                                     <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfj-i7-tf6">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfj-i7-tf6">
                                                     <rect key="frame" x="48" y="14" width="534" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="534" id="mdF-fn-G1b"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1093,7 +1090,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="titleW" destination="mdF-fn-G1b" id="Jo8-0A-m9D"/>
                                             <segue destination="CyA-FC-DXd" kind="show" identifier="showCalendarDetail" id="13D-6a-XH7"/>
                                         </connections>
                                     </tableViewCell>
@@ -1125,7 +1121,7 @@
         <!--Discipline View-->
         <scene sceneID="uNZ-5p-2qU">
             <objects>
-                <tableViewController id="yp9-Hm-f0p" userLabel="Discipline View" customClass="DisciplineViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yp9-Hm-f0p" userLabel="Discipline View" customClass="DisciplineViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZuJ-DF-Uca">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1175,7 +1171,7 @@
         <!--Discipline-->
         <scene sceneID="n4H-tM-lwN">
             <objects>
-                <viewController id="ghc-K8-Ixw" customClass="DisciplineDetailViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ghc-K8-Ixw" customClass="DisciplineDetailViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z1G-28-kzn"/>
                         <viewControllerLayoutGuide type="bottom" id="qSn-jh-Kpj"/>
@@ -1279,7 +1275,7 @@
         <!--Medal Classification-->
         <scene sceneID="HPM-27-EFL">
             <objects>
-                <viewController id="hrQ-Bu-25l" customClass="MedalsViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hrQ-Bu-25l" customClass="MedalsViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="syL-w4-oy3"/>
                         <viewControllerLayoutGuide type="bottom" id="y7U-qL-nMA"/>
@@ -1292,7 +1288,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medalClassificationCell" id="ldN-rP-fDw" customClass="MedalsTableViewCell" customModule="Wroclaw_2017" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medalClassificationCell" id="ldN-rP-fDw" customClass="MedalsTableViewCell" customModule="Wroclaw2017" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ldN-rP-fDw" id="W7v-KP-nY8">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -1330,7 +1326,9 @@
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Beg-En-hgM"/>
+                                                        <imageView userInteractionEnabled="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Beg-En-hgM">
+                                                            <rect key="frame" x="40" y="25" width="25" height="20"/>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbK-rc-9wU">
                                                             <rect key="frame" x="269" y="25" width="35" height="21"/>
                                                             <constraints>
@@ -1418,7 +1416,7 @@
         <!--Recent Results-->
         <scene sceneID="10D-Rl-Cds">
             <objects>
-                <viewController id="Nxl-V2-sOk" customClass="RecentResultsViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Nxl-V2-sOk" customClass="RecentResultsViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pfZ-VT-r1P"/>
                         <viewControllerLayoutGuide type="bottom" id="aEM-nA-tBF"/>
@@ -1431,7 +1429,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecentResultCell" rowHeight="55" id="Dl9-8X-tnt" customClass="ResultsTableViewCell" customModule="Wroclaw_2017" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecentResultCell" rowHeight="55" id="Dl9-8X-tnt" customClass="ResultsTableViewCell" customModule="Wroclaw2017" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dl9-8X-tnt" id="9Ql-Xw-Lzy">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -1449,7 +1447,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibI-oc-z5H">
-                                                            <rect key="frame" x="5" y="32" width="42" height="21"/>
+                                                            <rect key="frame" x="10" y="32" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1516,7 +1514,7 @@
         <!--Calendar Detail-->
         <scene sceneID="VEZ-hw-nXC">
             <objects>
-                <viewController title="Calendar Detail" id="CyA-FC-DXd" customClass="CalendarDetailViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Calendar Detail" id="CyA-FC-DXd" customClass="CalendarDetailViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lqP-Cn-cP8"/>
                         <viewControllerLayoutGuide type="bottom" id="vEP-HO-SqM"/>
@@ -1597,13 +1595,13 @@
         <!--Info-->
         <scene sceneID="E0L-Dn-Lxq">
             <objects>
-                <tableViewController id="4cB-DG-VXH" customClass="InfoMenuViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="4cB-DG-VXH" customClass="InfoMenuViewController" customModule="Wroclaw2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lZx-Ps-kcb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.80806107949999995" green="0.80806107949999995" blue="0.80806107949999995" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" rowHeight="110" id="wtQ-V9-3qf" customClass="InfoTableViewCell" customModule="Wroclaw_2017" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" rowHeight="110" id="wtQ-V9-3qf" customClass="InfoTableViewCell" customModule="Wroclaw2017" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wtQ-V9-3qf" id="KUR-QZ-zmt">
                                     <autoresizingMask key="autoresizingMask"/>

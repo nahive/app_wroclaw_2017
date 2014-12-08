@@ -122,7 +122,6 @@
 		4C3F8F9E1A0A79970066F3F7 /* news2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news2.jpg; sourceTree = "<group>"; };
 		4C4B9E031A09FFF000F60266 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4C4C75981A35DBA900D89546 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
-		4C4C759A1A35DF5400D89546 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		4C4C759E1A35DF7600D89546 /* DisciplineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplineTableViewCell.swift; sourceTree = "<group>"; };
 		4C52D1531A0AD92A0060E222 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,7 +160,7 @@
 		4C8A7C051A1CD305008754F3 /* tug-of-war.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tug-of-war.png"; sourceTree = "<group>"; };
 		4C8A7C061A1CD305008754F3 /* waterski-&-wakeboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waterski-&-wakeboard.png"; sourceTree = "<group>"; };
 		4C8A7C071A1CD305008754F3 /* wushu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wushu.png; sourceTree = "<group>"; };
-		4C9B832619F6F5A800B68B88 /* Wroclaw 2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wroclaw 2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9B832619F6F5A800B68B88 /* Wroclaw2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wroclaw2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9B832A19F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C9B833219F6F5A800B68B88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -298,7 +297,7 @@
 		4C9B832719F6F5A800B68B88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C9B832619F6F5A800B68B88 /* Wroclaw 2017.app */,
+				4C9B832619F6F5A800B68B88 /* Wroclaw2017.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -406,7 +405,6 @@
 				4C9B836B19F70C9000B68B88 /* MenuViewController.swift */,
 				4C6B019C19FE997F00EBF821 /* NewsTableViewCell.swift */,
 				4C4C75981A35DBA900D89546 /* InfoTableViewCell.swift */,
-				4C4C759A1A35DF5400D89546 /* CalendarTableViewCell.swift */,
 				4C4C759E1A35DF7600D89546 /* DisciplineTableViewCell.swift */,
 				4CBBDF0D1A35E27B00E0C135 /* MedalsTableViewCell.swift */,
 				4CBBDF0F1A35E29700E0C135 /* ResultsTableViewCell.swift */,
@@ -440,7 +438,7 @@
 			);
 			name = wroclaw_2017;
 			productName = wroclaw_2017;
-			productReference = 4C9B832619F6F5A800B68B88 /* Wroclaw 2017.app */;
+			productReference = 4C9B832619F6F5A800B68B88 /* Wroclaw2017.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -698,7 +696,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_NAME = "Wroclaw 2017";
+				PRODUCT_NAME = Wroclaw2017;
 				SWIFT_OBJC_BRIDGING_HEADER = "wroclaw_2017/wroclaw_2017-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -720,7 +718,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_NAME = "Wroclaw 2017";
+				PRODUCT_NAME = Wroclaw2017;
 				SWIFT_OBJC_BRIDGING_HEADER = "wroclaw_2017/wroclaw_2017-Bridging-Header.h";
 			};
 			name = Release;
