@@ -76,10 +76,10 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         var url = "";
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
             url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/schedule";
-            self.title = "Aktualności";
+            self.title = "Kalendarz";
         } else {
             url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/schedule?lang=en_US";
-            self.title = "News";
+            self.title = "Calendar";
         }
         
         

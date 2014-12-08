@@ -32,7 +32,6 @@ class MedalsViewController: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(animated: Bool) {
         
-        
     }
     
     func customSetup(){
@@ -124,20 +123,21 @@ class MedalsViewController: UIViewController, UITableViewDelegate {
         sectionHeaderView.frame = CGRectMake(10, 5, screen.width, 45);
         sectionHeaderView.backgroundColor = Utils.colorize(0xfafafa);
         
-        
+        var imgWidth : CGFloat = 38.0;
+        var last = screen.width - 50;
         var goldMedal: UIImage = UIImage(named: "medal-gold.png")!;
         var imageGoldView: UIImageView = UIImageView(image: goldMedal);
-        imageGoldView.frame = CGRectMake(250, 10, 35, 45);
+        imageGoldView.frame = CGRectMake(last - imgWidth - imgWidth, 10, 35, 45);
         sectionHeaderView.addSubview(imageGoldView);
         
         var silverMedal: UIImage = UIImage(named: "medal-silver.png")!;
         var imageSilverView: UIImageView = UIImageView(image: silverMedal);
-        imageSilverView.frame = CGRectMake(290, 10, 35, 45);
+        imageSilverView.frame = CGRectMake(last - imgWidth, 10, 35, 45);
         sectionHeaderView.addSubview(imageSilverView);
         
         var bronzeMedal: UIImage = UIImage(named: "medal-bronze.png")!;
         var imageBronzeView: UIImageView = UIImageView(image: bronzeMedal);
-        imageBronzeView.frame = CGRectMake(330, 10, 35, 45);
+        imageBronzeView.frame = CGRectMake(last, 10, 35, 45);
         sectionHeaderView.addSubview(imageBronzeView);
         
         

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C78c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C78c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -9,7 +9,7 @@
         <!--News Detail View Controller-->
         <scene sceneID="9CO-5w-bbE">
             <objects>
-                <viewController id="VqC-HN-2tm" customClass="NewsDetailViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VqC-HN-2tm" customClass="NewsDetailViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0hg-Pd-EXh"/>
                         <viewControllerLayoutGuide type="bottom" id="EEz-Ed-ibh"/>
@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJj-0Z-CH4">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJj-0Z-CH4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="EoA-b7-Q2G">
+                                    <view contentMode="scaleAspectFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EoA-b7-Q2G">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stadionolimpijski.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1ox-u8-QhW">
@@ -30,7 +30,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                                 </variation>
                                             </imageView>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YYJ-Tl-GKX">
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YYJ-Tl-GKX">
                                                 <rect key="frame" x="-12" y="230" width="624" height="352"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8u-UO-UNx">
@@ -113,7 +113,7 @@
         <!--Settings-->
         <scene sceneID="qw2-fc-hzK">
             <objects>
-                <tableViewController id="fkB-Rq-8Jp" customClass="SettingsViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fkB-Rq-8Jp" customClass="SettingsViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="lAF-N2-sQm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,8 +157,8 @@
                                             <exclude reference="sdW-ny-44c"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="SnB-do-fGa"/>
                                             <exclude reference="3zV-cX-cPI"/>
+                                            <exclude reference="SnB-do-fGa"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -396,7 +396,7 @@
         <!--Select Follow Table View Controller-->
         <scene sceneID="tjl-IT-cjO">
             <objects>
-                <tableViewController id="lqQ-ts-Zsw" customClass="SelectFollowTableViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="lqQ-ts-Zsw" customClass="SelectFollowTableViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nL7-3g-gTL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -453,7 +453,7 @@
         <!--Select Language Table View Controller-->
         <scene sceneID="X6G-GJ-AJP">
             <objects>
-                <tableViewController id="whG-4V-9Vp" customClass="SelectLanguageTableViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="whG-4V-9Vp" customClass="SelectLanguageTableViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="RUF-yb-lT7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -507,7 +507,7 @@
         <!--News View-->
         <scene sceneID="XDa-bw-qPS">
             <objects>
-                <tableViewController storyboardIdentifier="NewsTest" title="News View" id="YgV-WD-tBc" customClass="NewsViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NewsTest" title="News View" id="YgV-WD-tBc" customClass="NewsViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DY1-sq-Myl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -523,7 +523,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="110" id="QnM-up-w0R" customClass="NewsTableViewCell" customModule="_017_Wroclaw" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="110" id="QnM-up-w0R" customClass="NewsTableViewCell" customModule="Wroclaw_2017" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QnM-up-w0R" id="W5y-5Y-HFg">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -607,7 +607,7 @@
         <!--Info View Controller-->
         <scene sceneID="Fmz-cU-jlH">
             <objects>
-                <viewController id="anT-3Y-Mtc" customClass="InfoViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="anT-3Y-Mtc" customClass="InfoViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rdF-kR-FRx"/>
                         <viewControllerLayoutGuide type="bottom" id="tl7-2j-7oq"/>
@@ -687,7 +687,7 @@
         <!--Menu View-->
         <scene sceneID="hEd-3J-OYr">
             <objects>
-                <tableViewController title="Menu View" id="HSl-ZE-XQG" customClass="MenuViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Menu View" id="HSl-ZE-XQG" customClass="MenuViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wx4-GW-71a">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -903,7 +903,7 @@
         <!--Locations-->
         <scene sceneID="V67-VJ-O8Z">
             <objects>
-                <viewController id="Lum-s9-Drv" customClass="LocationsViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lum-s9-Drv" customClass="LocationsViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c4S-TP-8kB"/>
                         <viewControllerLayoutGuide type="bottom" id="Ivr-NH-jiJ"/>
@@ -970,7 +970,7 @@
         <!--Locations Detail View Controller-->
         <scene sceneID="kmq-cw-rZG">
             <objects>
-                <viewController id="qMj-dO-WVY" customClass="LocationsDetailViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qMj-dO-WVY" customClass="LocationsDetailViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="apU-Uv-MYi"/>
                         <viewControllerLayoutGuide type="bottom" id="Jys-xc-qHZ"/>
@@ -979,10 +979,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2uU-Kj-QWk">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2uU-Kj-QWk">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1EG-pI-Mfm">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1EG-pI-Mfm">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqe-2z-tcl">
@@ -1044,7 +1044,7 @@
         <!--Calendar View-->
         <scene sceneID="HT0-Eg-4Gl">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RC9-Jc-1Jm" userLabel="Calendar View" customClass="CalendarViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RC9-Jc-1Jm" userLabel="Calendar View" customClass="CalendarViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qsT-6O-0Da"/>
                         <viewControllerLayoutGuide type="bottom" id="wMX-Zt-GCV"/>
@@ -1066,7 +1066,7 @@
                                     <constraint firstAttribute="height" constant="468" id="Fw9-Rr-VVW"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CalendarCell" rowHeight="50" id="cxM-kG-XMQ" userLabel="CalendarCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CalendarCell" rowHeight="50" id="cxM-kG-XMQ" userLabel="CalendarCell" customClass="CalendarTableViewCell" customModule="Wroclaw_2017" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxM-kG-XMQ" id="o7i-gW-L97">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -1077,8 +1077,11 @@
                                                     <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfj-i7-tf6">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfj-i7-tf6">
                                                     <rect key="frame" x="48" y="14" width="534" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="534" id="mdF-fn-G1b"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1090,6 +1093,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="titleW" destination="mdF-fn-G1b" id="Jo8-0A-m9D"/>
                                             <segue destination="CyA-FC-DXd" kind="show" identifier="showCalendarDetail" id="13D-6a-XH7"/>
                                         </connections>
                                     </tableViewCell>
@@ -1121,7 +1125,7 @@
         <!--Discipline View-->
         <scene sceneID="uNZ-5p-2qU">
             <objects>
-                <tableViewController id="yp9-Hm-f0p" userLabel="Discipline View" customClass="DisciplineViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yp9-Hm-f0p" userLabel="Discipline View" customClass="DisciplineViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZuJ-DF-Uca">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1171,7 +1175,7 @@
         <!--Discipline-->
         <scene sceneID="n4H-tM-lwN">
             <objects>
-                <viewController id="ghc-K8-Ixw" customClass="DisciplineDetailViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ghc-K8-Ixw" customClass="DisciplineDetailViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z1G-28-kzn"/>
                         <viewControllerLayoutGuide type="bottom" id="qSn-jh-Kpj"/>
@@ -1180,10 +1184,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCw-cD-xYI">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCw-cD-xYI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-GX-DGU">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-GX-DGU">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnS-AR-cJW">
@@ -1275,7 +1279,7 @@
         <!--Medal Classification-->
         <scene sceneID="HPM-27-EFL">
             <objects>
-                <viewController id="hrQ-Bu-25l" customClass="MedalsViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hrQ-Bu-25l" customClass="MedalsViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="syL-w4-oy3"/>
                         <viewControllerLayoutGuide type="bottom" id="y7U-qL-nMA"/>
@@ -1288,46 +1292,70 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medalClassificationCell" id="ldN-rP-fDw">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medalClassificationCell" id="ldN-rP-fDw" customClass="MedalsTableViewCell" customModule="Wroclaw_2017" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ldN-rP-fDw" id="W7v-KP-nY8">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV4-Q9-1Dc">
-                                                    <rect key="frame" x="8" y="11" width="10" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scz-Bx-Cji">
-                                                    <rect key="frame" x="66" y="11" width="150" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbK-rc-9wU">
-                                                    <rect key="frame" x="258" y="11" width="20" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kl-gz-iqe">
-                                                    <rect key="frame" x="298" y="11" width="20" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6a-Bt-0oC">
-                                                    <rect key="frame" x="338" y="11" width="20" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Beg-En-hgM">
-                                                    <rect key="frame" x="26" y="6" width="32" height="32"/>
-                                                </imageView>
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNR-9h-1Q5">
+                                                    <rect key="frame" x="-12" y="-14" width="390" height="72"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV4-Q9-1Dc">
+                                                            <rect key="frame" x="20" y="25" width="10" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scz-Bx-Cji">
+                                                            <rect key="frame" x="78" y="25" width="150" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kl-gz-iqe">
+                                                            <rect key="frame" x="312" y="25" width="35" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="35" id="AL1-EK-Qzi"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6a-Bt-0oC">
+                                                            <rect key="frame" x="355" y="25" width="35" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="35" id="y73-BI-QpT"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Beg-En-hgM"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbK-rc-9wU">
+                                                            <rect key="frame" x="269" y="25" width="35" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="35" id="A37-Xn-UrZ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="v6a-Bt-0oC" firstAttribute="leading" secondItem="5kl-gz-iqe" secondAttribute="trailing" constant="3" id="48o-Uh-nkS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="v6a-Bt-0oC" secondAttribute="trailing" constant="3" id="PBV-QC-Usf"/>
+                                                        <constraint firstAttribute="width" constant="390" id="X8E-G3-eRu"/>
+                                                        <constraint firstItem="5kl-gz-iqe" firstAttribute="leading" secondItem="nbK-rc-9wU" secondAttribute="trailing" constant="3" id="j7M-qe-yQA"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bronze" destination="v6a-Bt-0oC" id="6LV-ge-UGJ"/>
+                                            <outlet property="contentW" destination="X8E-G3-eRu" id="31c-Yg-Yb3"/>
+                                            <outlet property="gold" destination="nbK-rc-9wU" id="qmi-u0-diT"/>
+                                            <outlet property="silver" destination="5kl-gz-iqe" id="CJj-4I-E33"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1390,7 +1418,7 @@
         <!--Recent Results-->
         <scene sceneID="10D-Rl-Cds">
             <objects>
-                <viewController id="Nxl-V2-sOk" customClass="RecentResultsViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Nxl-V2-sOk" customClass="RecentResultsViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pfZ-VT-r1P"/>
                         <viewControllerLayoutGuide type="bottom" id="aEM-nA-tBF"/>
@@ -1403,31 +1431,44 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecentResultCell" rowHeight="55" id="Dl9-8X-tnt">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecentResultCell" rowHeight="55" id="Dl9-8X-tnt" customClass="ResultsTableViewCell" customModule="Wroclaw_2017" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dl9-8X-tnt" id="9Ql-Xw-Lzy">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oon-Ra-YmC">
-                                                    <rect key="frame" x="8" y="3" width="32" height="32"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg9-xq-wH2">
-                                                    <rect key="frame" x="77" y="17" width="200" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibI-oc-z5H">
-                                                    <rect key="frame" x="14" y="33" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" tag="104" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOq-jE-cpJ">
-                                                    <rect key="frame" x="306" y="5" width="35" height="45"/>
-                                                </imageView>
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zxh-Jf-u3d">
+                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="55"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oon-Ra-YmC">
+                                                            <rect key="frame" x="5" y="5" width="32" height="32"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg9-xq-wH2">
+                                                            <rect key="frame" x="45" y="15" width="200" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibI-oc-z5H">
+                                                            <rect key="frame" x="5" y="32" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" tag="104" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="medal-gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="TOq-jE-cpJ">
+                                                            <rect key="frame" x="338" y="5" width="35" height="45"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="373" id="4hH-U7-1yy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TOq-jE-cpJ" secondAttribute="trailing" constant="5" id="EAo-kf-vpO"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentW" destination="4hH-U7-1yy" id="kfv-oi-Eqg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1475,7 +1516,7 @@
         <!--Calendar Detail-->
         <scene sceneID="VEZ-hw-nXC">
             <objects>
-                <viewController title="Calendar Detail" id="CyA-FC-DXd" customClass="CalendarDetailViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Calendar Detail" id="CyA-FC-DXd" customClass="CalendarDetailViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lqP-Cn-cP8"/>
                         <viewControllerLayoutGuide type="bottom" id="vEP-HO-SqM"/>
@@ -1484,10 +1525,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Xd-gp-WlW">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Xd-gp-WlW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Z2-Ii-9n0">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Z2-Ii-9n0">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHo-5d-Ip8">
@@ -1556,31 +1597,41 @@
         <!--Info-->
         <scene sceneID="E0L-Dn-Lxq">
             <objects>
-                <tableViewController id="4cB-DG-VXH" customClass="InfoMenuViewController" customModule="_017_Wroclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="4cB-DG-VXH" customClass="InfoMenuViewController" customModule="Wroclaw_2017" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lZx-Ps-kcb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.80806107949999995" green="0.80806107949999995" blue="0.80806107949999995" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" rowHeight="110" id="wtQ-V9-3qf">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" rowHeight="110" id="wtQ-V9-3qf" customClass="InfoTableViewCell" customModule="Wroclaw_2017" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wtQ-V9-3qf" id="KUR-QZ-zmt">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIE-gZ-d7D">
+                                        <view alpha="0.85000002384185791" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIE-gZ-d7D">
                                             <rect key="frame" x="10" y="10" width="356" height="90"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="203" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2B-kt-WKW">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="203" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2B-kt-WKW">
                                                     <rect key="frame" x="8" y="0.0" width="340" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="340" id="EQU-3k-A05"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="356" id="HcD-th-pN8"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contentW" destination="HcD-th-pN8" id="v4K-TR-ib3"/>
+                                    <outlet property="titleW" destination="EQU-3k-A05" id="HGg-1Y-kK0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1617,13 +1668,14 @@
         <image name="ic_action_place.png" width="96" height="96"/>
         <image name="ic_action_settings.png" width="48" height="48"/>
         <image name="logo.png" width="924" height="263"/>
+        <image name="medal-gold.png" width="35" height="45"/>
         <image name="navi.png" width="30" height="30"/>
         <image name="reveal-icon.png" width="22" height="17"/>
         <image name="stadionolimpijski.jpg" width="550" height="367"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="kcQ-Mg-3Nr"/>
         <segue reference="RTZ-ni-NCl"/>
-        <segue reference="4ja-f9-7lP"/>
         <segue reference="qOb-th-u9s"/>
     </inferredMetricsTieBreakers>
 </document>
