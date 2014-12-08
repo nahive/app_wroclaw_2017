@@ -155,9 +155,7 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         }
         
         if (firstIconNotNull == false) {
-            println(lastCategory);
             imagesDictionary.updateValue(categoryIcons, forKey: lastCategory);
-            println(imagesDictionary);
             
         }
         
