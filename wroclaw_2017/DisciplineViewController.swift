@@ -75,6 +75,10 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         disciplineIndexTitles.removeAll(keepCapacity: true);
         disciplinesSectionTitles.removeAll(keepCapacity: true);
         disciplines.removeAll(keepCapacity: true);
+        imagesDictionary.removeAll(keepCapacity: true);
+        
+        var firstIconNotNull = true;
+        var lastCategory: String = "";
         
         for (k, v) in json {
             for (i,j) in v {
@@ -100,23 +104,49 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
                     names.append(j.toString(pretty: true));
                     break;
                 case "category":
-                    if (!(disciplinesSectionTitles.last == j.toString(pretty: true))) {
-                        disciplinesSectionTitles.append(j.toString(pretty: true));
-                        var lastDiscipline = categoryDisciplines.last;
-                        categoryDisciplines.removeAll(keepCapacity: true);
-                        categoryDisciplines.append(lastDiscipline!);
-                        var lastImage: UIImage = categoryIcons.last!;
-                        categoryIcons.removeAll(keepCapacity: true);
-                        categoryIcons.append(lastImage);
-                        imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
-                    } else {
-                        imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
+                    
+                    if (categoryIcons.count != 0 && firstIconNotNull == true) {
+                        if (!(disciplinesSectionTitles.last == j.toString(pretty: true))) {
+                            disciplinesSectionTitles.append(j.toString(pretty: true));
+                            var lastDiscipline = categoryDisciplines.last;
+                            categoryDisciplines.removeAll(keepCapacity: true);
+                            categoryDisciplines.append(lastDiscipline!);
+                            var lastImage: UIImage = categoryIcons.last!;
+                            categoryIcons.removeAll(keepCapacity: true);
+                            categoryIcons.append(lastImage);
+                            imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
+                        } else {
+                            imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
+                        }
+                        
+                    } else if (categoryIcons.count == 0 || firstIconNotNull == false){
+                        firstIconNotNull = false;
+                        println(lastCategory);
+                        if (!(disciplinesSectionTitles.last == j.toString(pretty: true))) {
+                            disciplinesSectionTitles.append(j.toString(pretty: true));
+                            var lastDiscipline = categoryDisciplines.last!;
+                            categoryDisciplines.removeAll(keepCapacity: true);
+                            categoryDisciplines.append(lastDiscipline);
+                            if (categoryIcons.count != 0) {
+                                imagesDictionary.updateValue(categoryIcons, forKey: lastCategory);
+                                categoryIcons.removeAll(keepCapacity: true);
+                            }
+                            
+                        } else {
+                            imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
+                        }
+                        
+                        lastCategory = j.toString(pretty: true);
+                        
+                        if (!(disciplineIndexTitles.last == j.toString(pretty: true))) {
+                            disciplineIndexTitles.append(j.toString(pretty: true));
+                        }
                     }
                     
-                    if (!(disciplineIndexTitles.last == j.toString(pretty: true))) {
-                        disciplineIndexTitles.append(j.toString(pretty: true));
-                    }
                     disciplines.updateValue(categoryDisciplines, forKey: j.toString(pretty: true));
+                    
+                    
+                    
                     break;
                 default:
                     break;
@@ -124,9 +154,17 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
             }
         }
         
+        if (firstIconNotNull == false) {
+            println(lastCategory);
+            imagesDictionary.updateValue(categoryIcons, forKey: lastCategory);
+            println(imagesDictionary);
+            
+        }
+        
         disciplinesSectionTitles = disciplinesSectionTitles.sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending };
         
     }
+
     
     func customSetup(){
         var revealViewController = self.revealViewController();

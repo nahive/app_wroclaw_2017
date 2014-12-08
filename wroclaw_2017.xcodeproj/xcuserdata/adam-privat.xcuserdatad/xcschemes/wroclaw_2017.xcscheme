@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C9B832519F6F5A800B68B88"
-               BuildableName = "wroclaw_2017.app"
+               BuildableName = "Wroclaw 2017.app"
                BlueprintName = "wroclaw_2017"
                ReferencedContainer = "container:wroclaw_2017.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C9B832519F6F5A800B68B88"
-            BuildableName = "wroclaw_2017.app"
+            BuildableName = "Wroclaw 2017.app"
             BlueprintName = "wroclaw_2017"
             ReferencedContainer = "container:wroclaw_2017.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C9B832519F6F5A800B68B88"
-            BuildableName = "wroclaw_2017.app"
+            BuildableName = "Wroclaw 2017.app"
             BlueprintName = "wroclaw_2017"
             ReferencedContainer = "container:wroclaw_2017.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C9B832519F6F5A800B68B88"
-            BuildableName = "wroclaw_2017.app"
+            BuildableName = "Wroclaw 2017.app"
             BlueprintName = "wroclaw_2017"
             ReferencedContainer = "container:wroclaw_2017.xcodeproj">
          </BuildableReference>

@@ -58,7 +58,6 @@
 		4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832B19F6F5A800B68B88 /* AppDelegate.swift */; };
 		4C9B832E19F6F5A800B68B88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B832D19F6F5A800B68B88 /* ViewController.swift */; };
 		4C9B833319F6F5A800B68B88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B833219F6F5A800B68B88 /* Images.xcassets */; };
-		4C9B834219F6F5A800B68B88 /* wroclaw_2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B834119F6F5A800B68B88 /* wroclaw_2017Tests.swift */; };
 		4C9B834C19F6F63E00B68B88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */; };
 		4C9B835919F6F67000B68B88 /* ic_action_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B834E19F6F67000B68B88 /* ic_action_about.png */; };
 		4C9B835A19F6F67000B68B88 /* ic_action_chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B834F19F6F67000B68B88 /* ic_action_chat.png */; };
@@ -175,7 +174,6 @@
 		4C9B833219F6F5A800B68B88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4C9B833B19F6F5A800B68B88 /* wroclaw_2017Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wroclaw_2017Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9B834019F6F5A800B68B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C9B834119F6F5A800B68B88 /* wroclaw_2017Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wroclaw_2017Tests.swift; sourceTree = "<group>"; };
 		4C9B834B19F6F63E00B68B88 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4C9B834E19F6F67000B68B88 /* ic_action_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_about.png; sourceTree = "<group>"; };
 		4C9B834F19F6F67000B68B88 /* ic_action_chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_chat.png; sourceTree = "<group>"; };
@@ -364,7 +362,6 @@
 		4C9B833E19F6F5A800B68B88 /* wroclaw_2017Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4C9B834119F6F5A800B68B88 /* wroclaw_2017Tests.swift */,
 				4C9B833F19F6F5A800B68B88 /* Supporting Files */,
 			);
 			path = wroclaw_2017Tests;
@@ -656,7 +653,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C9B834219F6F5A800B68B88 /* wroclaw_2017Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

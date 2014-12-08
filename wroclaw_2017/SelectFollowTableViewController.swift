@@ -54,6 +54,9 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
         var categoryDisciplines: [String] = [];
         var categoryIcons: [UIImage] = [];
         
+        var firstIconNotNull = true;
+        var lastCategory: String = "";
+        
         for (k, v) in json {
             for (i,j) in v {
                 switch i as NSString {
@@ -72,26 +75,48 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
                     names.append(j.toString(pretty: true));
                     break;
                 case "category":
-                    if (!(followsSectionTitles.last == j.toString(pretty: true))) {
-                        followsSectionTitles.append(j.toString(pretty: true));
-                        var lastDiscipline = categoryDisciplines.last;
-                        categoryDisciplines.removeAll(keepCapacity: true);
-                        categoryDisciplines.append(lastDiscipline!);
+                    if (categoryIcons.count != 0 && firstIconNotNull == true) {
+                        if (!(followsSectionTitles.last == j.toString(pretty: true))) {
+                            followsSectionTitles.append(j.toString(pretty: true));
+                            var lastDiscipline = categoryDisciplines.last;
+                            categoryDisciplines.removeAll(keepCapacity: true);
+                            categoryDisciplines.append(lastDiscipline!);
+                            var lastImage: UIImage = categoryIcons.last!;
+                            categoryIcons.removeAll(keepCapacity: true);
+                            categoryIcons.append(lastImage);
+                            imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
+                        } else {
+                            imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
+                        }
+                        
+                    } else if (categoryIcons.count == 0 || firstIconNotNull == false){
+                        firstIconNotNull = false;
+                        println(lastCategory);
+                        if (!(followsSectionTitles.last == j.toString(pretty: true))) {
+                            followsSectionTitles.append(j.toString(pretty: true));
+                            var lastDiscipline = categoryDisciplines.last!;
+                            categoryDisciplines.removeAll(keepCapacity: true);
+                            categoryDisciplines.append(lastDiscipline);
+                            if (categoryIcons.count != 0) {
+                                imagesDictionary.updateValue(categoryIcons, forKey: lastCategory);
+                                categoryIcons.removeAll(keepCapacity: true);
+                            }
+                            
+                        } else {
+                            imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
+                        }
+                        
+                        lastCategory = j.toString(pretty: true);
+                        
+                        //                        if (!(followsIndexTitles.last == j.toString(pretty: true))) {
+                        //                            disciplineIndexTitles.append(j.toString(pretty: true));
+                        //                        }
                     }
-                    if (!(followIndexTitles.last == j.toString(pretty: true))) {
-                        followIndexTitles.append(j.toString(pretty: true));
-                    }
+                    
                     follows.updateValue(categoryDisciplines, forKey: j.toString(pretty: true));
-                    if (!(contains(followsSectionTitles, j.toString(pretty: true)))) {
-                        followsSectionTitles.append(j.toString(pretty: true));
-                        followIndexTitles.append(j.toString(pretty: true));
-                        var lastImage: UIImage = categoryIcons.last!;
-                        categoryIcons.removeAll(keepCapacity: true);
-                        categoryIcons.append(lastImage);
-                        imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
-                    } else {
-                        imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
-                    }
+                    
+                    
+                    
                     break;
                 default:
                     break;
@@ -99,9 +124,17 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
             }
         }
         
+        if (firstIconNotNull == false) {
+            println(lastCategory);
+            imagesDictionary.updateValue(categoryIcons, forKey: lastCategory);
+            println(imagesDictionary);
+            
+        }
+        
         followsSectionTitles = followsSectionTitles.sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
         
     }
+
     
     func getCountiresJSON() {
   
