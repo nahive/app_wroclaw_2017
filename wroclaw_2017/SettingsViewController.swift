@@ -60,7 +60,7 @@ class SettingsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4;
+        return 5;
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -73,15 +73,18 @@ class SettingsViewController: UITableViewController {
         var cellId = "Cell";
         switch(indexPath.row){
         case 0:
-            cellId = "language";
+            cellId = "language_label";
             break;
         case 1:
-            cellId = "follow";
+            cellId = "language";
             break;
         case 2:
-            cellId = "countries";
+            cellId = "follow_label";
             break;
         case 3:
+            cellId = "countries";
+            break;
+        case 4:
             cellId = "participants";
             break;
         default:
@@ -97,28 +100,32 @@ class SettingsViewController: UITableViewController {
         var followLabel: UILabel? = cell.viewWithTag(105) as? UILabel;
         var countryLabel: UILabel? = cell.viewWithTag(106) as? UILabel;
         var disciplineLabel: UILabel? = cell.viewWithTag(107) as? UILabel;
+        var languageLabelSection: UILabel? = cell.viewWithTag(108) as? UILabel;
         
         
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
             languageName?.text = "Polski";
             languageLabel?.text = "Język:";
-            followLabel?.text = "Obserwuj";
+            followLabel?.text = "Wybierz obserwowane kraje lub dyscypliny";
             countryLabel?.text = "Kraje:";
             disciplineLabel?.text = "Dyscypliny:";
+            languageLabelSection?.text = "Wybierz glowny jezyk aplikacji";
             self.title = "Ustawienia";
         } else if (NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage")) {
             languageName?.text = "English";
             languageLabel?.text = "Language:";
-            followLabel?.text = "Follow";
+            followLabel?.text = "Choose what would you like to follow";
             countryLabel?.text = "Countries:";
             disciplineLabel?.text = "Disciplines:";
+             languageLabelSection?.text = "Choose application language";
             self.title = "Settings";
         } else {
             languageName?.text = "English";
             languageLabel?.text = "Language:";
-            followLabel?.text = "Follow";
+            followLabel?.text = "Choose what would you like to follow";
             countryLabel?.text = "Countries:";
             disciplineLabel?.text = "Disciplines:";
+             languageLabelSection?.text = "Choose application language";
         }
         
         if (NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") != nil) {

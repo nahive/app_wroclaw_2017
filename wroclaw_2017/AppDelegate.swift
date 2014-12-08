@@ -19,12 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var font: UIFont = UIFont(name: "HelveticaNeue-Thin",size: 20.0)!;
         let navDict: NSDictionary = [NSFontAttributeName: font];
         UINavigationBar.appearance().titleTextAttributes = navDict;
+      //  UINavigationBar.appearance().barTintColor = Utils.colorize(0x79196E);
         UINavigationBar.appearance().tintColor = Utils.colorize(0x7f7f7f);
         application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum);
-        let settings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
-        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-        UIApplication.sharedApplication().cancelAllLocalNotifications();
-        UIApplication.sharedApplication().applicationIconBadgeNumber = 0;
+        let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings);
+      
+//        
+//        if UIApplication.sharedApplication().respondsToSelector("registerUserNotificationSettings:") {
+//            var settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, categories: nil);
+//            UIApplication.sharedApplication().registerUserNotificationSettings(settings);
+//            UIApplication.sharedApplication().registerForRemoteNotifications();
+//        } else {
+//            UIApplication.sharedApplication().registerForRemoteNotificationTypes(UIRemoteNotificationType.Alert | UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound);
+//        }
+      
         return true
     }
     
@@ -128,6 +137,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func applicationWillEnterForeground(application: UIApplication) {
+        UIApplication.sharedApplication().cancelAllLocalNotifications();
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0;
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
