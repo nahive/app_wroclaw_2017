@@ -72,6 +72,7 @@
 		4CA7AB631A0AD1CD005073E7 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */; };
 		4CB5F59E19F71255006F09EC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5F59D19F71255006F09EC /* NewsViewController.swift */; };
 		4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */; };
+		4CBAFCAD1A370FFB0097813C /* InfoMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAFCAC1A370FFB0097813C /* InfoMenuViewController.swift */; };
 		4CBBDF0E1A35E27B00E0C135 /* MedalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBDF0D1A35E27B00E0C135 /* MedalsTableViewCell.swift */; };
 		4CBBDF101A35E29700E0C135 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBDF0F1A35E29700E0C135 /* ResultsTableViewCell.swift */; };
 		4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3471A004B65006DE05C /* DIDatepicker.m */; };
@@ -180,6 +181,7 @@
 		4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		4CB5F59D19F71255006F09EC /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		4CBAFCAC1A370FFB0097813C /* InfoMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoMenuViewController.swift; sourceTree = "<group>"; };
 		4CBBDF0D1A35E27B00E0C135 /* MedalsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalsTableViewCell.swift; sourceTree = "<group>"; };
 		4CBBDF0F1A35E29700E0C135 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		4CC9A3461A004B65006DE05C /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				4CB5F59D19F71255006F09EC /* NewsViewController.swift */,
 				4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */,
 				4C4B9E031A09FFF000F60266 /* InfoViewController.swift */,
+				4CBAFCAC1A370FFB0097813C /* InfoMenuViewController.swift */,
 				D45996451A120372002B1059 /* DisciplineViewController.swift */,
 				D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */,
 				4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */,
@@ -595,6 +598,7 @@
 				D45996541A1229D9002B1059 /* DisciplineDetailViewController.swift in Sources */,
 				4C4C759F1A35DF7600D89546 /* DisciplineTableViewCell.swift in Sources */,
 				4C9B836C19F70C9000B68B88 /* MenuViewController.swift in Sources */,
+				4CBAFCAD1A370FFB0097813C /* InfoMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

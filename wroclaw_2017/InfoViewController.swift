@@ -10,27 +10,35 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    // views
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var insideView: UIView!
+    
+    // info data
     var infoHeaders : [String] = [];
     var infoContents : [String] = [];
     var infoTitle : String = "";
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var insideView: UIView!
-    
+    // constraints
     @IBOutlet weak var scrollViewH: NSLayoutConstraint!
     @IBOutlet weak var insideViewH: NSLayoutConstraint!
+    
+    ///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = infoTitle;
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
         loadContents();
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    ///////////////////////////////////// Custom functions /////////////////////////////////////
     
     func loadContents(){
         for var i = 0; i < infoHeaders.count; i++ {
@@ -64,21 +72,4 @@ class InfoViewController: UIViewController {
         }
         return h;
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
 }

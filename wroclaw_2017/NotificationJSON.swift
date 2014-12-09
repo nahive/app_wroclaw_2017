@@ -23,7 +23,6 @@ class NotificationJSON {
     }
     
     class func getEventsForDiscipline(discipline: String, eventsNum: Int) -> Int {
-        
         var url = "";
         var events: [String] = [];
         
@@ -54,7 +53,6 @@ class NotificationJSON {
         }
         return lastEventsCount;
     }
-    
     
     class func getEventsForAllDisciplines() -> Int {
         var url = "";
@@ -142,5 +140,4 @@ class NotificationJSON {
         }
         return medalsCount;
     }
-
 }

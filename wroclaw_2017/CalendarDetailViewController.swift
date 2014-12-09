@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 
 class CalendarDetailViewController: UIViewController {
+    
+    // views
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventTime: UILabel!
     @IBOutlet weak var eventTitle: UILabel!
@@ -17,16 +19,20 @@ class CalendarDetailViewController: UIViewController {
     @IBOutlet weak var eventPlace: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
+    // constraints
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollViewH: NSLayoutConstraint!
     @IBOutlet weak var insideViewH: NSLayoutConstraint!
     
+    // data for detailed view from segue
     var screen = UIScreen.mainScreen().bounds;
     var dateVal = "";
     var timeVal = "";
     var titleVal = "";
     var contentVal = "";
     var placeVal = "";
+    
+    ///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +46,13 @@ class CalendarDetailViewController: UIViewController {
         showElements();
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    ///////////////////////////////////// Custom functions /////////////////////////////////////
+    
+    // hide views for transition
     func hideElements(){
         eventDate.alpha = 0.0;
         eventTime.alpha = 0.0;
@@ -49,6 +62,7 @@ class CalendarDetailViewController: UIViewController {
         mapView.alpha = 0.0;
     }
     
+    // show views with animation
     func showElements() {
         Utils.fadeIn(mapView,duration: 0.3, delay: 0.0);
         Utils.fadeIn(eventDate, duration: 0.5, delay: 0.5);
@@ -58,6 +72,7 @@ class CalendarDetailViewController: UIViewController {
         Utils.fadeIn(eventContent,duration: 0.5, delay: 0.5);
     }
     
+    // fill data from segue
     func fillFromSegue(){
         self.title = titleVal;
         eventDate.text = "03 Sep";
@@ -67,6 +82,7 @@ class CalendarDetailViewController: UIViewController {
         eventPlace.text = "Plac Grunwaldzki 201";
     }
     
+    // position views
     func customSetup(){
         mapView.frame = CGRectMake(0,0,screen.size.width, screen.size.height/3);
         eventDate.frame = CGRectMake(5,screen.size.height/3+10, screen.size.width/2, eventDate.frame.height);
@@ -83,23 +99,4 @@ class CalendarDetailViewController: UIViewController {
         scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

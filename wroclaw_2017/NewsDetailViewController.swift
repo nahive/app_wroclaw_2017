@@ -10,37 +10,60 @@ import UIKit
 
 class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
     
+    // data + news images
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var clockImage: UIImageView!
     
+    // views
     @IBOutlet weak var author: UILabel!
-    
     @IBOutlet weak var newsDate: UILabel!
     @IBOutlet weak var newsContent: UILabel!
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var insideView: UIView!
     
+    // constrains
     @IBOutlet weak var scrollViewH: NSLayoutConstraint!
     @IBOutlet weak var insideViewH: NSLayoutConstraint!
-    
     @IBOutlet weak var insideViewW: NSLayoutConstraint!
     @IBOutlet weak var insideContentView: UIView!
     @IBOutlet weak var insideContentViewH: NSLayoutConstraint!
     
     var screen =  UIScreen.mainScreen().bounds;
+    
+    // passed info from news
     var idVal = "";
     var titleVal = "";
     var dateVal = "";
     var photoVal = UIImage();
     
+    
+    ///////////////////////////////////// System functions /////////////////////////////////////
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideElements();
-          fillFromSegue();
+        fillFromSegue();
     }
     
+    override func viewDidLayoutSubviews() {
+    }
     
+    override func viewDidAppear(animated: Bool) {
+        customSetup();
+        showElements();
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    ///////////////////////////////////// Custom functions /////////////////////////////////////
+    
+    // fill info from previous view
     func fillFromSegue(){
         self.title = titleVal;
         newsDate.text = dateVal;
@@ -50,28 +73,12 @@ class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    // parallax function
     func scrollViewDidScroll(scrollView: UIScrollView) {
-  
         newsImage.frame = CGRectMake(0, -44 + (scrollView.contentOffset.y + 64)/2,screen.size.width,screen.size.height/3+44);
     }
-    
-    func getJSON(){
-        var url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/news/view/"+idVal;
-        let json = JSON(url:url);
-        
-        for (k, v) in json {
-                switch k as NSString {
-                case "author":
-                    author.text = v.toString(pretty: true);
-                    break;
-                case "content":
-                    newsContent.text = v.toString(pretty: true);
-                default:
-                    break;
-                }
-        }
-    }
-    
+
+    // hide elements for transition
     func hideElements() {
         newsImage.alpha = 0.0;
         clockImage.alpha = 0.0;
@@ -81,6 +88,7 @@ class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
         author.alpha = 0.0;
     }
     
+    // show elements with animation
     func showElements() {
         Utils.fadeIn(newsImage,duration: 0.3, delay: 0.0);
         Utils.fadeIn(newsDate,duration: 0.5, delay: 0.5);
@@ -90,6 +98,7 @@ class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
         Utils.fadeIn(author,duration: 0.3, delay: 0.5);
     }
     
+    // position elements
     func customSetup(){
         newsImage.frame = CGRectMake(0, -44,screen.size.width,screen.size.height/3+44);
         newsDate.frame = CGRectMake(40, 0, screen.size.width/2, newsDate.frame.size.height);
@@ -102,42 +111,38 @@ class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
         newsTitle.frame.origin = CGPointMake(20, newsDate.frame.origin.y + newsDate.frame.size.height + 5);
         author.frame = CGRectMake(20, newsTitle.frame.origin.y+newsTitle.frame.size.height, screen.size.width/2, author.frame.height);
         newsContent.frame.origin = CGPointMake(20, newsTitle.frame.origin.y+newsTitle.frame.size.height+40);
-//        insideContentViewH.constant = newsDate.frame.height + newsTitle.frame.height + newsContent.frame.height + author.frame.height + 75;
         insideViewH.constant = newsImage.frame.height+newsDate.frame.height + newsTitle.frame.height + newsContent.frame.height + author.frame.height + 75;
         scrollViewH.constant = view.frame.size.height;
         scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
-//
     }
+
     
-    override func viewDidLayoutSubviews() {
+    ///////////////////////////////////// Server functions /////////////////////////////////////
+    
+    // get data from server
+    func getJSON(){
+       
+        // check language
+        var url = "";
+        if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+            url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/news/view/" + idVal;
+        } else {
+            url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/news/view/"+idVal+"?lang=en_US";
+        }
         
-        
+        // get author and content
+        let json = JSON(url:url);
+        for (k, v) in json {
+                switch k as NSString {
+                case "author":
+                    author.text = v.toString(pretty: true);
+                    break;
+                case "content":
+                    newsContent.text = v.toString(pretty: true);
+                default:
+                    break;
+                }
+        }
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        customSetup();
-        showElements();
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

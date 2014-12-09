@@ -10,13 +10,11 @@ import UIKit
 
 class SettingsViewController: UITableViewController {
     
-
+    //View Variables
     @IBOutlet weak var revealButton: UIBarButtonItem!
     @IBOutlet weak var settingsDone: UIBarButtonItem!
 
-
-    
-    
+///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,43 +27,26 @@ class SettingsViewController: UITableViewController {
             NSUserDefaults.standardUserDefaults().synchronize();
             revealButton.style = UIBarButtonItemStyle.Plain;
             revealButton.enabled = false;
-            revealButton.image = nil;            
+            revealButton.image = nil;
         }
         customSetup();
-        
-        
-            
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    func customSetup(){
-        var revealViewController = self.revealViewController();
-        if(revealViewController != nil){
-            self.revealButton.target = revealViewController;
-            self.revealButton.action = "revealToggle:";
-            self.navigationController?.navigationBar.addGestureRecognizer(revealViewController.panGestureRecognizer());
-            view.addGestureRecognizer(revealViewController.panGestureRecognizer());
-        }
     }
     
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData();
     }
-
+    
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        super.didReceiveMemoryWarning();
     }
+    
+///////////////////////////////////// View functions ///////////////////////////////////////
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5;
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
     }
     
@@ -92,7 +73,6 @@ class SettingsViewController: UITableViewController {
             break;
         }
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as UITableViewCell;
-        
         var languageName: UILabel? = cell.viewWithTag(101) as? UILabel;
         var numberOfCountries: UILabel? = cell.viewWithTag(102) as? UILabel;
         var numberOfDisciplines: UILabel? = cell.viewWithTag(103) as? UILabel;
@@ -101,8 +81,6 @@ class SettingsViewController: UITableViewController {
         var countryLabel: UILabel? = cell.viewWithTag(106) as? UILabel;
         var disciplineLabel: UILabel? = cell.viewWithTag(107) as? UILabel;
         var languageLabelSection: UILabel? = cell.viewWithTag(108) as? UILabel;
-        
-        
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
             languageName?.text = "Polski";
             languageLabel?.text = "Język:";
@@ -117,7 +95,7 @@ class SettingsViewController: UITableViewController {
             followLabel?.text = "Choose what would you like to follow";
             countryLabel?.text = "Countries:";
             disciplineLabel?.text = "Disciplines:";
-             languageLabelSection?.text = "Choose application language";
+            languageLabelSection?.text = "Choose application language";
             self.title = "Settings";
         } else {
             languageName?.text = "English";
@@ -125,7 +103,7 @@ class SettingsViewController: UITableViewController {
             followLabel?.text = "Choose what would you like to follow";
             countryLabel?.text = "Countries:";
             disciplineLabel?.text = "Disciplines:";
-             languageLabelSection?.text = "Choose application language";
+            languageLabelSection?.text = "Choose application language";
         }
         
         if (NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") != nil) {
@@ -139,7 +117,6 @@ class SettingsViewController: UITableViewController {
         } else {
             numberOfDisciplines?.text = "";
         }
-        
         if (NSUserDefaults.standardUserDefaults().objectForKey("countriesToFollow") != nil) {
             var amoutOfCountries: String = String((NSUserDefaults.standardUserDefaults().objectForKey("countriesToFollow") as [NSString]).count);
             if (amoutOfCountries == "0") {
@@ -150,30 +127,29 @@ class SettingsViewController: UITableViewController {
         } else {
             numberOfCountries?.text = "";
         }
-        
-        
-        
         return cell;
     }
     
-
+///////////////////////////////////// Custom functions /////////////////////////////////////
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    func customSetup(){
+        var revealViewController = self.revealViewController();
+        if(revealViewController != nil){
+            self.revealButton.target = revealViewController;
+            self.revealButton.action = "revealToggle:";
+            self.navigationController?.navigationBar.addGestureRecognizer(revealViewController.panGestureRecognizer());
+            view.addGestureRecognizer(revealViewController.panGestureRecognizer());
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if(segue.identifier == "countries"){
-            //let row = self.tableView.indexPathForSelectedRow()?.row;
             var destViewController : SelectFollowTableViewController = segue.destinationViewController as SelectFollowTableViewController;
             destViewController.contentValue = "countries";
         } else if(segue.identifier == "disciplines") {
             var destViewController : SelectFollowTableViewController = segue.destinationViewController as SelectFollowTableViewController;
             destViewController.contentValue = "disciplines";
         }
-        
-        
     }
     
-
 }

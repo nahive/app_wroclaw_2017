@@ -9,24 +9,32 @@
 import UIKit
 
 public class NewsViewController: UITableViewController {
+    
+    // menu button
     @IBOutlet weak var revealButtonItem: UIBarButtonItem!
     
-    
-    
+    // data arrays for news content
     var images: [UIImage] = [];
     var authors: [String] = [];
     var titles: [String] = [];
     var dates: [String] = [];
     var id: [String] = [];
+    
+    // loading icon
     var loader = UIActivityIndicatorView();
+    
+    ///////////////////////////////////// System functions /////////////////////////////////////
+    
     override public func viewDidLoad() {
         super.viewDidLoad();
         
+        // view customization
         customSetup();
         var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
         bgView.alpha = 0.5;
         tableView.backgroundView = bgView;
         
+        // loading icon
         loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge);
         loader.frame = CGRectMake(0,0,80,80);
         loader.center = self.view.center;
@@ -36,25 +44,16 @@ public class NewsViewController: UITableViewController {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
     }
     
-    public func didItLoad() -> UIViewController {
-        return self;
-    }
     
-    public func didDownload() -> Bool {
-        return id.count != 0;
-    }
-    
+    // download data, reload table and hide loading icon
     public override func viewDidAppear(animated: Bool) {
-        if (NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")) {
-        } else {performSegueWithIdentifier("showSettings", sender: nil);}
-        
         getJSON();
         self.tableView.reloadData();
         loader.stopAnimating();
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
-        
-        }
+    }
     
+    // language customizations
     public override func viewWillAppear(animated: Bool) {
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
             self.title = "Aktualności";
@@ -63,16 +62,112 @@ public class NewsViewController: UITableViewController {
         }
     }
     
+    public override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    ///////////////////////////////////// Custom functions /////////////////////////////////////
+    
+    func customSetup(){
+        
+        // menu button init
+        var revealViewController = self.revealViewController();
+        if(revealViewController != nil){
+            self.revealButtonItem.target = revealViewController;
+            self.revealButtonItem.action = "revealToggle:";
+            self.navigationController?.navigationBar.addGestureRecognizer(revealViewController.panGestureRecognizer());
+            view.addGestureRecognizer(revealViewController.panGestureRecognizer());
+        }
+        
+        // pull down to refresh init
+        self.refreshControl =  UIRefreshControl();
+        self.refreshControl?.backgroundColor = UIColor.whiteColor();
+        self.refreshControl?.tintColor = UIColor.grayColor();
+        self.refreshControl?.addTarget(self, action: "updateData:", forControlEvents: UIControlEvents.ValueChanged);
+        
+    }
+    
+    // pull down to refresh function - get new data from server and refresh view
+    func updateData(sender : UIRefreshControl!){
+        getJSON();
+        self.tableView.reloadData();
+        if ((self.refreshControl) != nil) {
+            // add date to refresh view
+            var formatter : NSDateFormatter = NSDateFormatter();
+            formatter.dateFormat = "MMM d, h:mm a";
+            var date = formatter.stringFromDate(NSDate());
+            var title = "Updated \(date)";
+            var attrs = NSDictionary(object: UIColor.grayColor(), forKey: NSForegroundColorAttributeName);
+            var attrTit = NSAttributedString(string: title, attributes: attrs);
+            self.refreshControl?.attributedTitle = attrTit;
+            self.refreshControl?.endRefreshing();
+        }
+    }
+
+    ///////////////////////////////////// View functions ///////////////////////////////////////
+    
+    override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // assign cell to view
+        let tableId = "NewsCell";
+        var cell = tableView.dequeueReusableCellWithIdentifier(tableId) as? UITableViewCell;
+        if !(cell != nil) {
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableId);
+        }
+        
+        // assign data to views
+        var image: UIImageView? = cell!.viewWithTag(101) as? UIImageView;
+        image?.image = images[indexPath.row];
+        var date: UILabel? = cell!.viewWithTag(102) as? UILabel;
+        date?.text = dates[indexPath.row];
+        var title: UITextView? = cell!.viewWithTag(103) as? UITextView;
+        title?.text = titles[indexPath.row];
+        title?.font = UIFont(name: "HelveticaNeue-Light", size: 17);
+        
+        // clear background
+        cell?.backgroundColor = UIColor.clearColor()
+        cell?.selectionStyle = UITableViewCellSelectionStyle.None;
+        return cell!
+    }
+    
+    // news clicked to show details
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "showNewsDetail"){
+            let row = self.tableView.indexPathForSelectedRow()?.row;
+            var destViewController : NewsDetailViewController = segue.destinationViewController as NewsDetailViewController;
+            
+            // pass data to detailed view
+            destViewController.idVal = id[row!];
+            destViewController.photoVal = images[row!];
+            destViewController.titleVal = titles[row!];
+            destViewController.dateVal = dates[row!];
+        }
+    }
+
+    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return titles.count
+    }
+
+    override public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 110
+    }
+    
+    ///////////////////////////////////// Server functions /////////////////////////////////////
+    
     public func getJSON() -> Int {
+        
+        // clear arrays
         images.removeAll(keepCapacity: true);
         authors.removeAll(keepCapacity: true);
         titles.removeAll(keepCapacity: true);
         dates.removeAll(keepCapacity: true);
         id.removeAll(keepCapacity: true);
         
+        // lannguage check
         var url = "";
-        
-        
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
             url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/news";
             self.title = "Aktualności";
@@ -80,6 +175,8 @@ public class NewsViewController: UITableViewController {
             url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/news?lang=en_US";
             self.title = "News";
         }
+        
+        // parse json to arrays
         let json = JSON(url:url);
         for (k, v) in json {
             for (i,j) in v {
@@ -106,112 +203,9 @@ public class NewsViewController: UITableViewController {
                 }
             }
         }
-        loader.stopAnimating()
-        
         return json.length;
-        
     }
     
-    
-    func customSetup(){
-        var revealViewController = self.revealViewController();
-        if(revealViewController != nil){
-            self.revealButtonItem.target = revealViewController;
-            self.revealButtonItem.action = "revealToggle:";
-            self.navigationController?.navigationBar.addGestureRecognizer(revealViewController.panGestureRecognizer());
-            view.addGestureRecognizer(revealViewController.panGestureRecognizer());
-        }
 
-        self.refreshControl =  UIRefreshControl();
-        self.refreshControl?.backgroundColor = UIColor.whiteColor();
-        self.refreshControl?.tintColor = UIColor.grayColor();
-        self.refreshControl?.addTarget(self, action: "updateData:", forControlEvents: UIControlEvents.ValueChanged);
-        
-    }
-    
-    func updateData(sender : UIRefreshControl!){
-        // Reload table data
-        getJSON();
-        self.tableView.reloadData();
-        
-        // End the refreshing
-        if ((self.refreshControl) != nil) {
-            
-            var formatter : NSDateFormatter = NSDateFormatter();
-            formatter.dateFormat = "MMM d, h:mm a";
-            var date = formatter.stringFromDate(NSDate());
-            var title = "Updated \(date)";
-            var attrs = NSDictionary(object: UIColor.grayColor(), forKey: NSForegroundColorAttributeName);
-            var attrTit = NSAttributedString(string: title, attributes: attrs);
-            self.refreshControl?.attributedTitle = attrTit;
-            self.refreshControl?.endRefreshing();
-        }
-        
-        
-    }
-    
-    
-    public override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let tableId = "NewsCell";
-        var cell = tableView.dequeueReusableCellWithIdentifier(tableId) as? UITableViewCell;
-        if !(cell != nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableId);
-        }
-        var image: UIImageView? = cell!.viewWithTag(101) as? UIImageView;
-        image?.image = images[indexPath.row];
-        var date: UILabel? = cell!.viewWithTag(102) as? UILabel;
-        date?.text = dates[indexPath.row];
-        var title: UITextView? = cell!.viewWithTag(103) as? UITextView;
-        title?.text = titles[indexPath.row];
-        title?.font = UIFont(name: "HelveticaNeue-Light", size: 17);
-        cell?.backgroundColor = UIColor.clearColor()
-        cell?.selectionStyle = UITableViewCellSelectionStyle.None;
-        return cell!
-    }
-    
-    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "showNewsDetail"){
-            let row = self.tableView.indexPathForSelectedRow()?.row;
-            var destViewController : NewsDetailViewController = segue.destinationViewController as NewsDetailViewController;
-            destViewController.idVal = id[row!];
-            destViewController.photoVal = images[row!];
-            destViewController.titleVal = titles[row!];
-            destViewController.dateVal = dates[row!];
-        }
-    }
-    // MARK: - Table view data source
-    
-    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 1
-    }
-    
-    
-    
-    override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return titles.count
-    }
-    
-    //    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    //        return 10
-    //    }
-    
-    //    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    //        var h_view : UIView = UIView();
-    //        h_view.backgroundColor = UIColor.lightGrayColor();
-    //        return h_view
-    //    }
-    
-    override public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 110
-    }
     
 }
