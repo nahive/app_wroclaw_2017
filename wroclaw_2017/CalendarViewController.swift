@@ -33,6 +33,9 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         return s1 > s2
     }
     
+    // loading icon
+    var loader = UIActivityIndicatorView();
+    
     ///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
@@ -47,8 +50,14 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         var scroll: UIScrollView! = datePicker.subviews[0] as UIScrollView;
         scroll.frame = CGRectMake(0, 0, view.frame.width, datePicker.frame.height);
         
-        // get data from view
-        getJSON();
+        // loading icon
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
+        loader.frame = CGRectMake(0,0,80,80);
+        loader.center = self.view.center;
+        self.view.addSubview(loader);
+        loader.bringSubviewToFront(self.view);
+        loader.startAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -62,7 +71,12 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     override func viewDidAppear(animated: Bool) {
+        // get data from view
+        getJSON();
+        tableView.reloadData();
+        
         // init scroll and fade in
+        loader.stopAnimating();
         var scroll: UIScrollView! = datePicker.subviews[0] as UIScrollView;
         scroll.frame = CGRectMake(0, 0, view.frame.width, datePicker.frame.height);
         Utils.fadeIn(tableView,duration: 0.6);
@@ -108,23 +122,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         Utils.fadeIn(tableView,duration: 0.6);
     }
     
-    // prepare data for detailed view
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "showCalendarDetail"){
-            let row = self.tableView.indexPathForSelectedRow()?.row;
-            var destViewController : CalendarDetailViewController = segue.destinationViewController as CalendarDetailViewController;
-            var cell: UITableViewCell = tableView.cellForRowAtIndexPath(self.tableView.indexPathForSelectedRow()!)!;
-            var id: UILabel = cell.viewWithTag(203) as UILabel;
-            var index: Int = find(allId, id.text!)!;
-            
-            // pass data
-            destViewController.titleVal = allEvents[index];
-            destViewController.timeVal = allTimes[index];
-            var dateFormat = NSDateFormatter();
-            var dateStr = dateFormat.stringFromDate(datePicker.selectedDate);
-            destViewController.dateVal = dateStr;
-        }
-    }
     
     ///////////////////////////////////// View functions ///////////////////////////////////////
     

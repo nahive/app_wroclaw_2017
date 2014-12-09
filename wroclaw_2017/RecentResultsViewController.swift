@@ -26,13 +26,21 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
     var refreshControl: UIRefreshControl = UIRefreshControl();
     
     @IBOutlet weak var tableView: UITableView!
-    
+
     ///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
-        getJSON();
+        
+        // loading icon
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
+        loader.frame = CGRectMake(0,0,80,80);
+        loader.center = self.view.center;
+        self.view.addSubview(loader);
+        loader.bringSubviewToFront(self.view);
+        loader.startAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +48,11 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
+        getJSON();
+        tableView.reloadData();
+        loader.stopAnimating();
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        
     }
     
     ///////////////////////////////////// Custom functions /////////////////////////////////////
@@ -146,7 +158,6 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
         countryLabel.text = currentResult["country"];
         
         var url: NSURL = NSURL(string: "https://2017.wroclaw.pl/"+currentResult["flag"]!)!;
-        println(url);
         var data: NSData = NSData(contentsOfURL: url)!;
         iconImage.image = (UIImage(data: data)!);
         
@@ -188,8 +199,6 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
         var whichFirst = 0;
         var lastSport: String = "";
         var idFirst: Bool = true;
-        
-        println(json);
         
         for (k, v) in json {
             for (i,j) in v {

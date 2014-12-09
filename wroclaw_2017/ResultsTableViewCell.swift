@@ -10,13 +10,13 @@ import UIKit
 
 class ResultsTableViewCell: UITableViewCell {
     
-    var screen = UIScreen.mainScreen().bounds;
+   // var screen = UIScreen.mainScreen().bounds;
 
     
     @IBOutlet weak var contentW: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentW.constant = screen.width;
+       // contentW.constant = screen.width;
     }
     
     override func setSelected(selected: Bool, animated: Bool) {

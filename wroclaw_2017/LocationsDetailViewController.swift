@@ -32,7 +32,7 @@ class LocationsDetailViewController: UIViewController {
     // latitude of object
     var lat: Double = 0;
     var lng: Double = 0;
-
+    
     // latitude of my location
     var myLng: Double = 0;
     var myLat: Double = 0;
@@ -60,15 +60,30 @@ class LocationsDetailViewController: UIViewController {
         
     }
     
+    // loading icon
+    var loader = UIActivityIndicatorView();
+    
     ///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fillFromSegue();
+        hideElements();
+        
+        // loading icon
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
+        loader.frame = CGRectMake(0,0,80,80);
+        loader.center = self.view.center;
+        self.view.addSubview(loader);
+        loader.bringSubviewToFront(self.view);
+        loader.startAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
     }
     
     override func viewDidAppear(animated: Bool) {
-       customSetup()
+        customSetup();
+        loader.stopAnimating();
+        showElements();
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,6 +92,14 @@ class LocationsDetailViewController: UIViewController {
     
     ///////////////////////////////////// Custom functions /////////////////////////////////////
     
+    func hideElements() {
+        mapImage.alpha = 0.0;
+        mapPlace.alpha = 0.0;
+        mapTitle.alpha = 0.0;
+        mapContent.alpha = 0.0;
+        scrollView.alpha = 0.0;
+    }
+    
     // fill data from segue
     func fillFromSegue(){
         self.title = titleVal;
@@ -84,6 +107,14 @@ class LocationsDetailViewController: UIViewController {
         mapPlace.text = placeVal;
         mapImage.image = imageVal;
         getJSON();
+    }
+    
+    func showElements() {
+        Utils.fadeIn(mapImage,duration: 0.3, delay: 0.0);
+        Utils.fadeIn(mapPlace,duration: 0.5, delay: 0.5);
+        Utils.fadeIn(mapTitle,duration: 0.5, delay: 0.5);
+        Utils.fadeIn(mapContent,duration: 0.5, delay: 0.5);
+        Utils.fadeIn(scrollView,duration: 0.3, delay: 0.5);
     }
     
     // position views
@@ -100,8 +131,8 @@ class LocationsDetailViewController: UIViewController {
         scrollViewH.constant = view.frame.size.height;
         scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
     }
-
-
+    
+    
     ///////////////////////////////////// Server functions /////////////////////////////////////
     
     // get data from server
@@ -133,6 +164,6 @@ class LocationsDetailViewController: UIViewController {
         }
         
     }
-
-
+    
+    
 }

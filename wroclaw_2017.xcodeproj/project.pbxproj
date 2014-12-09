@@ -10,7 +10,6 @@
 		4C0E6ED41A0922C9006A22D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E6ED31A0922C9006A22D7 /* Main.storyboard */; };
 		4C39069A1A2E244700DD1A54 /* NotificationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3906991A2E244700DD1A54 /* NotificationJSON.swift */; };
 		4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CF7381A0058BF005D5D95 /* Utils.swift */; };
-		4C3D16301A076C85001EBDA7 /* CalendarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */; };
 		4C3D16321A076EE6001EBDA7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D16311A076EE6001EBDA7 /* MapKit.framework */; };
 		4C3F8F971A0A776C0066F3F7 /* bg_news.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F8F961A0A776C0066F3F7 /* bg_news.jpg */; };
 		4C3F8F9B1A0A79550066F3F7 /* news1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F8F981A0A79550066F3F7 /* news1.jpg */; };
@@ -78,6 +77,7 @@
 		4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3471A004B65006DE05C /* DIDatepicker.m */; };
 		4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */; };
 		4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */; };
+		4CF84D021A376D65005E528C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF84D011A376D65005E528C /* Reachability.swift */; };
 		D422AFD11A1C9DBB00A62C32 /* LocationsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422AFD01A1C9DBB00A62C32 /* LocationsDetailViewController.swift */; };
 		D422AFD31A1CA45900A62C32 /* route.png in Resources */ = {isa = PBXBuildFile; fileRef = D422AFD21A1CA45900A62C32 /* route.png */; };
 		D42821871A2DDBF40087546F /* navi.png in Resources */ = {isa = PBXBuildFile; fileRef = D42821861A2DDBF40087546F /* navi.png */; };
@@ -115,7 +115,6 @@
 		4C0E6ED31A0922C9006A22D7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4C3906991A2E244700DD1A54 /* NotificationJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationJSON.swift; sourceTree = "<group>"; };
 		4C3CF7381A0058BF005D5D95 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDetailViewController.swift; sourceTree = "<group>"; };
 		4C3D16311A076EE6001EBDA7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4C3F8F961A0A776C0066F3F7 /* bg_news.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_news.jpg; sourceTree = "<group>"; };
 		4C3F8F981A0A79550066F3F7 /* news1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news1.jpg; sourceTree = "<group>"; };
@@ -189,6 +188,7 @@
 		4CC9A3481A004B65006DE05C /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
 		4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
 		4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		4CF84D011A376D65005E528C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D422AFD01A1C9DBB00A62C32 /* LocationsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDetailViewController.swift; sourceTree = "<group>"; };
 		D422AFD21A1CA45900A62C32 /* route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = route.png; sourceTree = "<group>"; };
 		D42821861A2DDBF40087546F /* navi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navi.png; sourceTree = "<group>"; };
@@ -320,7 +320,6 @@
 				D45996451A120372002B1059 /* DisciplineViewController.swift */,
 				D45996531A1229D9002B1059 /* DisciplineDetailViewController.swift */,
 				4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */,
-				4C3D162F1A076C85001EBDA7 /* CalendarDetailViewController.swift */,
 				4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */,
 				D422AFD01A1C9DBB00A62C32 /* LocationsDetailViewController.swift */,
 				D4DF74621A264556001DA427 /* MedalsViewController.swift */,
@@ -388,6 +387,7 @@
 		4C9B836819F70BE800B68B88 /* support */ = {
 			isa = PBXGroup;
 			children = (
+				4CF84D011A376D65005E528C /* Reachability.swift */,
 				4CBBDF0C1A35E16800E0C135 /* ui_support */,
 				D45996551A13993D002B1059 /* json.swift */,
 				4CC9A3461A004B65006DE05C /* DIDatepicker.h */,
@@ -573,7 +573,6 @@
 			files = (
 				4CBBDF0E1A35E27B00E0C135 /* MedalsTableViewCell.swift in Sources */,
 				4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */,
-				4C3D16301A076C85001EBDA7 /* CalendarDetailViewController.swift in Sources */,
 				D4C38E321A20AE380056EA87 /* SelectFollowTableViewController.swift in Sources */,
 				4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */,
 				D4C38E2C1A208CE60056EA87 /* SettingsViewController.swift in Sources */,
@@ -586,6 +585,7 @@
 				D4DF74651A26455F001DA427 /* RecentResultsViewController.swift in Sources */,
 				D4C38E301A20AE220056EA87 /* SelectLanguageTableViewController.swift in Sources */,
 				4C4C75991A35DBA900D89546 /* InfoTableViewCell.swift in Sources */,
+				4CF84D021A376D65005E528C /* Reachability.swift in Sources */,
 				4C9B832C19F6F5A800B68B88 /* AppDelegate.swift in Sources */,
 				4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */,
 				4C4B9E041A09FFF000F60266 /* InfoViewController.swift in Sources */,

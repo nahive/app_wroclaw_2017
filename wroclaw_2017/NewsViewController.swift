@@ -12,6 +12,7 @@ public class NewsViewController: UITableViewController {
     
     // menu button
     @IBOutlet weak var revealButtonItem: UIBarButtonItem!
+    var screen =  UIScreen.mainScreen().bounds;
     
     // data arrays for news content
     var images: [UIImage] = [];
@@ -22,6 +23,9 @@ public class NewsViewController: UITableViewController {
     
     // loading icon
     var loader = UIActivityIndicatorView();
+    
+    //helper
+    var noInternetView: UIView = UIView();
     
     ///////////////////////////////////// System functions /////////////////////////////////////
     
@@ -42,6 +46,30 @@ public class NewsViewController: UITableViewController {
         loader.bringSubviewToFront(self.view);
         loader.startAnimating();
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
+        
+        //Test internet connection
+        if Reachability.isConnectedToNetwork() {
+            revealButtonItem.image = UIImage(named: "reveal-icon.png");
+            revealButtonItem.enabled = true;
+            noInternetView.removeFromSuperview();
+        } else {
+            noInternetView.frame = CGRectMake(10, (screen.height/2)-50, screen.width-20, 50);
+            noInternetView.backgroundColor = UIColor.whiteColor();
+            var noInternetLabel: UILabel = UILabel();
+            noInternetLabel.frame = CGRectMake(10, 10, screen.width-40, 30);
+            if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+                noInternetLabel.text = "Brak połączenia z internetem.";
+            } else if (NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage")){
+                noInternetLabel.text = "No internet connection.";
+            }
+            noInternetLabel.textAlignment = NSTextAlignment.Center;
+            noInternetLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 21);
+            noInternetView.addSubview(noInternetLabel);
+            view.addSubview(noInternetView);
+            revealButtonItem.style = UIBarButtonItemStyle.Plain;
+            revealButtonItem.enabled = false;
+            revealButtonItem.image = nil;
+        }
     }
     
     
@@ -101,6 +129,30 @@ public class NewsViewController: UITableViewController {
             var attrTit = NSAttributedString(string: title, attributes: attrs);
             self.refreshControl?.attributedTitle = attrTit;
             self.refreshControl?.endRefreshing();
+        }
+        
+        //Test internet connection
+        if Reachability.isConnectedToNetwork() {
+            revealButtonItem.image = UIImage(named: "reveal-icon.png");
+            revealButtonItem.enabled = true;
+            noInternetView.removeFromSuperview();
+        } else {
+            noInternetView.frame = CGRectMake(10, (screen.height/2)-50, screen.width-20, 50);
+            noInternetView.backgroundColor = UIColor.whiteColor();
+            var noInternetLabel: UILabel = UILabel();
+            noInternetLabel.frame = CGRectMake(10, 10, screen.width-40, 30);
+            if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+                noInternetLabel.text = "Brak połączenia z internetem.";
+            } else if (NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage")){
+                noInternetLabel.text = "No internet connection.";
+            }
+            noInternetLabel.textAlignment = NSTextAlignment.Center;
+            noInternetLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 21);
+            noInternetView.addSubview(noInternetLabel);
+            view.addSubview(noInternetView);
+            revealButtonItem.style = UIBarButtonItemStyle.Plain;
+            revealButtonItem.enabled = false;
+            revealButtonItem.image = nil;
         }
     }
 

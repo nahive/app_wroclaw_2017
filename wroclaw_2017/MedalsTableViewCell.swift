@@ -12,7 +12,7 @@ class MedalsTableViewCell: UITableViewCell {
     
     var screen = UIScreen.mainScreen().bounds;
     
-    @IBOutlet weak var contentW: NSLayoutConstraint!
+//    @IBOutlet weak var contentW: NSLayoutConstraint!
     
     @IBOutlet weak var gold: UILabel!
     @IBOutlet weak var silver: UILabel!
@@ -20,7 +20,7 @@ class MedalsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentW.constant = screen.width;
+//        contentW.constant = screen.width;
         
     }
     

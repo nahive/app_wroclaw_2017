@@ -29,10 +29,22 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
     var selectedDisciplies: [NSString] = [];
     var selectedShort: [NSString] = [];
     
+    // loading icon
+    var loader = UIActivityIndicatorView();
+    
     ///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // loading icon
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
+        loader.frame = CGRectMake(0,0,80,80);
+        loader.center = self.view.center;
+        self.view.addSubview(loader);
+        loader.bringSubviewToFront(self.view);
+        loader.startAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -51,6 +63,7 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
                 selectedDisciplies.append(names[index]);
             }
         }
+        loader.stopAnimating();
     }
     
     override func didReceiveMemoryWarning() {
@@ -387,6 +400,10 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
                         if (!(categoryLanguages.isEmpty) && previousCategory != "null") {
                             println(categoryLanguages);
                             follows.updateValue(categoryLanguages, forKey: previousCategory);
+                        }
+                        if ifRemove {
+                            categoryLanguages.removeAll(keepCapacity: true);
+                            ifRemove = false;
                         }
                         lastCategory = j.toString(pretty: true);
                         previousCategory = j.toString(pretty: true);

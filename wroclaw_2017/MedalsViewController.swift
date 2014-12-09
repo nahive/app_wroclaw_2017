@@ -17,6 +17,8 @@ class MedalsViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var medalsIcon: UITabBarItem!
     var screen =  UIScreen.mainScreen().bounds;
     
+    @IBOutlet weak var tableView: UITableView!
+    
     // data from server
     var positions: [String] = [];
     var bronze_medals: [String] = [];
@@ -24,13 +26,31 @@ class MedalsViewController: UIViewController, UITableViewDelegate {
     var silver_medals: [String] = [];
     var names: [String] = [];
     var gold_medals: [String] = [];
+    
+    // loading icon
+    var loader = UIActivityIndicatorView();
 
     ///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customSetup();
+        
+        // loading icon
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
+        loader.frame = CGRectMake(0,0,80,80);
+        loader.center = self.view.center;
+        self.view.addSubview(loader);
+        loader.bringSubviewToFront(self.view);
+        loader.startAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
+       
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         getJSON();
+        tableView.reloadData();
+        loader.stopAnimating();
     }
 
     override func didReceiveMemoryWarning() {
@@ -156,7 +176,6 @@ class MedalsViewController: UIViewController, UITableViewDelegate {
         }
         
         let json = JSON(url:url);
-        println(json);
         
         for (k, v) in json {
             for (i,j) in v {

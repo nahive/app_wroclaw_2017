@@ -22,12 +22,7 @@ class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var insideView: UIView!
     
-    // constrains
-    @IBOutlet weak var scrollViewH: NSLayoutConstraint!
-    @IBOutlet weak var insideViewH: NSLayoutConstraint!
-    @IBOutlet weak var insideViewW: NSLayoutConstraint!
     @IBOutlet weak var insideContentView: UIView!
-    @IBOutlet weak var insideContentViewH: NSLayoutConstraint!
     
     var screen =  UIScreen.mainScreen().bounds;
     
@@ -38,19 +33,32 @@ class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
     var photoVal = UIImage();
     
     
+    // loading icon
+    var loader = UIActivityIndicatorView();
+    
     ///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideElements();
         fillFromSegue();
+        // loading icon
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
+        loader.frame = CGRectMake(0,0,80,80);
+        loader.center = self.view.center;
+        self.view.addSubview(loader);
+        loader.bringSubviewToFront(self.view);
+        loader.startAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
     }
     
     override func viewDidLayoutSubviews() {
     }
     
     override func viewDidAppear(animated: Bool) {
+        getJSON();
         customSetup();
+        loader.stopAnimating();
         showElements();
     }
     
@@ -61,6 +69,10 @@ class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    deinit {
+        scrollView.delegate = nil;
+    }
+    
     ///////////////////////////////////// Custom functions /////////////////////////////////////
     
     // fill info from previous view
@@ -69,8 +81,6 @@ class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
         newsDate.text = dateVal;
         newsTitle.text = titleVal;
         newsImage.image = photoVal;
-        getJSON();
-        
     }
     
     // parallax function
@@ -111,9 +121,10 @@ class NewsDetailViewController: UIViewController, UIScrollViewDelegate {
         newsTitle.frame.origin = CGPointMake(20, newsDate.frame.origin.y + newsDate.frame.size.height + 5);
         author.frame = CGRectMake(20, newsTitle.frame.origin.y+newsTitle.frame.size.height, screen.size.width/2, author.frame.height);
         newsContent.frame.origin = CGPointMake(20, newsTitle.frame.origin.y+newsTitle.frame.size.height+40);
-        insideViewH.constant = newsImage.frame.height+newsDate.frame.height + newsTitle.frame.height + newsContent.frame.height + author.frame.height + 75;
-        scrollViewH.constant = view.frame.size.height;
-        scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, insideViewH.constant);
+        var contentH = newsImage.frame.height+newsDate.frame.height + newsTitle.frame.height + newsContent.frame.height + author.frame.height + 75;
+//        insideViewH.constant = newsImage.frame.height+newsDate.frame.height + newsTitle.frame.height + newsContent.frame.height + author.frame.height + 75;
+//        scrollViewH.constant = view.frame.size.height;
+        scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, contentH);
     }
 
     

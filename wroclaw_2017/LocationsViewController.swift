@@ -23,7 +23,7 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     var seenError : Bool = false
     var locationFixAchieved : Bool = false
     var locationStatus : NSString = "Not Started"
-
+    
     // locations server data
     var locationImages: [UIImage] = [];
     var locationNames: [String] = [];
@@ -81,7 +81,7 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     }
     
     ///////////////////////////////////// Custom functions /////////////////////////////////////
-
+    
     // check language
     override func viewWillAppear(animated: Bool) {
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
@@ -166,10 +166,13 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
         var coords = CLLocationCoordinate2DMake(x, y);
         mapView.setCenterCoordinate(coords, animated: true)
     }
-
+    
     // set markers for locations
     func setMarkers() {
-        var address: [String: String] = [:]
+        if (!(mapView.annotations.isEmpty)) {
+            return;
+        }
+        var address: [String: String] = [:];
         var location: CLLocationCoordinate2D;
         var placeMark: MKPointAnnotation;
         for i in 0...locationId.count-1 {
@@ -246,7 +249,7 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
             let row = find(locationNames,clickedAnnotation);
             println(row);
             var destViewController : LocationsDetailViewController = segue.destinationViewController as LocationsDetailViewController;
-          
+            
             destViewController.imageVal = locationImages[row!];
             destViewController.titleVal = locationNames[row!];
             destViewController.placeVal = locationsAddress[row!];
@@ -277,7 +280,7 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
             setMapToLocation(coord.latitude, longitude: coord.longitude, scale50KM: 0.025)
         }
     }
-
+    
     // authorize location services
     func locationManager(manager: CLLocationManager!,
         didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -314,7 +317,14 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     func getJSON() {
         
-        // lannguage check
+        locationImages.removeAll(keepCapacity: true);
+        locationNames.removeAll(keepCapacity: true);
+        locationsAddress.removeAll(keepCapacity: true);
+        locationLat.removeAll(keepCapacity: true);
+        locationLng.removeAll(keepCapacity: true);
+        locationId.removeAll(keepCapacity: true);
+        locationContent.removeAll(keepCapacity: true);
+        
         var url = "";
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
             url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/location";

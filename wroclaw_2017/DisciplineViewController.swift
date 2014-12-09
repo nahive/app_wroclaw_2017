@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DisciplineViewController: UITableViewController, UITableViewDelegate {
+class DisciplineViewController: UITableViewController, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate {
     
     // menu button
     @IBOutlet weak var barButtonItem: UIBarButtonItem!
@@ -26,9 +26,13 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     var locations: [String] = [];
     var id: [String] = [];
     var numberOfImage: Int = 0;
+    var searchResults: [String] = [];
     
     // loader icon
     var loader = UIActivityIndicatorView();
+    
+    //helper
+    var searchRowSelected: String = "";
     
     ///////////////////////////////////// System functions /////////////////////////////////////
     
@@ -36,19 +40,13 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         super.viewDidLoad()
         customSetup();
         
-        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge);
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
         loader.frame = CGRectMake(0,0,80,80);
         loader.center = self.view.center;
         self.view.addSubview(loader);
         loader.bringSubviewToFront(self.view);
         loader.startAnimating();
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -85,35 +83,63 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         view.addGestureRecognizer(revealViewController.panGestureRecognizer());
     }
     
-    ///////////////////////////////////// View functions ///////////////////////////////////////
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return disciplinesSectionTitles.count;
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var sectionTitle: String = disciplinesSectionTitles[section];
-        var sectionEvents: [String] = disciplines[sectionTitle]!;
-        return sectionEvents.count;
-    }
-    
     // pass info to detailed view
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "showDisciplineDetail"){
-            let row = self.tableView.indexPathForSelectedRow()?.row;
-            var cell: UITableViewCell = tableView.cellForRowAtIndexPath(self.tableView.indexPathForSelectedRow()!)!;
-            var followName: UILabel = cell.viewWithTag(102) as UILabel;
-            var index: Int = find(names, followName.text!)!;
+            var index: Int = 0;
+            if (self.tableView.indexPathForSelectedRow() != nil) {
+                let row = self.tableView.indexPathForSelectedRow()?.row;
+                var cell: UITableViewCell = tableView.cellForRowAtIndexPath(self.tableView.indexPathForSelectedRow()!)!;
+                var followName: UILabel = cell.viewWithTag(102) as UILabel;
+                index = find(names, followName.text!)!;
+            } else {
+                index = find(names, searchRowSelected)!;
+            }
             var destViewController : DisciplineDetailViewController = segue.destinationViewController as DisciplineDetailViewController;
             destViewController.idVal = id[index];
+            println(id[index]);
             destViewController.locationVal = locations[index];
             destViewController.titleVal = names[index];
+            println(names[index]);
+        }
+    }
+    
+    ///////////////////////////////////// View functions ///////////////////////////////////////
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        if(tableView == self.searchDisplayController!.searchResultsTableView){
+            return 1;
+        } else {
+            return disciplinesSectionTitles.count;
+        }
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (tableView == self.searchDisplayController!.searchResultsTableView) {
+            return searchResults.count;
+        } else {
+            var sectionTitle: String = disciplinesSectionTitles[section];
+            var sectionEvents: [String] = disciplines[sectionTitle]!;
+            return sectionEvents.count;
         }
     }
     
     // header view
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var sectionHeaderView: UIView = UIView();
+        if (tableView == self.searchDisplayController!.searchResultsTableView) {
+            var title: UILabel = UILabel();
+            title.frame = CGRectMake(5, 0, 300, 30);
+            title.backgroundColor = UIColor.whiteColor();
+            if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
+                title.text = "Wyniki wyszukiwania:";
+            } else {
+                title.text = "Search results:";
+            }
+            sectionHeaderView.addSubview(title);
+            return sectionHeaderView;
+        }
+        
         sectionHeaderView.frame = CGRectMake(10, 10, screen.width, 30);
         sectionHeaderView.backgroundColor = Utils.colorize(0xffffff);
         
@@ -138,7 +164,7 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 50
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // assign view to cell
@@ -147,25 +173,89 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         if !(cell != nil) {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableId);
         }
-        
-        // assign data to views
         var disciplineName: UILabel? = cell!.viewWithTag(102) as? UILabel;
         var image: UIImageView? = cell!.viewWithTag(101) as? UIImageView;
-        image?.backgroundColor = Utils.colorize(0x605196);
-        image?.layer.cornerRadius = 8;
-
-        var sectionTitle: String = disciplinesSectionTitles[indexPath.section];
-        var sectionImages: [UIImage] = imagesDictionary[sectionTitle]!;
-        var sectionEvents: [String] = disciplines[sectionTitle]!;
+        var index : Int;
+        var imageView: UIImageView = UIImageView();
+        imageView.frame = CGRectMake(19, 5, 30, 30);
+        imageView.backgroundColor = Utils.colorize(0x605196);
+        imageView.layer.cornerRadius = 8;
         
-        var event: String = sectionEvents[indexPath.row];
-        var currentImage: UIImage = sectionImages[indexPath.row];
-        image?.image = currentImage;
-        
-        disciplineName?.text = event;
-        disciplineName?.font = UIFont(name: "HelveticaNeue-Light", size: 22);
-        cell?.selectionStyle = UITableViewCellSelectionStyle.None;
+        //return cell for search results
+        if (tableView == self.searchDisplayController!.searchResultsTableView) {
+            var event: String = searchResults[indexPath.row];
+            index = find(names, event)!;
+            var currentImage: UIImage = icons[index];
+            var numberOfSubviews: Int = cell?.subviews.count as Int!;
+            for index in 0...numberOfSubviews-1 {
+                if (index > -1) {
+                    if (cell?.subviews[index] is UILabel) {
+                        cell?.subviews[index].removeFromSuperview();
+                        break;
+                    }
+                }
+            }
+            var label: UILabel = UILabel();
+            label.text = event;
+            label.font = UIFont(name: "HelveticaNeue-Thin", size: 21);
+            label.frame = CGRectMake(60, 5, 300, 30);
+            label.textAlignment = NSTextAlignment.Left;
+            cell?.addSubview(label);
+            imageView.image = currentImage;
+            cell?.addSubview(imageView);
+        } else {
+            // assign data to views
+            
+            var sectionTitle: String = disciplinesSectionTitles[indexPath.section];
+            var sectionImages: [UIImage] = imagesDictionary[sectionTitle]!;
+            var sectionEvents: [String] = disciplines[sectionTitle]!;
+            var event: String = sectionEvents[indexPath.row];
+            var currentImage: UIImage = sectionImages[indexPath.row];
+            imageView.image = currentImage;
+            cell?.addSubview(imageView);
+            disciplineName?.text = event;
+            disciplineName?.font = UIFont(name: "HelveticaNeue-Light", size: 22);
+            cell?.selectionStyle = UITableViewCellSelectionStyle.None;
+        }
         return cell!
+    }
+    
+    func filterContentForSearchText(searchText: String) {
+        searchResults = names.filter({(name: String) -> Bool in
+            let stringMatch = name.lowercaseString.rangeOfString(searchText.lowercaseString)
+            return stringMatch != nil
+        })
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        self.filterContentForSearchText(searchString)
+        return true
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+        return true
+    }
+    
+    func searchDisplayControllerDidEndSearch(controller: UISearchDisplayController) {
+        tableView.reloadData();
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (tableView == self.searchDisplayController!.searchResultsTableView) {
+            var cell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!;
+            var numberOfSubviews: Int = cell.subviews.count as Int!;
+            for index in 0...numberOfSubviews-1 {
+                if (index > -1) {
+                    if (cell.subviews[index] is UILabel) {
+                        var label: UILabel = cell.subviews[index] as UILabel;
+                        searchRowSelected = label.text!;
+                        break;
+                    }
+                }
+            }
+            performSegueWithIdentifier("showDisciplineDetail", sender: self);
+        }
     }
     
     ///////////////////////////////////// Server functions /////////////////////////////////////
@@ -197,7 +287,7 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         // check dependency
         var firstIconNotNull = true;
         var lastCategory: String = "";
-    
+        
         for (k, v) in json {
             for (i,j) in v {
                 switch i as NSString {
@@ -213,8 +303,10 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
                     var img = UIImage(named: str);
                     if img != nil {
                         categoryIcons.append(img!);
+                        icons.append(img!);
                     } else {
                         categoryIcons.append(UIImage(named: "aikido.png")!);
+                        icons.append(UIImage(named: "aikido.png")!);
                     }
                     break;
                 case "name":
@@ -274,5 +366,5 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate {
         disciplinesSectionTitles = disciplinesSectionTitles.sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending };
         
     }
-
+    
 }

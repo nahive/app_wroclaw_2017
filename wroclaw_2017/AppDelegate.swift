@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum);
         let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings);
+        
+        
       
         return true
     }

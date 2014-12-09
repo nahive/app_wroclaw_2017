@@ -46,6 +46,9 @@ class DisciplineDetailViewController: UIViewController {
     }
     
     
+    // loading icon
+    var loader = UIActivityIndicatorView();
+    
     var screen = UIScreen.mainScreen().bounds;
     
     // discipline info
@@ -74,10 +77,21 @@ class DisciplineDetailViewController: UIViewController {
             }
         }
         
+        // loading icon
+        loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
+        loader.frame = CGRectMake(0,0,80,80);
+        loader.center = self.view.center;
+        self.view.addSubview(loader);
+        loader.bringSubviewToFront(self.view);
+        loader.startAnimating();
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
+        
     }
     
     override func viewDidAppear(animated: Bool) {
+        getJSON();
         customSetup()
+        loader.stopAnimating();
         showElements();
     }
 
@@ -93,7 +107,6 @@ class DisciplineDetailViewController: UIViewController {
         self.title = titleVal;
         disTitle.text = titleVal;
         disPlace.text = placeVal;
-        getJSON();
     }
     
     // hide views for transition
@@ -135,10 +148,8 @@ class DisciplineDetailViewController: UIViewController {
         var url = "";
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
             url = "https://2017.wroclaw.pl/mobile/discipline/view/"+idVal;
-            self.title = "Aktualności";
         } else {
             url = "https://2017.wroclaw.pl/mobile/discipline/view/"+idVal+"?lang=en_US";
-            self.title = "News";
         }
         
         //get data
