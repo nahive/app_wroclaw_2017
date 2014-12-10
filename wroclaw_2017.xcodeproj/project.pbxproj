@@ -78,6 +78,7 @@
 		4CBAFCAD1A370FFB0097813C /* InfoMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAFCAC1A370FFB0097813C /* InfoMenuViewController.swift */; };
 		4CBBDF0E1A35E27B00E0C135 /* MedalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBDF0D1A35E27B00E0C135 /* MedalsTableViewCell.swift */; };
 		4CBBDF101A35E29700E0C135 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBDF0F1A35E29700E0C135 /* ResultsTableViewCell.swift */; };
+		4CBD620E1A385F8100751777 /* wroclaw_2017_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD620D1A385F8100751777 /* wroclaw_2017_Tests.swift */; };
 		4CC9A34A1A004B65006DE05C /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3471A004B65006DE05C /* DIDatepicker.m */; };
 		4CC9A34B1A004B65006DE05C /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A3491A004B65006DE05C /* DIDatepickerDateView.m */; };
 		4CC9A34D1A004B91006DE05C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9A34C1A004B91006DE05C /* CalendarViewController.swift */; };
@@ -114,6 +115,16 @@
 		D4DF74631A264556001DA427 /* MedalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF74621A264556001DA427 /* MedalsViewController.swift */; };
 		D4DF74651A26455F001DA427 /* RecentResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF74641A26455F001DA427 /* RecentResultsViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CBD620F1A385F8100751777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C9B831E19F6F5A800B68B88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C9B832519F6F5A800B68B88;
+			remoteInfo = wroclaw_2017;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4C0E6ED31A0922C9006A22D7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -191,6 +202,9 @@
 		4CBAFCAC1A370FFB0097813C /* InfoMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoMenuViewController.swift; sourceTree = "<group>"; };
 		4CBBDF0D1A35E27B00E0C135 /* MedalsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalsTableViewCell.swift; sourceTree = "<group>"; };
 		4CBBDF0F1A35E29700E0C135 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
+		4CBD62091A385F8100751777 /* wroclaw_2017 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wroclaw_2017 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBD620C1A385F8100751777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CBD620D1A385F8100751777 /* wroclaw_2017_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wroclaw_2017_Tests.swift; sourceTree = "<group>"; };
 		4CC9A3461A004B65006DE05C /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
 		4CC9A3471A004B65006DE05C /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
 		4CC9A3481A004B65006DE05C /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
@@ -238,6 +252,13 @@
 			files = (
 				4C52D1541A0AD92A0060E222 /* CoreLocation.framework in Frameworks */,
 				4C3D16321A076EE6001EBDA7 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CBD62061A385F8100751777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +320,7 @@
 				4C52D1531A0AD92A0060E222 /* CoreLocation.framework */,
 				4C3D16311A076EE6001EBDA7 /* MapKit.framework */,
 				4C9B832819F6F5A800B68B88 /* wroclaw_2017 */,
+				4CBD620A1A385F8100751777 /* wroclaw_2017 Tests */,
 				4C9B832719F6F5A800B68B88 /* Products */,
 				4B0D1D91D1FDF3DC39A84EAE /* Frameworks */,
 			);
@@ -308,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				4C9B832619F6F5A800B68B88 /* Wroclaw2017.app */,
+				4CBD62091A385F8100751777 /* wroclaw_2017 Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -427,6 +450,23 @@
 			name = ui_support;
 			sourceTree = "<group>";
 		};
+		4CBD620A1A385F8100751777 /* wroclaw_2017 Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4CBD620D1A385F8100751777 /* wroclaw_2017_Tests.swift */,
+				4CBD620B1A385F8100751777 /* Supporting Files */,
+			);
+			path = "wroclaw_2017 Tests";
+			sourceTree = "<group>";
+		};
+		4CBD620B1A385F8100751777 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CBD620C1A385F8100751777 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D422AFC71A1B9C3600A62C32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +496,24 @@
 			productReference = 4C9B832619F6F5A800B68B88 /* Wroclaw2017.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4CBD62081A385F8100751777 /* wroclaw_2017 Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CBD62111A385F8100751777 /* Build configuration list for PBXNativeTarget "wroclaw_2017 Tests" */;
+			buildPhases = (
+				4CBD62051A385F8100751777 /* Sources */,
+				4CBD62061A385F8100751777 /* Frameworks */,
+				4CBD62071A385F8100751777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CBD62101A385F8100751777 /* PBXTargetDependency */,
+			);
+			name = "wroclaw_2017 Tests";
+			productName = "wroclaw_2017 Tests";
+			productReference = 4CBD62091A385F8100751777 /* wroclaw_2017 Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -476,6 +534,10 @@
 							};
 						};
 					};
+					4CBD62081A385F8100751777 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 4C9B832519F6F5A800B68B88;
+					};
 				};
 			};
 			buildConfigurationList = 4C9B832119F6F5A800B68B88 /* Build configuration list for PBXProject "wroclaw_2017" */;
@@ -492,6 +554,7 @@
 			projectRoot = "";
 			targets = (
 				4C9B832519F6F5A800B68B88 /* wroclaw_2017 */,
+				4CBD62081A385F8100751777 /* wroclaw_2017 Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -580,6 +643,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CBD62071A385F8100751777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -618,7 +688,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CBD62051A385F8100751777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBD620E1A385F8100751777 /* wroclaw_2017_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CBD62101A385F8100751777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C9B832519F6F5A800B68B88 /* wroclaw_2017 */;
+			targetProxy = 4CBD620F1A385F8100751777 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4C9B834319F6F5A800B68B88 /* Debug */ = {
@@ -743,6 +829,40 @@
 			};
 			name = Release;
 		};
+		4CBD62121A385F8100751777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "wroclaw_2017 Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wroclaw2017.app/Wroclaw2017";
+			};
+			name = Debug;
+		};
+		4CBD62131A385F8100751777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "wroclaw_2017 Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wroclaw2017.app/Wroclaw2017";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -763,6 +883,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4CBD62111A385F8100751777 /* Build configuration list for PBXNativeTarget "wroclaw_2017 Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CBD62121A385F8100751777 /* Debug */,
+				4CBD62131A385F8100751777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
