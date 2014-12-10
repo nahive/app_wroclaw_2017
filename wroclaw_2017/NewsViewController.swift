@@ -75,10 +75,16 @@ public class NewsViewController: UITableViewController {
     
     // download data, reload table and hide loading icon
     public override func viewDidAppear(animated: Bool) {
-        getJSON();
-        self.tableView.reloadData();
-        loader.stopAnimating();
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.getJSON();
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData();
+                self.loader.stopAnimating();
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+            }
+        }
+        
     }
     
     // language customizations
@@ -93,6 +99,8 @@ public class NewsViewController: UITableViewController {
     public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
     
     ///////////////////////////////////// Custom functions /////////////////////////////////////
     
@@ -117,8 +125,16 @@ public class NewsViewController: UITableViewController {
     
     // pull down to refresh function - get new data from server and refresh view
     func updateData(sender : UIRefreshControl!){
-        getJSON();
-        self.tableView.reloadData();
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.getJSON();
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData();
+                self.loader.stopAnimating();
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+            }
+        }
+
         if ((self.refreshControl) != nil) {
             // add date to refresh view
             var formatter : NSDateFormatter = NSDateFormatter();

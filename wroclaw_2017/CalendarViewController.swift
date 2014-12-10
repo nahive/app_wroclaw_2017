@@ -70,14 +70,19 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidAppear(animated: Bool) {
         // get data from view
-        getJSON();
-        tableView.reloadData();
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.getJSON();
+            dispatch_async(dispatch_get_main_queue()) {
+                self.customSetup();
+                self.loader.stopAnimating();
+                self.tableView.reloadData();
+                var scroll: UIScrollView! = self.datePicker.subviews[0] as UIScrollView;
+                scroll.frame = CGRectMake(0, 0, self.view.frame.width, self.datePicker.frame.height);
+                Utils.fadeIn(self.tableView,duration: 0.6);
+            }
+        }
         
-        // init scroll and fade in
-        loader.stopAnimating();
-        var scroll: UIScrollView! = datePicker.subviews[0] as UIScrollView;
-        scroll.frame = CGRectMake(0, 0, view.frame.width, datePicker.frame.height);
-        Utils.fadeIn(tableView,duration: 0.6);       
 
     }
     

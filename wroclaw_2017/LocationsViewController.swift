@@ -62,13 +62,18 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     override func viewDidAppear(animated: Bool) {
         mapH.constant = view.frame.height*(2/3);
         mapW.constant = view.frame.width;
-        getJSON();
-        setMarkers();
-        setScrollView();
-        initLocationManager();
-        setPageControl();
-        loader.stopAnimating();
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.getJSON();
+            dispatch_async(dispatch_get_main_queue()) {
+                self.setMarkers();
+                self.setScrollView();
+                self.initLocationManager();
+                self.setPageControl();
+                self.loader.stopAnimating();
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {

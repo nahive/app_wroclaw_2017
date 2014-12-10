@@ -48,9 +48,15 @@ class MedalsViewController: UIViewController, UITableViewDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        getJSON();
-        tableView.reloadData();
-        loader.stopAnimating();
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.getJSON();
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData();
+                self.loader.stopAnimating();
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

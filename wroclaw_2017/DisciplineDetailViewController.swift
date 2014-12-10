@@ -89,10 +89,15 @@ class DisciplineDetailViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        getJSON();
-        customSetup()
-        loader.stopAnimating();
-        showElements();
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.getJSON();
+            dispatch_async(dispatch_get_main_queue()) {
+                self.customSetup();
+                self.loader.stopAnimating();
+                self.showElements();
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

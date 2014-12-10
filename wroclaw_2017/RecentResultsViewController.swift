@@ -48,10 +48,15 @@ class RecentResultsViewController: UIViewController, UITableViewDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        getJSON();
-        tableView.reloadData();
-        loader.stopAnimating();
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.getJSON();
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData();
+                self.loader.stopAnimating();
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+            }
+        }
         
     }
     
