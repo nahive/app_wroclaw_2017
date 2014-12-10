@@ -34,8 +34,8 @@ public class NewsViewController: UITableViewController {
         
         // view customization
         customSetup();
-        var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
-        bgView.alpha = 0.5;
+        var bgView = UIImageView(image: UIImage(named:"bg_all.png"));
+        bgView.alpha = 0.5
         tableView.backgroundView = bgView;
         
         // loading icon

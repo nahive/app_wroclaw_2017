@@ -47,8 +47,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         
         // customize slide calendar view
         self.tableView.alpha = 0.0;
-        var scroll: UIScrollView! = datePicker.subviews[0] as UIScrollView;
-        scroll.frame = CGRectMake(0, 0, view.frame.width, datePicker.frame.height);
         
         // loading icon
         loader = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray);
@@ -79,7 +77,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         loader.stopAnimating();
         var scroll: UIScrollView! = datePicker.subviews[0] as UIScrollView;
         scroll.frame = CGRectMake(0, 0, view.frame.width, datePicker.frame.height);
-        Utils.fadeIn(tableView,duration: 0.6);
+        Utils.fadeIn(tableView,duration: 0.6);       
+
     }
     
     override func didReceiveMemoryWarning() {

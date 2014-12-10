@@ -112,7 +112,7 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
         var title: String = followsSectionTitles[section];
         var label: UILabel = UILabel();
         label.text = title;
-        label.textColor = Utils.colorize(0xd64691);
+        label.textColor = Utils.colorize(0xFF0000);
         label.font = UIFont(name: "HelveticaNeue-Thin", size: 13);
         label.font = UIFont.boldSystemFontOfSize(13);
         label.frame = CGRectMake(10, 5, 300, 30);
@@ -138,7 +138,7 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
         var followName: UILabel? = cell!.viewWithTag(102) as? UILabel;
         var image: UIImageView? = cell!.viewWithTag(101) as? UIImageView;
         if (contentValue == "disciplines") {
-            image?.backgroundColor = Utils.colorize(0x605196);
+            image?.backgroundColor = Utils.colorize(0xFF0000);
             image?.layer.cornerRadius = 8;
         }
         var sectionTitle : String;
@@ -181,7 +181,7 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
                 var imageView: UIImageView = UIImageView();
                 imageView.frame = CGRectMake(19, 5, 30, 30);
                 imageView.image = currentImage;
-                imageView.backgroundColor = Utils.colorize(0x605196);
+                imageView.backgroundColor = Utils.colorize(0xFF0000);
                 imageView.layer.cornerRadius = 8;
                 cell?.addSubview(imageView);
             }

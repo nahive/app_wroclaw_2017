@@ -27,7 +27,7 @@ class InfoMenuViewController: UITableViewController {
         customSetup();
         
         // view customization
-        var bgView = UIImageView(image: UIImage(named:"bg_news.jpg"));
+        var bgView = UIImageView(image: UIImage(named:"bg_info.png"));
         bgView.alpha = 0.3;
         tableView.backgroundView = bgView;
     }

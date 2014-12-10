@@ -19,15 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var font: UIFont = UIFont(name: "HelveticaNeue-Thin",size: 20.0)!;
         let navDict: NSDictionary = [NSFontAttributeName: font];
         UINavigationBar.appearance().titleTextAttributes = navDict;
-        UINavigationBar.appearance().tintColor = Utils.colorize(0x7f7f7f);
+        UINavigationBar.appearance().tintColor = Utils.colorize(0xffffff);
+        UINavigationBar.appearance().backgroundColor = Utils.colorize(0x9e2175);
+        var titleAttr = NSDictionary(objectsAndKeys: UIColor.whiteColor(), NSForegroundColorAttributeName);
+        UINavigationBar.appearance().titleTextAttributes = titleAttr;
         
         // background refresh & notifications
         application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum);
         let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings);
         
+        // default language
+        if NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage") && NSUserDefaults.standardUserDefaults().boolForKey("EnglishLanguage") {
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "PolishLanguage");
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "EnglishLanguage");
+        }
         
-      
+        // tab bar
+        UITabBar.appearance().tintColor = Utils.colorize(0x43A417);
         return true
     }
     
@@ -58,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             // events update for followed disciplines
-            if events_count != new_events_count {
+            if events_count < new_events_count {
                 NSUserDefaults.standardUserDefaults().setInteger(new_events_count, forKey: "events_count");
                 var disciplines : [String] = NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [String];
                 for disci in disciplines {
@@ -76,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
 
             // medals update for followed countries
-            if results_count != new_results_count {
+            if results_count < new_results_count {
                 NSUserDefaults.standardUserDefaults().setInteger(new_results_count, forKey: "medals_all_count");
                 var countries : [String] = NSUserDefaults.standardUserDefaults().objectForKey("countriesToFollow") as [String];
                 var medals : [String: Int] = NSUserDefaults.standardUserDefaults().objectForKey("medals_count") as [String: Int];
@@ -118,12 +127,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSUserDefaults.standardUserDefaults().setInteger(NotificationJSON.getResultsForAllCountries(), forKey: "medals_all_count");
         
         // update medals for all countries
-        var countries = NSUserDefaults.standardUserDefaults().objectForKey("countriesToFollow") as [String];
-        var medals : [String: Int] = [:];
-        for country in countries {
-            medals.updateValue(NotificationJSON.getResultsForCountry(country), forKey: country);
+        if NSUserDefaults.standardUserDefaults().objectForKey("countriesToFollow") != nil {
+            var countries = NSUserDefaults.standardUserDefaults().objectForKey("countriesToFollow") as [String];
+            var medals : [String: Int] = [:];
+            for country in countries {
+                medals.updateValue(NotificationJSON.getResultsForCountry(country), forKey: country);
+            }
+            NSUserDefaults.standardUserDefaults().setObject(medals, forKey: "medals_count");
         }
-        NSUserDefaults.standardUserDefaults().setObject(medals, forKey: "medals_count");
+
     }
     
     

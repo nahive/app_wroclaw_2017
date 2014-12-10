@@ -68,6 +68,10 @@
 		4C9B836319F6F67000B68B88 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B835819F6F67000B68B88 /* reveal-icon@2x.png */; };
 		4C9B836719F6F71100B68B88 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B836619F6F71100B68B88 /* SWRevealViewController.m */; };
 		4C9B836C19F70C9000B68B88 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B836B19F70C9000B68B88 /* MenuViewController.swift */; };
+		4CA737391A38369000613F2F /* menu_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA737381A38369000613F2F /* menu_bg.png */; };
+		4CA7373B1A3838D700613F2F /* bg_all.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA7373A1A3838D700613F2F /* bg_all.png */; };
+		4CA7373D1A3848E500613F2F /* bg_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA7373C1A3848E500613F2F /* bg_info.png */; };
+		4CA7373F1A384B3200613F2F /* ic_action_send_now.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA7373E1A384B3200613F2F /* ic_action_send_now.png */; };
 		4CA7AB631A0AD1CD005073E7 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */; };
 		4CB5F59E19F71255006F09EC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5F59D19F71255006F09EC /* NewsViewController.swift */; };
 		4CB5F5A019F71BA8006F09EC /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */; };
@@ -177,6 +181,10 @@
 		4C9B836519F6F71100B68B88 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4C9B836619F6F71100B68B88 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		4C9B836B19F70C9000B68B88 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4CA737381A38369000613F2F /* menu_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_bg.png; sourceTree = "<group>"; };
+		4CA7373A1A3838D700613F2F /* bg_all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_all.png; sourceTree = "<group>"; };
+		4CA7373C1A3848E500613F2F /* bg_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_info.png; sourceTree = "<group>"; };
+		4CA7373E1A384B3200613F2F /* ic_action_send_now.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_send_now.png; sourceTree = "<group>"; };
 		4CA7AB621A0AD1CD005073E7 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		4CB5F59D19F71255006F09EC /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		4CB5F59F19F71BA8006F09EC /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
@@ -345,6 +353,10 @@
 		4C9B834D19F6F65C00B68B88 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				4CA7373E1A384B3200613F2F /* ic_action_send_now.png */,
+				4CA7373C1A3848E500613F2F /* bg_info.png */,
+				4CA7373A1A3838D700613F2F /* bg_all.png */,
+				4CA737381A38369000613F2F /* menu_bg.png */,
 				D42821861A2DDBF40087546F /* navi.png */,
 				D45D88C11A27CF660062D063 /* medal-bronze.png */,
 				D45D88C21A27CF660062D063 /* medal-gold.png */,
@@ -507,6 +519,7 @@
 				4C8A7C0B1A1CD305008754F3 /* beach-handball.png in Resources */,
 				4C8A7C0F1A1CD305008754F3 /* bowling.png in Resources */,
 				D422AFD31A1CA45900A62C32 /* route.png in Resources */,
+				4CA7373B1A3838D700613F2F /* bg_all.png in Resources */,
 				4C8A7C211A1CD305008754F3 /* racquetball.png in Resources */,
 				4C8A7C2A1A1CD305008754F3 /* wushu.png in Resources */,
 				4C8A7C131A1CD305008754F3 /* fistball.png in Resources */,
@@ -515,8 +528,10 @@
 				4C8A7C251A1CD305008754F3 /* squash.png in Resources */,
 				D4C38E2E1A20A20C0056EA87 /* ic_action_settings.png in Resources */,
 				D46C75CD1A24F93F00620D30 /* medal.png in Resources */,
+				4CA737391A38369000613F2F /* menu_bg.png in Resources */,
 				D45996421A11046C002B1059 /* lotnisko.jpg in Resources */,
 				4C8A7C141A1CD305008754F3 /* floorball.png in Resources */,
+				4CA7373F1A384B3200613F2F /* ic_action_send_now.png in Resources */,
 				4C8A7C221A1CD305008754F3 /* roller-sports.png in Resources */,
 				D43E0A931A0B66C200121C99 /* ic_action_location_found.png in Resources */,
 				4C8A7C1E1A1CD305008754F3 /* netball.png in Resources */,
@@ -556,6 +571,7 @@
 				4C8A7C191A1CD305008754F3 /* kickboxing.png in Resources */,
 				D42821871A2DDBF40087546F /* navi.png in Resources */,
 				4C8A7C111A1CD305008754F3 /* Dance Sport.png in Resources */,
+				4CA7373D1A3848E500613F2F /* bg_info.png in Resources */,
 				4C8A7C121A1CD305008754F3 /* finswimming.png in Resources */,
 				4C8A7C151A1CD305008754F3 /* flying-disc.png in Resources */,
 				4C8A7C1B1A1CD305008754F3 /* lacrosse.png in Resources */,

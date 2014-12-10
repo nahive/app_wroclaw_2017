@@ -178,7 +178,7 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate, UISe
         var index : Int;
         var imageView: UIImageView = UIImageView();
         imageView.frame = CGRectMake(19, 5, 30, 30);
-        imageView.backgroundColor = Utils.colorize(0x605196);
+        imageView.backgroundColor = Utils.colorize(0x1756a3);
         imageView.layer.cornerRadius = 8;
         
         //return cell for search results

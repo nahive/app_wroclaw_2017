@@ -37,7 +37,7 @@ public class MenuViewController: UITableViewController {
     ///////////////////////////////////// Custom functions /////////////////////////////////////
     
     func customSetup(){
-        self.tableView.backgroundColor = Utils.colorize(0x7f7f7f);
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "menu_bg.png"));
         self.tableView.tableFooterView = UIView(frame: CGRectZero);
         var view: UIView = UIView(frame: CGRectMake(0,-1000,320,1000));
         view.backgroundColor = UIColor.whiteColor();

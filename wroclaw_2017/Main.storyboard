@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C78c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C78c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJj-0Z-CH4">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJj-0Z-CH4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="EoA-b7-Q2G">
+                                    <view contentMode="scaleAspectFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EoA-b7-Q2G">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stadionolimpijski.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1ox-u8-QhW">
@@ -362,9 +362,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="5mR-TJ-MOU">
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="ZcZ-6K-vgl">
-                            <color key="tintColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="zcv-wv-Wm6">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="showDetail" id="jac-pj-c4e"/>
                             </connections>
@@ -386,6 +387,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pbw-28-7Zb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.94901960780000005" green="0.83921568629999999" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="fkB-Rq-8Jp" kind="relationship" relationship="rootViewController" id="feX-84-5W1"/>
@@ -406,6 +408,7 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" id="FU0-di-qmV">
                             <rect key="frame" x="-8" y="-19" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.94901960780000005" green="0.83921568629999999" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="lqQ-ts-Zsw" id="xGF-Yh-N5o"/>
@@ -557,7 +560,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="30I-P9-P2t"/>
                                                 <constraint firstAttribute="width" constant="356" id="pOV-Pe-d9b"/>
@@ -583,7 +586,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="News" id="XDE-2M-cKf">
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="QcT-gy-JJd">
-                            <color key="tintColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -602,6 +605,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6mJ-r7-pjS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.61960784313725492" green="0.12941176470588237" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="YgV-WD-tBc" kind="relationship" relationship="rootViewController" id="c06-Vo-oQL"/>
@@ -659,6 +663,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L7q-gn-1e5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83921568627450982" green="0.29411764705882354" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="4cB-DG-VXH" kind="relationship" relationship="rootViewController" id="ObB-Bx-rfb"/>
@@ -719,11 +724,11 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_chat.png" translatesAutoresizingMaskIntoConstraints="NO" id="K9l-9g-qae">
                                             <rect key="frame" x="8" y="9" width="35" height="35"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WP-oe-7wO">
                                             <rect key="frame" x="51" y="12" width="100" height="30"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                            <color key="textColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -739,11 +744,11 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_location_found.png" translatesAutoresizingMaskIntoConstraints="NO" id="XpO-vd-S1K">
                                             <rect key="frame" x="8" y="9" width="35" height="35"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disciplines" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwR-9S-wBr">
                                             <rect key="frame" x="51" y="12" width="100" height="30"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                            <color key="textColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -759,11 +764,11 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_go_to_today.png" translatesAutoresizingMaskIntoConstraints="NO" id="B9Z-gE-cc2">
                                             <rect key="frame" x="8" y="9" width="35" height="35"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calendar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4J-8A-ZVC">
                                             <rect key="frame" x="51" y="12" width="100" height="30"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                            <color key="textColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -779,11 +784,11 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_about.png" translatesAutoresizingMaskIntoConstraints="NO" id="aIC-4U-BVR">
                                             <rect key="frame" x="8" y="9" width="35" height="35"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7f-v1-Xuo">
                                             <rect key="frame" x="51" y="12" width="100" height="30"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                            <color key="textColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_action_forward.png" translatesAutoresizingMaskIntoConstraints="NO" id="n5K-NZ-LDK">
@@ -807,11 +812,11 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_place.png" translatesAutoresizingMaskIntoConstraints="NO" id="QM7-ST-z9V">
                                             <rect key="frame" x="8" y="9" width="35" height="35"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Locations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcd-ej-xmr">
                                             <rect key="frame" x="51" y="12" width="100" height="30"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                            <color key="textColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -827,11 +832,11 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_network_cell.png" translatesAutoresizingMaskIntoConstraints="NO" id="BCu-rQ-0n8">
                                             <rect key="frame" x="8" y="9" width="35" height="35"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Results" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AER-vE-XKR">
                                             <rect key="frame" x="51" y="12" width="100" height="30"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                            <color key="textColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -847,11 +852,11 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="fRD-vb-FiQ">
                                             <rect key="frame" x="8" y="9" width="35" height="35"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0Q-kg-yyL">
                                             <rect key="frame" x="51" y="12" width="100" height="30"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                            <color key="textColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -879,6 +884,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GoP-Qi-MzZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.89803921568627454" green="0.32156862745098042" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7WS-3P-r48">
                         <autoresizingMask key="autoresizingMask"/>
@@ -898,6 +904,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lAC-62-OFa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.93725490196078431" green="0.45490196078431372" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Lum-s9-Drv" kind="relationship" relationship="rootViewController" id="6Tl-i1-rtO"/>
@@ -958,7 +965,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Locations" id="vjV-sT-Grc">
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="oS3-Dg-mbx"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="oS3-Dg-mbx">
+                            <color key="tintColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapH" destination="4Of-0z-XZ7" id="6IL-Wd-BhG"/>
@@ -1034,7 +1043,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aHw-mq-NLM">
-                        <barButtonItem key="rightBarButtonItem" image="navi.png" id="aEl-aC-0wU">
+                        <barButtonItem key="rightBarButtonItem" image="ic_action_send_now.png" id="aEl-aC-0wU">
+                            <inset key="imageInsets" minX="50" minY="30" maxX="0.0" maxY="30"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="openMap:" destination="qMj-dO-WVY" id="75R-Gz-AId"/>
                             </connections>
@@ -1120,7 +1131,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="vnS-Pz-4qd">
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="LIA-oC-xpH">
-                            <color key="tintColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1145,6 +1156,7 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" id="nlM-o6-3wc">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.090196078430000007" green="0.33725490200000002" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="yp9-Hm-f0p" id="GgG-KO-L4T"/>
@@ -1179,7 +1191,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Discipline" id="Zao-O9-Iut">
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="OrF-kk-jd3">
-                            <color key="tintColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="0.95086348679999999" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1266,10 +1278,12 @@
                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="nun-lZ-UGB">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="changeFollow:" destination="ghc-K8-Ixw" eventType="valueChanged" id="NHW-Z1-CWk"/>
                                 </connections>
                             </switch>
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="changeFollow:" destination="ghc-K8-Ixw" id="4SZ-gR-rFj"/>
                             </connections>
@@ -1297,6 +1311,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dci-6E-GEz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.090196078431372548" green="0.33725490196078434" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="yp9-Hm-f0p" kind="relationship" relationship="rootViewController" id="7Zl-85-JNk"/>
@@ -1423,7 +1438,7 @@
                     <tabBarItem key="tabBarItem" title="Medal Classification" image="3medals.png" id="UFM-dL-G7r"/>
                     <navigationItem key="navigationItem" title="Medal Classification" id="kqH-VT-tZL">
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="Ei7-4e-Xyy">
-                            <color key="tintColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1444,6 +1459,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kLw-ZI-xVw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.64313725489999995" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Nxl-V2-sOk" kind="relationship" relationship="rootViewController" id="F0g-sO-4yd"/>
@@ -1461,6 +1477,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="O30-WW-unk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2627450980392157" green="0.64313725490196083" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="hrQ-Bu-25l" kind="relationship" relationship="rootViewController" id="T0f-Pp-raW"/>
@@ -1491,7 +1508,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dl9-8X-tnt" id="9Ql-Xw-Lzy">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zxh-Jf-u3d">
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zxh-Jf-u3d">
                                                     <rect key="frame" x="0.0" y="0.0" width="373" height="55"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oon-Ra-YmC">
@@ -1509,7 +1526,7 @@
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" tag="104" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="medal-gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="TOq-jE-cpJ">
+                                                        <imageView userInteractionEnabled="NO" tag="104" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="medal-gold.png" translatesAutoresizingMaskIntoConstraints="NO" id="TOq-jE-cpJ">
                                                             <rect key="frame" x="338" y="5" width="35" height="45"/>
                                                         </imageView>
                                                     </subviews>
@@ -1544,7 +1561,7 @@
                     <tabBarItem key="tabBarItem" systemItem="recents" id="HZO-Xc-Toa"/>
                     <navigationItem key="navigationItem" title="Recent Results" id="QcS-Y7-zbn">
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="kTG-V2-SIL">
-                            <color key="tintColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1565,10 +1582,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.26274509800000001" green="0.64313725489999995" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.26274509800000001" green="0.64313725489999995" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="TNC-VR-ANb" kind="relationship" relationship="viewControllers" id="iay-IY-myX"/>
-                        <segue destination="Bbk-aA-73h" kind="relationship" relationship="viewControllers" id="bOq-j0-i5x"/>
+                        <segue destination="Bbk-aA-73h" kind="relationship" relationship="viewControllers" id="Tyl-rS-sPO"/>
+                        <segue destination="TNC-VR-ANb" kind="relationship" relationship="viewControllers" id="YMa-Jn-GWP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sek-Me-XWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1622,7 +1641,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Info" id="IFM-Ns-l2h">
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="W77-25-9Fb">
-                            <color key="tintColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1644,13 +1663,13 @@
         <image name="ic_action_chat.png" width="96" height="96"/>
         <image name="ic_action_forward.png" width="48" height="48"/>
         <image name="ic_action_go_to_today.png" width="96" height="96"/>
-        <image name="ic_action_location_found.png" width="48" height="48"/>
+        <image name="ic_action_location_found.png" width="96" height="96"/>
         <image name="ic_action_network_cell.png" width="96" height="96"/>
         <image name="ic_action_place.png" width="96" height="96"/>
-        <image name="ic_action_settings.png" width="48" height="48"/>
+        <image name="ic_action_send_now.png" width="96" height="96"/>
+        <image name="ic_action_settings.png" width="96" height="96"/>
         <image name="logo.png" width="924" height="263"/>
         <image name="medal-gold.png" width="35" height="45"/>
-        <image name="navi.png" width="30" height="30"/>
         <image name="reveal-icon.png" width="22" height="17"/>
         <image name="stadionolimpijski.jpg" width="550" height="367"/>
     </resources>

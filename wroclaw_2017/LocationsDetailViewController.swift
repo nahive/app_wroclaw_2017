@@ -81,6 +81,7 @@ class LocationsDetailViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        getJSON();
         customSetup();
         loader.stopAnimating();
         showElements();
@@ -106,7 +107,6 @@ class LocationsDetailViewController: UIViewController {
         mapTitle.text = titleVal;
         mapPlace.text = placeVal;
         mapImage.image = imageVal;
-        getJSON();
     }
     
     func showElements() {
