@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+import wroclaw_2017
 
 class wroclaw_2017_Tests: XCTestCase {
     
@@ -21,16 +22,39 @@ class wroclaw_2017_Tests: XCTestCase {
         super.tearDown()
     }
     
+//    func testJSON() {
+//        // This is an example of a functional test case.
+//        let json = NewsViewController();
+//        XCTAssertFalse(json.didDownload(), "not yet downloaded");
+//        json.getJSON();
+//        XCTAssertTrue(json.didDownload(), "downloaded");
+//    }
+//    
+//    func testJSONPerformance() {
+//        // This is an example of a performance test case.
+//        let json = NewsViewController();
+//        self.measureBlock() {
+//            var bla = json.getJSON();
+//        }
+//    }
+//    
+//    func testNews(){
+//        let news = NewsViewController();
+//        XCTAssertNotNil(news.view, "view did load");
+//    }
+//    
+//    func testMenu(){
+//        let menu = MenuViewController();
+//        var index = NSIndexPath(forItem: 0, inSection: 0);
+//        menu.getTableView().selectRowAtIndexPath(index, animated: true, scrollPosition: UITableViewScrollPosition.Middle);
+//        XCTAssertNotNil(menu.view, "loaded");    }
+////    
+//    func testJSONNotifications(){
+//        let view = NewsViewController();
+//    }
+//
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

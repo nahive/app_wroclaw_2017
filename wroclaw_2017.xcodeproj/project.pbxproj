@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C0E6ED41A0922C9006A22D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E6ED31A0922C9006A22D7 /* Main.storyboard */; };
+		4C3658581A386A280056D7B8 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45996551A13993D002B1059 /* json.swift */; };
 		4C39069A1A2E244700DD1A54 /* NotificationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3906991A2E244700DD1A54 /* NotificationJSON.swift */; };
 		4C3CF7391A0058BF005D5D95 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CF7381A0058BF005D5D95 /* Utils.swift */; };
 		4C3D16321A076EE6001EBDA7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3D16311A076EE6001EBDA7 /* MapKit.framework */; };
@@ -693,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CBD620E1A385F8100751777 /* wroclaw_2017_Tests.swift in Sources */,
+				4C3658581A386A280056D7B8 /* json.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,6 +893,7 @@
 				4CBD62131A385F8100751777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

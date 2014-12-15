@@ -138,7 +138,7 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
         var followName: UILabel? = cell!.viewWithTag(102) as? UILabel;
         var image: UIImageView? = cell!.viewWithTag(101) as? UIImageView;
         if (contentValue == "disciplines") {
-            image?.backgroundColor = Utils.colorize(0xFF0000);
+            image?.backgroundColor = Utils.colorize(0x333333);
             image?.layer.cornerRadius = 8;
         }
         var sectionTitle : String;
@@ -181,7 +181,7 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
                 var imageView: UIImageView = UIImageView();
                 imageView.frame = CGRectMake(19, 5, 30, 30);
                 imageView.image = currentImage;
-                imageView.backgroundColor = Utils.colorize(0xFF0000);
+                imageView.backgroundColor = Utils.colorize(0x333333);
                 imageView.layer.cornerRadius = 8;
                 cell?.addSubview(imageView);
             }
@@ -398,7 +398,6 @@ class SelectFollowTableViewController: UITableViewController, UISearchBarDelegat
                             imagesDictionary.updateValue(categoryIcons, forKey: j.toString(pretty: true));
                         }
                         if (!(categoryLanguages.isEmpty) && previousCategory != "null") {
-                            println(categoryLanguages);
                             follows.updateValue(categoryLanguages, forKey: previousCategory);
                         }
                         if ifRemove {

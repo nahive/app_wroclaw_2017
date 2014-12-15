@@ -42,6 +42,8 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     var clickedAnnotation = "";
     var pageControl: UIPageControl = UIPageControl();
     
+    var first = true;
+    
     ///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
@@ -62,17 +64,20 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     override func viewDidAppear(animated: Bool) {
         mapH.constant = view.frame.height*(2/3);
         mapW.constant = view.frame.width;
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            self.getJSON();
-            dispatch_async(dispatch_get_main_queue()) {
-                self.setMarkers();
-                self.setScrollView();
-                self.initLocationManager();
-                self.setPageControl();
-                self.loader.stopAnimating();
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        if (first){
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                self.getJSON();
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.setMarkers();
+                    self.setScrollView();
+                    self.initLocationManager();
+                    self.setPageControl();
+                    self.loader.stopAnimating();
+                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+                }
             }
+            first = false;
         }
     }
     
@@ -240,9 +245,7 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     // scroll to annotation on click and center
     func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
-        println(view.annotation.title);
         let row = find(locationNames,view.annotation.title!);
-        println(UIScreen.mainScreen().bounds.width*(2/3));
         let index: CGFloat = CGFloat(row!);
         let scrollXPosition: CGFloat = UIScreen.mainScreen().bounds.width*(2/3)*index;
         scrollView.scrollRectToVisible(CGRect(x: scrollXPosition, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height), animated: true);
@@ -252,7 +255,6 @@ class LocationsViewController: UIViewController, CLLocationManagerDelegate, MKMa
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "showMapDetails"){
             let row = find(locationNames,clickedAnnotation);
-            println(row);
             var destViewController : LocationsDetailViewController = segue.destinationViewController as LocationsDetailViewController;
             
             destViewController.imageVal = locationImages[row!];

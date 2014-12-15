@@ -53,8 +53,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var results_count = NSUserDefaults.standardUserDefaults().integerForKey("medals_all_count");
             var new_results_count = NotificationJSON.getResultsForAllCountries();
             
+            println("updating news");
+            println(new_news_count);
+            println(news_count);
             // news update
             if news_count < new_news_count {
+                println("new news");
                 NSUserDefaults.standardUserDefaults().setInteger(new_news_count, forKey: "news_count");
                 var notification = UILocalNotification();
                 var now = NSDate();
@@ -66,8 +70,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 isUpdate = true;
             }
             
+            println("updating events");
+            println(new_events_count);
+            println(events_count);
             // events update for followed disciplines
             if events_count < new_events_count {
+                println("new events");
                 NSUserDefaults.standardUserDefaults().setInteger(new_events_count, forKey: "events_count");
                 var disciplines : [String] = NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [String];
                 for disci in disciplines {
@@ -84,8 +92,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
 
+            println("updating medals");
+            println(new_results_count);
+            println(results_count);
             // medals update for followed countries
             if results_count < new_results_count {
+                println("new medals");
                 NSUserDefaults.standardUserDefaults().setInteger(new_results_count, forKey: "medals_all_count");
                 var countries : [String] = NSUserDefaults.standardUserDefaults().objectForKey("countriesToFollow") as [String];
                 var medals : [String: Int] = NSUserDefaults.standardUserDefaults().objectForKey("medals_count") as [String: Int];

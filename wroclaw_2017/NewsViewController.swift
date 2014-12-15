@@ -27,6 +27,8 @@ public class NewsViewController: UITableViewController {
     //helper
     var noInternetView: UIView = UIView();
     
+    var first = true;
+    
     ///////////////////////////////////// System functions /////////////////////////////////////
     
     override public func viewDidLoad() {
@@ -75,14 +77,18 @@ public class NewsViewController: UITableViewController {
     
     // download data, reload table and hide loading icon
     public override func viewDidAppear(animated: Bool) {
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            self.getJSON();
-            dispatch_async(dispatch_get_main_queue()) {
-                self.tableView.reloadData();
-                self.loader.stopAnimating();
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        println("back");
+        if(first){
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                self.getJSON();
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.tableView.reloadData();
+                    self.loader.stopAnimating();
+                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+                }
             }
+            first = false;
         }
         
     }

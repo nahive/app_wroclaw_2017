@@ -344,7 +344,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
                                 }
                                 
                             }
-                            println(eventsForDiscipline);
                             oneDisciplineContainer.append(eventsForDiscipline);
                             eventsForDiscipline.removeAll(keepCapacity: true);
                         }

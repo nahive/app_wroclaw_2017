@@ -34,6 +34,8 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate, UISe
     //helper
     var searchRowSelected: String = "";
     
+    var first = true;
+    
     ///////////////////////////////////// System functions /////////////////////////////////////
     
     override func viewDidLoad() {
@@ -49,14 +51,17 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate, UISe
     }
     
     override func viewDidAppear(animated: Bool) {
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            self.getJSON();
-            dispatch_async(dispatch_get_main_queue()) {
-                self.tableView.reloadData();
-                self.loader.stopAnimating();
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        if (first){
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                self.getJSON();
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.tableView.reloadData();
+                    self.loader.stopAnimating();
+                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+                }
             }
+            first = false;
         }
     }
     
@@ -100,10 +105,8 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate, UISe
             }
             var destViewController : DisciplineDetailViewController = segue.destinationViewController as DisciplineDetailViewController;
             destViewController.idVal = id[index];
-            println(id[index]);
             destViewController.locationVal = locations[index];
             destViewController.titleVal = names[index];
-            println(names[index]);
         }
     }
     
@@ -333,7 +336,6 @@ class DisciplineViewController: UITableViewController, UITableViewDelegate, UISe
                         
                     } else if (categoryIcons.count == 0 || firstIconNotNull == false){
                         firstIconNotNull = false;
-                        println(lastCategory);
                         if (!(disciplinesSectionTitles.last == j.toString(pretty: true))) {
                             disciplinesSectionTitles.append(j.toString(pretty: true));
                             var lastDiscipline = categoryDisciplines.last!;

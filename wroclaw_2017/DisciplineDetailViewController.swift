@@ -69,7 +69,6 @@ class DisciplineDetailViewController: UIViewController {
         
         // check if discipline followed
         if(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") != nil) {
-            println(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [NSString]);
             if (contains(NSUserDefaults.standardUserDefaults().objectForKey("disciplinesToFollow") as [NSString], titleVal)) {
                 followSwitch.on = true;
             } else {
@@ -89,15 +88,16 @@ class DisciplineDetailViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+//        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+//        dispatch_async(dispatch_get_global_queue(priority, 0)) {
             self.getJSON();
-            dispatch_async(dispatch_get_main_queue()) {
+           // dispatch_async(dispatch_get_main_queue()) {
                 self.customSetup();
                 self.loader.stopAnimating();
                 self.showElements();
-            }
-        }
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+            //}
+        //}
     }
 
     override func didReceiveMemoryWarning() {

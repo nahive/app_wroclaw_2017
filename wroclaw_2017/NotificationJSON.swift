@@ -8,9 +8,9 @@
 
 import Foundation
 
-class NotificationJSON {
+public class NotificationJSON {
     
-    class func getNewsCount() -> Int {
+    public class func getNewsCount() -> Int {
         var dates: [String] = [];
         var url = "";
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
@@ -22,7 +22,7 @@ class NotificationJSON {
         return json.length;
     }
     
-    class func getEventsForDiscipline(discipline: String, eventsNum: Int) -> Int {
+    public class func getEventsForDiscipline(discipline: String, eventsNum: Int) -> Int {
         var url = "";
         var events: [String] = [];
         
@@ -54,7 +54,7 @@ class NotificationJSON {
         return lastEventsCount;
     }
     
-    class func getEventsForAllDisciplines() -> Int {
+    public class func getEventsForAllDisciplines() -> Int {
         var url = "";
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
             url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/event";
@@ -67,7 +67,7 @@ class NotificationJSON {
     }
 
     
-    class func getResultsForCountry(country: String) -> Int {
+    public class func getResultsForCountry(country: String) -> Int {
         var url = "";
     
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
@@ -106,11 +106,10 @@ class NotificationJSON {
                 }
             }
         }
-        println(medalsCount);
         return medalsCount;
     }
     
-    class func getResultsForAllCountries() -> Int {
+    public class func getResultsForAllCountries() -> Int {
         var url = "";
         if (NSUserDefaults.standardUserDefaults().boolForKey("PolishLanguage")) {
             url = "https://2017:twg2017wroclaw@2017.wroclaw.pl/mobile/result";
